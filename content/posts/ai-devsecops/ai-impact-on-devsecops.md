@@ -33,8 +33,8 @@ This CI/CD pipeline deploys a Java application (`target/WebApp.war`) on a Tomcat
 
 - **Jenkins**: CI/CD Pipeline
 - **GitHub**: Source Code Manager
-- **TruffleHog**: Secrets Scanner (Docker)
-- **OWASP Dependency-Check**: Software Composition Analysis (SCA) (Bash script)
+- **TruffleHog**: Secrets Scanner (Docker) - **Example Below**
+- **OWASP Dependency-Check**: Software Composition Analysis (SCA) (Bash script) - **Example Below**
 - **SonarQube**: Static Application Security Testing (SAST) (Docker container)
 - **Maven**: Build Tool (running on instance)
 - **Tomcat**: Web HTTP Server that runs Java code (running on instance)
@@ -113,7 +113,7 @@ One of the key steps in ensuring the security of your software is identifying vu
 
 Integrating **OWASP Dependency-Check** can significantly enhance your application’s security posture, ensuring you address vulnerabilities before they can be exploited in production.
 
-### Example: OWASP Dependency-Check in Action
+#### Example: OWASP Dependency-Check in Action
 
 For a practical implementation of **OWASP Dependency-Check**, check out this [example script from my GitHub repo](https://github.com/d0uble3L/webapp/blob/master/owasp-dependency-check.sh). This script demonstrates how to integrate Dependency-Check into your pipeline to scan for vulnerabilities in project dependencies.
 
@@ -156,6 +156,8 @@ By automating these checks, you can ensure continuous security for your applicat
 ### Checking Git Secrets in Pipeline Using Trufflehog
 
 When securing your CI/CD pipeline, it's essential to scan for sensitive information accidentally committed to your repositories. **Trufflehog** is a powerful regex-based scanning tool designed to detect secrets in your Git history.
+
+#### Example: Trufflehog in Action
 
 You can quickly run **Trufflehog** in a Docker container to scan your Git repository for secrets:
 
