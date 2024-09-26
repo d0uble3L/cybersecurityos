@@ -162,21 +162,21 @@ The theme automatically adds "Follow" link icons to the header and footer and "S
 
 In order to register a service to be used, user must add an `ananke_socials` parameter to its project configuration file and list them through it in the desired order. Each entry must bear a
 
-- name*: It matches the built-in service reference (Ex: twitter, github)
-- url*: The url of the handle's profile on the service (Ex: <https://twitter.com/theNewDynamic>, <https://github.com/>
-theNewDynamic)
+- name\*: It matches the built-in service reference (Ex: twitter, github)
+- url\*: The url of the handle's profile on the service (Ex: <https://twitter.com/theNewDynamic>, <https://github.com/>
+  theNewDynamic)
 - rel: (default: `noopener`) Controls the `rel` attribute of the "follow" link. Useful for Mastodon verification which requires a `rel="me"` on the link.
 
 ```yaml
 params:
   ananke_socials:
-  - name: twitter
-    url: https://twitter.com/theNewDynamic
-  - name: github
-    url: https://github.com/theNewDynamic
-  - name: mastodon
-    url: https://social.example.com/@username
-    rel: me noopener
+    - name: twitter
+      url: https://twitter.com/theNewDynamic
+    - name: github
+      url: https://github.com/theNewDynamic
+    - name: mastodon
+      url: https://social.example.com/@username
+      rel: me noopener
 ```
 
 If user needs to overwrite default `color` and `label` of the service, they simply need to append the following to the entry:
@@ -187,13 +187,13 @@ If user needs to overwrite default `color` and `label` of the service, they simp
 ```yaml
 params:
   ananke_socials:
-  - name: twitter
-    url: https://twitter.com/theNewDynamic
-    label: TND Twitter
-  - name: github
-    url: https://github.com/theNewDynamic
-    label: TND GitHub Account
-    color: '#ff6800'
+    - name: twitter
+      url: https://twitter.com/theNewDynamic
+      label: TND Twitter
+    - name: github
+      url: https://github.com/theNewDynamic
+      label: TND GitHub Account
+      color: "#ff6800"
 ```
 
 #### Limit Follow or Share
@@ -203,12 +203,12 @@ If a user needs to control Share and Follow of a service, for example enabling "
 ```yaml
 params:
   ananke_socials:
-  - name: facebook
-    label: Facebook
-    follow: false
-  - name: twitter
-    url: https://twitter.com/theNewDynamic
-    label: TND Twitter
+    - name: facebook
+      label: Facebook
+      follow: false
+    - name: twitter
+      url: https://twitter.com/theNewDynamic
+      label: TND Twitter
 ```
 
 #### Social Icons Customization
@@ -220,18 +220,18 @@ For example, in order to use your own GitHub icon, simply add an svg file at `/a
 
 Here is the list of built-in services. Those marked with an `*` are also part of the "Share" module.
 
-- twitter*
+- twitter\*
 - instagram
 - youtube
 - github
 - gitlab
 - keybase
-- linkedin*
+- linkedin\*
 - medium
 - mastodon
 - slack
 - stackoverflow
-- facebook*
+- facebook\*
 - rss
 
 #### Complement
@@ -289,9 +289,9 @@ For example, if your css files are `assets/ananke/css/custom.css` and `assets/an
     custom_css = ["custom.css","special.css"]
 ```
 
-__IMPORTANT__: Files registered through the `custom_css` array, while unlimited in number, must be of the same type (Ex: all `scss` or all `css`)
+**IMPORTANT**: Files registered through the `custom_css` array, while unlimited in number, must be of the same type (Ex: all `scss` or all `css`)
 
-__Note on retrocompatibiliy for custom css__: If the files registered through the `custom_css` setting are not found in `assets/ananke/css` the theme will expect them to live at the given path relative to the static directory and load them as <link> requests.
+**Note on retrocompatibiliy for custom css**: If the files registered through the `custom_css` setting are not found in `assets/ananke/css` the theme will expect them to live at the given path relative to the static directory and load them as <link> requests.
 
 ### Show Reading Time and Word Count
 
