@@ -55,7 +55,7 @@
   <meta itemprop="description" content="One significant shift has been the integration of DevSecOps and the philosophy of shifting security left. With the rapid advancement of artificial intelligence (AI), its implications for these areas are profound.">
   <meta itemprop="datePublished" content="2024-09-25T23:29:07-05:00">
   <meta itemprop="dateModified" content="2024-09-25T23:29:07-05:00">
-  <meta itemprop="wordCount" content="1269">
+  <meta itemprop="wordCount" content="1279">
   <meta itemprop="keywords" content="DevSecOps,CI/CD,AI,Artificial Intelligence,Cybersecurity">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="The Power of AI in DevSecOps: Building Secure Applications Faster">
@@ -169,8 +169,8 @@
 <ul>
 <li><strong>Jenkins</strong>: CI/CD Pipeline</li>
 <li><strong>GitHub</strong>: Source Code Manager</li>
-<li><strong>TruffleHog</strong>: Secrets Scanner (Docker)</li>
-<li><strong>OWASP Dependency-Check</strong>: Software Composition Analysis (SCA) (Bash script)</li>
+<li><strong>TruffleHog</strong>: Secrets Scanner (Docker) - <strong>Example Below</strong></li>
+<li><strong>OWASP Dependency-Check</strong>: Software Composition Analysis (SCA) (Bash script) - <strong>Example Below</strong></li>
 <li><strong>SonarQube</strong>: Static Application Security Testing (SAST) (Docker container)</li>
 <li><strong>Maven</strong>: Build Tool (running on instance)</li>
 <li><strong>Tomcat</strong>: Web HTTP Server that runs Java code (running on instance)</li>
@@ -241,7 +241,7 @@
 <h3 id="securing-dependencies-with-owasp-dependency-check">Securing Dependencies with OWASP Dependency-Check</h3>
 <p>One of the key steps in ensuring the security of your software is identifying vulnerable third-party libraries.<a href="https://owasp.org/www-project-dependency-check/"><strong>OWASP Dependency-Check</strong></a> is an open-source tool designed to help developers and security professionals automatically identify known vulnerabilities in project dependencies. By scanning your project’s libraries against the National Vulnerability Database (NVD), it provides reports on any potential risks, making it a crucial part of your DevSecOps pipeline.</p>
 <p>Integrating <strong>OWASP Dependency-Check</strong> can significantly enhance your application’s security posture, ensuring you address vulnerabilities before they can be exploited in production.</p>
-<h3 id="example-owasp-dependency-check-in-action">Example: OWASP Dependency-Check in Action</h3>
+<h4 id="example-owasp-dependency-check-in-action">Example: OWASP Dependency-Check in Action</h4>
 <p>For a practical implementation of <strong>OWASP Dependency-Check</strong>, check out this <a href="https://github.com/d0uble3L/webapp/blob/master/owasp-dependency-check.sh">example script from my GitHub repo</a>. This script demonstrates how to integrate Dependency-Check into your pipeline to scan for vulnerabilities in project dependencies.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/sh
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
@@ -276,6 +276,7 @@
 <p>By automating these checks, you can ensure continuous security for your application dependencies.</p>
 <h3 id="checking-git-secrets-in-pipeline-using-trufflehog">Checking Git Secrets in Pipeline Using Trufflehog</h3>
 <p>When securing your CI/CD pipeline, it&rsquo;s essential to scan for sensitive information accidentally committed to your repositories. <strong>Trufflehog</strong> is a powerful regex-based scanning tool designed to detect secrets in your Git history.</p>
+<h4 id="example-trufflehog-in-action">Example: Trufflehog in Action</h4>
 <p>You can quickly run <strong>Trufflehog</strong> in a Docker container to scan your Git repository for secrets:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Pull the Trufflehog Docker image</span>
 </span></span><span style="display:flex;"><span>docker pull gesellix/trufflehog
