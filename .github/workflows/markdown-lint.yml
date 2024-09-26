@@ -25,4 +25,4 @@ jobs:
         run: npm install -g markdownlint-cli
 
       - name: Lint Markdown files
-        run: markdownlint content/*/*.md  # Change 'docs' to your specific folder name
+        run: markdownlint content/*.md  # Change 'docs' to your specific folder name
