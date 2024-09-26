@@ -11,9 +11,9 @@ As artificial intelligence (AI) rapidly advances, its profound implications for 
 
 In this post I will focus on the transformative integration of DevSecOps and how the shift-left philosophy has fundamentally enhanced how organizations approach security throughout the software development lifecycle.
 
-![Image of DevSecOps Example](/posts/ai-devsecops/images/secure-cicd.png) <!-- Callout for image -->
+![Image of DevSecOps Workflow](/posts/ai-devsecops/images/devsecops.png) <!-- Callout for image -->
 
-*Image Source: [d0uble3l. "DevSecOps - Implementing Secure CI/CD Pipelines" GitHub.](https://github.com/d0uble3L/webapp/blob/master/cicd-example-piepline.png)*
+*Image Source: [Pooja Arya. "DevSecOps: Shifting Security Left Within Agile World of DevOps." LinkedIn.](https://www.linkedin.com/pulse/devsecops-shifting-security-left-within-agile-world-devops-pooja-arya)*
 
 ## Understanding DevSecOps and Shifting Left
 
@@ -24,6 +24,10 @@ Take a look at this real work example - Deploying a web application on AWS EC2: 
 ### High Level Overview
 
 This CI/CD pipeline deploys a Java application (`target/WebApp.war`) on a Tomcat web server. It incorporates security checks as part of a DevSecOps approach.
+
+![Image of DevSecOps Example](/posts/ai-devsecops/images/secure-cicd.png) <!-- Callout for image -->
+
+*Image Source: [d0uble3l. "DevSecOps - Implementing Secure CI/CD Pipelines" GitHub.](https://github.com/d0uble3L/webapp/blob/master/cicd-example-piepline.png)*
 
 #### Tools
 
@@ -103,10 +107,6 @@ pipeline {
 
 Shifting left means addressing security concerns earlier in development, which helps to reduce vulnerabilities and mitigate risks before deployment.
 
-![Image of DevSecOps Workflow](/posts/ai-devsecops/images/devsecops.png) <!-- Callout for image -->
-
-*Image Source: [Pooja Arya. "DevSecOps: Shifting Security Left Within Agile World of DevOps." LinkedIn.](https://www.linkedin.com/pulse/devsecops-shifting-security-left-within-agile-world-devops-pooja-arya)*
-
 ### Securing Dependencies with OWASP Dependency-Check
 
 One of the key steps in ensuring the security of your software is identifying vulnerable third-party libraries.[**OWASP Dependency-Check**](https://owasp.org/www-project-dependency-check/) is an open-source tool designed to help developers and security professionals automatically identify known vulnerabilities in project dependencies. By scanning your project’s libraries against the National Vulnerability Database (NVD), it provides reports on any potential risks, making it a crucial part of your DevSecOps pipeline.
@@ -182,6 +182,8 @@ For more information on **Trufflehog** and its features, visit the official [Tru
 
 ## The Role of AI in Enhancing Security Practices
 
+![Image of AI in Cybersecurity](/posts/ai-devsecops/images/ai-cyber-security.webp) <!-- Callout for image -->
+
 AI technologies are set to revolutionize both DevSecOps and the shift-left strategy in several ways:
 
 1. **Automated Threat Detection**: AI can analyze vast amounts of data to identify patterns indicating security threats. This capability allows for real-time monitoring and rapid response, enabling teams to address vulnerabilities as they arise.
@@ -193,8 +195,6 @@ AI technologies are set to revolutionize both DevSecOps and the shift-left strat
 4. **Improved Collaboration**: AI tools facilitate better collaboration between development, security, and operations teams by providing insights that are easily accessible, fostering a culture of shared responsibility for security.
 
 5. **Training and Awareness**: AI can personalize security training for developers, enhancing their understanding of security best practices and equipping them with the knowledge to implement secure coding practices from the outset.
-
-![Image of AI in Cybersecurity](/posts/ai-devsecops/images/ai-cyber-security.webp) <!-- Callout for image -->
 
 ## Transform Your Development Process with Our Guide
 
@@ -208,14 +208,14 @@ To help you navigate the integration of security into your development processes
 - **Tools and Techniques**: Discover the latest tools for automating security testing and continuous monitoring.
 - **Risk Mitigation Strategies**: Learn how to effectively address common risks inherent in traditional DevOps.
 
-![Image of Successful Implementation](/posts/ai-devsecops/images/microsoft-devsecops.png) <!-- Callout for image -->
-*Image Source: [DevSecOps Guides. "Methodology." DevSecOps Guides.](https://devsecopsguides.com/docs/plan-develop/methodology/)*
-
 ## Why This Guide Matters
 
 Developed by industry experts, this resource offers practical insights and actionable steps that you can apply immediately. Whether you're a developer, security professional, operations team member, or a manager looking to drive organizational change, this guide is designed to meet your needs*.
 
 Download Now: [**Code, Commit, Secure - DevSecOps In Action**](https://trilltayo.gumroad.com/l/devsecops-in-action)
+
+![Image of Successful Implementation](/posts/ai-devsecops/images/microsoft-devsecops.png) <!-- Callout for image -->
+*Image Source: [DevSecOps Guides. "Methodology." DevSecOps Guides.](https://devsecopsguides.com/docs/plan-develop/methodology/)*
 
 ## Challenges and Considerations
 
