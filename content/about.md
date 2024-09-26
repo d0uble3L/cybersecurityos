@@ -5,3 +5,5 @@ draft = false
 +++
 
 Hi, I'm Michael Tayo! I'm a cybersecurity professional with expertise in Cloud Security, Vulnerability Management, and DevSecOps. I love learning about new technologies, hosting workshops, and sharing my experiences in the cybersecurity world.
+
+Bye for now!
