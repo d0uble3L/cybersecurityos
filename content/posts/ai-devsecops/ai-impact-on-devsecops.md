@@ -13,7 +13,7 @@ In this post I will focus on the transformative integration of DevSecOps and how
 
 ![Image of DevSecOps Workflow](/posts/ai-devsecops/images/devsecops.png) <!-- Callout for image -->
 
-*Image Source: [Pooja Arya. "DevSecOps: Shifting Security Left Within Agile World of DevOps." LinkedIn.](https://www.linkedin.com/pulse/devsecops-shifting-security-left-within-agile-world-devops-pooja-arya)*
+_Image Source: [Pooja Arya. "DevSecOps: Shifting Security Left Within Agile World of DevOps." LinkedIn.](https://www.linkedin.com/pulse/devsecops-shifting-security-left-within-agile-world-devops-pooja-arya)_
 
 ## Understanding DevSecOps and Shifting Left
 
@@ -27,7 +27,7 @@ This CI/CD pipeline deploys a Java application (`target/WebApp.war`) on a Tomcat
 
 ![Image of DevSecOps Example](/posts/ai-devsecops/images/secure-cicd.png) <!-- Callout for image -->
 
-*Image Source: [d0uble3l. "DevSecOps - Implementing Secure CI/CD Pipelines" GitHub.](https://github.com/d0uble3L/webapp/blob/master/cicd-example-piepline.png)*
+_Image Source: [d0uble3l. "DevSecOps - Implementing Secure CI/CD Pipelines" GitHub.](https://github.com/d0uble3L/webapp/blob/master/cicd-example-piepline.png)_
 
 #### Tools
 
@@ -69,7 +69,7 @@ pipeline {
          sh 'chmod +x owasp-dependency-check.sh'
          sh 'bash owasp-dependency-check.sh'
          sh 'cat /var/lib/jenkins/OWASP-Dependency-Check/reports/dependency-check-report.xml'
-        
+
       }
      }
     stage ('SAST') {
@@ -89,8 +89,8 @@ pipeline {
             steps {
            sshagent(['tomcat']) {
                 sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@tomcat-server:/home/ec2-user/prod/apache-tomcat-9.0.74/webapps/webapp.war'
-              }      
-           }       
+              }
+           }
     }
     stage ('DAST') {
       steps {
@@ -103,7 +103,7 @@ pipeline {
 }
 ```
 
-*Code Source: [d0uble3l. webapp/Jenkinsfile, GitHub.](https://github.com/d0uble3L/webapp/blob/master/Jenkinsfile)*
+_Code Source: [d0uble3l. webapp/Jenkinsfile, GitHub.](https://github.com/d0uble3L/webapp/blob/master/Jenkinsfile)_
 
 Shifting left means addressing security concerns earlier in development, which helps to reduce vulnerabilities and mitigate risks before deployment.
 
@@ -149,7 +149,7 @@ docker run --rm \
     # --suppression "/src/security/dependency-check-suppression.xml"
 ```
 
-*Code Source: [d0uble3l. webapp/owasp-dependency-check.sh, GitHub.](https://github.com/d0uble3L/webapp/blob/master/owasp-dependency-check.sh)*
+_Code Source: [d0uble3l. webapp/owasp-dependency-check.sh, GitHub.](https://github.com/d0uble3L/webapp/blob/master/owasp-dependency-check.sh)_
 
 By automating these checks, you can ensure continuous security for your application dependencies.
 
@@ -240,12 +240,12 @@ To help you navigate the integration of security into your development processes
 
 ## Why This Guide Matters
 
-Developed by industry experts, this resource offers practical insights and actionable steps that you can apply immediately. Whether you're a developer, security professional, operations team member, or a manager looking to drive organizational change, this guide is designed to meet your needs*.
+Developed by industry experts, this resource offers practical insights and actionable steps that you can apply immediately. Whether you're a developer, security professional, operations team member, or a manager looking to drive organizational change, this guide is designed to meet your needs\*.
 
 Download Now: [**Code, Commit, Secure - DevSecOps In Action**](https://trilltayo.gumroad.com/l/devsecops-in-action)
 
 ![Image of Successful Implementation](/posts/ai-devsecops/images/microsoft-devsecops.png) <!-- Callout for image -->
-*Image Source: [DevSecOps Guides. "Methodology." DevSecOps Guides.](https://devsecopsguides.com/docs/plan-develop/methodology/)*
+_Image Source: [DevSecOps Guides. "Methodology." DevSecOps Guides.](https://devsecopsguides.com/docs/plan-develop/methodology/)_
 
 ## Challenges and Considerations
 

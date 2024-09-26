@@ -204,7 +204,7 @@
          sh &#39;chmod +x owasp-dependency-check.sh&#39;
          sh &#39;bash owasp-dependency-check.sh&#39;
          sh &#39;cat /var/lib/jenkins/OWASP-Dependency-Check/reports/dependency-check-report.xml&#39;
-        
+
       }
      }
     stage (&#39;SAST&#39;) {
@@ -224,8 +224,8 @@
             steps {
            sshagent([&#39;tomcat&#39;]) {
                 sh &#39;scp -o StrictHostKeyChecking=no target/*.war ec2-user@tomcat-server:/home/ec2-user/prod/apache-tomcat-9.0.74/webapps/webapp.war&#39;
-              }      
-           }       
+              }
+           }
     }
     stage (&#39;DAST&#39;) {
       steps {
