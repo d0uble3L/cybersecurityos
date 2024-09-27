@@ -1,3 +1,12 @@
 module:
   hugoVersion:
     min: "0.84.0"
+
+params:
+  ananke_socials:
+  - name: twitter
+    url: https://twitter.com/cyb3rshi3ld
+    label: TND Twitter
+  - name: github
+    url: https://github.com/d0uble3L
+    label: TND GitHub Account
