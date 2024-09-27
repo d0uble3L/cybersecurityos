@@ -20,14 +20,16 @@ googleAnalytics = "YOUR_TRACKING_ID"  # Replace with your Google Analytics track
   commentoEnable = true
   showSocialLinks = true        # Show social links in the footer (if supported by the theme)
   disqusShortname = "your-disqus-shortname"  # If you are using Disqus for comments
+  Paginate = 3                  # this is set low for demonstrating with dummy content. Set to a higher number
+
 
 [services.disqus]
   shortname = 'CyberSHIELD'
 
 # Menu Configuration (Optional: Customize navigation)
 [[menu.main]]
-  name = "Home"
-  url = "/"
+  name = "About"
+  url = "/about/"
   weight = 1
 
 [[menu.main]]
@@ -35,10 +37,12 @@ googleAnalytics = "YOUR_TRACKING_ID"  # Replace with your Google Analytics track
   url = "/posts/"
   weight = 2
 
-[[menu.main]]
-  name = "About"
-  url = "/about/"
+ [[menu.main]]
+  name = "Contact"
+  url = "/contact/"
   weight = 3
+
+
 
 # Enable the sitemap
 [params.sitemap]
