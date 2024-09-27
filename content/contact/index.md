@@ -10,4 +10,4 @@ menu: main
 
 We’d love to hear from you! Whether you have questions, feedback, or partnership inquiries, feel free to reach out below:
 
-{{< form-contact action="mailto:hello@cybershieldacademy.net"  >}}
+{{< form-contact action="https://formspree.io/f/xrbznpkl" >}}
