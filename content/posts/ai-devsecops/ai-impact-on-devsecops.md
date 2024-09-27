@@ -2,7 +2,7 @@
 title = 'The Power of AI in DevSecOps: Building Secure Applications Faster'
 date = 2024-09-25T23:29:07-05:00
 draft = false
-featured_image = "/images/devsecops.jpg"
+featured_image = "/posts/ai-devsecops/images/devsecops.png"
 tags =  ["DevSecOps","CI/CD","AI","Artificial Intelligence", "Cybersecurity"]
 description = "One significant shift has been the integration of DevSecOps and the philosophy of shifting security left. With the rapid advancement of artificial intelligence (AI), its implications for these areas are profound."
 +++
@@ -10,10 +10,6 @@ description = "One significant shift has been the integration of DevSecOps and t
 As artificial intelligence (AI) rapidly advances, its profound implications for these practices offer unprecedented opportunities to further strengthen our security posture and streamline processes.
 
 In this post I will focus on the transformative integration of DevSecOps and how the shift-left philosophy has fundamentally enhanced how organizations approach security throughout the software development lifecycle.
-
-![Image of DevSecOps Workflow](/posts/ai-devsecops/images/devsecops.png) <!-- Callout for image -->
-
-_Image Source: [Pooja Arya. "DevSecOps: Shifting Security Left Within Agile World of DevOps." LinkedIn.](https://www.linkedin.com/pulse/devsecops-shifting-security-left-within-agile-world-devops-pooja-arya)_
 
 ## Understanding DevSecOps and Shifting Left
 
