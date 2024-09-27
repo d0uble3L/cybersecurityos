@@ -19,7 +19,11 @@ googleAnalytics = "YOUR_TRACKING_ID"  # Replace with your Google Analytics track
   logo = "img/logo.png"         # Path to your logo
   showSocialLinks = true        # Show social links in the footer (if supported by the theme)
   Paginate = 3                  # this is set low for demonstrating with dummy content. Set to a higher number
+  rss = "index.xml" #rss
 
+[params.social]
+  linkedin = "https://linkedin.com/in/michaeltayo" #linkedin
+  
 # Menu Configuration (Optional: Customize navigation)
 [[menu.main]]
   name = "About"
