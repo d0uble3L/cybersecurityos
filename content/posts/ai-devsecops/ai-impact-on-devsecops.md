@@ -2,9 +2,9 @@
 title = 'The Power of AI in DevSecOps: Building Secure Applications Faster'
 date = 2024-09-25T23:29:07-05:00
 draft = false
+featured_image = "/images/devsecops.jpg"
 tags =  ["DevSecOps","CI/CD","AI","Artificial Intelligence", "Cybersecurity"]
 description = "One significant shift has been the integration of DevSecOps and the philosophy of shifting security left. With the rapid advancement of artificial intelligence (AI), its implications for these areas are profound."
-image = "/posts/ai-devsecops/images/test.jpg"
 +++
 
 As artificial intelligence (AI) rapidly advances, its profound implications for these practices offer unprecedented opportunities to further strengthen our security posture and streamline processes.
