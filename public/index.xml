@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CybersecurityOS: Secure by Design on CybersecurityOS</title>
+    <title>CybersecurityOS</title>
     <link>https://cybersecurityos.net/</link>
-    <description>Recent content in CybersecurityOS: Secure by Design on CybersecurityOS</description>
+    <description>Recent content on CybersecurityOS</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 25 Sep 2024 23:29:07 -0500</lastBuildDate>
@@ -27,7 +27,7 @@
       <link>https://cybersecurityos.net/about/</link>
       <pubDate>Mon, 23 Sep 2024 20:46:17 -0500</pubDate>
       <guid>https://cybersecurityos.net/about/</guid>
-      <description>&lt;p&gt;Hi, I&amp;rsquo;m Michael Tayo! I&amp;rsquo;m a cybersecurity professional with expertise in Cloud Security, Vulnerability Management, and DevSecOps. I love learning about new technologies, hosting workshops, and sharing my experiences in the cybersecurity world.&lt;/p&gt;&#xA;&lt;p&gt;Bye for now!&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;hi-im-michael-tayo&#34;&gt;Hi, I’m Michael Tayo!&lt;/h1&gt;&#xA;&lt;p&gt;I’m a cybersecurity professional with expertise in Cloud Security, Vulnerability Management, and DevSecOps.&lt;/p&gt;&#xA;&lt;p&gt;Welcome to my site, where cutting-edge ideas on &lt;strong&gt;cybersecurity&lt;/strong&gt;, &lt;strong&gt;automation&lt;/strong&gt;, &lt;strong&gt;AI&lt;/strong&gt;, and &lt;strong&gt;system design&lt;/strong&gt; converge. Here, I explore the ever-evolving world of technology, with a strong focus on &lt;strong&gt;building systems that are secure by design&lt;/strong&gt;, ensuring security is embedded at every level.&lt;/p&gt;&#xA;&lt;p&gt;One day, these insights will become a book. Until then, I invite you to join me as I share thoughts, strategies, and practical solutions for navigating the complex landscape of modern cybersecurity. Together, we’ll uncover new approaches to &lt;strong&gt;protecting systems&lt;/strong&gt;, &lt;strong&gt;securing data&lt;/strong&gt;, and &lt;strong&gt;shaping the future of tech&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Contact</title>
