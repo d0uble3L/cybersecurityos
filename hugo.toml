@@ -16,7 +16,7 @@ googleAnalytics = "YOUR_TRACKING_ID"  # Replace with your Google Analytics track
 # Params (Optional: Adjust as needed based on your theme)
 [params]
   favicon = "img/favicon.ico"  # Path to your favicon
-  logo = "img/logo.png"         # Path to your logo
+  site_logo = "images/c-os.svg" 
   showSocialLinks = true        # Show social links in the footer (if supported by the theme)
   Paginate = 3                  # this is set low for demonstrating with dummy content. Set to a higher number
   rss = "index.xml" #rss
@@ -39,7 +39,6 @@ googleAnalytics = "YOUR_TRACKING_ID"  # Replace with your Google Analytics track
   name = "Contact"
   url = "/contact/"
   weight = 3
-
 
 
 # Enable the sitemap
