@@ -2,47 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://cybersecurityos.net/tags/ai/</loc>
+    <loc>http://localhost:1313/tags/ai/</loc>
     <lastmod>2024-09-25T23:29:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/artificial-intelligence/</loc>
+    <loc>http://localhost:1313/tags/artificial-intelligence/</loc>
     <lastmod>2024-09-25T23:29:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/ci/cd/</loc>
+    <loc>http://localhost:1313/tags/ci/cd/</loc>
     <lastmod>2024-09-25T23:29:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/cybersecurity/</loc>
+    <loc>http://localhost:1313/tags/cybersecurity/</loc>
     <lastmod>2024-09-25T23:29:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/devsecops/</loc>
+    <loc>http://localhost:1313/tags/devsecops/</loc>
     <lastmod>2024-09-25T23:29:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2024-09-25T23:29:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-09-25T23:29:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/posts/ai-devsecops/ai-impact-on-devsecops/</loc>
+    <loc>http://localhost:1313/posts/ai-devsecops/ai-impact-on-devsecops/</loc>
     <lastmod>2024-09-25T23:29:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-09-25T23:19:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/risk-management/</loc>
+    <loc>http://localhost:1313/tags/risk-management/</loc>
     <lastmod>2024-09-25T23:19:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/vulnerability-management/</loc>
+    <loc>http://localhost:1313/tags/vulnerability-management/</loc>
     <lastmod>2024-09-25T23:19:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/posts/vuln/vulnerability-management-101/</loc>
+    <loc>http://localhost:1313/posts/vuln/vulnerability-management-101/</loc>
     <lastmod>2024-09-25T23:19:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2024-09-23T20:46:17-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://cybersecurityos.net/contact/</loc>
+    <loc>http://localhost:1313/contact/</loc>
   </url>
 </urlset>
