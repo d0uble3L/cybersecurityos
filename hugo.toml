@@ -48,4 +48,4 @@ googleAnalytics = "YOUR_TRACKING_ID"  # Replace with your Google Analytics track
 
 [services]
   [services.disqus]
-    shortname = 'cybersecurityos'
+    shortname = 'https-www-cybersecurityos-net'
