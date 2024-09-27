@@ -8,6 +8,6 @@ menu: main
 
 ---
 
-This is an example of a custom shortcode that you can put right into your content. You will need to add a form action to the shortcode to make it work.
+We’d love to hear from you! Whether you have questions, feedback, or partnership inquiries, feel free to reach out below:
 
 {{< form-contact action="mailto:hello@cybershieldacademy.net"  >}}
