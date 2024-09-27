@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on CybersecurityOS</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://cybersecurityos.net/tags/</link>
     <description>Recent content in Tags on CybersecurityOS</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 25 Sep 2024 23:29:07 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cybersecurityos.net/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI</title>
-      <link>http://localhost:1313/tags/ai/</link>
+      <link>https://cybersecurityos.net/tags/ai/</link>
       <pubDate>Wed, 25 Sep 2024 23:29:07 -0500</pubDate>
-      <guid>http://localhost:1313/tags/ai/</guid>
+      <guid>https://cybersecurityos.net/tags/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Artificial Intelligence</title>
-      <link>http://localhost:1313/tags/artificial-intelligence/</link>
+      <link>https://cybersecurityos.net/tags/artificial-intelligence/</link>
       <pubDate>Wed, 25 Sep 2024 23:29:07 -0500</pubDate>
-      <guid>http://localhost:1313/tags/artificial-intelligence/</guid>
+      <guid>https://cybersecurityos.net/tags/artificial-intelligence/</guid>
       <description></description>
     </item>
     <item>
       <title>CI/CD</title>
-      <link>http://localhost:1313/tags/ci/cd/</link>
+      <link>https://cybersecurityos.net/tags/ci/cd/</link>
       <pubDate>Wed, 25 Sep 2024 23:29:07 -0500</pubDate>
-      <guid>http://localhost:1313/tags/ci/cd/</guid>
+      <guid>https://cybersecurityos.net/tags/ci/cd/</guid>
       <description></description>
     </item>
     <item>
       <title>Cybersecurity</title>
-      <link>http://localhost:1313/tags/cybersecurity/</link>
+      <link>https://cybersecurityos.net/tags/cybersecurity/</link>
       <pubDate>Wed, 25 Sep 2024 23:29:07 -0500</pubDate>
-      <guid>http://localhost:1313/tags/cybersecurity/</guid>
+      <guid>https://cybersecurityos.net/tags/cybersecurity/</guid>
       <description></description>
     </item>
     <item>
       <title>DevSecOps</title>
-      <link>http://localhost:1313/tags/devsecops/</link>
+      <link>https://cybersecurityos.net/tags/devsecops/</link>
       <pubDate>Wed, 25 Sep 2024 23:29:07 -0500</pubDate>
-      <guid>http://localhost:1313/tags/devsecops/</guid>
+      <guid>https://cybersecurityos.net/tags/devsecops/</guid>
       <description></description>
     </item>
     <item>
       <title>Risk Management</title>
-      <link>http://localhost:1313/tags/risk-management/</link>
+      <link>https://cybersecurityos.net/tags/risk-management/</link>
       <pubDate>Wed, 25 Sep 2024 23:19:07 -0500</pubDate>
-      <guid>http://localhost:1313/tags/risk-management/</guid>
+      <guid>https://cybersecurityos.net/tags/risk-management/</guid>
       <description></description>
     </item>
     <item>
       <title>Vulnerability Management</title>
-      <link>http://localhost:1313/tags/vulnerability-management/</link>
+      <link>https://cybersecurityos.net/tags/vulnerability-management/</link>
       <pubDate>Wed, 25 Sep 2024 23:19:07 -0500</pubDate>
-      <guid>http://localhost:1313/tags/vulnerability-management/</guid>
+      <guid>https://cybersecurityos.net/tags/vulnerability-management/</guid>
       <description></description>
     </item>
   </channel>
