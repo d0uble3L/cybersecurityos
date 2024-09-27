@@ -46,3 +46,6 @@ googleAnalytics = "YOUR_TRACKING_ID"  # Replace with your Google Analytics track
 [params.sitemap]
   sitemap = true
 
+[services]
+  [services.disqus]
+    shortname = 'cybersecurityos'
