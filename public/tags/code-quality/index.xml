@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code-Quality on CybersecurityOS</title>
+    <link>http://localhost:1313/tags/code-quality/</link>
+    <description>Recent content in Code-Quality on CybersecurityOS</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Sep 2024 10:58:08 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/code-quality/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pylint Power-Up: Automated Code Quality Checks for GitHub Projects</title>
+      <link>http://localhost:1313/posts/python/pylint-github-action/</link>
+      <pubDate>Fri, 27 Sep 2024 10:58:08 -0400</pubDate>
+      <guid>http://localhost:1313/posts/python/pylint-github-action/</guid>
+      <description>&lt;p&gt;Pylint is a powerful tool for analyzing Python code to ensure it follows coding standards and best practices. Integrating Pylint into your GitHub repository as part of your CI/CD pipeline helps maintain clean, readable, and error-free code. Here&amp;rsquo;s a quick guide on how to configure Pylint in GitHub using GitHub Actions.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;GitHub Repo Source: &lt;a href=&#34;https://github.com/d0uble3L/pylint-demo&#34;&gt;d0uble3l. GitHub&lt;/a&gt;*&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;set-up-a-github-action-for-pylint&#34;&gt;Set Up a GitHub Action for Pylint&lt;/h2&gt;&#xA;&lt;p&gt;Create a .github/workflows directory in the root of your repository if it doesn&amp;rsquo;t exist.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
