@@ -24,6 +24,7 @@ googleAnalytics = "YOUR_TRACKING_ID"  # Replace with your Google Analytics track
 
 [params.social]
   linkedin = "https://linkedin.com/in/michaeltayo" #linkedin
+  twitter = 'cyb3rshi3ld'
   
 # Menu Configuration (Optional: Customize navigation)
 [[menu.main]]
