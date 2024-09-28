@@ -115,3 +115,13 @@ This will give you a summary of code quality issues and suggestions on how to im
 ## Conclusion
 
 By setting up Pylint in your GitHub repository, you automate the process of enforcing code quality. This helps catch bugs early and maintain a clean, professional codebase!
+
+Thanks for reading,
+
+Michael
+
+If you enjoy the content, then consider [buying me a coffee.](https://buymeacoffee.com/cybershieldacademy)
+
+---
+
+**P.S.** Stay updated on the latest cybersecurity trends and best practices by subscribing to our newsletter or leaving your thoughts in the comments below! [Visit CyberSHIELD](https://cybershieldacademy.net)
