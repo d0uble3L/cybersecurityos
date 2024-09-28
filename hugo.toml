@@ -20,6 +20,7 @@ googleAnalytics = "YOUR_TRACKING_ID"  # Replace with your Google Analytics track
   showSocialLinks = true        # Show social links in the footer (if supported by the theme)
   paginate = 10                  # this is set low for demonstrating with dummy content. Set to a higher number
   rss = "index.xml" #rss
+  show_reading_time = true
 
 [params.social]
   linkedin = "https://linkedin.com/in/michaeltayo" #linkedin
