@@ -66,6 +66,10 @@ git push origin main
 
 Now, every time you push or open a pull request, GitHub Actions will automatically run Pylint. You can view the results under the "Actions" tab in your GitHub repository.
 
+![pyLint running](/posts/python/images/py-lint.jpg)
+
+*Image Source: [d0uble3l. GitHub](https://github.com/d0uble3L/pylint-demo)*
+
 ### DEMO
 
 Here’s a simple Python script with a few intentional Pylint warnings and style issues that you can use to test your Pylint configuration:
