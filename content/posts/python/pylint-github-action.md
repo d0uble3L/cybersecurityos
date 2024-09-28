@@ -90,15 +90,11 @@ if __name__ == "__main__":
 
 #### Issues in the Script
 
-![pyLint findings](/posts/python/images/pylint-fail.jpg)
+* Variable naming: Using sum as a variable name will trigger a Pylint warning because sum is a built-in Python function.
 
-*Image Source: [d0uble3l. GitHub](https://github.com/d0uble3L/pylint-demo)*
+* Missing docstring: The greet function is missing a docstring, which will trigger a warning for code documentation.
 
-- Variable naming: Using sum as a variable name will trigger a Pylint warning because sum is a built-in Python function.
-
-- Missing docstring: The greet function is missing a docstring, which will trigger a warning for code documentation.
-
-- Formatting: Depending on your Pylint settings, the script may raise warnings about code formatting (line lengths, spacing, etc.).
+* Formatting: Depending on your Pylint settings, the script may raise warnings about code formatting (line lengths, spacing, etc.).
 
 You can run Pylint on this file using:
 
@@ -107,6 +103,10 @@ pylint test_script.py
 ```
 
 This will give you a summary of code quality issues and suggestions on how to improve the script.
+
+![pyLint findings](/posts/python/images/pylint-fail.jpg)
+
+*Image Source: [d0uble3l. GitHub](https://github.com/d0uble3L/pylint-demo)*
 
 ## Conclusion
 
