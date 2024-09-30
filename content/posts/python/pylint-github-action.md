@@ -2,8 +2,8 @@
 date: 2024-09-27T10:58:08-04:00
 description: "The Grand Hall"
 images:
-  - /posts/python/images/py-lint.png
-featured_image: "/posts/python/images/py-lint.png"
+  - /posts/python/images/pylint-dalle.webp
+featured_image: "/posts/python/images/pylint-dalle.webp"
 Tags: ["python", "github", "code-quality", "pylint", "automation", "security", "system-design"]
 title: "Pylint Power-Up: Automated Code Quality Checks for GitHub Projects"
 ---
