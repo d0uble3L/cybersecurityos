@@ -29,19 +29,5 @@
       <guid>https://cybersecurityos.net/posts/vuln/vulnerability-management-101/</guid>
       <description>&lt;p&gt;In today’s digital world, no organization is immune to cyber threats. From small businesses to global enterprises, everyone is a potential target for hackers seeking to exploit vulnerabilities. Whether you&amp;rsquo;re a seasoned cybersecurity professional or a curious beginner, understanding &lt;strong&gt;vulnerability management&lt;/strong&gt; is key to safeguarding your systems and data.&lt;/p&gt;&#xA;&lt;p&gt;In this post, we&amp;rsquo;ll break down the basics of vulnerability management, explain why it&amp;rsquo;s important, and provide steps for implementing an effective vulnerability management program.&lt;/p&gt;</description>
     </item>
-    <item>
-      <title>About</title>
-      <link>https://cybersecurityos.net/about/</link>
-      <pubDate>Mon, 23 Sep 2024 20:46:17 -0500</pubDate>
-      <guid>https://cybersecurityos.net/about/</guid>
-      <description>&lt;h1 id=&#34;hi-im-michael-tayo&#34;&gt;Hi, I’m Michael Tayo&lt;/h1&gt;&#xA;&lt;p&gt;I’m a cybersecurity expert based in the USA, blending cutting-edge tech with a deep understanding of security architecture to keep the digital world from, well, crumbling into chaos. I’m passionate about &lt;strong&gt;automating security processes&lt;/strong&gt; (because who doesn’t love making life simpler?) and &lt;strong&gt;locking down cloud environments&lt;/strong&gt;. Whether I’m building fortress-like defenses or hunting down vulnerabilities like they owe me money, I bring a fresh, forward-thinking approach to staying one step ahead of the bad guys.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Contact</title>
-      <link>https://cybersecurityos.net/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://cybersecurityos.net/contact/</guid>
-      <description>&lt;h2 id=&#34;id-love-to-hear-from-you&#34;&gt;I&amp;rsquo;d love to hear from you&lt;/h2&gt;&#xA;&lt;p&gt;Whether you have questions, feedback, or partnership inquiries, feel free to reach out below.&lt;/p&gt;&#xA;&lt;p&gt;I’m open to collaborations, speaking engagements, podcasts, keynotes, workshops, conferences, and more. Let’s connect and make something great together!&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;&lt;form class=&#34;black-80 sans-serif&#34; accept-charset=&#34;UTF-8&#34; action=&#34;https://formspree.io/f/xrbznpkl&#34; method=&#34;POST&#34; role=&#34;form&#34;&gt;&#xA;&#xA;    &lt;label class=&#34;f6 b db mb1 mt3 sans-serif mid-gray&#34;  for=&#34;name&#34;&gt;Your Name&lt;/label&gt;&#xA;    &lt;input type=&#34;text&#34; id=&#34;name&#34; name=&#34;name&#34; class=&#34;w-100 f5 pv3 ph3 bg-light-gray bn&#34;  required placeholder=&#34; &#34;  aria-labelledby=&#34;name&#34;/&gt;&#xA;&#xA;    &lt;label class=&#34;f6 b db mb1 mt3 sans-serif mid-gray&#34; for=&#34;email&#34;&gt;Email Address&lt;/label&gt;&#xA;    &lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;email&#34; class=&#34;w-100 f5 pv3 ph3 bg-light-gray bn&#34;  required placeholder=&#34; &#34;  aria-labelledby=&#34;email&#34;/&gt;&#xA;    &lt;div class=&#34;requirements f6 gray glow i ph3 overflow-hidden&#34;&gt;&#xA;      An email address is required.&#xA;    &lt;/div&gt;&#xA;&#xA;    &lt;label class=&#34;f6 b db mb1 mt3 sans-serif mid-gray&#34; for=&#34;message&#34;&gt;Message&lt;/label&gt;&#xA;    &lt;textarea id=&#34;message&#34; name=&#34;message&#34; class=&#34;w-100 f5 pv3 ph3 bg-light-gray bn h4&#34; aria-labelledby=&#34;message&#34;&gt;&lt;/textarea&gt;&#xA;&#xA;    &lt;input class=&#34;db w-100 mv2 white pa3 bn hover-shadow hover-bg-black bg-animate bg-black&#34; type=&#34;submit&#34; value=&#34;Send&#34; /&gt;&#xA;&#xA;&lt;/form&gt;</description>
-    </item>
   </channel>
 </rss>

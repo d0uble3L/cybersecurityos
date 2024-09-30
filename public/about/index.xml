@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Abouts on CybersecurityOS</title>
-    <link>http://localhost:1313/about/</link>
-    <description>Recent content in Abouts on CybersecurityOS</description>
+    <title>About on CybersecurityOS</title>
+    <link>https://cybersecurityos.net/about/</link>
+    <description>Recent content in About on CybersecurityOS</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Sep 2024 20:46:17 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/about/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>About</title>
-      <link>http://localhost:1313/about/about/</link>
-      <pubDate>Mon, 23 Sep 2024 20:46:17 -0500</pubDate>
-      <guid>http://localhost:1313/about/about/</guid>
-      <description>&lt;p&gt;Hi, I&amp;rsquo;m Michael Tayo! I&amp;rsquo;m a cybersecurity professional with expertise in Cloud Security, Vulnerability Management, and DevSecOps. I love learning about new technologies, hosting workshops, and sharing my experiences in the cybersecurity world.&lt;/p&gt;&#xA;&lt;p&gt;Bye for now!&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://cybersecurityos.net/about/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
