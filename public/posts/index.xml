@@ -6,8 +6,15 @@
     <description>Recent content in Posts on CybersecurityOS</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Sep 2024 10:58:08 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://cybersecurityos.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Broader Cloud Context: The Missing Piece in CNAPP</title>
+      <link>https://cybersecurityos.net/posts/cloud/cnapp/</link>
+      <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://cybersecurityos.net/posts/cloud/cnapp/</guid>
+      <description>&lt;p&gt;The rapid evolution of cloud environments has brought transformative benefits for businesses, but it has also introduced significant security challenges. As organizations increasingly move to cloud-native architectures, traditional security tools and approaches are struggling to keep up.&lt;/p&gt;&#xA;&lt;p&gt;Enter the &lt;strong&gt;Cloud-Native Application Protection Platform (CNAPP)&lt;/strong&gt;, an emerging category that promises to streamline and modernize cloud security.&lt;/p&gt;&#xA;&lt;p&gt;In this post, we’ll dive into the concept of CNAPP, explore the shift towards &lt;strong&gt;agentless security&lt;/strong&gt;, and examine how &lt;strong&gt;workload protection&lt;/strong&gt; plays a crucial role in securing cloud-native applications.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Pylint Power-Up: Automated Code Quality Checks for GitHub Projects</title>
       <link>https://cybersecurityos.net/posts/python/pylint-github-action/</link>
