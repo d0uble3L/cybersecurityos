@@ -20,6 +20,8 @@ In this post, we’ll dive into the concept of CNAPP, explore the shift towards 
 
 A **Cloud-Native Application Protection Platform (CNAPP)** is an integrated solution designed to protect cloud-native applications across their entire lifecycle—from development through production. CNAPPs combine several security capabilities into a unified platform, allowing organizations to address the complex and dynamic nature of cloud environments.
 
+- **Gartner Cloud-Native Application Protection Platforms Reviews** - [Gartner](https://www.gartner.com/reviews/market/cloud-native-application-protection-platforms)
+
 Key components of CNAPP include:
 
 - **Cloud Security Posture Management (CSPM)**: Ensures cloud infrastructure configurations align with security best practices and compliance requirements.
@@ -91,6 +93,14 @@ For most organizations, a **hybrid approach** is often best, combining agentless
 As cloud-native architectures continue to evolve, the demand for comprehensive, integrated security platforms like CNAPP will only grow. The shift towards agentless security signals a broader trend of reducing operational complexity and making cloud security more accessible to organizations of all sizes.
 
 Workload protection will remain a cornerstone of CNAPP, ensuring that cloud-native applications remain secure as they scale and evolve. By combining agentless monitoring with the deep visibility of agent-based tools, organizations can achieve the balance between security, performance, and scalability in their cloud environments.
+
+### Further Reading
+
+- **What is Cloud Security Posture Management (CSPM)?** - [TechTarget](https://www.techtarget.com/searchsecurity/definition/Cloud-Security-Posture-Management-CSPM)
+
+- **Agentless Security vs. Agent-Based Security: Which is Right for Your Cloud?** - [Puppet](https://www.puppet.com/blog/agent-vs-agentless-security#:~:text=Agent%20vs.-,Agentless%20Security%20Differences,network%2Dbased%20tools%20for%20security.)
+
+- **Container Security: Best Practices and Tools** - [Aqua Security](https://www.aquasec.com/cloud-native-academy/container-security-best-practices/)
 
 ---
 
