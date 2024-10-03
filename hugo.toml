@@ -37,10 +37,17 @@ googleAnalytics = "YOUR_TRACKING_ID"  # Replace with your Google Analytics track
   url = "/posts/"
   weight = 2
 
+[[menu.main]]
+  name = "Talks"
+  url = "/posts/talks/"
+  weight = 3
+
  [[menu.main]]
   name = "Contact"
   url = "/contact/"
-  weight = 3
+  weight = 4
+
+
 
 
 # Enable the sitemap
