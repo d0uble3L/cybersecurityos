@@ -1,6 +1,6 @@
 ---
 date: 2024-09-27T10:58:08-04:00
-description: "The Grand Hall"
+description: "Pylint is a powerful tool for analyzing Python code to ensure it follows coding standards and best practices."
 images:
   - /posts/python/images/pylint-dalle.webp
 featured_image: "/posts/python/images/pylint-dalle.webp"
