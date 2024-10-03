@@ -6,8 +6,36 @@
     <description>Recent content in Tags on CybersecurityOS</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Sep 2024 10:58:08 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://cybersecurityos.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Agentless Security</title>
+      <link>https://cybersecurityos.net/tags/agentless-security/</link>
+      <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://cybersecurityos.net/tags/agentless-security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cloud Security</title>
+      <link>https://cybersecurityos.net/tags/cloud-security/</link>
+      <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://cybersecurityos.net/tags/cloud-security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CNAPP</title>
+      <link>https://cybersecurityos.net/tags/cnapp/</link>
+      <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://cybersecurityos.net/tags/cnapp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Workload Protection</title>
+      <link>https://cybersecurityos.net/tags/workload-protection/</link>
+      <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://cybersecurityos.net/tags/workload-protection/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Automation</title>
       <link>https://cybersecurityos.net/tags/automation/</link>
