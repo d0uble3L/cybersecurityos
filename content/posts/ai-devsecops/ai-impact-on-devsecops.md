@@ -259,7 +259,7 @@ Thanks for reading,
 
 Michael
 
-If you enjoy the content, then consider [buying me a coffee.](https://buymeacoffee.com/cybershieldacademy)
+If you enjoy the content, then consider [buying me a coffee.](https://trilltayo.gumroad.com/coffee)
 
 ---
 
