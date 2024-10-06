@@ -38,8 +38,8 @@ googleAnalytics = "YOUR_TRACKING_ID"  # Replace with your Google Analytics track
   weight = 2
 
 [[menu.main]]
-  name = "Talks"
-  url = "/posts/talks/"
+  name = "Features"
+  url = "/posts/features/"
   weight = 3
 
  [[menu.main]]

@@ -1,5 +1,5 @@
 +++
-title = 'Talks'
+title = 'Features'
 draft = false
 featured_image = '/images/c-os.svg'
 description = "Explore my latest engagements."
@@ -15,6 +15,10 @@ If you enjoy the content, then consider [buying me a coffee.](https://trilltayo.
 ### 2023
 
 [Cloud Security: Navigating the Security Challenges of Cloud Computing](https://github.com/d0uble3L/presentations/blob/master/2023/CloudSecurity-CDMMedia-Chicago-2023.pdf) (CISO Chicago Summit - CDM Media - July 2023)
+
+## Ebooks
+
+[Seven Cybersecurity Experts on Cyber Fusion: Collaborative Security to Defend the Modern Threat Landscape](https://www.anomali.com/resources/ebooks/seven-cybersecurity-experts-on-cyber-fusion) 
 
 ## Podcasts
 
