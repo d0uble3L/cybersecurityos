@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Risk Management on CybersecurityOS</title>
-    <link>https://cybersecurityos.net/tags/risk-management/</link>
-    <description>Recent content in Risk Management on CybersecurityOS</description>
+    <title>GRC on CybersecurityOS</title>
+    <link>https://cybersecurityos.net/tags/grc/</link>
+    <description>Recent content in GRC on CybersecurityOS</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 17 Oct 2024 23:29:07 -0500</lastBuildDate>
-    <atom:link href="https://cybersecurityos.net/tags/risk-management/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cybersecurityos.net/tags/grc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rethinking GRC: How CISOs Can Keep Up With Growing Demands</title>
       <link>https://cybersecurityos.net/posts/grc/images/rethinking-grc-ciso-assistant/</link>
       <pubDate>Thu, 17 Oct 2024 23:29:07 -0500</pubDate>
       <guid>https://cybersecurityos.net/posts/grc/images/rethinking-grc-ciso-assistant/</guid>
       <description>&lt;p&gt;As the digital threat landscape evolves, &lt;strong&gt;Governance, Risk, and Compliance (GRC)&lt;/strong&gt; has become an essential focus for every CISO. But managing GRC today feels like juggling endless responsibilities—compliance demands, security risks, and resource constraints—all while trying to protect your organization. Traditional GRC approaches aren’t cutting it anymore. They’re slow, inflexible, and often prioritize compliance over actual security.&lt;/p&gt;&#xA;&lt;p&gt;The key challenge is &lt;strong&gt;decoupling compliance from security&lt;/strong&gt;. Compliance frameworks, while necessary, shouldn’t dictate how you manage security risks. Passing audits doesn’t mean your organization is secure. CISOs need to focus on real threats and risks, letting compliance be a byproduct of effective security rather than the driver.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Foundations of Vulnerability Management: Strengthening Your Cybersecurity Posture</title>
-      <link>https://cybersecurityos.net/posts/vuln/vulnerability-management-101/</link>
-      <pubDate>Wed, 25 Sep 2024 23:19:07 -0500</pubDate>
-      <guid>https://cybersecurityos.net/posts/vuln/vulnerability-management-101/</guid>
-      <description>&lt;p&gt;In today’s digital world, no organization is immune to cyber threats. From small businesses to global enterprises, everyone is a potential target for hackers seeking to exploit vulnerabilities. Whether you&amp;rsquo;re a seasoned cybersecurity professional or a curious beginner, understanding &lt;strong&gt;vulnerability management&lt;/strong&gt; is key to safeguarding your systems and data.&lt;/p&gt;&#xA;&lt;p&gt;In this post, we&amp;rsquo;ll break down the basics of vulnerability management, explain why it&amp;rsquo;s important, and provide steps for implementing an effective vulnerability management program.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
