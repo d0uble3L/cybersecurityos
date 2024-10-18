@@ -3,6 +3,7 @@ title = "Turbocharge Your Container Security with NVIDIA's NIM Agent Blueprint"
 date = 2024-10-17T23:29:07-05:00
 draft = false
 featured_image = "/posts/ai-devsecops/images/nvidia-container.webp"
+images = ["/posts/ai-devsecops/images/nvidia-container.webp"]
 tags =  ["DevSecOps","CI/CD","AI","Artificial Intelligence", "Cybersecurity"]
 description = "NVIDIA’s cooking up something that’ll make your life a whole lot easier—and faster. The NIM Agent Blueprint is an AI-driven, GPU-powered answer to container security woes, turning the days-long process of vulnerability analysis into a matter of seconds."
 +++
