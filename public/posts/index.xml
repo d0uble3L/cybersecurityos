@@ -6,8 +6,15 @@
     <description>Recent content in Posts on CybersecurityOS</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Oct 2024 23:29:07 -0500</lastBuildDate>
     <atom:link href="https://cybersecurityos.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Turbocharge Your Container Security with NVIDIA&#39;s NIM Agent Blueprint</title>
+      <link>https://cybersecurityos.net/posts/ai-devsecops/nvidia-container-security/</link>
+      <pubDate>Thu, 17 Oct 2024 23:29:07 -0500</pubDate>
+      <guid>https://cybersecurityos.net/posts/ai-devsecops/nvidia-container-security/</guid>
+      <description>&lt;p&gt;Let’s be real—cybersecurity is getting crazier by the day. The number of vulnerabilities out there is skyrocketing, and keeping up with them is like playing whack-a-mole on expert level. By the end of 2023, the CVE database was pushing past 200K reported vulnerabilities. Now, imagine trying to sift through hundreds of data points just to assess a &lt;em&gt;single&lt;/em&gt; container for risks. Yeah, no thanks.&lt;/p&gt;&#xA;&lt;p&gt;But here’s the good news: NVIDIA’s cooking up something that’ll make your life a whole lot easier—and faster. The &lt;strong&gt;NIM Agent Blueprint&lt;/strong&gt; is an AI-driven, GPU-powered answer to container security woes, turning the days-long process of vulnerability analysis into a matter of seconds. Seconds! That’s the kind of efficiency every security team needs in their arsenal.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Broader Cloud Context: The Missing Piece in CNAPP</title>
       <link>https://cybersecurityos.net/posts/cloud/cnapp/</link>
