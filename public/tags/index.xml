@@ -6,8 +6,57 @@
     <description>Recent content in Tags on CybersecurityOS</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Oct 2024 23:29:07 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 13 Nov 2024 10:58:08 -0400</lastBuildDate>
     <atom:link href="https://cybersecurityos.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Compliance</title>
+      <link>https://cybersecurityos.net/tags/compliance/</link>
+      <pubDate>Wed, 13 Nov 2024 10:58:08 -0400</pubDate>
+      <guid>https://cybersecurityos.net/tags/compliance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cybersecurity</title>
+      <link>https://cybersecurityos.net/tags/cybersecurity/</link>
+      <pubDate>Wed, 13 Nov 2024 10:58:08 -0400</pubDate>
+      <guid>https://cybersecurityos.net/tags/cybersecurity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GRC</title>
+      <link>https://cybersecurityos.net/tags/grc/</link>
+      <pubDate>Wed, 13 Nov 2024 10:58:08 -0400</pubDate>
+      <guid>https://cybersecurityos.net/tags/grc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NIST</title>
+      <link>https://cybersecurityos.net/tags/nist/</link>
+      <pubDate>Wed, 13 Nov 2024 10:58:08 -0400</pubDate>
+      <guid>https://cybersecurityos.net/tags/nist/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Risk Management</title>
+      <link>https://cybersecurityos.net/tags/risk-management/</link>
+      <pubDate>Wed, 13 Nov 2024 10:58:08 -0400</pubDate>
+      <guid>https://cybersecurityos.net/tags/risk-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>https://cybersecurityos.net/tags/security/</link>
+      <pubDate>Wed, 13 Nov 2024 10:58:08 -0400</pubDate>
+      <guid>https://cybersecurityos.net/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SOC 2</title>
+      <link>https://cybersecurityos.net/tags/soc-2/</link>
+      <pubDate>Wed, 13 Nov 2024 10:58:08 -0400</pubDate>
+      <guid>https://cybersecurityos.net/tags/soc-2/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI</title>
       <link>https://cybersecurityos.net/tags/ai/</link>
@@ -37,38 +86,10 @@
       <description></description>
     </item>
     <item>
-      <title>Compliance</title>
-      <link>https://cybersecurityos.net/tags/compliance/</link>
-      <pubDate>Thu, 17 Oct 2024 23:29:07 -0500</pubDate>
-      <guid>https://cybersecurityos.net/tags/compliance/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Cybersecurity</title>
-      <link>https://cybersecurityos.net/tags/cybersecurity/</link>
-      <pubDate>Thu, 17 Oct 2024 23:29:07 -0500</pubDate>
-      <guid>https://cybersecurityos.net/tags/cybersecurity/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>DevSecOps</title>
       <link>https://cybersecurityos.net/tags/devsecops/</link>
       <pubDate>Thu, 17 Oct 2024 23:29:07 -0500</pubDate>
       <guid>https://cybersecurityos.net/tags/devsecops/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>GRC</title>
-      <link>https://cybersecurityos.net/tags/grc/</link>
-      <pubDate>Thu, 17 Oct 2024 23:29:07 -0500</pubDate>
-      <guid>https://cybersecurityos.net/tags/grc/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Risk Management</title>
-      <link>https://cybersecurityos.net/tags/risk-management/</link>
-      <pubDate>Thu, 17 Oct 2024 23:29:07 -0500</pubDate>
-      <guid>https://cybersecurityos.net/tags/risk-management/</guid>
       <description></description>
     </item>
     <item>
@@ -132,13 +153,6 @@
       <link>https://cybersecurityos.net/tags/python/</link>
       <pubDate>Fri, 27 Sep 2024 10:58:08 -0400</pubDate>
       <guid>https://cybersecurityos.net/tags/python/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Security</title>
-      <link>https://cybersecurityos.net/tags/security/</link>
-      <pubDate>Fri, 27 Sep 2024 10:58:08 -0400</pubDate>
-      <guid>https://cybersecurityos.net/tags/security/</guid>
       <description></description>
     </item>
     <item>

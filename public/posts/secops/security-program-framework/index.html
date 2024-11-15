@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Building Blocks of a Security Program: Aligning with NIST Framework &amp; SOC 2 Controls | CybersecurityOS</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="A comprehensive guide to building a security program that aligns with the NIST Cybersecurity Framework and SOC 2 controls to meet compliance and strengthen security posture.">
+    <meta name="generator" content="Hugo 0.134.3">
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+<link rel="shortcut icon" href="/images/c-os-l.svg" type="image/x-icon" />
+
+
+    
+
+    
+
+    
+      <link rel="canonical" href="https://cybersecurityos.net/posts/secops/security-program-framework/">
+    
+
+    <meta property="og:url" content="https://cybersecurityos.net/posts/secops/security-program-framework/">
+  <meta property="og:site_name" content="CybersecurityOS">
+  <meta property="og:title" content="Building Blocks of a Security Program: Aligning with NIST Framework & SOC 2 Controls">
+  <meta property="og:description" content="A comprehensive guide to building a security program that aligns with the NIST Cybersecurity Framework and SOC 2 controls to meet compliance and strengthen security posture.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-13T10:58:08-04:00">
+    <meta property="article:modified_time" content="2024-11-13T10:58:08-04:00">
+    <meta property="article:tag" content="Security">
+    <meta property="article:tag" content="Compliance">
+    <meta property="article:tag" content="NIST">
+    <meta property="article:tag" content="SOC 2">
+    <meta property="article:tag" content="Cybersecurity">
+    <meta property="article:tag" content="Risk Management">
+    <meta property="og:image" content="https://cybersecurityos.net/posts/secops/images/sec-program.webp">
+
+  <meta itemprop="name" content="Building Blocks of a Security Program: Aligning with NIST Framework & SOC 2 Controls">
+  <meta itemprop="description" content="A comprehensive guide to building a security program that aligns with the NIST Cybersecurity Framework and SOC 2 controls to meet compliance and strengthen security posture.">
+  <meta itemprop="datePublished" content="2024-11-13T10:58:08-04:00">
+  <meta itemprop="dateModified" content="2024-11-13T10:58:08-04:00">
+  <meta itemprop="wordCount" content="1228">
+  <meta itemprop="image" content="https://cybersecurityos.net/posts/secops/images/sec-program.webp">
+  <meta itemprop="keywords" content="Security,Compliance,NIST,SOC 2,Cybersecurity,Risk Management,GRC">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://cybersecurityos.net/posts/secops/images/sec-program.webp">
+  <meta name="twitter:title" content="Building Blocks of a Security Program: Aligning with NIST Framework & SOC 2 Controls">
+  <meta name="twitter:description" content="A comprehensive guide to building a security program that aligns with the NIST Cybersecurity Framework and SOC 2 controls to meet compliance and strengthen security posture.">
+      <meta name="twitter:site" content="@cyb3rshi3ld">
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  <header class="cover bg-top" style="background-image: url('https://cybersecurityos.net/posts/secops/images/sec-program.webp');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        <img src="/images/c-os.svg" class="w100 mw5-ns" alt="CybersecurityOS" />
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/features/" title="Features page">
+              Features
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/services/" title="Services page">
+              Services
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    
+    <a href="index.xml" target="_blank" rel="noopener" class="rss ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="RSS link" aria-label="follow on RSS——Opens in a new window">
+      
+        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <circle cx="6.18" cy="17.82" r="2.18"/>
+    <path id="scale" d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+</svg>
+
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    
+    <a href="https://twitter.com/cyb3rshi3ld" target="_blank" rel="noopener" class="twitter ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Twitter link" aria-label="follow on Twitter——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    
+    <a href="https://github.com/d0uble3L" target="_blank" rel="noopener" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    
+    <a href="https://linkedin.com/in/michaeltayo/" target="_blank" rel="noopener" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">Building Blocks of a Security Program: Aligning with NIST Framework &amp; SOC 2 Controls</div>
+          
+            <div class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              A comprehensive guide to building a security program that aligns with the NIST Cybersecurity Framework and SOC 2 controls to meet compliance and strengthen security posture.
+            </div>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+      
+      <a href="https://twitter.com/intent/tweet?url=https://cybersecurityos.net/posts/secops/security-program-framework/&amp;text=Building%20Blocks%20of%20a%20Security%20Program:%20Aligning%20with%20NIST%20Framework%20&amp;%20SOC%202%20Controls" class="ananke-social-link twitter no-underline" aria-label="share on Twitter">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+        
+      </a>
+    
+      
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://cybersecurityos.net/posts/secops/security-program-framework/&amp;title=Building%20Blocks%20of%20a%20Security%20Program:%20Aligning%20with%20NIST%20Framework%20&amp;%20SOC%202%20Controls" class="ananke-social-link linkedin no-underline" aria-label="share on LinkedIn">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+        
+      </a>
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Building Blocks of a Security Program: Aligning with NIST Framework &amp; SOC 2 Controls</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-11-13T10:58:08-04:00">November 13, 2024</time>
+      
+
+      
+      
+        <span class="f6 mv4 dib tracked"> - 6 minutes read </span>
+        <span class="f6 mv4 dib tracked"> - 1228 words </span>
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Creating a resilient security program that meets industry standards is crucial for today’s organizations, especially with the rising expectations around data security and regulatory compliance.</p>
+<p>For CISOs, Security Managers, GRC Specialists, and technology professionals, aligning with established frameworks such as the NIST Cybersecurity Framework (CSF) and SOC 2 controls provides a solid foundation for protecting sensitive data and ensuring trust with clients and stakeholders.</p>
+<p>This blog will outline how to build a security program that effectively aligns with both NIST and SOC 2, leveraging the strengths of each.</p>
+<h2 id="what-is-the-nist-cybersecurity-framework">What is the NIST Cybersecurity Framework?</h2>
+<p>The NIST Cybersecurity Framework (CSF) is a comprehensive set of guidelines developed by the National Institute of Standards and Technology (NIST) that assists organizations in managing and reducing cybersecurity risk. Its core structure is organized into five functions—<strong>Identify, Protect, Detect, Respond, and Recover</strong>—which together provide a holistic approach to cybersecurity risk management.</p>
+<p><img src="/posts/secops/images/nist-csf.png" alt="NIST Cybersecurity Framework"></p>
+<blockquote>
+<p>Source: <a href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Faccorian.com%2Fnist-csf%2F&amp;psig=AOvVaw00HdwfjilTHYvx_16jAelH&amp;ust=1731721970221000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBQQjRxqFwoTCNDN3pid3YkDFQAAAAAdAAAAABAR">Accorian - NIST Cybersecurity Framework</a></p>
+</blockquote>
+<ul>
+<li><strong>Identify</strong> involves understanding the context, systems, and risks that define the organization’s cybersecurity posture.</li>
+<li><strong>Protect</strong> covers safeguards to ensure critical infrastructure services are secure.</li>
+<li><strong>Detect</strong> focuses on identifying cybersecurity events in a timely manner.</li>
+<li><strong>Respond</strong> addresses response planning and mitigation for cybersecurity events.</li>
+<li><strong>Recover</strong> ensures resilience and quick recovery following a cybersecurity incident.</li>
+</ul>
+<p>By adopting the NIST CSF, organizations can establish a flexible, adaptive framework that scales with their needs, while also aligning with other standards like SOC 2.</p>
+<h2 id="understanding-soc-2-controls">Understanding SOC 2 Controls</h2>
+<p>SOC 2 is a widely recognized auditing standard developed by the American Institute of CPAs (AICPA). It is particularly valuable for service providers managing client data as it emphasizes <strong>data security, confidentiality, availability, processing integrity, and privacy</strong>—known as the Trust Service Criteria (TSC). SOC 2 controls provide a structured approach for assessing how an organization protects information.</p>
+<p><img src="/posts/secops/images/soc2.png" alt="SOC 2 Compliance"></p>
+<blockquote>
+<p>Source: <a href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.compliancepoint.com%2Fregulations%2Fsoc-2%2F&amp;psig=AOvVaw3ZNjBSOqwZFBuP9wAoag3w&amp;ust=1731722078178000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBQQjRxqFwoTCJjhh8yd3YkDFQAAAAAdAAAAABAE">CompliancePoint - SOC 2</a></p>
+</blockquote>
+<p>For SOC 2 compliance, organizations must implement robust controls to safeguard information and demonstrate continuous compliance through audits. These criteria align closely with security functions in the NIST CSF, making it easier to combine both frameworks in a unified program.</p>
+<h2 id="mapping-nist-csf-with-soc-2-controls">Mapping NIST CSF with SOC 2 Controls</h2>
+<p>The NIST CSF and SOC 2 Trust Service Criteria overlap in many areas, making them complementary frameworks. For instance:</p>
+<ul>
+<li><strong>Identify</strong> and <strong>Protect</strong> functions in NIST relate closely to SOC 2’s <strong>Security</strong> and <strong>Confidentiality</strong> criteria.</li>
+<li><strong>Detect</strong> and <strong>Respond</strong> align well with <strong>Processing Integrity</strong> and <strong>Availability</strong>, as they ensure data integrity and service uptime.</li>
+<li><strong>Recover</strong> in NIST supports SOC 2’s <strong>Availability</strong>, helping organizations maintain resilience.</li>
+</ul>
+<p>Mapping these frameworks allows organizations to streamline control implementation, focusing on both risk reduction and compliance. By cross-mapping NIST functions and SOC 2 controls, companies can develop a layered security posture that satisfies both regulatory requirements and practical cybersecurity needs.</p>
+<p><img src="/posts/secops/images/csf.png" alt="Understanding NIST CSF"></p>
+<blockquote>
+<p>Source: <a href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Farcticwolf.com%2Funderstanding-and-implementing-the-nist-csf-2-0-cybersecurity-framework%2F&amp;psig=AOvVaw00HdwfjilTHYvx_16jAelH&amp;ust=1731721970221000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBQQjRxqFwoTCNDN3pid3YkDFQAAAAAdAAAAABAa">ArcticWolf - Understanding and Implementing the NIST CSF</a></p>
+</blockquote>
+<h2 id="building-blocks-of-a-security-program-aligned-with-nist-and-soc-2">Building Blocks of a Security Program Aligned with NIST and SOC 2</h2>
+<p>To effectively combine NIST CSF and SOC 2, a security program must incorporate several essential building blocks:</p>
+<h3 id="governance-and-risk-management">Governance and Risk Management</h3>
+<p>Establishing governance frameworks is foundational. CISOs and security leaders should set policies that define the organization’s security posture, risk tolerance, and strategic objectives. Regular risk assessments help in identifying and mitigating potential threats aligned with both NIST’s Identify function and SOC 2 Security requirements.</p>
+<h3 id="asset-management-and-inventory-identify">Asset Management and Inventory (Identify)</h3>
+<p>An accurate, comprehensive asset inventory is essential for identifying critical information systems, devices, and data flows. Both NIST and SOC 2 emphasize asset management to improve visibility into what needs to be protected, providing a clear basis for access control and incident response processes.</p>
+<h3 id="access-controls-protect">Access Controls (Protect)</h3>
+<p>Access controls are fundamental in both NIST and SOC 2 frameworks. Implement role-based access and least privilege principles to ensure only authorized individuals can access sensitive systems and data. Technologies such as multi-factor authentication (MFA) strengthen access security and are critical in reducing unauthorized access risks.</p>
+<h3 id="security-awareness-and-training-protect">Security Awareness and Training (Protect)</h3>
+<p>Human error remains a significant factor in security incidents, so training and awareness are critical. NIST emphasizes Protect measures, which SOC 2 reinforces through policies that require regular training on security practices, phishing, and social engineering. Continuous education empowers employees to recognize and respond to potential security threats.</p>
+<h3 id="vulnerability-management-detect">Vulnerability Management (Detect)</h3>
+<p>Vulnerability management is a proactive element of both the NIST Detect function and SOC 2’s Processing Integrity criterion. Regular scanning, assessment, and prioritization of vulnerabilities should be part of the security program. Implement patch management and continuous monitoring to identify vulnerabilities before they lead to incidents.</p>
+<h3 id="incident-response-respond">Incident Response (Respond)</h3>
+<p>Both frameworks emphasize having a clear, structured approach to incident response. Define the process for detecting, responding to, and containing cybersecurity events. For SOC 2, logging incidents and documenting response efforts are essential for audit preparation. This step also aligns with NIST’s Respond function, helping organizations respond quickly and minimize potential damage.</p>
+<h3 id="recovery-planning-recover">Recovery Planning (Recover)</h3>
+<p>Recovery is crucial for business continuity, especially following a disruptive security incident. Recovery planning aligns with both NIST and SOC 2’s Availability criterion. Regularly test disaster recovery (DR) and business continuity plans to ensure they meet organizational requirements and function as intended during an incident.</p>
+<h2 id="-nist--soc-2-security-program-checklist">📋 NIST &amp; SOC 2 Security Program Checklist</h2>
+<p><strong>Looking to align your security program with the NIST Cybersecurity Framework (CSF) and SOC 2 controls?</strong></p>
+<p>Our <a href="https://trilltayo.gumroad.com/l/sec-program-checklist">NIST &amp; SOC 2 Security Program Checklist</a> provides an easy-to-follow, step-by-step guide for building a robust security posture that meets regulatory compliance requirements. Ideal for CISOs, Security Managers, GRC Specialists, and Technology Professionals, this checklist helps streamline your security programs while ensuring alignment with industry standards.</p>
+<h3 id="-what-youll-get">🔍 What You&rsquo;ll Get</h3>
+<ul>
+<li>Comprehensive checklist with actionable steps</li>
+<li>Guidance on aligning with NIST CSF’s five core functions</li>
+<li>SOC 2 control mapping for easy compliance</li>
+<li>Practical tips for implementing strong security governance</li>
+</ul>
+<p><img src="/posts/secops/images/sec-program-checklist.png" alt="NIST &amp; SOC 2 Security Program Checklist"></p>
+<p><em>Image Source: <a href="https://trilltayo.gumroad.com/l/sec-program-checklist">CyberSHIELD | CybersecurityOS. Gumroad</a></em></p>
+<p><strong>Ready to strengthen your security program? <a href="https://trilltayo.gumroad.com/l/sec-program-checklist">Get your checklist today!</a></strong></p>
+<h2 id="measuring-and-improving-security-posture">Measuring and Improving Security Posture</h2>
+<p>Continuous improvement is a core principle in both NIST and SOC 2. Security professionals should engage in regular audits, tests, and assessments to ensure that implemented controls are effective and evolve with emerging threats. SOC 2 audits, in particular, provide a structured way to validate security measures.</p>
+<p>Organizations should leverage metrics and KPIs that measure the effectiveness of controls across the NIST CSF and SOC 2 criteria, such as response time to incidents, vulnerability remediation timeframes, and user access compliance rates. A proactive approach to measuring and improving security posture helps maintain compliance and mitigates risks efficiently.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Aligning a security program with the NIST Cybersecurity Framework and SOC 2 controls builds a resilient and comprehensive approach to cybersecurity. For CISOs, GRC specialists, and technology leaders, this alignment enables the organization to address regulatory requirements, maintain robust security practices, and gain customer trust. A security program built on these frameworks not only helps to manage risk but also strengthens the organization’s reputation in a landscape where data protection is paramount.</p>
+<hr>
+<h2 id="additional-resources-and-recommendations">Additional Resources and Recommendations</h2>
+<ul>
+<li><strong><a href="https://www.nist.gov/cyberframework">NIST Cybersecurity Framework (CSF) Overview</a></strong></li>
+<li><strong><a href="https://us.aicpa.org/interestareas/frc/assuranceadvisoryservices/aicpasoc2report">SOC 2 Trust Service Criteria Overview</a></strong></li>
+<li><strong><a href="https://www.isaca.org/resources">Guide to Implementing NIST and SOC 2 Controls</a></strong></li>
+</ul>
+<p>By leveraging these resources, security teams can gain a deeper understanding of NIST and SOC 2 frameworks and apply best practices for building and optimizing a security program that ensures compliance and security excellence.</p>
+<p>Thanks for reading,</p>
+<p>Michael</p>
+<p>If you enjoy the content, then consider <a href="https://trilltayo.gumroad.com/coffee">buying me a coffee.</a></p>
+<hr>
+<p><strong>P.S.</strong> Stay updated on the latest cybersecurity trends and best practices by subscribing to our newsletter or leaving your thoughts in the comments below! <a href="https://cybershieldacademy.net">Visit CyberSHIELD</a></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/security/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Security</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/compliance/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Compliance</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/nist/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">NIST</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/soc-2/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">SOC 2</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/cybersecurity/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Cybersecurity</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/risk-management/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Risk Management</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/grc/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">GRC</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+        <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-www-cybersecurityos-net" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/grc/images/rethinking-grc-ciso-assistant/">Rethinking GRC: How CISOs Can Keep Up With Growing Demands</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/python/pylint-github-action/">Pylint Power-Up: Automated Code Quality Checks for GitHub Projects</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/vuln/vulnerability-management-101/">Foundations of Vulnerability Management: Strengthening Your Cybersecurity Posture</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://cybersecurityos.net/" >
+    &copy;  CybersecurityOS 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    
+    <a href="index.xml" target="_blank" rel="noopener" class="rss ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="RSS link" aria-label="follow on RSS——Opens in a new window">
+      
+        <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <circle cx="6.18" cy="17.82" r="2.18"/>
+    <path id="scale" d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/>
+</svg>
+
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    
+    <a href="https://twitter.com/cyb3rshi3ld" target="_blank" rel="noopener" class="twitter ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Twitter link" aria-label="follow on Twitter——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    
+    <a href="https://github.com/d0uble3L" target="_blank" rel="noopener" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    
+    <a href="https://linkedin.com/in/michaeltayo/" target="_blank" rel="noopener" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
