@@ -40,11 +40,11 @@ Our risk assessment process involves:
 
 ### Service Tiers
 
-| **Tier**                                         | **Description**                                                                                                        | **Includes**                                                              | **Pricing**                                                            |
-|--------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|------------------------------------------------------------------------|
-| **Tier 1: Basic Assessment**                     | Suitable for small businesses and organizations with limited IT infrastructure.                                         | Vulnerability scanning and risk analysis.                                 | [Request A Quote](https://www.cybersecurityos.net/contact/)            |
-| **Tier 2: Comprehensive Assessment (MOST POPULAR)** | Ideal for medium-sized businesses and organizations with complex IT environments.                                       | In-depth vulnerability assessment, risk analysis, and remediation planning.| [Request A Quote](https://www.cybersecurityos.net/contact/)            |
-| **Tier 3: Enterprise Assessment (COMING SOON)**  | Designed for large organizations with critical IT infrastructure and high-security requirements.                        | Advanced vulnerability assessment, risk analysis, remediation planning, and ongoing monitoring. | [Contact us today to learn more](https://www.cybersecurityos.net/contact/) |
+| **Tier**                                         | **Description**                                                                                                        | **Includes**                                                              |
+|--------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
+| **Tier 1: Basic Assessment**                     | Suitable for small businesses and organizations with limited IT infrastructure.                                         | Vulnerability scanning and risk analysis.                                 |
+| **Tier 2: Comprehensive Assessment (MOST POPULAR)** | Ideal for medium-sized businesses and organizations with complex IT environments.                                       | In-depth vulnerability assessment, risk analysis, and remediation planning.|
+| **Tier 3: Enterprise Assessment (COMING SOON)**  | Designed for large organizations with critical IT infrastructure and high-security requirements.                        | Advanced vulnerability assessment, risk analysis, remediation planning, and ongoing monitoring. |
 
 **Note**: Pricing may vary based on the scope of the assessment, the size of your organization, and the complexity of your IT environment.
 
