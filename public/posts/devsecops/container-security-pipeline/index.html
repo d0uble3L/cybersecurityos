@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Building Blocks of a Security Program: Aligning with NIST Framework &amp; SOC 2 Controls | CybersecurityOS</title>
+    <title>Building a Secure DevSecOps Pipeline: Deploying to Amazon ECR with GitHub Actions and Trivy | CybersecurityOS</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="A comprehensive guide to building a security program that aligns with the NIST Cybersecurity Framework and SOC 2 controls to meet compliance and strengthen security posture.">
+    <meta name="description" content="Learn how to set up a secure CI/CD pipeline to deploy container images to Amazon ECR using GitHub Actions and Trivy.">
     <meta name="generator" content="Hugo 0.134.3">
     
     
@@ -33,37 +33,36 @@
     
 
     
-      <link rel="canonical" href="https://cybersecurityos.net/posts/secops/security-program-framework/">
+      <link rel="canonical" href="https://cybersecurityos.net/posts/devsecops/container-security-pipeline/">
     
 
-    <meta property="og:url" content="https://cybersecurityos.net/posts/secops/security-program-framework/">
+    <meta property="og:url" content="https://cybersecurityos.net/posts/devsecops/container-security-pipeline/">
   <meta property="og:site_name" content="CybersecurityOS">
-  <meta property="og:title" content="Building Blocks of a Security Program: Aligning with NIST Framework & SOC 2 Controls">
-  <meta property="og:description" content="A comprehensive guide to building a security program that aligns with the NIST Cybersecurity Framework and SOC 2 controls to meet compliance and strengthen security posture.">
+  <meta property="og:title" content="Building a Secure DevSecOps Pipeline: Deploying to Amazon ECR with GitHub Actions and Trivy">
+  <meta property="og:description" content="Learn how to set up a secure CI/CD pipeline to deploy container images to Amazon ECR using GitHub Actions and Trivy.">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-11-13T10:58:08-04:00">
-    <meta property="article:modified_time" content="2024-11-13T10:58:08-04:00">
-    <meta property="article:tag" content="Security">
-    <meta property="article:tag" content="Compliance">
-    <meta property="article:tag" content="NIST">
-    <meta property="article:tag" content="SOC 2">
-    <meta property="article:tag" content="Cybersecurity">
-    <meta property="article:tag" content="Risk Management">
-    <meta property="og:image" content="https://cybersecurityos.net/posts/secops/images/sec-program.webp">
+    <meta property="article:published_time" content="2024-12-03T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-12-03T00:00:00+00:00">
+    <meta property="article:tag" content="DevSecOps">
+    <meta property="article:tag" content="AWS">
+    <meta property="article:tag" content="GitHub Actions">
+    <meta property="article:tag" content="Container Security">
+    <meta property="article:tag" content="Trivy">
+    <meta property="og:image" content="https://cybersecurityos.net/posts/devsecops/images/devsecops-trivy.webp">
 
-  <meta itemprop="name" content="Building Blocks of a Security Program: Aligning with NIST Framework & SOC 2 Controls">
-  <meta itemprop="description" content="A comprehensive guide to building a security program that aligns with the NIST Cybersecurity Framework and SOC 2 controls to meet compliance and strengthen security posture.">
-  <meta itemprop="datePublished" content="2024-11-13T10:58:08-04:00">
-  <meta itemprop="dateModified" content="2024-11-13T10:58:08-04:00">
-  <meta itemprop="wordCount" content="1228">
-  <meta itemprop="image" content="https://cybersecurityos.net/posts/secops/images/sec-program.webp">
-  <meta itemprop="keywords" content="Security,Compliance,NIST,SOC 2,Cybersecurity,Risk Management,GRC">
+  <meta itemprop="name" content="Building a Secure DevSecOps Pipeline: Deploying to Amazon ECR with GitHub Actions and Trivy">
+  <meta itemprop="description" content="Learn how to set up a secure CI/CD pipeline to deploy container images to Amazon ECR using GitHub Actions and Trivy.">
+  <meta itemprop="datePublished" content="2024-12-03T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-12-03T00:00:00+00:00">
+  <meta itemprop="wordCount" content="768">
+  <meta itemprop="image" content="https://cybersecurityos.net/posts/devsecops/images/devsecops-trivy.webp">
+  <meta itemprop="keywords" content="DevSecOps,AWS,GitHub Actions,Container Security,Trivy">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://cybersecurityos.net/posts/secops/images/sec-program.webp">
-  <meta name="twitter:title" content="Building Blocks of a Security Program: Aligning with NIST Framework & SOC 2 Controls">
-  <meta name="twitter:description" content="A comprehensive guide to building a security program that aligns with the NIST Cybersecurity Framework and SOC 2 controls to meet compliance and strengthen security posture.">
+  <meta name="twitter:image" content="https://cybersecurityos.net/posts/devsecops/images/devsecops-trivy.webp">
+  <meta name="twitter:title" content="Building a Secure DevSecOps Pipeline: Deploying to Amazon ECR with GitHub Actions and Trivy">
+  <meta name="twitter:description" content="Learn how to set up a secure CI/CD pipeline to deploy container images to Amazon ECR using GitHub Actions and Trivy.">
       <meta name="twitter:site" content="@cyb3rshi3ld">
 
 	
@@ -76,7 +75,7 @@
   
 
   
-  <header class="cover bg-top" style="background-image: url('https://cybersecurityos.net/posts/secops/images/sec-program.webp');">
+  <header class="cover bg-top" style="background-image: url('https://cybersecurityos.net/posts/devsecops/images/devsecops-trivy.webp');">
     <div class="bg-black-60">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
@@ -186,10 +185,10 @@
 
       <div class="tc-l pv6 ph3 ph4-ns">
         
-          <div class="f2 f1-l fw2 white-90 mb0 lh-title">Building Blocks of a Security Program: Aligning with NIST Framework &amp; SOC 2 Controls</div>
+          <div class="f2 f1-l fw2 white-90 mb0 lh-title">Building a Secure DevSecOps Pipeline: Deploying to Amazon ECR with GitHub Actions and Trivy</div>
           
             <div class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
-              A comprehensive guide to building a security program that aligns with the NIST Cybersecurity Framework and SOC 2 controls to meet compliance and strengthen security posture.
+              Learn how to set up a secure CI/CD pipeline to deploy container images to Amazon ECR using GitHub Actions and Trivy.
             </div>
           
         
@@ -222,7 +221,7 @@
   <div id="sharing" class="mt3 ananke-socials">
     
       
-      <a href="https://twitter.com/intent/tweet?url=https://cybersecurityos.net/posts/secops/security-program-framework/&amp;text=Building%20Blocks%20of%20a%20Security%20Program:%20Aligning%20with%20NIST%20Framework%20&amp;%20SOC%202%20Controls" class="ananke-social-link twitter no-underline" aria-label="share on Twitter">
+      <a href="https://twitter.com/intent/tweet?url=https://cybersecurityos.net/posts/devsecops/container-security-pipeline/&amp;text=Building%20a%20Secure%20DevSecOps%20Pipeline:%20Deploying%20to%20Amazon%20ECR%20with%20GitHub%20Actions%20and%20Trivy" class="ananke-social-link twitter no-underline" aria-label="share on Twitter">
         
         <span class="icon"> <svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
 </span>
@@ -230,7 +229,7 @@
       </a>
     
       
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://cybersecurityos.net/posts/secops/security-program-framework/&amp;title=Building%20Blocks%20of%20a%20Security%20Program:%20Aligning%20with%20NIST%20Framework%20&amp;%20SOC%202%20Controls" class="ananke-social-link linkedin no-underline" aria-label="share on LinkedIn">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://cybersecurityos.net/posts/devsecops/container-security-pipeline/&amp;title=Building%20a%20Secure%20DevSecOps%20Pipeline:%20Deploying%20to%20Amazon%20ECR%20with%20GitHub%20Actions%20and%20Trivy" class="ananke-social-link linkedin no-underline" aria-label="share on LinkedIn">
         
         <span class="icon"> <svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
@@ -242,97 +241,178 @@
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">Building Blocks of a Security Program: Aligning with NIST Framework &amp; SOC 2 Controls</h1>
+      <h1 class="f1 athelas mt3 mb1">Building a Secure DevSecOps Pipeline: Deploying to Amazon ECR with GitHub Actions and Trivy</h1>
       
       
       
-      <time class="f6 mv4 dib tracked" datetime="2024-11-13T10:58:08-04:00">November 13, 2024</time>
+      <time class="f6 mv4 dib tracked" datetime="2024-12-03T00:00:00Z">December 3, 2024</time>
       
 
       
       
-        <span class="f6 mv4 dib tracked"> - 6 minutes read </span>
-        <span class="f6 mv4 dib tracked"> - 1228 words </span>
+        <span class="f6 mv4 dib tracked"> - 4 minutes read </span>
+        <span class="f6 mv4 dib tracked"> - 768 words </span>
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Creating a resilient security program that meets industry standards is crucial for today’s organizations, especially with the rising expectations around data security and regulatory compliance.</p>
-<p>For CISOs, Security Managers, GRC Specialists, and technology professionals, aligning with established frameworks such as the NIST Cybersecurity Framework (CSF) and SOC 2 controls provides a solid foundation for protecting sensitive data and ensuring trust with clients and stakeholders.</p>
-<p>This blog will outline how to build a security program that effectively aligns with both NIST and SOC 2, leveraging the strengths of each.</p>
-<h2 id="what-is-the-nist-cybersecurity-framework">What is the NIST Cybersecurity Framework?</h2>
-<p>The NIST Cybersecurity Framework (CSF) is a comprehensive set of guidelines developed by the National Institute of Standards and Technology (NIST) that assists organizations in managing and reducing cybersecurity risk. Its core structure is organized into five functions—<strong>Identify, Protect, Detect, Respond, and Recover</strong>—which together provide a holistic approach to cybersecurity risk management.</p>
-<p><img src="/posts/secops/images/nist-csf.png" alt="NIST Cybersecurity Framework"></p>
-<blockquote>
-<p>Source: <a href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Faccorian.com%2Fnist-csf%2F&amp;psig=AOvVaw00HdwfjilTHYvx_16jAelH&amp;ust=1731721970221000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBQQjRxqFwoTCNDN3pid3YkDFQAAAAAdAAAAABAR">Accorian - NIST Cybersecurity Framework</a></p>
-</blockquote>
-<ul>
-<li><strong>Identify</strong> involves understanding the context, systems, and risks that define the organization’s cybersecurity posture.</li>
-<li><strong>Protect</strong> covers safeguards to ensure critical infrastructure services are secure.</li>
-<li><strong>Detect</strong> focuses on identifying cybersecurity events in a timely manner.</li>
-<li><strong>Respond</strong> addresses response planning and mitigation for cybersecurity events.</li>
-<li><strong>Recover</strong> ensures resilience and quick recovery following a cybersecurity incident.</li>
-</ul>
-<p>By adopting the NIST CSF, organizations can establish a flexible, adaptive framework that scales with their needs, while also aligning with other standards like SOC 2.</p>
-<h2 id="understanding-soc-2-controls">Understanding SOC 2 Controls</h2>
-<p>SOC 2 is a widely recognized auditing standard developed by the American Institute of CPAs (AICPA). It is particularly valuable for service providers managing client data as it emphasizes <strong>data security, confidentiality, availability, processing integrity, and privacy</strong>—known as the Trust Service Criteria (TSC). SOC 2 controls provide a structured approach for assessing how an organization protects information.</p>
-<p><img src="/posts/secops/images/soc2.png" alt="SOC 2 Compliance"></p>
-<blockquote>
-<p>Source: <a href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.compliancepoint.com%2Fregulations%2Fsoc-2%2F&amp;psig=AOvVaw3ZNjBSOqwZFBuP9wAoag3w&amp;ust=1731722078178000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBQQjRxqFwoTCJjhh8yd3YkDFQAAAAAdAAAAABAE">CompliancePoint - SOC 2</a></p>
-</blockquote>
-<p>For SOC 2 compliance, organizations must implement robust controls to safeguard information and demonstrate continuous compliance through audits. These criteria align closely with security functions in the NIST CSF, making it easier to combine both frameworks in a unified program.</p>
-<h2 id="mapping-nist-csf-with-soc-2-controls">Mapping NIST CSF with SOC 2 Controls</h2>
-<p>The NIST CSF and SOC 2 Trust Service Criteria overlap in many areas, making them complementary frameworks. For instance:</p>
-<ul>
-<li><strong>Identify</strong> and <strong>Protect</strong> functions in NIST relate closely to SOC 2’s <strong>Security</strong> and <strong>Confidentiality</strong> criteria.</li>
-<li><strong>Detect</strong> and <strong>Respond</strong> align well with <strong>Processing Integrity</strong> and <strong>Availability</strong>, as they ensure data integrity and service uptime.</li>
-<li><strong>Recover</strong> in NIST supports SOC 2’s <strong>Availability</strong>, helping organizations maintain resilience.</li>
-</ul>
-<p>Mapping these frameworks allows organizations to streamline control implementation, focusing on both risk reduction and compliance. By cross-mapping NIST functions and SOC 2 controls, companies can develop a layered security posture that satisfies both regulatory requirements and practical cybersecurity needs.</p>
-<p><img src="/posts/secops/images/csf.png" alt="Understanding NIST CSF"></p>
-<blockquote>
-<p>Source: <a href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Farcticwolf.com%2Funderstanding-and-implementing-the-nist-csf-2-0-cybersecurity-framework%2F&amp;psig=AOvVaw00HdwfjilTHYvx_16jAelH&amp;ust=1731721970221000&amp;source=images&amp;cd=vfe&amp;opi=89978449&amp;ved=0CBQQjRxqFwoTCNDN3pid3YkDFQAAAAAdAAAAABAa">ArcticWolf - Understanding and Implementing the NIST CSF</a></p>
-</blockquote>
-<h2 id="building-blocks-of-a-security-program-aligned-with-nist-and-soc-2">Building Blocks of a Security Program Aligned with NIST and SOC 2</h2>
-<p>To effectively combine NIST CSF and SOC 2, a security program must incorporate several essential building blocks:</p>
-<h3 id="governance-and-risk-management">Governance and Risk Management</h3>
-<p>Establishing governance frameworks is foundational. CISOs and security leaders should set policies that define the organization’s security posture, risk tolerance, and strategic objectives. Regular risk assessments help in identifying and mitigating potential threats aligned with both NIST’s Identify function and SOC 2 Security requirements.</p>
-<h3 id="asset-management-and-inventory-identify">Asset Management and Inventory (Identify)</h3>
-<p>An accurate, comprehensive asset inventory is essential for identifying critical information systems, devices, and data flows. Both NIST and SOC 2 emphasize asset management to improve visibility into what needs to be protected, providing a clear basis for access control and incident response processes.</p>
-<h3 id="access-controls-protect">Access Controls (Protect)</h3>
-<p>Access controls are fundamental in both NIST and SOC 2 frameworks. Implement role-based access and least privilege principles to ensure only authorized individuals can access sensitive systems and data. Technologies such as multi-factor authentication (MFA) strengthen access security and are critical in reducing unauthorized access risks.</p>
-<h3 id="security-awareness-and-training-protect">Security Awareness and Training (Protect)</h3>
-<p>Human error remains a significant factor in security incidents, so training and awareness are critical. NIST emphasizes Protect measures, which SOC 2 reinforces through policies that require regular training on security practices, phishing, and social engineering. Continuous education empowers employees to recognize and respond to potential security threats.</p>
-<h3 id="vulnerability-management-detect">Vulnerability Management (Detect)</h3>
-<p>Vulnerability management is a proactive element of both the NIST Detect function and SOC 2’s Processing Integrity criterion. Regular scanning, assessment, and prioritization of vulnerabilities should be part of the security program. Implement patch management and continuous monitoring to identify vulnerabilities before they lead to incidents.</p>
-<h3 id="incident-response-respond">Incident Response (Respond)</h3>
-<p>Both frameworks emphasize having a clear, structured approach to incident response. Define the process for detecting, responding to, and containing cybersecurity events. For SOC 2, logging incidents and documenting response efforts are essential for audit preparation. This step also aligns with NIST’s Respond function, helping organizations respond quickly and minimize potential damage.</p>
-<h3 id="recovery-planning-recover">Recovery Planning (Recover)</h3>
-<p>Recovery is crucial for business continuity, especially following a disruptive security incident. Recovery planning aligns with both NIST and SOC 2’s Availability criterion. Regularly test disaster recovery (DR) and business continuity plans to ensure they meet organizational requirements and function as intended during an incident.</p>
-<h2 id="-nist--soc-2-security-program-checklist">📋 NIST &amp; SOC 2 Security Program Checklist</h2>
-<p><strong>Looking to align your security program with the NIST Cybersecurity Framework (CSF) and SOC 2 controls?</strong></p>
-<p>Our <a href="https://trilltayo.gumroad.com/l/sec-program-checklist">NIST &amp; SOC 2 Security Program Checklist</a> provides an easy-to-follow, step-by-step guide for building a robust security posture that meets regulatory compliance requirements. Ideal for CISOs, Security Managers, GRC Specialists, and Technology Professionals, this checklist helps streamline your security programs while ensuring alignment with industry standards.</p>
-<h3 id="-what-youll-get">🔍 What You&rsquo;ll Get</h3>
-<ul>
-<li>Comprehensive checklist with actionable steps</li>
-<li>Guidance on aligning with NIST CSF’s five core functions</li>
-<li>SOC 2 control mapping for easy compliance</li>
-<li>Practical tips for implementing strong security governance</li>
-</ul>
-<p><img src="/posts/secops/images/sec-program-checklist.png" alt="NIST &amp; SOC 2 Security Program Checklist"></p>
-<p><em>Image Source: <a href="https://trilltayo.gumroad.com/l/sec-program-checklist">CyberSHIELD | CybersecurityOS. Gumroad</a></em></p>
-<p><strong>Ready to strengthen your security program? <a href="https://trilltayo.gumroad.com/l/sec-program-checklist">Get your checklist today!</a></strong></p>
-<h2 id="measuring-and-improving-security-posture">Measuring and Improving Security Posture</h2>
-<p>Continuous improvement is a core principle in both NIST and SOC 2. Security professionals should engage in regular audits, tests, and assessments to ensure that implemented controls are effective and evolve with emerging threats. SOC 2 audits, in particular, provide a structured way to validate security measures.</p>
-<p>Organizations should leverage metrics and KPIs that measure the effectiveness of controls across the NIST CSF and SOC 2 criteria, such as response time to incidents, vulnerability remediation timeframes, and user access compliance rates. A proactive approach to measuring and improving security posture helps maintain compliance and mitigates risks efficiently.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>Aligning a security program with the NIST Cybersecurity Framework and SOC 2 controls builds a resilient and comprehensive approach to cybersecurity. For CISOs, GRC specialists, and technology leaders, this alignment enables the organization to address regulatory requirements, maintain robust security practices, and gain customer trust. A security program built on these frameworks not only helps to manage risk but also strengthens the organization’s reputation in a landscape where data protection is paramount.</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>In today’s rapidly evolving tech landscape, incorporating security into every step of the development lifecycle is essential. <a href="https://owasp.org/www-project-devsecops/">DevSecOps</a> ensures that security is baked into the process, not bolted on afterward.</p>
+<p>This blog post will walk you through setting up a secure <a href="https://aws.amazon.com/devops/continuous-delivery/">CI/CD pipeline</a> to deploy a container image to <a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html">Amazon Elastic Container Registry (ECR)</a> using <a href="https://docs.github.com/en/actions">GitHub Actions</a>, with vulnerability scanning using <a href="https://aquasecurity.github.io/trivy/">Trivy</a>.</p>
+<p>By the end of this guide, you’ll have a secure, automated workflow that builds, scans, and pushes your container images to ECR.</p>
+<p><img src="/posts/devsecops/images/trivy-logo.png" alt="Trivy"> <!-- raw HTML omitted --></p>
 <hr>
-<h2 id="additional-resources-and-recommendations">Additional Resources and Recommendations</h2>
+<h2 id="why-devsecops">Why DevSecOps?</h2>
+<p>Traditional development pipelines often treat security as an afterthought. This approach leads to costly fixes and vulnerabilities slipping into production. With DevSecOps:</p>
 <ul>
-<li><strong><a href="https://www.nist.gov/cyberframework">NIST Cybersecurity Framework (CSF) Overview</a></strong></li>
-<li><strong><a href="https://us.aicpa.org/interestareas/frc/assuranceadvisoryservices/aicpasoc2report">SOC 2 Trust Service Criteria Overview</a></strong></li>
-<li><strong><a href="https://www.isaca.org/resources">Guide to Implementing NIST and SOC 2 Controls</a></strong></li>
+<li><strong>Security is integrated</strong>: Vulnerabilities are caught early in the CI/CD pipeline.</li>
+<li><strong>Automation ensures consistency</strong>: Tools like Trivy automatically enforce security standards.</li>
+<li><strong>Developers and security teams collaborate</strong>: Security becomes a shared responsibility.</li>
 </ul>
-<p>By leveraging these resources, security teams can gain a deeper understanding of NIST and SOC 2 frameworks and apply best practices for building and optimizing a security program that ensures compliance and security excellence.</p>
+<p><img src="/posts/devsecops/images/github-actions-ecr.png" alt="GitHub Actitons to ECR"> <!-- raw HTML omitted --></p>
+<hr>
+<h2 id="setting-up-the-pipeline">Setting Up the Pipeline</h2>
+<p>We’ll create a GitHub Actions workflow with the following steps:</p>
+<ol>
+<li>Checkout the repository.</li>
+<li>Configure AWS credentials for ECR access.</li>
+<li>Build the Docker image.</li>
+<li>Scan the Docker image with Trivy.</li>
+<li>Push the image to Amazon ECR if it passes the security scan.</li>
+</ol>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>An AWS account with permissions to access ECR.</li>
+<li>A GitHub repository.</li>
+<li>Docker installed locally for testing (optional).</li>
+</ul>
+<hr>
+<h2 id="step-1-configuring-aws-and-ecr">Step 1: Configuring AWS and ECR</h2>
+<p>Before setting up the GitHub Actions workflow:</p>
+<ol>
+<li>Create an ECR repository in your AWS Management Console.</li>
+<li>Store your AWS credentials (<code>AWS_ACCESS_KEY_ID</code> and <code>AWS_SECRET_ACCESS_KEY</code>) as <strong>secrets</strong> in your GitHub repository:
+<ul>
+<li>Go to <strong>Settings &gt; Secrets and Variables &gt; Actions &gt; New repository secret</strong>.</li>
+<li>Add the credentials with names <code>AWS_ACCESS_KEY_ID</code> and <code>AWS_SECRET_ACCESS_KEY</code>.</li>
+</ul>
+</li>
+</ol>
+<p><img src="/posts/devsecops/images/github-variables.png" alt="GitHub Variables"> <!-- raw HTML omitted --></p>
+<hr>
+<h2 id="step-2-writing-the-github-actions-workflow">Step 2: Writing the GitHub Actions Workflow</h2>
+<p>Create a workflow file in your GitHub repository: <code>.github/workflows/deploy-to-ecr.yml</code>.</p>
+<p>Here’s the complete workflow:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;Build and Deploy to ECR with Trivy Scanning&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">main</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pull_request</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">BuildAndPushImageToECR</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Checkout Code</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Configure AWS Credentials</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">aws-actions/configure-aws-credentials@v2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">aws-access-key-id</span>: <span style="color:#ae81ff">${{ secrets.AWS_ACCESS_KEY_ID }}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">aws-secret-access-key</span>: <span style="color:#ae81ff">${{ secrets.AWS_SECRET_ACCESS_KEY }}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">aws-region</span>: <span style="color:#ae81ff">us-west-1</span> <span style="color:#75715e"># Adjust to your region</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Login to Amazon ECR</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">id</span>: <span style="color:#ae81ff">login-ecr</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">aws-actions/amazon-ecr-login@v2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build Docker Image</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">id</span>: <span style="color:#ae81ff">build-image</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">env</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">ECR_REGISTRY</span>: <span style="color:#ae81ff">${{ steps.login-ecr.outputs.registry }}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">ECR_REPOSITORY</span>: <span style="color:#e6db74">&#34;my-app-repo&#34;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">IMAGE_TAG</span>: <span style="color:#e6db74">&#34;latest&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          echo &#34;::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG&#34;</span>          
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Scan Docker Image with Trivy</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">env</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">ECR_REGISTRY</span>: <span style="color:#ae81ff">${{ steps.login-ecr.outputs.registry }}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">ECR_REPOSITORY</span>: <span style="color:#e6db74">&#34;my-app-repo&#34;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">IMAGE_TAG</span>: <span style="color:#e6db74">&#34;latest&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          docker pull $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG || true
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          docker run --rm -v /var/run/docker.sock:/var/run/docker.sock \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          aquasec/trivy:latest image --severity HIGH,CRITICAL \
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG</span>          
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Push Image to Amazon ECR</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">env</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">ECR_REGISTRY</span>: <span style="color:#ae81ff">${{ steps.login-ecr.outputs.registry }}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">ECR_REPOSITORY</span>: <span style="color:#e6db74">&#34;my-app-repo&#34;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">IMAGE_TAG</span>: <span style="color:#e6db74">&#34;latest&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: |<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG</span>          
+</span></span></code></pre></div><h2 id="step-3-how-it-works">Step 3: How It Works</h2>
+<h3 id="step-by-step-breakdown">Step-by-Step Breakdown</h3>
+<ol>
+<li><strong>Checkout Code</strong>: The <code>actions/checkout</code> step fetches the latest code from your repository.</li>
+<li><strong>Configure AWS Credentials</strong>: The <code>aws-actions/configure-aws-credentials</code> step sets up AWS access using the stored secrets.</li>
+<li><strong>Login to Amazon ECR</strong>: The <code>amazon-ecr-login</code> action authenticates Docker with your ECR registry.</li>
+<li><strong>Build Docker Image</strong>: This step builds your Docker image and tags it for ECR.</li>
+<li><strong>Scan with Trivy</strong>: The image is scanned for vulnerabilities. The pipeline will fail if high or critical issues are found.</li>
+<li><strong>Push to ECR</strong>: If the scan passes, the image is pushed to ECR.</li>
+</ol>
+<p>Here is what the Trivy Output looks like:
+<img src="/posts/devsecops/images/trivy-output.png" alt="Trivy Output"> <!-- raw HTML omitted --></p>
+<hr>
+<h2 id="step-4-demo">Step 4: Demo</h2>
+<h3 id="running-the-workflow">Running the Workflow</h3>
+<ol>
+<li>Commit the <code>.github/workflows/deploy-to-ecr.yml</code> file to your repository.</li>
+<li>Push changes to the <code>main</code> branch or open a pull request.</li>
+<li>Monitor the workflow progress in the <strong>Actions</strong> tab of your repository.</li>
+</ol>
+<p>If vulnerabilities are detected, the pipeline will fail at the Trivy scanning step, providing detailed output of the issues.</p>
+<p><img src="/posts/devsecops/images/github-actions.png" alt="GitHub Actions"> <!-- raw HTML omitted --></p>
+<hr>
+<h2 id="wrapping-up">Wrapping Up</h2>
+<p>This secure DevSecOps pipeline demonstrates how to integrate security checks with GitHub Actions using Trivy, ensuring vulnerabilities are caught early. By automating the build, scan, and deploy process, your team can deliver secure containerized applications with confidence.</p>
+<p>Start integrating security into your pipeline today, and embrace the principles of DevSecOps for a safer development lifecycle.</p>
+<h2 id="further-reading">Further Reading</h2>
+<ul>
+<li>
+<p><a href="https://docs.github.com/en/actions">GitHub Actions Documentation</a><br>
+Learn the basics and advanced features of GitHub Actions.</p>
+</li>
+<li>
+<p><a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html">Amazon ECR Documentation</a><br>
+Understand how to use Amazon Elastic Container Registry (ECR) for managing Docker container images.</p>
+</li>
+<li>
+<p><a href="https://aquasecurity.github.io/trivy/">Trivy Documentation</a><br>
+Official documentation for Trivy, an open-source vulnerability scanner.</p>
+</li>
+<li>
+<p><a href="https://owasp.org/www-project-devsecops/">Introduction to DevSecOps</a><br>
+Explore the principles and practices of integrating security into DevOps workflows.</p>
+</li>
+<li>
+<p><a href="https://docs.docker.com/">Docker Documentation</a><br>
+Comprehensive guide to Docker, including containerization concepts and commands.</p>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/devops/continuous-delivery/">Best Practices for Building a CI/CD Pipeline</a><br>
+Learn how to create robust CI/CD pipelines with security and scalability in mind.</p>
+</li>
+<li>
+<p><a href="https://owasp.org/www-project-dependency-check/">OWASP Dependency-Check</a><br>
+Another tool for vulnerability detection in project dependencies.</p>
+</li>
+</ul>
+<hr>
 <p>Thanks for reading,</p>
 <p>Michael</p>
 <p>If you enjoy the content, then consider <a href="https://trilltayo.gumroad.com/coffee">buying me a coffee.</a></p>
@@ -341,31 +421,23 @@
 <ul class="pa0">
   
    <li class="list di">
-     <a href="/tags/security/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Security</a>
+     <a href="/tags/devsecops/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">DevSecOps</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/compliance/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Compliance</a>
+     <a href="/tags/aws/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">AWS</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/nist/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">NIST</a>
+     <a href="/tags/github-actions/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">GitHub Actions</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/soc-2/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">SOC 2</a>
+     <a href="/tags/container-security/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Container Security</a>
    </li>
   
    <li class="list di">
-     <a href="/tags/cybersecurity/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Cybersecurity</a>
-   </li>
-  
-   <li class="list di">
-     <a href="/tags/risk-management/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Risk Management</a>
-   </li>
-  
-   <li class="list di">
-     <a href="/tags/grc/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">GRC</a>
+     <a href="/tags/trivy/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Trivy</a>
    </li>
   
 </ul>
@@ -406,15 +478,11 @@
     <ul class="pa0 list">
 	   
 	     <li  class="mb2">
-          <a href="/posts/grc/rethinking-grc-ciso-assistant/">Rethinking GRC: How CISOs Can Keep Up With Growing Demands</a>
+          <a href="/posts/ai-devsecops/nvidia-container-security/">Turbocharge Your Container Security with NVIDIA&#39;s NIM Agent Blueprint</a>
         </li>
 	    
 	     <li  class="mb2">
-          <a href="/posts/python/pylint-github-action/">Pylint Power-Up: Automated Code Quality Checks for GitHub Projects</a>
-        </li>
-	    
-	     <li  class="mb2">
-          <a href="/posts/vuln/vulnerability-management-101/">Foundations of Vulnerability Management: Strengthening Your Cybersecurity Posture</a>
+          <a href="/posts/ai-devsecops/ai-impact-on-devsecops/">The Power of AI in DevSecOps: Building Secure Applications Faster</a>
         </li>
 	    
     </ul>

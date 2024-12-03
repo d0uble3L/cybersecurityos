@@ -6,8 +6,15 @@
     <description>Recent content on CybersecurityOS</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Nov 2024 10:58:08 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 03 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://cybersecurityos.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a Secure DevSecOps Pipeline: Deploying to Amazon ECR with GitHub Actions and Trivy</title>
+      <link>https://cybersecurityos.net/posts/devsecops/container-security-pipeline/</link>
+      <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://cybersecurityos.net/posts/devsecops/container-security-pipeline/</guid>
+      <description>&lt;p&gt;In today’s rapidly evolving tech landscape, incorporating security into every step of the development lifecycle is essential. &lt;a href=&#34;https://owasp.org/www-project-devsecops/&#34;&gt;DevSecOps&lt;/a&gt; ensures that security is baked into the process, not bolted on afterward.&lt;/p&gt;&#xA;&lt;p&gt;This blog post will walk you through setting up a secure &lt;a href=&#34;https://aws.amazon.com/devops/continuous-delivery/&#34;&gt;CI/CD pipeline&lt;/a&gt; to deploy a container image to &lt;a href=&#34;https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html&#34;&gt;Amazon Elastic Container Registry (ECR)&lt;/a&gt; using &lt;a href=&#34;https://docs.github.com/en/actions&#34;&gt;GitHub Actions&lt;/a&gt;, with vulnerability scanning using &lt;a href=&#34;https://aquasecurity.github.io/trivy/&#34;&gt;Trivy&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;By the end of this guide, you’ll have a secure, automated workflow that builds, scans, and pushes your container images to ECR.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Building Blocks of a Security Program: Aligning with NIST Framework &amp; SOC 2 Controls</title>
       <link>https://cybersecurityos.net/posts/secops/security-program-framework/</link>
@@ -17,9 +24,9 @@
     </item>
     <item>
       <title>Rethinking GRC: How CISOs Can Keep Up With Growing Demands</title>
-      <link>https://cybersecurityos.net/posts/grc/images/rethinking-grc-ciso-assistant/</link>
+      <link>https://cybersecurityos.net/posts/grc/rethinking-grc-ciso-assistant/</link>
       <pubDate>Thu, 17 Oct 2024 23:29:07 -0500</pubDate>
-      <guid>https://cybersecurityos.net/posts/grc/images/rethinking-grc-ciso-assistant/</guid>
+      <guid>https://cybersecurityos.net/posts/grc/rethinking-grc-ciso-assistant/</guid>
       <description>&lt;p&gt;As the digital threat landscape evolves, &lt;strong&gt;Governance, Risk, and Compliance (GRC)&lt;/strong&gt; has become an essential focus for every CISO. But managing GRC today feels like juggling endless responsibilities—compliance demands, security risks, and resource constraints—all while trying to protect your organization. Traditional GRC approaches aren’t cutting it anymore. They’re slow, inflexible, and often prioritize compliance over actual security.&lt;/p&gt;&#xA;&lt;p&gt;The key challenge is &lt;strong&gt;decoupling compliance from security&lt;/strong&gt;. Compliance frameworks, while necessary, shouldn’t dictate how you manage security risks. Passing audits doesn’t mean your organization is secure. CISOs need to focus on real threats and risks, letting compliance be a byproduct of effective security rather than the driver.&lt;/p&gt;</description>
     </item>
     <item>
