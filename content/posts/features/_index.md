@@ -22,6 +22,8 @@ If you enjoy the content, then consider [buying me a coffee.](https://trilltayo.
 
 ## Podcasts
 
+[How hard is it to make DevSecOps work in a Hybrid Cloud?](https://youtu.be/Eqz17Xp7keM?si=9pUZe37M5EAkzFdb) (December, 2024)
+
 [Champions of Security: Common Pitfalls of Cloud Security](https://youtu.be/uyLyscWJHqU?si=2nN0Bisw7vLD-vGT) (September, 2023)
 
 [Bulletproofing Banking & Financial Services in the Cloud with DevSecOps](https://www.cigniti.com/resource/podcasts/bulletproofing-banking-financial-services-in-the-cloud-with-devsecops/) (September, 2023)
