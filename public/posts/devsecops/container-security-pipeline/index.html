@@ -56,7 +56,7 @@
   <meta itemprop="description" content="Learn how to set up a secure CI/CD pipeline to deploy container images to Amazon ECR using GitHub Actions and Trivy.">
   <meta itemprop="datePublished" content="2024-12-03T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-12-03T00:00:00+00:00">
-  <meta itemprop="wordCount" content="768">
+  <meta itemprop="wordCount" content="868">
   <meta itemprop="image" content="https://cybersecurityos.net/posts/devsecops/images/devsecops-trivy.webp">
   <meta itemprop="keywords" content="DevSecOps,AWS,GitHub Actions,Container Security,Trivy">
   <meta name="twitter:card" content="summary_large_image">
@@ -250,8 +250,8 @@
 
       
       
-        <span class="f6 mv4 dib tracked"> - 4 minutes read </span>
-        <span class="f6 mv4 dib tracked"> - 768 words </span>
+        <span class="f6 mv4 dib tracked"> - 5 minutes read </span>
+        <span class="f6 mv4 dib tracked"> - 868 words </span>
       
     </header>
     <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>In today’s rapidly evolving tech landscape, incorporating security into every step of the development lifecycle is essential. <a href="https://owasp.org/www-project-devsecops/">DevSecOps</a> ensures that security is baked into the process, not bolted on afterward.</p>
@@ -288,6 +288,33 @@
 <p>Before setting up the GitHub Actions workflow:</p>
 <ol>
 <li>Create an ECR repository in your AWS Management Console.</li>
+</ol>
+<p>Here is a awscli command that you can use to create an ecr repo&hellip;</p>
+<p>first you need to set your environment variables</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>export AWS_ACCESS_KEY_ID<span style="color:#f92672">=</span>&lt;YOUR_ACCESS_KEY_ID&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>export AWS_SECRET_ACCESS_KEY<span style="color:#f92672">=</span>&lt;YOUR_SECRET_ACCESS_KEY&gt;
+</span></span></code></pre></div><p>To create a repository in the ECR from the AWS CLI On a machine that has the AWS CLI configured, enter the following to create the repository:</p>
+<p>For example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> aws ecr create-repository --region eu-west-1 --repository-name node-repo
+</span></span></code></pre></div><p>If everything goes well, you should see an output like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;repository&#34;</span>: <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;repositoryArn&#34;</span>: <span style="color:#e6db74">&#34;arn:aws:ecr:eu-west-1:XXXXXXXXXX:repository/test&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;registryId&#34;</span>: <span style="color:#e6db74">&#34;790783553687&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;repositoryName&#34;</span>: <span style="color:#e6db74">&#34;test&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;repositoryUri&#34;</span>: <span style="color:#e6db74">&#34;XXXXXXXXXX.dkr.ecr.eu-west-1.amazonaws.com/test&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;createdAt&#34;</span>: <span style="color:#e6db74">&#34;2022-09-28T14:01:20+01:00&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;imageTagMutability&#34;</span>: <span style="color:#e6db74">&#34;MUTABLE&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;imageScanningConfiguration&#34;</span>: <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;scanOnPush&#34;</span>: false
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;encryptionConfiguration&#34;</span>: <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;encryptionType&#34;</span>: <span style="color:#e6db74">&#34;AES256&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><ol start="2">
 <li>Store your AWS credentials (<code>AWS_ACCESS_KEY_ID</code> and <code>AWS_SECRET_ACCESS_KEY</code>) as <strong>secrets</strong> in your GitHub repository:
 <ul>
 <li>Go to <strong>Settings &gt; Secrets and Variables &gt; Actions &gt; New repository secret</strong>.</li>

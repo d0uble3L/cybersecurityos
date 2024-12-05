@@ -53,6 +53,46 @@ We’ll create a GitHub Actions workflow with the following steps:
 Before setting up the GitHub Actions workflow:
 
 1. Create an ECR repository in your AWS Management Console.
+
+Here is a awscli command that you can use to create an ecr repo...
+
+first you need to set your environment variables
+
+```bash
+export AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_ID>
+
+export AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ACCESS_KEY>
+```
+
+To create a repository in the ECR from the AWS CLI On a machine that has the AWS CLI configured, enter the following to create the repository:
+
+For example:
+
+```bash
+ aws ecr create-repository --region eu-west-1 --repository-name node-repo
+```
+
+If everything goes well, you should see an output like this:
+
+```bash
+{
+    "repository": {
+        "repositoryArn": "arn:aws:ecr:eu-west-1:XXXXXXXXXX:repository/test",
+        "registryId": "790783553687",
+        "repositoryName": "test",
+        "repositoryUri": "XXXXXXXXXX.dkr.ecr.eu-west-1.amazonaws.com/test",
+        "createdAt": "2022-09-28T14:01:20+01:00",
+        "imageTagMutability": "MUTABLE",
+        "imageScanningConfiguration": {
+            "scanOnPush": false
+        },
+        "encryptionConfiguration": {
+            "encryptionType": "AES256"
+        }
+    }
+}
+```
+
 2. Store your AWS credentials (`AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`) as **secrets** in your GitHub repository:
    - Go to **Settings > Secrets and Variables > Actions > New repository secret**.
    - Add the credentials with names `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
