@@ -6,8 +6,43 @@
     <description>Recent content in Tags on CybersecurityOS</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jan 2025 12:45:00 -0500</lastBuildDate>
     <atom:link href="https://cybersecurityos.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Access Control</title>
+      <link>https://cybersecurityos.net/tags/access-control/</link>
+      <pubDate>Sun, 12 Jan 2025 12:45:00 -0500</pubDate>
+      <guid>https://cybersecurityos.net/tags/access-control/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Compliance</title>
+      <link>https://cybersecurityos.net/tags/compliance/</link>
+      <pubDate>Sun, 12 Jan 2025 12:45:00 -0500</pubDate>
+      <guid>https://cybersecurityos.net/tags/compliance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cybersecurity</title>
+      <link>https://cybersecurityos.net/tags/cybersecurity/</link>
+      <pubDate>Sun, 12 Jan 2025 12:45:00 -0500</pubDate>
+      <guid>https://cybersecurityos.net/tags/cybersecurity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HIPAA</title>
+      <link>https://cybersecurityos.net/tags/hipaa/</link>
+      <pubDate>Sun, 12 Jan 2025 12:45:00 -0500</pubDate>
+      <guid>https://cybersecurityos.net/tags/hipaa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PCI DSS</title>
+      <link>https://cybersecurityos.net/tags/pci-dss/</link>
+      <pubDate>Sun, 12 Jan 2025 12:45:00 -0500</pubDate>
+      <guid>https://cybersecurityos.net/tags/pci-dss/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AWS</title>
       <link>https://cybersecurityos.net/tags/aws/</link>
@@ -41,20 +76,6 @@
       <link>https://cybersecurityos.net/tags/trivy/</link>
       <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://cybersecurityos.net/tags/trivy/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Compliance</title>
-      <link>https://cybersecurityos.net/tags/compliance/</link>
-      <pubDate>Wed, 13 Nov 2024 10:58:08 -0400</pubDate>
-      <guid>https://cybersecurityos.net/tags/compliance/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Cybersecurity</title>
-      <link>https://cybersecurityos.net/tags/cybersecurity/</link>
-      <pubDate>Wed, 13 Nov 2024 10:58:08 -0400</pubDate>
-      <guid>https://cybersecurityos.net/tags/cybersecurity/</guid>
       <description></description>
     </item>
     <item>
