@@ -2,13 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://cybersecurityos.net/tags/cyber-warfare/</loc>
+    <lastmod>2025-02-08T10:58:08-04:00</lastmod>
+  </url><url>
+    <loc>https://cybersecurityos.net/tags/cybersecurity/</loc>
+    <lastmod>2025-02-08T10:58:08-04:00</lastmod>
+  </url><url>
+    <loc>https://cybersecurityos.net/tags/espionage/</loc>
+    <lastmod>2025-02-08T10:58:08-04:00</lastmod>
+  </url><url>
+    <loc>https://cybersecurityos.net/posts/secops/cyber-warfare/</loc>
+    <lastmod>2025-02-08T10:58:08-04:00</lastmod>
+  </url><url>
+    <loc>https://cybersecurityos.net/tags/moonlight-maze/</loc>
+    <lastmod>2025-02-08T10:58:08-04:00</lastmod>
+  </url><url>
+    <loc>https://cybersecurityos.net/posts/</loc>
+    <lastmod>2025-02-08T10:58:08-04:00</lastmod>
+  </url><url>
+    <loc>https://cybersecurityos.net/tags/regulations/</loc>
+    <lastmod>2025-02-08T10:58:08-04:00</lastmod>
+  </url><url>
+    <loc>https://cybersecurityos.net/tags/risk-management/</loc>
+    <lastmod>2025-02-08T10:58:08-04:00</lastmod>
+  </url><url>
+    <loc>https://cybersecurityos.net/tags/stuxnet/</loc>
+    <lastmod>2025-02-08T10:58:08-04:00</lastmod>
+  </url><url>
+    <loc>https://cybersecurityos.net/tags/</loc>
+    <lastmod>2025-02-08T10:58:08-04:00</lastmod>
+  </url><url>
     <loc>https://cybersecurityos.net/tags/access-control/</loc>
     <lastmod>2025-01-12T12:45:00-05:00</lastmod>
   </url><url>
     <loc>https://cybersecurityos.net/tags/compliance/</loc>
-    <lastmod>2025-01-12T12:45:00-05:00</lastmod>
-  </url><url>
-    <loc>https://cybersecurityos.net/tags/cybersecurity/</loc>
     <lastmod>2025-01-12T12:45:00-05:00</lastmod>
   </url><url>
     <loc>https://cybersecurityos.net/tags/hipaa/</loc>
@@ -18,12 +45,6 @@
     <lastmod>2025-01-12T12:45:00-05:00</lastmod>
   </url><url>
     <loc>https://cybersecurityos.net/posts/grc/pci-vs-hipaa/</loc>
-    <lastmod>2025-01-12T12:45:00-05:00</lastmod>
-  </url><url>
-    <loc>https://cybersecurityos.net/posts/</loc>
-    <lastmod>2025-01-12T12:45:00-05:00</lastmod>
-  </url><url>
-    <loc>https://cybersecurityos.net/tags/</loc>
     <lastmod>2025-01-12T12:45:00-05:00</lastmod>
   </url><url>
     <loc>https://cybersecurityos.net/tags/aws/</loc>
@@ -51,9 +72,6 @@
     <lastmod>2024-11-13T10:58:08-04:00</lastmod>
   </url><url>
     <loc>https://cybersecurityos.net/tags/nist/</loc>
-    <lastmod>2024-11-13T10:58:08-04:00</lastmod>
-  </url><url>
-    <loc>https://cybersecurityos.net/tags/risk-management/</loc>
     <lastmod>2024-11-13T10:58:08-04:00</lastmod>
   </url><url>
     <loc>https://cybersecurityos.net/tags/security/</loc>
