@@ -29,7 +29,7 @@ Source: [Fortinet - WannaCry: Evolving History from Beta to 2.0](https://www.for
 
 ### Virus Hoaxes: Fear as a Weapon  
 
-Sometimes, the biggest threat isn’t even real. **Virus hoaxes** spread misinformation, tricking users into taking unnecessary actions. The “Good Times” hoax, for example, falsely claimed that opening an email could fry a hard drive. While not technically malware, hoaxes waste time, trigger unnecessary IT responses, and spread fear.
+Sometimes, the biggest threat isn’t even real. **Virus hoaxes** spread misinformation, tricking users into taking unnecessary actions. The [“Good Times” hoax](https://www.sophos.com/en-us/threat%20center/threat%20analyses/hoaxes/virus%20hoax/goodtimes.html), for example, falsely claimed that opening an email could fry a hard drive. While not technically malware, hoaxes waste time, trigger unnecessary IT responses and spread fear.
 
 ## Denial-of-Service Attacks and Blended Threats  
 
@@ -71,7 +71,7 @@ Trojan horses **disguise themselves as legitimate software** but pack a nasty su
 
 ### 1. Phishing: The Art of Deception  
 
-Phishing attacks use emails, fake websites, and messages to trick users into revealing sensitive info. One infamous case? The **2016 DNC hack**, where a phishing campaign led to a major political breach.
+Phishing attacks use emails, fake websites, and messages to trick users into revealing sensitive info. One infamous case? The [**2016 DNC hack**](https://www.washingtonpost.com/news/the-switch/wp/2016/07/22/wikileaks-posts-nearly-20000-hacked-dnc-emails-online/), where a phishing campaign led to a major political breach.
 
 #### Defense  
 
@@ -109,16 +109,16 @@ If you enjoy the content, then consider [buying me a coffee.](https://trilltayo.
 
 ## References
 
-- Akbanov, Maxat, et al. ["WannaCry Ransomware: Analysis of Infection, Persistence, Recovery Prevention and Propagation Mechanisms."](https://doi-org.libdatab.strayer.edu/10.26636/jtit.2019.130218) *Journal of Telecommunications & Information Technology*, Apr. 2024, pp. 64–75. EBSCOhost.
+- Akbanov, Maxat, et al. ["WannaCry Ransomware: Analysis of Infection, Persistence, Recovery Prevention, and Propagation Mechanisms."]() *Journal of Telecommunications & Information Technology*, Apr. 2024, pp. 64–75. EBSCOhost.
 
-- Sánchez-del-Vas, Rocío, and Jorge Tuñón-Navarro. ["Hoaxes’ Anatomy: Analysis of Disinformation during the Coronavirus Pandemic in Europe (2020-2022)."](https://doi-org.libdatab.strayer.edu/10.15581/003.37.4.1-19) *Communication & Society*, vol. 37, no. 4, Oct. 2024, pp. 1–19. EBSCOhost.
+- Sánchez-del-Vas, Rocío, and Jorge Tuñón-Navarro. ["Hoaxes’ Anatomy: Analysis of Disinformation during the Coronavirus Pandemic in Europe (2020-2022)."]() *Communication & Society*, vol. 37, no. 4, Oct. 2024, pp. 1–19. EBSCOhost.
 
-- Alam Rahmatulloh, et al. ["Identification of Mirai Botnet in IoT Environment through Denial-of-Service Attacks for Early Warning System."](https://doi-org.libdatab.strayer.edu/10.30630/joiv.6.3.1262) *JOIV: International Journal on Informatics Visualization*, vol. 6, no. 3, Sept. 2022, pp. 623–28. EBSCOhost.
+- Alam Rahmatulloh, et al. ["Identification of Mirai Botnet in IoT Environment through Denial-of-Service Attacks for Early Warning System."]() *JOIV: International Journal on Informatics Visualization*, vol. 6, no. 3, Sept. 2022, pp. 623–28.
 
-- Wan, Katherine S. ["Notpetya, Not Warfare: Rethinking the Insurance War Exclusion in the Context of International Cyberattacks."](https://research.ebsco.com/linkprocessor/plink?id=ad03d70e-e863-329f-b9b9-c673cebd3130) *Washington Law Review*, vol. 95, no. 3, Oct. 2020, pp. 1995–1620. EBSCOhost.
+- Wan, Katherine S. ["Notpetya, Not Warfare: Rethinking the Insurance War Exclusion in the Context of International Cyberattacks."]() *Washington Law Review*, vol. 95, no. 3, Oct. 2020, pp. 1995–1620.
 
-- Szabó, Csaba. ["Europol’s Role in the Fight against Cybercrime."](https://doi-org.libdatab.strayer.edu/10.38146/BSZ-AJIA.2024.v72.i9.pp1707-1714) *Belügyi Szemle / Academic Journal of Internal Affairs*, vol. 72, no. 9, Sept. 2024, pp. 1707–14. EBSCOhost.
+- Szabó, Csaba. ["Europol’s Role in the Fight against Cybercrime."](https://doi-org.libdatab.strayer.edu/10.38146/BSZ-AJIA.2024.v72.i9.pp1707-1714) *Belügyi Szemle / Academic Journal of Internal Affairs*, vol. 72, no. 9, Sept. 2024, pp. 1707–14.
 
-- Rosenberg, Daniel. ["Seizing the Means of Disruption: International Jurisdiction and Human Rights in the Expanding Frontier of Cyberspace."](https://research.ebsco.com/linkprocessor/plink?id=9f958b43-502b-370a-843c-070157d7f051) *New York University Journal of International Law & Politics*, vol. 55, no. 1, Jan. 2023, pp. 125–64. EBSCOhost.
+- Rosenberg, Daniel. ["Seizing the Means of Disruption: International Jurisdiction and Human Rights in the Expanding Frontier of Cyberspace."]() *New York University Journal of International Law & Politics*, vol. 55, no. 1, Jan. 2023, pp. 125–64.
 
-- Wescott, Clay G. ["Dark Mirror: Edward Snowden and the American Surveillance State."](https://doi-org.libdatab.strayer.edu/10.1111/gove.12537) *Governance*, vol. 33, no. 4, Oct. 2020, pp. 976–79. EBSCOhost.
+- Wescott, Clay G. ["Dark Mirror: Edward Snowden and the American Surveillance State."]() *Governance*, vol. 33, no. 4, Oct. 2020, pp. 976–79.
