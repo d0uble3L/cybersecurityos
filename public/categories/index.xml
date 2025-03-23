@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on CybersecurityOS</title>
-    <link>https://cybersecurityos.net/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on CybersecurityOS</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 03 Oct 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://cybersecurityos.net/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cloud Security</title>
-      <link>https://cybersecurityos.net/categories/cloud-security/</link>
+      <link>http://localhost:1313/categories/cloud-security/</link>
       <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://cybersecurityos.net/categories/cloud-security/</guid>
+      <guid>http://localhost:1313/categories/cloud-security/</guid>
       <description></description>
     </item>
     <item>
       <title>Cybersecurity</title>
-      <link>https://cybersecurityos.net/categories/cybersecurity/</link>
+      <link>http://localhost:1313/categories/cybersecurity/</link>
       <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://cybersecurityos.net/categories/cybersecurity/</guid>
+      <guid>http://localhost:1313/categories/cybersecurity/</guid>
       <description></description>
     </item>
   </channel>

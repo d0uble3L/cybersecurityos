@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Espionage on CybersecurityOS</title>
-    <link>https://cybersecurityos.net/tags/espionage/</link>
+    <link>http://localhost:1313/tags/espionage/</link>
     <description>Recent content in Espionage on CybersecurityOS</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 08 Feb 2025 10:58:08 -0400</lastBuildDate>
-    <atom:link href="https://cybersecurityos.net/tags/espionage/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/espionage/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Inside the Digital Battlefield: The Evolution of Cyber Warfare</title>
-      <link>https://cybersecurityos.net/posts/secops/cyber-warfare/</link>
+      <link>http://localhost:1313/posts/secops/cyber-warfare/</link>
       <pubDate>Sat, 08 Feb 2025 10:58:08 -0400</pubDate>
-      <guid>https://cybersecurityos.net/posts/secops/cyber-warfare/</guid>
+      <guid>http://localhost:1313/posts/secops/cyber-warfare/</guid>
       <description>&lt;h2 id=&#34;cyber-warfare-the-digital-frontline&#34;&gt;Cyber Warfare: The Digital Frontline&lt;/h2&gt;&#xA;&lt;p&gt;Cyber operations have come a long way, evolving from obscure espionage missions to full-scale digital warfare. These operations shape modern technology, influence global conflicts, and redefine the meaning of security in a hyper-connected world. Today, we’re diving into the strategic goals of cyber operations, the infamous Moonlight Maze and Stuxnet incidents, and the laws they helped bring into existence. Buckle up—this is where cybersecurity meets history.&lt;/p&gt;</description>
     </item>
   </channel>

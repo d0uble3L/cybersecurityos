@@ -2,167 +2,188 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://cybersecurityos.net/tags/cyber-warfare/</loc>
+    <loc>http://localhost:1313/posts/secops/cyber-threats/</loc>
+    <lastmod>2025-03-23T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cybersecurity/</loc>
+    <lastmod>2025-03-23T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ddos/</loc>
+    <lastmod>2025-03-23T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/malware/</loc>
+    <lastmod>2025-03-23T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-03-23T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/risk-mitigation/</loc>
+    <lastmod>2025-03-23T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-03-23T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/threat-vectors/</loc>
+    <lastmod>2025-03-23T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/trojan-horses/</loc>
+    <lastmod>2025-03-23T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/viruses/</loc>
+    <lastmod>2025-03-23T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cyber-warfare/</loc>
     <lastmod>2025-02-08T10:58:08-04:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/cybersecurity/</loc>
+    <loc>http://localhost:1313/tags/espionage/</loc>
     <lastmod>2025-02-08T10:58:08-04:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/espionage/</loc>
+    <loc>http://localhost:1313/posts/secops/cyber-warfare/</loc>
     <lastmod>2025-02-08T10:58:08-04:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/posts/secops/cyber-warfare/</loc>
+    <loc>http://localhost:1313/tags/moonlight-maze/</loc>
     <lastmod>2025-02-08T10:58:08-04:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/moonlight-maze/</loc>
+    <loc>http://localhost:1313/tags/regulations/</loc>
     <lastmod>2025-02-08T10:58:08-04:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/posts/</loc>
+    <loc>http://localhost:1313/tags/risk-management/</loc>
     <lastmod>2025-02-08T10:58:08-04:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/regulations/</loc>
+    <loc>http://localhost:1313/tags/stuxnet/</loc>
     <lastmod>2025-02-08T10:58:08-04:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/risk-management/</loc>
-    <lastmod>2025-02-08T10:58:08-04:00</lastmod>
-  </url><url>
-    <loc>https://cybersecurityos.net/tags/stuxnet/</loc>
-    <lastmod>2025-02-08T10:58:08-04:00</lastmod>
-  </url><url>
-    <loc>https://cybersecurityos.net/tags/</loc>
-    <lastmod>2025-02-08T10:58:08-04:00</lastmod>
-  </url><url>
-    <loc>https://cybersecurityos.net/tags/access-control/</loc>
+    <loc>http://localhost:1313/tags/access-control/</loc>
     <lastmod>2025-01-12T12:45:00-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/compliance/</loc>
+    <loc>http://localhost:1313/tags/compliance/</loc>
     <lastmod>2025-01-12T12:45:00-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/hipaa/</loc>
+    <loc>http://localhost:1313/tags/hipaa/</loc>
     <lastmod>2025-01-12T12:45:00-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/pci-dss/</loc>
+    <loc>http://localhost:1313/tags/pci-dss/</loc>
     <lastmod>2025-01-12T12:45:00-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/posts/grc/pci-vs-hipaa/</loc>
+    <loc>http://localhost:1313/posts/grc/pci-vs-hipaa/</loc>
     <lastmod>2025-01-12T12:45:00-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/aws/</loc>
+    <loc>http://localhost:1313/tags/aws/</loc>
     <lastmod>2024-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/posts/devsecops/container-security-pipeline/</loc>
+    <loc>http://localhost:1313/posts/devsecops/container-security-pipeline/</loc>
     <lastmod>2024-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/container-security/</loc>
+    <loc>http://localhost:1313/tags/container-security/</loc>
     <lastmod>2024-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/devsecops/</loc>
+    <loc>http://localhost:1313/tags/devsecops/</loc>
     <lastmod>2024-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/github-actions/</loc>
+    <loc>http://localhost:1313/tags/github-actions/</loc>
     <lastmod>2024-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/trivy/</loc>
+    <loc>http://localhost:1313/tags/trivy/</loc>
     <lastmod>2024-12-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/posts/secops/security-program-framework/</loc>
+    <loc>http://localhost:1313/posts/secops/security-program-framework/</loc>
     <lastmod>2024-11-13T10:58:08-04:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/grc/</loc>
+    <loc>http://localhost:1313/tags/grc/</loc>
     <lastmod>2024-11-13T10:58:08-04:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/nist/</loc>
+    <loc>http://localhost:1313/tags/nist/</loc>
     <lastmod>2024-11-13T10:58:08-04:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/security/</loc>
+    <loc>http://localhost:1313/tags/security/</loc>
     <lastmod>2024-11-13T10:58:08-04:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/soc-2/</loc>
+    <loc>http://localhost:1313/tags/soc-2/</loc>
     <lastmod>2024-11-13T10:58:08-04:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/ai/</loc>
+    <loc>http://localhost:1313/tags/ai/</loc>
     <lastmod>2024-10-17T23:29:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/artificial-intelligence/</loc>
+    <loc>http://localhost:1313/tags/artificial-intelligence/</loc>
     <lastmod>2024-10-17T23:29:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/ci/cd/</loc>
+    <loc>http://localhost:1313/tags/ci/cd/</loc>
     <lastmod>2024-10-17T23:29:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/ciso/</loc>
+    <loc>http://localhost:1313/tags/ciso/</loc>
     <lastmod>2024-10-17T23:29:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/posts/grc/rethinking-grc-ciso-assistant/</loc>
+    <loc>http://localhost:1313/posts/grc/rethinking-grc-ciso-assistant/</loc>
     <lastmod>2024-10-17T23:29:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/posts/ai-devsecops/nvidia-container-security/</loc>
+    <loc>http://localhost:1313/posts/ai-devsecops/nvidia-container-security/</loc>
     <lastmod>2024-10-17T23:29:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/services/</loc>
+    <loc>http://localhost:1313/services/</loc>
     <lastmod>2024-10-07T20:46:17-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/agentless-security/</loc>
+    <loc>http://localhost:1313/tags/agentless-security/</loc>
     <lastmod>2024-10-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/posts/cloud/cnapp/</loc>
+    <loc>http://localhost:1313/posts/cloud/cnapp/</loc>
     <lastmod>2024-10-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2024-10-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/cloud-security/</loc>
+    <loc>http://localhost:1313/tags/cloud-security/</loc>
     <lastmod>2024-10-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/categories/cloud-security/</loc>
+    <loc>http://localhost:1313/categories/cloud-security/</loc>
     <lastmod>2024-10-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/cnapp/</loc>
+    <loc>http://localhost:1313/tags/cnapp/</loc>
     <lastmod>2024-10-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/categories/cybersecurity/</loc>
+    <loc>http://localhost:1313/categories/cybersecurity/</loc>
     <lastmod>2024-10-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/workload-protection/</loc>
+    <loc>http://localhost:1313/tags/workload-protection/</loc>
     <lastmod>2024-10-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/automation/</loc>
+    <loc>http://localhost:1313/tags/automation/</loc>
     <lastmod>2024-09-27T10:58:08-04:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/code-quality/</loc>
+    <loc>http://localhost:1313/tags/code-quality/</loc>
     <lastmod>2024-09-27T10:58:08-04:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/github/</loc>
+    <loc>http://localhost:1313/tags/github/</loc>
     <lastmod>2024-09-27T10:58:08-04:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/pylint/</loc>
+    <loc>http://localhost:1313/tags/pylint/</loc>
     <lastmod>2024-09-27T10:58:08-04:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/posts/python/pylint-github-action/</loc>
+    <loc>http://localhost:1313/posts/python/pylint-github-action/</loc>
     <lastmod>2024-09-27T10:58:08-04:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/python/</loc>
+    <loc>http://localhost:1313/tags/python/</loc>
     <lastmod>2024-09-27T10:58:08-04:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/system-design/</loc>
+    <loc>http://localhost:1313/tags/system-design/</loc>
     <lastmod>2024-09-27T10:58:08-04:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/posts/ai-devsecops/ai-impact-on-devsecops/</loc>
+    <loc>http://localhost:1313/posts/ai-devsecops/ai-impact-on-devsecops/</loc>
     <lastmod>2024-09-25T23:29:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-09-25T23:19:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/posts/vuln/vulnerability-management-101/</loc>
+    <loc>http://localhost:1313/posts/vuln/vulnerability-management-101/</loc>
     <lastmod>2024-09-25T23:19:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/tags/vulnerability-management/</loc>
+    <loc>http://localhost:1313/tags/vulnerability-management/</loc>
     <lastmod>2024-09-25T23:19:07-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2024-09-23T20:46:17-05:00</lastmod>
   </url><url>
-    <loc>https://cybersecurityos.net/contact/</loc>
+    <loc>http://localhost:1313/contact/</loc>
   </url><url>
-    <loc>https://cybersecurityos.net/posts/features/</loc>
+    <loc>http://localhost:1313/posts/features/</loc>
   </url>
 </urlset>
