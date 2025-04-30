@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Container Security on CybersecurityOS</title>
-    <link>http://localhost:1313/tags/container-security/</link>
+    <link>https://cybersecurityos.net/tags/container-security/</link>
     <description>Recent content in Container Security on CybersecurityOS</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 03 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/container-security/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cybersecurityos.net/tags/container-security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building a Secure DevSecOps Pipeline: Deploying to Amazon ECR with GitHub Actions and Trivy</title>
-      <link>http://localhost:1313/posts/devsecops/container-security-pipeline/</link>
+      <link>https://cybersecurityos.net/posts/devsecops/container-security-pipeline/</link>
       <pubDate>Tue, 03 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/devsecops/container-security-pipeline/</guid>
+      <guid>https://cybersecurityos.net/posts/devsecops/container-security-pipeline/</guid>
       <description>&lt;p&gt;In today’s rapidly evolving tech landscape, incorporating security into every step of the development lifecycle is essential. &lt;a href=&#34;https://owasp.org/www-project-devsecops/&#34;&gt;DevSecOps&lt;/a&gt; ensures that security is baked into the process, not bolted on afterward.&lt;/p&gt;&#xA;&lt;p&gt;This blog post will walk you through setting up a secure &lt;a href=&#34;https://aws.amazon.com/devops/continuous-delivery/&#34;&gt;CI/CD pipeline&lt;/a&gt; to deploy a container image to &lt;a href=&#34;https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html&#34;&gt;Amazon Elastic Container Registry (ECR)&lt;/a&gt; using &lt;a href=&#34;https://docs.github.com/en/actions&#34;&gt;GitHub Actions&lt;/a&gt;, with vulnerability scanning using &lt;a href=&#34;https://aquasecurity.github.io/trivy/&#34;&gt;Trivy&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;By the end of this guide, you’ll have a secure, automated workflow that builds, scans, and pushes your container images to ECR.&lt;/p&gt;</description>
     </item>
   </channel>
