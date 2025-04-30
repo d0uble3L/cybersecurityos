@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Trojan Horses on CybersecurityOS</title>
-    <link>http://localhost:1313/tags/trojan-horses/</link>
+    <link>https://cybersecurityos.net/tags/trojan-horses/</link>
     <description>Recent content in Trojan Horses on CybersecurityOS</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 23 Mar 2025 10:00:00 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/trojan-horses/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://cybersecurityos.net/tags/trojan-horses/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Breaking Down Cyber Threats: Malware, Attacks, and How to Fight Back</title>
-      <link>http://localhost:1313/posts/secops/cyber-threats/</link>
+      <link>https://cybersecurityos.net/posts/secops/cyber-threats/</link>
       <pubDate>Sun, 23 Mar 2025 10:00:00 -0400</pubDate>
-      <guid>http://localhost:1313/posts/secops/cyber-threats/</guid>
+      <guid>https://cybersecurityos.net/posts/secops/cyber-threats/</guid>
       <description>&lt;h2 id=&#34;the-threat-of-viruses-malicious-code-and-virus-hoaxes&#34;&gt;The Threat of Viruses, Malicious Code, and Virus Hoaxes&lt;/h2&gt;&#xA;&lt;p&gt;In today’s hyperconnected digital world, cyber threats lurk around every corner, evolving in complexity and scale. Malicious software—ranging from viruses and worms to ransomware and botnets—poses a constant danger to individuals, businesses, and even nation-states. These threats can cripple entire systems, compromise sensitive data, and disrupt critical infrastructure.&lt;/p&gt;&#xA;&lt;p&gt;Beyond the tangible dangers of malware, another insidious threat exists: misinformation in the form of virus hoaxes. Deceptive warnings about nonexistent threats spread rapidly through emails, social media, and online forums, exploiting fear and uncertainty. These hoaxes waste valuable resources, cause unnecessary panic, and can even lead users to take actions that harm their own systems.&lt;/p&gt;</description>
     </item>
   </channel>
