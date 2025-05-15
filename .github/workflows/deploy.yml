@@ -1,5 +1,5 @@
 # Continuous Deployment to GitHub Pages
-name: CD: Deploy to GitHub Pages
+name: 'CD: Deploy to GitHub Pages'
 
 on:
   # Runs on pushes targeting the default branch
