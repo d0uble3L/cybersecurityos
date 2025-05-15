@@ -13,6 +13,12 @@ googleAnalytics = "YOUR_TRACKING_ID"  # Replace with your Google Analytics track
 [permalinks]
   post = "/blog/:year/:month/:day/:slug/"  # Customize the permalink structure for blog posts
 
+# Taxonomies: add social taxonomy to address deprecation of .Site.Social
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  social = "social"
+
 # Params (Optional: Adjust as needed based on your theme)
 [params]
   favicon = "images/c-os-l.svg"   # Path to your favicon
