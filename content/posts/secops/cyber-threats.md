@@ -101,7 +101,7 @@ Thanks for reading,
 
 Michael
 
-If you enjoy the content, then consider [buying me a coffee.](https://trilltayo.gumroad.com/coffee)
+If you enjoy the content, then consider [buying me a coffee.](https://store.cybersecurityos.net/coffee)
 
 ---
 
