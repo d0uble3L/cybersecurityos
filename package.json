@@ -1,5 +1,9 @@
 {
+  "scripts": {
+    "lint:md": "markdownlint \"content/**/*.md\""
+  },
   "devDependencies": {
-    "prettier": "^3.3.3"
+    "prettier": "^3.3.3",
+    "markdownlint-cli": "^0.37.1"
   }
 }
