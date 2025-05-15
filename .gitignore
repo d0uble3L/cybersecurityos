@@ -1,0 +1,14 @@
+## Hugo Generated Files ##
+public/
+resources/
+
+## Node modules ##
+node_modules/
+
+## Logs and Lock Files ##
+npm-debug.log*
+
+## MacOS & Editor Files ##
+.DS_Store
+hugo_build.lock
+*.swp

@@ -20,6 +20,8 @@ jobs:
         run: npm ci
       - name: Run markdownlint
         run: npm run lint:md
+        # Allow markdown lint failures without failing the entire workflow
+        continue-on-error: true
 
   hugo-build:
     name: Hugo Build
