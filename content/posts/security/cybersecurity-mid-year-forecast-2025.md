@@ -106,7 +106,6 @@ Cybersecurity is no longer a technical problem—it’s a strategic one. And in 
 - [Preventing Large-Scale Crypto Hacks: Key Security Measures for Exchanges](https://www.chainalysis.com/blog/preventing-crypto-hacks-best-practices-for-exchanges-hexagate/)
 - [Microsoft Security in Action: Deploying and Maximizing Advanced Identity Protection](https://techcommunity.microsoft.com/blog/microsoft-security-blog/microsoft-security-in-action-deploying-and-maximizing-advanced-identity-protecti/4385307)
 
-
 🧠 Want to dive deeper? Check out  our [Resources](https://store.cybersecurityos.net/) page.
 
 ---
