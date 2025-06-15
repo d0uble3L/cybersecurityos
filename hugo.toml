@@ -29,7 +29,7 @@ googleAnalytics = "YOUR_TRACKING_ID"  # Replace with your Google Analytics track
   show_reading_time = true
 
 [params.social]
-  linkedin = "https://linkedin.com/in/michaeltayo" #linkedin
+  linkedin = "https://linkedin.com/in/cybershieldacademy" #linkedin
   twitter = 'cyb3rshi3ld'
   
 # Menu Configuration (Optional: Customize navigation)
@@ -44,21 +44,14 @@ googleAnalytics = "YOUR_TRACKING_ID"  # Replace with your Google Analytics track
   weight = 2
 
 [[menu.main]]
-  name = "Features"
-  url = "/posts/features/"
-  weight = 3
-
-
- [[menu.main]]
-  name = "Services"
-  url = "/services/"
+  name = "Store"
+  url = "https://store.cybersecurityos.net/"
   weight = 4
 
  [[menu.main]]
   name = "Contact"
   url = "/contact/"
   weight = 5
-
 
 # Enable the sitemap
 [params.sitemap]

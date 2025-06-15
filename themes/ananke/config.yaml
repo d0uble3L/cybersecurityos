@@ -6,8 +6,6 @@ params:
   ananke_socials:
   - name: twitter
     url: https://twitter.com/cyb3rshi3ld
-  - name: github
-    url: https://github.com/d0uble3L
   - name: linkedin
-    url: https://linkedin.com/in/michaeltayo/
+    url: https://linkedin.com/in/cybershieldacademy/
     
