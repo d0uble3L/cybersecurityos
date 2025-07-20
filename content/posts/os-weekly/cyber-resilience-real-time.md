@@ -59,6 +59,7 @@ Traditional cybersecurity alarm systems, once the stalwart guardians of digital 
 
 For cybersecurity leaders facing mounting pressures, this framework provides a strategic alignment between risk management and business resilience. By reframing traditional tactics into a cross-border, agile, and proactive defense model, CISOs can translate evolving threats into actionable outcomes that support enterprise growth. Think like a CISO. Act like a battlefield strategist. Make high-impact decisions with clarity, speed, and confidence. 
 
+> ![Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](/posts/os-weekly/images/leadershipos.png)
 [DOWNLOAD NOW: Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](https://cybersecurityos.gumroad.com/l/cybersecurity-leadership-os)
 
 For aspiring professionals, understanding these core principles offers a roadmap for a career in cybersecurity. Embrace these mental models, and you’re not just defending assets—you’re building a resilient portfolio of skills that will drive your next career breakthrough.
