@@ -90,8 +90,8 @@ If you enjoy the content, then consider [buying me a coffee.](https://store.cybe
 
 ---
 
-[^1]: <https://techcrunch.com/2024/06/26/hiring-software-paradox-data-breach>
-[^2]: <https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-zero-day-in-sharepoint-exploited-in-attacks>
-[^3]: <https://www.cisa.gov/sites/default/files/publications/cisa-secure-by-design-whitepaper_508c.pdf>
-[^4]: <https://www.wired.com/story/microsoft-foreign-employees-security-threat>
-[^5]: <https://www.bleepingcomputer.com/news/security/qr-code-phishing-bypasses-mfa-evades-detection-with-image-obfuscation>
+[^1]: [Security vulnerability in Paradox.ai's AI hiring system](https://krebsonsecurity.com/2025/07/poor-passwords-tattle-on-ai-hiring-bot-maker-paradox-ai/)  
+[^2]: [SharePoint Zero-Day Vulnerability Exploited in Global Breaches](https://thehackernews.com/2025/07/critical-microsoft-sharepoint-flaw.html)  
+[^3]: [The importance of taking breaks from digital devices](https://blog.talosintelligence.com/this-is-your-sign-to-step-away-from-the-keyboard/)  
+[^4]: [Microsoft halting use of Chinese engineers for US Department of Defense projects](https://techcrunch.com/2025/07/19/microsoft-says-it-will-no-longer-use-engineers-in-china-for-department-of-defense-work/)  
+[^5]: [Cyberattack bypasses FIDO security keys](https://www.darkreading.com/remote-workforce/poisonseed-attacker-fido-keys)
