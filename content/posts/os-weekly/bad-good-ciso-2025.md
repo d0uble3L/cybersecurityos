@@ -11,11 +11,19 @@ featured_image: /posts/os-weekly/images/good-ciso-bad-ciso-25.png
 draft: false
 ---
 
-Inspired by [Phil Venables’ Good CISO / Bad CISO framework](https://www.philvenables.com/post/good-ciso---bad-ciso), this analysis explores the mental models that separate effective security leaders from reactive ones.
+Inspired by [Phil Venables’ *Good CISO / Bad CISO* framework](https://www.philvenables.com/post/good-ciso---bad-ciso), this piece explores the mental models that distinguish effective security leaders from those trapped in reactive cycles.
 
-With over a decade of experience in cybersecurity, I currently serve as an Information Security Lead on the path to Deputy CISO, advising senior executives on risk, resilience, and security strategy. I hold a Master’s degree in Cybersecurity, multiple industry certifications across security, and bring hands-on expertise across cloud, application, and enterprise security domains.
+I’ve spent the past decade working across cloud, application, and enterprise security. I currently serve as an Information Security Lead and Deputy CISO.
 
-Beyond my corporate role, I’m a founder, mentor, and speaker, dedicated to developing the next generation of security leaders and bridging the gap between technical depth and executive strategy. My career focus: turning security into a business advantage by aligning technology, culture, and systems with organizational priorities
+My work centers on **advising executives on risk, resilience, and security strategy** while ensuring that security aligns with broader business priorities. 
+
+Along the way, I’ve earned a Master’s degree in Cybersecurity and several industry certifications, but what has mattered most is applying that knowledge to real-world challenges: **leading teams, scaling security programs, and building trust with stakeholders.**
+
+Beyond my day-to-day role, I mentor, speak, and create resources to help emerging leaders navigate the same path—bridging **technical depth with executive-level strategy.**
+
+What stands out in Venables’ framework is that many “bad” CISO traits don’t come from a lack of intelligence or effort. They emerge from environments that pull leaders into firefighting mode and strip away the space needed for long-term thinking.
+
+**That’s the lens through which I explore these mental models.**
 
 ---
 
@@ -27,7 +35,7 @@ Beyond my corporate role, I’m a founder, mentor, and speaker, dedicated to dev
 - 🎨 [Carrd](https://try.carrd.co/trilltayo) — Build beautiful, responsive landing pages in minutes. Perfect for portfolios, waitlists, and personal branding.  
 
 ---
-Phil Venables’ recent piece lays out a powerful contrast that every security leader should reflect on. What struck me most is how often the “bad” traits aren’t about incompetence, but about systems and environments that push CISOs into narrow, reactive postures.
+
 
 ## The Mental Models That Matter
 
