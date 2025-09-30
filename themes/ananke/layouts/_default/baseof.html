@@ -14,7 +14,7 @@
     {{ if and $production $public }}
       <meta name="robots" content="index, follow">
     {{ else }}
-      <meta name="robots" content="noindex, nofollow">
+      <meta name="robots" content="index, follow">
     {{ end }}
     {{ with .Params.author | default .Site.Params.author }}
       <meta name="author" content = "
