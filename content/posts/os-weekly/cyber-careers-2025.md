@@ -17,6 +17,7 @@ Our discussion went far beyond just “jobs” in cybersecurity.
 We explored where the field is heading, how emerging technologies are reshaping security roles, and the strategies someone entering the industry can use to ride the wave instead of being left behind.
 
 It was a reminder that true growth comes from understanding the bigger picture, not just the immediate tasks at hand.
+
 ![Cybersecurity Careers 2024](/posts/os-weekly/images/cyber-careers-2025-1.png)≈ç
 
 ---
