@@ -65,8 +65,6 @@ Why I like it: routers for branching, retries, rate-limit-friendly pacing, simpl
 
 Curious? Start tiny (e.g., watch an RSS/CVE feed → alert on keywords) and iterate. Free tier exists. [Get Started @ Make.com](https://www.make.com/en/register?pc=trilltayo)
 
-This post is brought to you by [Make](https://www.make.com/en/register?pc=trilltayo) — AI automation you can visually build and orchestrate in real time. Make brings no-code automation and AI agents into one visual-first platform so you can build with speed and scale with control.
-
 ---
 
 ## Reframe: Leadership Is the Real Security Control
@@ -137,3 +135,5 @@ To help you translate this insight into action, check out [Cybersecurity Leaders
 
 Stay informed, stay empowered,  
 **CyberSHIELD | CybersecurityOS**
+
+This post is brought to you by [Make](https://www.make.com/en/register?pc=trilltayo) — AI automation you can visually build and orchestrate in real time. Make brings no-code automation and AI agents into one visual-first platform so you can build with speed and scale with control.
