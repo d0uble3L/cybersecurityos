@@ -123,7 +123,7 @@ Leadership is the control plane. Tools and processes are the instruments. Withou
 
 ### Premium Resource for Security Leaders
 
-To help you translate this insight into action, check out [Cybersecurity Leadership OS](https://example.com) — a Notion-based toolkit with over 30 mental models, decision frameworks, and real-world guides designed for CISOs and Deputy CISOs.
+To help you translate this insight into action, check out [Cybersecurity Leadership OS](https://cybersecurityos.gumroad.com/l/cybersecurity-leadership-os) — a Notion-based toolkit with over 30 mental models, decision frameworks, and real-world guides designed for CISOs and Deputy CISOs.
 
 - Align your teams faster
 - Make better risk decisions
