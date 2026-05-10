@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="'Courier New', Courier, monospace">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/>
+      <stop offset="100%" style="stop-color:#100a1a"/>
+    </linearGradient>
+    <linearGradient id="redBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c62828"/>
+      <stop offset="100%" style="stop-color:#ff1744"/>
+    </linearGradient>
+    <linearGradient id="orangeBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e65100"/>
+      <stop offset="100%" style="stop-color:#ff6d00"/>
+    </linearGradient>
+    <linearGradient id="blueBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1565c0"/>
+      <stop offset="100%" style="stop-color:#3b9eff"/>
+    </linearGradient>
+    <linearGradient id="greenBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1b5e20"/>
+      <stop offset="100%" style="stop-color:#00e676"/>
+    </linearGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" fill="url(#bg2)" rx="12"/>
+
+  <!-- Grid -->
+  <g opacity="0.04" stroke="#aa44ff" stroke-width="1">
+    <line x1="0" y1="52" x2="900" y2="52"/><line x1="0" y1="104" x2="900" y2="104"/>
+    <line x1="0" y1="156" x2="900" y2="156"/><line x1="0" y1="208" x2="900" y2="208"/>
+    <line x1="0" y1="260" x2="900" y2="260"/><line x1="0" y1="312" x2="900" y2="312"/>
+    <line x1="0" y1="364" x2="900" y2="364"/><line x1="0" y1="416" x2="900" y2="416"/>
+    <line x1="0" y1="468" x2="900" y2="468"/>
+    <line x1="90" y1="0" x2="90" y2="520"/><line x1="180" y1="0" x2="180" y2="520"/>
+    <line x1="270" y1="0" x2="270" y2="520"/><line x1="360" y1="0" x2="360" y2="520"/>
+    <line x1="450" y1="0" x2="450" y2="520"/><line x1="540" y1="0" x2="540" y2="520"/>
+    <line x1="630" y1="0" x2="630" y2="520"/><line x1="720" y1="0" x2="720" y2="520"/>
+    <line x1="810" y1="0" x2="810" y2="520"/>
+  </g>
+
+  <!-- Top accent -->
+  <rect x="0" y="0" width="900" height="4" fill="#aa44ff" rx="2"/>
+
+  <!-- Title -->
+  <text x="450" y="45" fill="#e8d4fd" font-size="18" font-weight="bold" text-anchor="middle" letter-spacing="3" filter="url(#glow2)">THE VULNERABILITY TRIAGE CRISIS</text>
+  <text x="450" y="64" fill="#7a5a9a" font-size="11" text-anchor="middle" letter-spacing="2">Why manual analysis fails at modern CVE velocity</text>
+
+  <!-- ─── STAT CARD 1: 131 CVEs/day ─── -->
+  <rect x="30" y="90" width="195" height="170" rx="8" fill="#100a1a" stroke="#ff1744" stroke-width="1.5"/>
+  <rect x="30" y="90" width="195" height="5" rx="4" fill="#ff1744"/>
+  <text x="127" y="130" fill="#ff6b6b" font-size="11" text-anchor="middle" letter-spacing="1">CVEs DISCLOSED</text>
+  <text x="127" y="175" fill="#ff1744" font-size="52" font-weight="bold" text-anchor="middle" filter="url(#glow2)">131</text>
+  <text x="127" y="200" fill="#ff6b6b" font-size="14" text-anchor="middle" font-weight="bold">per day</text>
+  <text x="127" y="222" fill="#7a3a3a" font-size="10" text-anchor="middle">in 2025 · up from 113/day</text>
+  <text x="127" y="238" fill="#7a3a3a" font-size="10" text-anchor="middle">in 2024</text>
+
+  <!-- ─── STAT CARD 2: &lt;5 days ─── -->
+  <rect x="245" y="90" width="195" height="170" rx="8" fill="#100a1a" stroke="#ff6d00" stroke-width="1.5"/>
+  <rect x="245" y="90" width="195" height="5" rx="4" fill="#ff6d00"/>
+  <text x="342" y="130" fill="#ff9a4a" font-size="11" text-anchor="middle" letter-spacing="1">MEDIAN EXPLOIT TIME</text>
+  <text x="342" y="175" fill="#ff6d00" font-size="52" font-weight="bold" text-anchor="middle" filter="url(#glow2)">&lt;5</text>
+  <text x="342" y="200" fill="#ff9a4a" font-size="14" text-anchor="middle" font-weight="bold">days</text>
+  <text x="342" y="222" fill="#7a4a1a" font-size="10" text-anchor="middle">down from 745 days in 2020</text>
+  <text x="342" y="238" fill="#7a4a1a" font-size="10" text-anchor="middle">Source: Flashpoint 2026</text>
+
+  <!-- ─── STAT CARD 3: 2% exploited ─── -->
+  <rect x="460" y="90" width="195" height="170" rx="8" fill="#100a1a" stroke="#3b9eff" stroke-width="1.5"/>
+  <rect x="460" y="90" width="195" height="5" rx="4" fill="#3b9eff"/>
+  <text x="557" y="130" fill="#6ab3ef" font-size="11" text-anchor="middle" letter-spacing="1">CVEs ACTUALLY EXPLOITED</text>
+  <text x="557" y="175" fill="#3b9eff" font-size="52" font-weight="bold" text-anchor="middle" filter="url(#glow2)">2%</text>
+  <text x="557" y="200" fill="#6ab3ef" font-size="14" text-anchor="middle" font-weight="bold">in the wild</text>
+  <text x="557" y="222" fill="#2a4a6a" font-size="10" text-anchor="middle">Yet most teams triage all</text>
+  <text x="557" y="238" fill="#2a4a6a" font-size="10" text-anchor="middle">CVEs equally by CVSS alone</text>
+
+  <!-- ─── STAT CARD 4: 4.8M gap ─── -->
+  <rect x="675" y="90" width="195" height="170" rx="8" fill="#100a1a" stroke="#00e676" stroke-width="1.5"/>
+  <rect x="675" y="90" width="195" height="5" rx="4" fill="#00e676"/>
+  <text x="772" y="130" fill="#4adf8a" font-size="11" text-anchor="middle" letter-spacing="1">SECURITY TALENT GAP</text>
+  <text x="772" y="175" fill="#00e676" font-size="38" font-weight="bold" text-anchor="middle" filter="url(#glow2)">4.8M</text>
+  <text x="772" y="200" fill="#4adf8a" font-size="14" text-anchor="middle" font-weight="bold">unfilled roles</text>
+  <text x="772" y="222" fill="#1a6a3a" font-size="10" text-anchor="middle">2025 ISC2 Workforce Study</text>
+  <text x="772" y="238" fill="#1a6a3a" font-size="10" text-anchor="middle">+87% workforce growth needed</text>
+
+  <!-- ─── CVSS Failure Bar Chart ─── -->
+  <text x="450" y="296" fill="#c8a0e8" font-size="13" font-weight="bold" text-anchor="middle" letter-spacing="2">CVSS-FIRST TRIAGE: THE HIDDEN BLIND SPOT</text>
+
+  <!-- Chart area -->
+  <rect x="30" y="310" width="840" height="150" rx="8" fill="#0d0a18" stroke="#2a1a3a" stroke-width="1"/>
+
+  <!-- Y-axis labels -->
+  <text x="50" y="330" fill="#7a5a9a" font-size="10">100%</text>
+  <text x="50" y="365" fill="#7a5a9a" font-size="10"> 75%</text>
+  <text x="50" y="400" fill="#7a5a9a" font-size="10"> 50%</text>
+  <text x="50" y="430" fill="#7a5a9a" font-size="10"> 25%</text>
+
+  <!-- Grid lines chart -->
+  <g opacity="0.15" stroke="#7a5a9a" stroke-width="0.5" stroke-dasharray="4,3">
+    <line x1="88" y1="325" x2="855" y2="325"/>
+    <line x1="88" y1="358" x2="855" y2="358"/>
+    <line x1="88" y1="391" x2="855" y2="391"/>
+    <line x1="88" y1="424" x2="855" y2="424"/>
+  </g>
+  <line x1="88" y1="456" x2="855" y2="456" stroke="#7a5a9a" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- Bar 1: All CVEs scored High/Critical -->
+  <rect x="120" y="325" width="130" height="131" rx="3" fill="url(#redBar)" opacity="0.85"/>
+  <text x="185" y="320" fill="#ff6b6b" font-size="11" text-anchor="middle" font-weight="bold">100%</text>
+  <text x="185" y="468" fill="#9a6a6a" font-size="9" text-anchor="middle">Flagged by</text>
+  <text x="185" y="480" fill="#9a6a6a" font-size="9" text-anchor="middle">CVSS ≥7</text>
+
+  <!-- Bar 2: Actually exploited -->
+  <rect x="300" y="322" width="130" height="2.62" rx="3" fill="url(#greenBar)" opacity="0.85"/>
+  <text x="365" y="318" fill="#00e676" font-size="11" text-anchor="middle" font-weight="bold">2%</text>
+  <text x="365" y="468" fill="#5a9a6a" font-size="9" text-anchor="middle">Actually</text>
+  <text x="365" y="480" fill="#5a9a6a" font-size="9" text-anchor="middle">exploited</text>
+
+  <!-- Bar 3: Medium CVSS but exploited in Q1 2025 -->
+  <rect x="480" y="288.75" width="130" height="36.25" rx="3" fill="url(#orangeBar)" opacity="0.85"/>
+  <text x="545" y="284" fill="#ff9a4a" font-size="11" text-anchor="middle" font-weight="bold">28%</text>
+  <text x="545" y="468" fill="#9a6a3a" font-size="9" text-anchor="middle">Exploited with</text>
+  <text x="545" y="480" fill="#9a6a3a" font-size="9" text-anchor="middle">medium CVSS (Q1 2025)</text>
+
+  <!-- Bar 4: Unfilled roles vs needed -->
+  <rect x="660" y="398" width="130" height="58" rx="3" fill="url(#blueBar)" opacity="0.85"/>
+  <text x="725" y="394" fill="#6ab3ef" font-size="11" text-anchor="middle" font-weight="bold">44%</text>
+  <text x="725" y="468" fill="#4a6a9a" font-size="9" text-anchor="middle">Teams budget-</text>
+  <text x="725" y="480" fill="#4a6a9a" font-size="9" text-anchor="middle">constrained (ISC2)</text>
+
+  <!-- Annotation -->
+  <text x="450" y="500" fill="#5a3a7a" font-size="10" text-anchor="middle">Sources: Security Boulevard · ISC2 2025 · Flashpoint · Picus Security · Elementrica</text>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="516" width="900" height="4" fill="#aa44ff" rx="2"/>
+</svg>
