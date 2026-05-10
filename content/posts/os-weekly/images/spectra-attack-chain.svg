@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="'Courier New', Courier, monospace">
+  <defs>
+    <linearGradient id="acBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0808"/>
+      <stop offset="100%" style="stop-color:#180a08"/>
+    </linearGradient>
+    <linearGradient id="critGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a0808"/>
+      <stop offset="100%" style="stop-color:#200404"/>
+    </linearGradient>
+    <linearGradient id="highGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a1808"/>
+      <stop offset="100%" style="stop-color:#180c04"/>
+    </linearGradient>
+    <linearGradient id="medGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a08"/>
+      <stop offset="100%" style="stop-color:#100e04"/>
+    </linearGradient>
+    <linearGradient id="spectraNode" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1e30"/>
+      <stop offset="100%" style="stop-color:#051018"/>
+    </linearGradient>
+    <filter id="chainGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="nodeGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrowRed2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ff1744"/>
+    </marker>
+    <marker id="arrowOrange2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ff6d00"/>
+    </marker>
+    <marker id="arrowBlue2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3b9eff"/>
+    </marker>
+    <marker id="arrowGreen4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#00e676"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" fill="url(#acBg)" rx="12"/>
+
+  <!-- Grid -->
+  <g opacity="0.04" stroke="#ff4444" stroke-width="1">
+    <line x1="0" y1="52" x2="900" y2="52"/><line x1="0" y1="104" x2="900" y2="104"/>
+    <line x1="0" y1="156" x2="900" y2="156"/><line x1="0" y1="208" x2="900" y2="208"/>
+    <line x1="0" y1="260" x2="900" y2="260"/><line x1="0" y1="312" x2="900" y2="312"/>
+    <line x1="0" y1="364" x2="900" y2="364"/><line x1="0" y1="416" x2="900" y2="416"/>
+    <line x1="0" y1="468" x2="900" y2="468"/>
+    <line x1="90" y1="0" x2="90" y2="520"/><line x1="180" y1="0" x2="180" y2="520"/>
+    <line x1="270" y1="0" x2="270" y2="520"/><line x1="360" y1="0" x2="360" y2="520"/>
+    <line x1="450" y1="0" x2="450" y2="520"/><line x1="540" y1="0" x2="540" y2="520"/>
+    <line x1="630" y1="0" x2="630" y2="520"/><line x1="720" y1="0" x2="720" y2="520"/>
+    <line x1="810" y1="0" x2="810" y2="520"/>
+  </g>
+
+  <!-- Top accent -->
+  <rect x="0" y="0" width="900" height="4" fill="#ff1744" rx="2"/>
+
+  <!-- Title -->
+  <text x="450" y="44" fill="#ffd4d4" font-size="18" font-weight="bold" text-anchor="middle" letter-spacing="3" filter="url(#chainGlow)">SPECTRA — ATTACK CHAIN IDENTIFICATION</text>
+  <text x="450" y="63" fill="#7a4a4a" font-size="11" text-anchor="middle" letter-spacing="2">How isolated vulnerabilities combine into exploitable kill chains</text>
+
+  <!-- ═══ LEFT SIDE: WITHOUT SPECTRA (CVSS-only view) ═══ -->
+  <text x="195" y="96" fill="#ff4444" font-size="12" text-anchor="middle" letter-spacing="2" font-weight="bold">WITHOUT SPECTRA</text>
+  <text x="195" y="112" fill="#6a3a3a" font-size="10" text-anchor="middle">CVSS-only triage · No chain context</text>
+
+  <!-- Node A: CVE-2024-1234 (Medium) -->
+  <rect x="30" y="128" width="165" height="72" rx="6" fill="url(#medGrad)" stroke="#ccaa00" stroke-width="1.5"/>
+  <rect x="30" y="128" width="4" height="72" rx="2" fill="#ccaa00"/>
+  <text x="48" y="148" fill="#ccaa00" font-size="10" font-weight="bold">CVE-2024-1234</text>
+  <text x="48" y="163" fill="#8a7a3a" font-size="9">CVSS: 5.3 — MEDIUM</text>
+  <text x="48" y="178" fill="#6a6a3a" font-size="9">Unauthenticated info</text>
+  <text x="48" y="191" fill="#6a6a3a" font-size="9">disclosure · nginx</text>
+
+  <!-- Node B: CVE-2024-5678 (Medium) -->
+  <rect x="30" y="218" width="165" height="72" rx="6" fill="url(#medGrad)" stroke="#ccaa00" stroke-width="1.5"/>
+  <rect x="30" y="218" width="4" height="72" rx="2" fill="#ccaa00"/>
+  <text x="48" y="238" fill="#ccaa00" font-size="10" font-weight="bold">CVE-2024-5678</text>
+  <text x="48" y="253" fill="#8a7a3a" font-size="9">CVSS: 6.1 — MEDIUM</text>
+  <text x="48" y="268" fill="#6a6a3a" font-size="9">Path traversal ·</text>
+  <text x="48" y="281" fill="#6a6a3a" font-size="9">web application</text>
+
+  <!-- Node C: CVE-2024-9012 (High) -->
+  <rect x="30" y="308" width="165" height="72" rx="6" fill="url(#highGrad)" stroke="#ff6d00" stroke-width="1.5"/>
+  <rect x="30" y="308" width="4" height="72" rx="2" fill="#ff6d00"/>
+  <text x="48" y="328" fill="#ff6d00" font-size="10" font-weight="bold">CVE-2024-9012</text>
+  <text x="48" y="343" fill="#8a5a2a" font-size="9">CVSS: 7.8 — HIGH</text>
+  <text x="48" y="358" fill="#7a4a2a" font-size="9">Privilege escalation ·</text>
+  <text x="48" y="371" fill="#7a4a2a" font-size="9">local kernel</text>
+
+  <!-- Node D: CVE-2024-3456 (Critical) -->
+  <rect x="30" y="398" width="165" height="72" rx="6" fill="url(#critGrad)" stroke="#ff1744" stroke-width="1.5"/>
+  <rect x="30" y="398" width="4" height="72" rx="2" fill="#ff1744"/>
+  <text x="48" y="418" fill="#ff1744" font-size="10" font-weight="bold">CVE-2024-3456</text>
+  <text x="48" y="433" fill="#9a3a3a" font-size="9">CVSS: 9.8 — CRITICAL</text>
+  <text x="48" y="448" fill="#8a3a3a" font-size="9">RCE · unpatched</text>
+  <text x="48" y="461" fill="#8a3a3a" font-size="9">dependency</text>
+
+  <!-- CVSS priority labels (misleading) -->
+  <text x="113" y="494" fill="#5a3a3a" font-size="10" text-anchor="middle">Priority order: D → C → B → A</text>
+  <text x="113" y="508" fill="#4a2a2a" font-size="9" text-anchor="middle">Team patches Critical first. Chain ignored.</text>
+
+  <!-- Divider -->
+  <line x1="390" y1="80" x2="390" y2="510" stroke="#3a1a1a" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="390" y="295" fill="#3a1a1a" font-size="28" text-anchor="middle" transform="rotate(-90,390,295)">vs</text>
+
+  <!-- ═══ RIGHT SIDE: WITH SPECTRA ═══ -->
+  <text x="660" y="96" fill="#3b9eff" font-size="12" text-anchor="middle" letter-spacing="2" font-weight="bold">WITH SPECTRA + CLAUDE AI</text>
+  <text x="660" y="112" fill="#3a6a7a" font-size="10" text-anchor="middle">Attack chain detected · Real-world priority</text>
+
+  <!-- Chain nodes — connected with arrows showing the kill chain -->
+
+  <!-- Step 1: Info disclosure (entry point) -->
+  <rect x="420" y="128" width="185" height="72" rx="6" fill="#1a1a08" stroke="#ccaa00" stroke-width="1.5"/>
+  <rect x="420" y="128" width="4" height="72" rx="2" fill="#ccaa00"/>
+  <text x="450" y="142" fill="#ccaa00" font-size="9" letter-spacing="1">CHAIN STEP 1 — ENTRY</text>
+  <text x="438" y="158" fill="#ccaa00" font-size="10" font-weight="bold">CVE-2024-1234</text>
+  <text x="438" y="173" fill="#8a7a3a" font-size="9">Info disclosure → leaks</text>
+  <text x="438" y="187" fill="#8a7a3a" font-size="9">internal path structure</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="513" y1="200" x2="513" y2="216" stroke="#ff6d00" stroke-width="2" marker-end="url(#arrowOrange2)"/>
+  <text x="560" y="211" fill="#6a4a2a" font-size="9">enables</text>
+
+  <!-- Step 2: Path traversal -->
+  <rect x="420" y="218" width="185" height="72" rx="6" fill="#1a1408" stroke="#ff6d00" stroke-width="1.5"/>
+  <rect x="420" y="218" width="4" height="72" rx="2" fill="#ff6d00"/>
+  <text x="450" y="232" fill="#ff6d00" font-size="9" letter-spacing="1">CHAIN STEP 2 — PIVOT</text>
+  <text x="438" y="248" fill="#ff6d00" font-size="10" font-weight="bold">CVE-2024-5678</text>
+  <text x="438" y="263" fill="#8a5a2a" font-size="9">Path traversal → reads</text>
+  <text x="438" y="277" fill="#8a5a2a" font-size="9">/etc/shadow via leaked path</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="513" y1="290" x2="513" y2="306" stroke="#ff4400" stroke-width="2" marker-end="url(#arrowOrange2)"/>
+  <text x="560" y="301" fill="#7a3a1a" font-size="9">enables</text>
+
+  <!-- Step 3: Privilege escalation -->
+  <rect x="420" y="308" width="185" height="72" rx="6" fill="#200808" stroke="#ff3300" stroke-width="1.8"/>
+  <rect x="420" y="308" width="4" height="72" rx="2" fill="#ff3300"/>
+  <text x="450" y="322" fill="#ff3300" font-size="9" letter-spacing="1">CHAIN STEP 3 — ESCALATE</text>
+  <text x="438" y="338" fill="#ff4444" font-size="10" font-weight="bold">CVE-2024-9012</text>
+  <text x="438" y="353" fill="#9a4a3a" font-size="9">Privesc via creds from</text>
+  <text x="438" y="367" fill="#9a4a3a" font-size="9">shadow file → root access</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="513" y1="380" x2="513" y2="396" stroke="#ff1744" stroke-width="2.5" marker-end="url(#arrowRed2)" filter="url(#nodeGlow)"/>
+  <text x="560" y="391" fill="#8a2a2a" font-size="9">enables</text>
+
+  <!-- Step 4: RCE (terminal) -->
+  <rect x="420" y="398" width="185" height="72" rx="6" fill="url(#critGrad)" stroke="#ff1744" stroke-width="2" filter="url(#nodeGlow)"/>
+  <rect x="420" y="398" width="4" height="72" rx="2" fill="#ff1744"/>
+  <text x="450" y="412" fill="#ff4444" font-size="9" letter-spacing="1">CHAIN STEP 4 — IMPACT</text>
+  <text x="438" y="428" fill="#ff1744" font-size="10" font-weight="bold">CVE-2024-3456</text>
+  <text x="438" y="443" fill="#c04040" font-size="9">RCE with root — full</text>
+  <text x="438" y="457" fill="#c04040" font-size="9">system compromise</text>
+
+  <!-- SPECTRA verdict box -->
+  <rect x="630" y="128" width="240" height="342" rx="8" fill="url(#spectraNode)" stroke="#3b9eff" stroke-width="1.5"/>
+  <rect x="630" y="128" width="240" height="5" rx="4" fill="#3b9eff"/>
+
+  <text x="750" y="154" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle" letter-spacing="2" filter="url(#nodeGlow)">SPECTRA VERDICT</text>
+  <line x1="648" y1="165" x2="852" y2="165" stroke="#3b9eff" stroke-width="0.5" opacity="0.4"/>
+
+  <text x="648" y="184" fill="#ff4444" font-size="10" font-weight="bold">⚠ CRITICAL ATTACK CHAIN</text>
+  <text x="648" y="200" fill="#9a5a5a" font-size="9">4 findings → 1 kill chain</text>
+  <text x="648" y="216" fill="#9a5a5a" font-size="9">Full system compromise possible</text>
+
+  <line x1="648" y1="228" x2="852" y2="228" stroke="#3b9eff" stroke-width="0.5" opacity="0.2"/>
+
+  <text x="648" y="246" fill="#3b9eff" font-size="10" font-weight="bold">REAL PRIORITY ORDER</text>
+  <text x="648" y="262" fill="#6a9acc" font-size="9">#1 — CVE-2024-1234 (entry)</text>
+  <text x="648" y="276" fill="#6a8acc" font-size="9">    Block info disclosure first</text>
+  <text x="648" y="292" fill="#6a9acc" font-size="9">#2 — CVE-2024-5678 (pivot)</text>
+  <text x="648" y="306" fill="#6a8acc" font-size="9">    Patch traversal to break chain</text>
+  <text x="648" y="322" fill="#6a9acc" font-size="9">#3 — CVE-2024-9012 (escalate)</text>
+  <text x="648" y="336" fill="#6a8acc" font-size="9">    Kernel patch · breaks root path</text>
+  <text x="648" y="352" fill="#6a9acc" font-size="9">#4 — CVE-2024-3456 (impact)</text>
+  <text x="648" y="366" fill="#6a8acc" font-size="9">    Dep update · neutralizes RCE</text>
+
+  <line x1="648" y1="378" x2="852" y2="378" stroke="#3b9eff" stroke-width="0.5" opacity="0.2"/>
+
+  <text x="648" y="396" fill="#00e676" font-size="10" font-weight="bold">CVSS-ONLY MISSED THIS</text>
+  <text x="648" y="412" fill="#4a8a6a" font-size="9">Medium CVEs ranked low —</text>
+  <text x="648" y="426" fill="#4a8a6a" font-size="9">but they're the chain's entry.</text>
+  <text x="648" y="442" fill="#4a8a6a" font-size="9">SPECTRA surfaces the</text>
+  <text x="648" y="458" fill="#4a8a6a" font-size="9">real remediation order.</text>
+
+  <!-- Footer -->
+  <text x="450" y="494" fill="#3a1a1a" font-size="10" text-anchor="middle">github.com/d0uble3L/spectra · cybersecurityos.net</text>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="516" width="900" height="4" fill="#ff1744" rx="2"/>
+</svg>
