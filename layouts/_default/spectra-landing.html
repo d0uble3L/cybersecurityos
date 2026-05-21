@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPECTRA — AI-Powered Vulnerability Intelligence | CybersecurityOS</title>
+<meta name="description" content="{{ .Description }}">
+<meta property="og:title" content="SPECTRA — AI-Powered Vulnerability Intelligence">
+<meta property="og:description" content="{{ .Description }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{ partialCached "site-favicon.html" . }}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap');
+
+:root {
+  --green: #00ff88;
+  --green-dim: #00cc66;
+  --green-dark: #001a0d;
+  --bg: #080b10;
+  --bg2: #0d1117;
+  --text: #cccccc;
+  --text-dim: #556655;
+  --white: #ffffff;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Share Tech Mono', monospace;
+  overflow-x: hidden;
+  cursor: crosshair;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--green); opacity: 0.4; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 48px;
+  background: rgba(8,11,16,0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,255,136,0.1);
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 12px;
+  font-family: 'Orbitron', monospace;
+  font-weight: 900; font-size: 18px; letter-spacing: 4px;
+  color: var(--white); text-decoration: none;
+}
+.nav-logo span { color: var(--green); }
+.nav-links { display: flex; gap: 32px; }
+.nav-links a {
+  color: var(--text-dim); font-size: 11px; letter-spacing: 3px;
+  text-transform: uppercase; text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--green); }
+.nav-cta {
+  background: var(--green); color: #000; font-family: 'Share Tech Mono', monospace;
+  font-size: 11px; letter-spacing: 2px; padding: 10px 24px;
+  text-decoration: none; font-weight: 700;
+  transition: opacity 0.2s;
+}
+.nav-cta:hover { opacity: 0.85; }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+  padding: 120px 48px 80px;
+  text-align: center;
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(0,255,136,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,136,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.hero-glow {
+  position: absolute;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(0,255,136,0.12) 0%, transparent 70%);
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  pointer-events: none;
+}
+.hero-label {
+  font-size: 11px; letter-spacing: 5px; color: var(--green);
+  opacity: 0.8; margin-bottom: 24px; position: relative;
+}
+.hero-title {
+  font-family: 'Orbitron', monospace;
+  font-weight: 900; font-size: clamp(56px, 10vw, 112px);
+  letter-spacing: 12px; color: var(--white);
+  line-height: 1; margin-bottom: 24px; position: relative;
+  text-shadow: 0 0 60px rgba(0,255,136,0.3);
+}
+.hero-sub {
+  font-size: clamp(14px, 2vw, 18px); letter-spacing: 2px;
+  color: var(--text); max-width: 600px;
+  line-height: 1.7; margin-bottom: 48px; position: relative;
+}
+.hero-actions { display: flex; gap: 16px; position: relative; flex-wrap: wrap; justify-content: center; }
+.btn-primary {
+  background: var(--green); color: #000;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px; letter-spacing: 2px; font-weight: 700;
+  padding: 16px 36px; text-decoration: none;
+  transition: all 0.2s;
+}
+.btn-primary:hover { opacity: 0.85; transform: translateY(-1px); }
+.btn-secondary {
+  border: 1px solid rgba(0,255,136,0.4); color: var(--green);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px; letter-spacing: 2px;
+  padding: 16px 36px; text-decoration: none;
+  transition: all 0.2s; background: transparent;
+}
+.btn-secondary:hover { background: rgba(0,255,136,0.08); }
+.hero-stats {
+  display: flex; gap: 60px; margin-top: 80px; position: relative; flex-wrap: wrap; justify-content: center;
+}
+.stat { text-align: center; }
+.stat-num {
+  font-family: 'Orbitron', monospace; font-size: 36px; font-weight: 700;
+  color: var(--green); display: block; margin-bottom: 6px;
+}
+.stat-label { font-size: 10px; letter-spacing: 3px; color: var(--text-dim); }
+
+/* SECTION BASE */
+section { padding: 100px 48px; max-width: 1200px; margin: 0 auto; }
+.section-label {
+  font-size: 10px; letter-spacing: 5px; color: var(--green);
+  opacity: 0.7; margin-bottom: 16px; display: block;
+}
+.section-title {
+  font-family: 'Orbitron', monospace; font-weight: 700;
+  font-size: clamp(28px, 4vw, 42px); color: var(--white);
+  margin-bottom: 20px; line-height: 1.2;
+}
+.section-body {
+  font-size: 15px; line-height: 1.8; color: var(--text);
+  max-width: 640px; margin-bottom: 48px;
+}
+
+/* PROBLEM */
+.problem-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px; margin-top: 48px;
+}
+.problem-card {
+  background: #0d1117;
+  border: 1px solid rgba(0,255,136,0.15);
+  padding: 32px; position: relative; overflow: hidden;
+}
+.problem-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: var(--green); opacity: 0.4;
+}
+.problem-num {
+  font-family: 'Orbitron', monospace; font-size: 48px; font-weight: 900;
+  color: var(--green); opacity: 0.2; margin-bottom: 16px; line-height: 1;
+}
+.problem-title { font-size: 13px; letter-spacing: 2px; color: var(--white); margin-bottom: 12px; }
+.problem-text { font-size: 13px; color: var(--text-dim); line-height: 1.7; }
+
+/* FEATURES */
+.features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 48px; }
+.feature {
+  background: var(--bg2); padding: 40px;
+  border: 1px solid rgba(0,255,136,0.08);
+  transition: border-color 0.3s, background 0.3s;
+}
+.feature:hover { border-color: rgba(0,255,136,0.3); background: rgba(0,255,136,0.02); }
+.feature-icon {
+  width: 40px; height: 40px; margin-bottom: 24px;
+  border: 1px solid rgba(0,255,136,0.4); display: flex;
+  align-items: center; justify-content: center;
+  color: var(--green); font-size: 18px;
+}
+.feature-title {
+  font-family: 'Orbitron', monospace; font-size: 14px; font-weight: 700;
+  color: var(--white); margin-bottom: 12px; letter-spacing: 2px;
+}
+.feature-text { font-size: 13px; color: var(--text-dim); line-height: 1.8; }
+
+/* DOCS NAV GRID */
+.docs-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2px; margin-top: 48px;
+}
+.docs-card {
+  background: var(--bg2); padding: 32px 36px;
+  border: 1px solid rgba(0,255,136,0.08);
+  text-decoration: none;
+  transition: border-color 0.3s, background 0.3s;
+  display: block;
+}
+.docs-card:hover { border-color: rgba(0,255,136,0.3); background: rgba(0,255,136,0.02); }
+.docs-card-num {
+  font-family: 'Orbitron', monospace; font-size: 11px; font-weight: 700;
+  color: var(--green); opacity: 0.5; margin-bottom: 12px; letter-spacing: 3px;
+}
+.docs-card-title {
+  font-family: 'Orbitron', monospace; font-size: 13px; font-weight: 700;
+  color: var(--white); margin-bottom: 10px; letter-spacing: 2px;
+}
+.docs-card-text { font-size: 12px; color: var(--text-dim); line-height: 1.7; }
+.docs-card-arrow { color: var(--green); font-size: 12px; margin-top: 16px; display: block; opacity: 0.6; }
+
+/* TERMINAL */
+.terminal-section {
+  background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%);
+  border-top: 1px solid rgba(0,255,136,0.1);
+  border-bottom: 1px solid rgba(0,255,136,0.1);
+  padding: 100px 48px;
+}
+.terminal-wrap { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.terminal {
+  background: #000;
+  border: 1px solid rgba(0,255,136,0.3);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px; line-height: 1.9;
+  overflow: hidden;
+}
+.terminal-bar {
+  background: #111; padding: 10px 16px;
+  display: flex; align-items: center; gap: 8px;
+  border-bottom: 1px solid rgba(0,255,136,0.15);
+}
+.terminal-dot { width: 10px; height: 10px; border-radius: 50%; }
+.terminal-dot.r { background: #ff5f57; }
+.terminal-dot.y { background: #ffbd2e; }
+.terminal-dot.g { background: #28ca41; }
+.terminal-title { font-size: 11px; color: #444; margin-left: auto; }
+.terminal-body { padding: 24px; }
+.t-prompt { color: var(--green); }
+.t-cmd { color: var(--white); }
+.t-comment { color: #334; }
+.t-output { color: #668866; }
+.t-highlight { color: var(--green); }
+.t-warn { color: #ffaa00; }
+.t-dim { color: #334433; }
+
+/* USE CASES */
+.usecase-list { display: flex; flex-direction: column; gap: 2px; margin-top: 48px; }
+.usecase {
+  display: grid; grid-template-columns: 80px 1fr 1fr;
+  gap: 32px; align-items: center;
+  padding: 32px 40px;
+  background: var(--bg2);
+  border: 1px solid rgba(0,255,136,0.08);
+  transition: all 0.2s;
+}
+.usecase:hover { border-color: rgba(0,255,136,0.25); background: rgba(0,255,136,0.02); }
+.usecase-num { font-family: 'Orbitron', monospace; font-size: 28px; font-weight: 700; color: var(--green); opacity: 0.3; }
+.usecase-title { font-size: 14px; letter-spacing: 2px; color: var(--white); }
+.usecase-desc { font-size: 13px; color: var(--text-dim); line-height: 1.7; }
+
+/* CTA */
+.cta-section {
+  text-align: center; padding: 120px 48px;
+  position: relative; overflow: hidden;
+}
+.cta-glow {
+  position: absolute; width: 800px; height: 400px;
+  background: radial-gradient(ellipse, rgba(0,255,136,0.08) 0%, transparent 70%);
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+}
+.cta-title {
+  font-family: 'Orbitron', monospace; font-weight: 900;
+  font-size: clamp(32px, 5vw, 64px); color: var(--white);
+  margin-bottom: 20px; position: relative;
+}
+.cta-sub { font-size: 15px; color: var(--text-dim); margin-bottom: 48px; position: relative; letter-spacing: 1px; }
+.cta-actions { display: flex; gap: 16px; justify-content: center; position: relative; flex-wrap: wrap; }
+.code-block {
+  background: #000; border: 1px solid rgba(0,255,136,0.2);
+  padding: 20px 32px; margin-top: 48px;
+  font-size: 13px; color: var(--green);
+  display: inline-block; position: relative;
+  word-break: break-all;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid rgba(0,255,136,0.1);
+  padding: 40px 48px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px;
+}
+.footer-brand { font-family: 'Orbitron', monospace; font-size: 12px; letter-spacing: 4px; color: #334; }
+.footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+.footer-links a { font-size: 11px; letter-spacing: 2px; color: #334; text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--green); }
+.footer-status { display: flex; align-items: center; gap: 8px; font-size: 11px; color: #334; letter-spacing: 2px; }
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse-dot 2s ease-in-out infinite; }
+
+/* DIVIDERS */
+.band { border-top: 1px solid rgba(0,255,136,0.1); }
+.band-alt { border-top: 1px solid rgba(0,255,136,0.1); background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%); }
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+@keyframes scan-hero {
+  0% { top: 0; opacity: 0.6; }
+  100% { top: 100%; opacity: 0; }
+}
+.scan-hero {
+  position: absolute; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0,255,136,0.4), transparent);
+  animation: scan-hero 4s linear infinite;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+  section { padding: 60px 24px; }
+  .terminal-section { padding: 60px 24px; }
+  .problem-grid { grid-template-columns: 1fr; }
+  .features-grid { grid-template-columns: 1fr; }
+  .terminal-wrap { grid-template-columns: 1fr; }
+  .usecase { grid-template-columns: 1fr; gap: 12px; padding: 24px; }
+  .usecase-num { display: none; }
+  .hero-stats { gap: 30px; }
+  footer { padding: 32px 24px; }
+  .cta-section { padding: 80px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/docs/spectra/" class="nav-logo">SPECTRA<span>.</span></a>
+  <div class="nav-links">
+    <a href="/docs/spectra/installation/">Install</a>
+    <a href="/docs/spectra/quickstart/">Quick Start</a>
+    <a href="/docs/spectra/cli-reference/">CLI Docs</a>
+    <a href="/posts/">Blog</a>
+  </div>
+  <a href="https://github.com/d0uble3L/spectra" class="nav-cta" target="_blank" rel="noopener">VIEW ON GITHUB →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="max-width:100%;padding-top:140px;">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="scan-hero"></div>
+  <p class="hero-label">▸ CYBERSECURITYOS · OPEN SOURCE</p>
+  <h1 class="hero-title">SPECTRA</h1>
+  <p class="hero-sub">AI-powered vulnerability intelligence that turns scanner noise into ranked, actionable findings your team can act on today.</p>
+  <div class="hero-actions">
+    <a href="/docs/spectra/quickstart/" class="btn-primary">GET STARTED →</a>
+    <a href="https://github.com/d0uble3L/spectra" class="btn-secondary" target="_blank" rel="noopener">GITHUB ↗</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-num">131</span>
+      <span class="stat-label">NEW CVEs / DAY</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">~2%</span>
+      <span class="stat-label">EVER EXPLOITED</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">&lt;5d</span>
+      <span class="stat-label">MEDIAN EXPLOIT TIME</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">4.8M</span>
+      <span class="stat-label">WORKFORCE GAP</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<div class="band-alt">
+<section id="problem">
+  <span class="section-label">// THE PROBLEM</span>
+  <h2 class="section-title">CVSS Scores Are Broken.<br>Your Team Is Paying For It.</h2>
+  <p class="section-body">Traditional vulnerability management tools score severity in isolation — not whether the exploit path is reachable in your environment, not what attackers are actively using, not what your CISO needs to hear.</p>
+  <div class="problem-grid">
+    <div class="problem-card">
+      <div class="problem-num">01</div>
+      <div class="problem-title">SCORE INFLATION</div>
+      <p class="problem-text">28% of Q1 2025 exploited vulnerabilities had only medium CVSS scores. Teams prioritizing by score alone are systematically looking in the wrong direction.</p>
+    </div>
+    <div class="problem-card">
+      <div class="problem-num">02</div>
+      <div class="problem-title">TRIAGE OVERLOAD</div>
+      <p class="problem-text">With 131 new CVEs per day and a 4.8 million person workforce gap, manual triage isn't just slow — it's burning analyst time on findings that will never be exploited.</p>
+    </div>
+    <div class="problem-card">
+      <div class="problem-num">03</div>
+      <div class="problem-title">EXPLOIT VELOCITY</div>
+      <p class="problem-text">Median time from CVE disclosure to active exploitation dropped from 745 days in 2020 to under 5 days today. Manual triage wasn't built for this speed.</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- FEATURES -->
+<div class="band">
+<section id="features">
+  <span class="section-label">// WHAT SPECTRA DOES</span>
+  <h2 class="section-title">AI Reasoning Across Every<br>Dimension That Matters.</h2>
+  <p class="section-body">SPECTRA sits downstream of your existing scanners — Trivy, Semgrep, Nessus — and applies Claude AI to produce intelligence your team can immediately act on.</p>
+  <div class="features-grid">
+    <div class="feature">
+      <div class="feature-icon">◈</div>
+      <div class="feature-title">RANKED FINDINGS</div>
+      <p class="feature-text">Vulnerabilities prioritized by real-world exploitability, not theoretical CVSS scores. SPECTRA factors in attack surface, asset criticality, and active threat intelligence.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">⬡</div>
+      <div class="feature-title">ATTACK CHAIN ANALYSIS</div>
+      <p class="feature-text">Connects related vulnerabilities into exploitable paths — revealing how an attacker would chain findings your scanner reported as separate, lower-severity issues.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">▣</div>
+      <div class="feature-title">EXECUTIVE SUMMARIES</div>
+      <p class="feature-text">Leadership-ready briefings generated automatically. No more translating technical findings into business risk language — SPECTRA does it for you.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">◎</div>
+      <div class="feature-title">ACTIONABLE REMEDIATION</div>
+      <p class="feature-text">Not "patch this CVE" — but how, where, and why. Step-by-step remediation guidance with context specific to your environment and stack.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">⊞</div>
+      <div class="feature-title">SCANNER AGNOSTIC</div>
+      <p class="feature-text">Trivy. Semgrep. Nessus. Any JSON scanner output. SPECTRA plugs into the pipeline you already have — not the one you wish you had.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">◇</div>
+      <div class="feature-title">DUAL OUTPUT FORMAT</div>
+      <p class="feature-text">Outputs both Markdown and JSON. Ready for your dashboard, ticketing system, report template, or Slack bot — wherever your team lives.</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- TERMINAL -->
+<div class="terminal-section">
+  <div class="terminal-wrap">
+    <div>
+      <span class="section-label">// QUICK START</span>
+      <h2 class="section-title">Running in Under<br>60 Seconds.</h2>
+      <p class="section-body">Python 3.9+. No cloud account. No SaaS onboarding. No vendor calls. Clone, install, analyze.</p>
+      <a href="/docs/spectra/installation/" class="btn-secondary" style="display:inline-block;">VIEW FULL DOCS ↗</a>
+    </div>
+    <div class="terminal">
+      <div class="terminal-bar">
+        <div class="terminal-dot r"></div>
+        <div class="terminal-dot y"></div>
+        <div class="terminal-dot g"></div>
+        <span class="terminal-title">spectra — zsh</span>
+      </div>
+      <div class="terminal-body">
+        <div><span class="t-comment"># Clone the repo</span></div>
+        <div><span class="t-prompt">$ </span><span class="t-cmd">git clone https://github.com/d0uble3L/spectra</span></div>
+        <div><span class="t-prompt">$ </span><span class="t-cmd">cd spectra && pip install -e .</span></div>
+        <div>&nbsp;</div>
+        <div><span class="t-comment"># Set your Anthropic API key</span></div>
+        <div><span class="t-prompt">$ </span><span class="t-cmd">export ANTHROPIC_API_KEY=your_key</span></div>
+        <div>&nbsp;</div>
+        <div><span class="t-comment"># Run against your scanner output</span></div>
+        <div><span class="t-prompt">$ </span><span class="t-cmd">spectra analyze trivy.json</span></div>
+        <div>&nbsp;</div>
+        <div><span class="t-output">▸ Loading scan results... <span class="t-highlight">47 findings</span></span></div>
+        <div><span class="t-output">▸ Analyzing attack chains...</span></div>
+        <div><span class="t-output">▸ Ranking by real-world severity...</span></div>
+        <div><span class="t-output">▸ Generating executive summary...</span></div>
+        <div>&nbsp;</div>
+        <div><span class="t-highlight">✓ Analysis complete</span></div>
+        <div><span class="t-output">  Critical: <span class="t-warn">3</span> · High: 11 · Medium: 22 · Low: 11</span></div>
+        <div><span class="t-output">  Output: spectra-report.md + spectra-report.json</span></div>
+        <div>&nbsp;</div>
+        <div><span class="t-dim"># 3 critical paths worth your attention today.</span></div>
+        <div><span class="t-dim"># The other 44? Documented. Deprioritized. Defensible.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- USE CASES -->
+<div class="band">
+<section id="usecases">
+  <span class="section-label">// USE CASES</span>
+  <h2 class="section-title">Built for Four<br>Production Workflows.</h2>
+  <div class="usecase-list">
+    <div class="usecase">
+      <div class="usecase-num">01</div>
+      <div class="usecase-title">VULNERABILITY MANAGEMENT</div>
+      <p class="usecase-desc">Stop drowning in scanner output. SPECTRA ranks what matters, chains what connects, and produces the prioritized remediation plan your team needs — not a spreadsheet of CVEs sorted by CVSS.</p>
+    </div>
+    <div class="usecase">
+      <div class="usecase-num">02</div>
+      <div class="usecase-title">DEVSECOPS PIPELINE</div>
+      <p class="usecase-desc">Plug SPECTRA into your CI/CD pipeline and get actionable security context on every build — without flooding developers with noise that kills velocity and trust.</p>
+    </div>
+    <div class="usecase">
+      <div class="usecase-num">03</div>
+      <div class="usecase-title">RED TEAM REPORTING</div>
+      <p class="usecase-desc">Transform raw engagement findings into chained attack narratives that actually land with leadership. SPECTRA connects your findings into the story that drives remediation investment.</p>
+    </div>
+    <div class="usecase">
+      <div class="usecase-num">04</div>
+      <div class="usecase-title">GRC &amp; COMPLIANCE REPORTING</div>
+      <p class="usecase-desc">Generate board-ready risk summaries and compliance evidence automatically. Map findings to controls. Produce the artifacts your auditors need without the manual overhead.</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- DOCS NAVIGATION -->
+<div class="band">
+<section id="docs">
+  <span class="section-label">// DOCUMENTATION</span>
+  <h2 class="section-title">Everything You Need<br>to Get Running.</h2>
+  <p class="section-body">Full reference documentation — from first install to production CI/CD integration and architecture deep-dives.</p>
+  <div class="docs-grid">
+    <a href="/docs/spectra/installation/" class="docs-card">
+      <div class="docs-card-num">01 — SETUP</div>
+      <div class="docs-card-title">INSTALLATION</div>
+      <p class="docs-card-text">pip, Docker, and source install. System requirements and environment setup.</p>
+      <span class="docs-card-arrow">→ READ</span>
+    </a>
+    <a href="/docs/spectra/quickstart/" class="docs-card">
+      <div class="docs-card-num">02 — SETUP</div>
+      <div class="docs-card-title">QUICK START</div>
+      <p class="docs-card-text">Run your first analysis in under 5 minutes with sample scanner output.</p>
+      <span class="docs-card-arrow">→ READ</span>
+    </a>
+    <a href="/docs/spectra/cli-reference/" class="docs-card">
+      <div class="docs-card-num">03 — REFERENCE</div>
+      <div class="docs-card-title">CLI REFERENCE</div>
+      <p class="docs-card-text">Complete command and flag reference. All options, exit codes, and env overrides.</p>
+      <span class="docs-card-arrow">→ READ</span>
+    </a>
+    <a href="/docs/spectra/configuration/" class="docs-card">
+      <div class="docs-card-num">04 — REFERENCE</div>
+      <div class="docs-card-title">CONFIGURATION</div>
+      <p class="docs-card-text">Environment variables, .env setup, and Claude model configuration.</p>
+      <span class="docs-card-arrow">→ READ</span>
+    </a>
+    <a href="/docs/spectra/scanners/" class="docs-card">
+      <div class="docs-card-num">05 — REFERENCE</div>
+      <div class="docs-card-title">SUPPORTED SCANNERS</div>
+      <p class="docs-card-text">Trivy, Semgrep, Nessus, Burp Suite, and generic text — usage and examples.</p>
+      <span class="docs-card-arrow">→ READ</span>
+    </a>
+    <a href="/docs/spectra/output-formats/" class="docs-card">
+      <div class="docs-card-num">06 — REFERENCE</div>
+      <div class="docs-card-title">OUTPUT FORMATS</div>
+      <p class="docs-card-text">Markdown and JSON report structure. Integration with SIEM, Jira, and Slack.</p>
+      <span class="docs-card-arrow">→ READ</span>
+    </a>
+    <a href="/docs/spectra/cicd-integration/" class="docs-card">
+      <div class="docs-card-num">07 — GUIDES</div>
+      <div class="docs-card-title">CI/CD INTEGRATION</div>
+      <p class="docs-card-text">GitHub Actions, GitLab CI, and Jenkins pipeline examples.</p>
+      <span class="docs-card-arrow">→ READ</span>
+    </a>
+    <a href="/docs/spectra/architecture/" class="docs-card">
+      <div class="docs-card-num">08 — INTERNALS</div>
+      <div class="docs-card-title">ARCHITECTURE</div>
+      <p class="docs-card-text">Data flow, prompt caching, AI layer design, and engineering decisions.</p>
+      <span class="docs-card-arrow">→ READ</span>
+    </a>
+    <a href="/docs/spectra/contributing/" class="docs-card">
+      <div class="docs-card-num">09 — COMMUNITY</div>
+      <div class="docs-card-title">CONTRIBUTING</div>
+      <p class="docs-card-text">Bug reports, new scanner parsers, security policy, and code of conduct.</p>
+      <span class="docs-card-arrow">→ READ</span>
+    </a>
+    <a href="/docs/spectra/license/" class="docs-card">
+      <div class="docs-card-num">10 — LEGAL</div>
+      <div class="docs-card-title">LICENSE</div>
+      <p class="docs-card-text">Apache 2.0 full text, trademark notices, and IP guidance.</p>
+      <span class="docs-card-arrow">→ READ</span>
+    </a>
+  </div>
+</section>
+</div>
+
+<!-- FINAL CTA -->
+<div class="band">
+<section class="cta-section" style="max-width:100%;">
+  <div class="cta-glow"></div>
+  <h2 class="cta-title">Start Triaging Smarter<br>Today.</h2>
+  <p class="cta-sub">Open source. No vendor lock-in. Runs in your environment. Powered by Claude.</p>
+  <div class="cta-actions">
+    <a href="/posts/os-weekly/spectra-overview-claude-ai-security/" class="btn-primary">READ THE FULL POST →</a>
+    <a href="https://github.com/d0uble3L/spectra" class="btn-secondary" target="_blank" rel="noopener">GITHUB ↗</a>
+  </div>
+  <div class="code-block">
+    <span style="color:#334433">$</span> git clone https://github.com/d0uble3L/spectra &amp;&amp; cd spectra &amp;&amp; pip install -e . &amp;&amp; spectra analyze trivy.json
+  </div>
+</section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">SPECTRA · CYBERSECURITYOS</div>
+  <div class="footer-links">
+    <a href="/docs/">DOCS</a>
+    <a href="/posts/">BLOG</a>
+    <a href="https://github.com/d0uble3L/spectra" target="_blank" rel="noopener">GITHUB</a>
+    <a href="/docs/spectra/license/">LICENSE</a>
+    <a href="/contact/">CONTACT</a>
+  </div>
+  <div class="footer-status">
+    <div class="status-dot"></div>
+    ACTIVE DEVELOPMENT
+  </div>
+</footer>
+
+</body>
+</html>
