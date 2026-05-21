@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ .Title }} — SPECTRA Docs | CybersecurityOS</title>
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
+<meta property="og:title" content="{{ .Title }} — SPECTRA Docs">
+<meta property="og:url" content="{{ .Permalink }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{ partialCached "site-favicon.html" . }}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap');
+
+:root {
+  --green: #00ff88;
+  --green-dim: #00cc66;
+  --bg: #080b10;
+  --bg2: #0d1117;
+  --bg3: #111820;
+  --text: #cccccc;
+  --text-dim: #556655;
+  --white: #ffffff;
+  --sidebar-w: 260px;
+  --nav-h: 65px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Share Tech Mono', monospace;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: rgba(0,255,136,0.4); }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  height: var(--nav-h);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 32px;
+  background: rgba(8,11,16,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,255,136,0.12);
+}
+.nav-logo {
+  font-family: 'Orbitron', monospace;
+  font-weight: 900; font-size: 16px; letter-spacing: 4px;
+  color: var(--white); text-decoration: none;
+  flex-shrink: 0;
+}
+.nav-logo span { color: var(--green); }
+.nav-center {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 11px; color: var(--text-dim); letter-spacing: 2px;
+}
+.nav-center a { color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+.nav-center a:hover { color: var(--green); }
+.nav-sep { color: rgba(0,255,136,0.3); }
+.nav-page { color: var(--green); }
+.nav-cta {
+  background: var(--green); color: #000;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px; letter-spacing: 2px; padding: 8px 20px;
+  text-decoration: none; font-weight: 700;
+  transition: opacity 0.2s; flex-shrink: 0;
+}
+.nav-cta:hover { opacity: 0.85; }
+
+/* ── LAYOUT ── */
+.doc-shell {
+  display: flex;
+  padding-top: var(--nav-h);
+  min-height: 100vh;
+}
+
+/* ── SIDEBAR ── */
+.sidebar {
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  position: fixed;
+  top: var(--nav-h);
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+  background: var(--bg2);
+  border-right: 1px solid rgba(0,255,136,0.1);
+  padding: 32px 0 80px;
+}
+.sidebar::-webkit-scrollbar { width: 3px; }
+.sidebar::-webkit-scrollbar-thumb { background: rgba(0,255,136,0.2); }
+
+.sidebar-section {
+  padding: 0 24px;
+  margin-bottom: 8px;
+}
+.sidebar-section-label {
+  font-size: 9px; letter-spacing: 4px; color: var(--green);
+  opacity: 0.5; margin-bottom: 8px; display: block;
+  padding: 16px 0 8px;
+  border-top: 1px solid rgba(0,255,136,0.06);
+}
+.sidebar-section:first-child .sidebar-section-label {
+  border-top: none; padding-top: 0;
+}
+.sidebar-link {
+  display: block; padding: 8px 12px;
+  font-size: 12px; letter-spacing: 1px;
+  color: var(--text-dim); text-decoration: none;
+  transition: all 0.15s;
+  border-left: 2px solid transparent;
+  margin-bottom: 2px;
+}
+.sidebar-link:hover { color: var(--white); border-left-color: rgba(0,255,136,0.3); background: rgba(0,255,136,0.04); }
+.sidebar-link.active { color: var(--green); border-left-color: var(--green); background: rgba(0,255,136,0.06); }
+
+.sidebar-back {
+  display: flex; align-items: center; gap: 8px;
+  padding: 0 24px 24px;
+  font-size: 11px; letter-spacing: 2px;
+  color: var(--text-dim); text-decoration: none;
+  transition: color 0.2s;
+}
+.sidebar-back:hover { color: var(--green); }
+.sidebar-back-arrow { color: var(--green); opacity: 0.5; }
+
+/* ── CONTENT AREA ── */
+.doc-main {
+  margin-left: var(--sidebar-w);
+  flex: 1;
+  min-width: 0;
+}
+
+.doc-content-wrap {
+  max-width: 820px;
+  padding: 60px 64px 120px;
+}
+
+/* breadcrumb */
+.breadcrumb {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 11px; letter-spacing: 2px;
+  color: var(--text-dim); margin-bottom: 40px;
+}
+.breadcrumb a { color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+.breadcrumb a:hover { color: var(--green); }
+.breadcrumb-sep { color: rgba(0,255,136,0.3); }
+.breadcrumb-current { color: var(--green); }
+
+/* prev / next */
+.doc-nav-footer {
+  display: flex; justify-content: space-between; gap: 16px;
+  margin-top: 80px; padding-top: 40px;
+  border-top: 1px solid rgba(0,255,136,0.1);
+  flex-wrap: wrap;
+}
+.doc-nav-link {
+  display: flex; flex-direction: column; gap: 6px;
+  text-decoration: none; padding: 20px 24px;
+  background: var(--bg2); border: 1px solid rgba(0,255,136,0.08);
+  min-width: 200px; flex: 1;
+  transition: border-color 0.2s, background 0.2s;
+}
+.doc-nav-link:hover { border-color: rgba(0,255,136,0.3); background: rgba(0,255,136,0.03); }
+.doc-nav-link.next { text-align: right; }
+.doc-nav-label { font-size: 10px; letter-spacing: 3px; color: var(--text-dim); }
+.doc-nav-title { font-size: 13px; letter-spacing: 1px; color: var(--white); }
+.doc-nav-arrow { font-size: 11px; color: var(--green); }
+
+/* ── PROSE STYLES ── */
+.prose {
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--text);
+}
+
+.prose h1 {
+  font-family: 'Orbitron', monospace;
+  font-weight: 900; font-size: 36px; letter-spacing: 4px;
+  color: var(--white); margin-bottom: 24px;
+  line-height: 1.15;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0,255,136,0.15);
+}
+
+.prose h2 {
+  font-family: 'Orbitron', monospace;
+  font-weight: 700; font-size: 20px; letter-spacing: 2px;
+  color: var(--white); margin-top: 56px; margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0,255,136,0.1);
+}
+
+.prose h3 {
+  font-family: 'Orbitron', monospace;
+  font-weight: 700; font-size: 14px; letter-spacing: 2px;
+  color: var(--green); margin-top: 36px; margin-bottom: 14px;
+  opacity: 0.9;
+}
+
+.prose h4 {
+  font-size: 13px; letter-spacing: 2px; color: var(--white);
+  margin-top: 28px; margin-bottom: 12px; opacity: 0.8;
+}
+
+.prose p { margin-bottom: 18px; }
+
+.prose a {
+  color: var(--green); text-decoration: none;
+  border-bottom: 1px solid rgba(0,255,136,0.3);
+  transition: border-color 0.2s;
+}
+.prose a:hover { border-bottom-color: var(--green); }
+
+.prose strong { color: var(--white); font-weight: 700; }
+.prose em { color: var(--green); font-style: normal; opacity: 0.85; }
+
+.prose ul, .prose ol {
+  margin: 0 0 18px 0;
+  padding-left: 0;
+  list-style: none;
+}
+.prose ul li, .prose ol li {
+  padding: 5px 0 5px 20px;
+  position: relative;
+  color: var(--text);
+}
+.prose ul li::before {
+  content: '▸';
+  position: absolute; left: 0;
+  color: var(--green); opacity: 0.6;
+  font-size: 11px; top: 7px;
+}
+.prose ol { counter-reset: item; }
+.prose ol li { counter-increment: item; }
+.prose ol li::before {
+  content: counter(item) '.';
+  position: absolute; left: 0;
+  color: var(--green); opacity: 0.7;
+  font-size: 11px; top: 6px;
+  font-family: 'Orbitron', monospace;
+}
+
+/* inline code */
+.prose code {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px;
+  color: var(--green);
+  background: rgba(0,255,136,0.07);
+  border: 1px solid rgba(0,255,136,0.15);
+  padding: 2px 7px;
+  border-radius: 2px;
+}
+
+/* code blocks */
+.prose pre {
+  background: #000;
+  border: 1px solid rgba(0,255,136,0.25);
+  padding: 24px;
+  overflow-x: auto;
+  margin: 24px 0;
+  position: relative;
+}
+.prose pre::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--green), transparent);
+  opacity: 0.4;
+}
+.prose pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 13px;
+  color: #a0d4a0;
+  line-height: 1.7;
+}
+
+/* tables */
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 13px;
+}
+.prose thead { border-bottom: 1px solid rgba(0,255,136,0.3); }
+.prose th {
+  text-align: left; padding: 12px 16px;
+  font-family: 'Orbitron', monospace;
+  font-size: 10px; letter-spacing: 2px;
+  color: var(--green); font-weight: 700;
+}
+.prose td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(0,255,136,0.06);
+  color: var(--text);
+  vertical-align: top;
+}
+.prose tr:hover td { background: rgba(0,255,136,0.03); }
+
+/* blockquotes */
+.prose blockquote {
+  border-left: 3px solid rgba(0,255,136,0.5);
+  background: rgba(0,255,136,0.04);
+  padding: 16px 20px;
+  margin: 24px 0;
+  color: var(--text-dim);
+}
+.prose blockquote p { margin-bottom: 0; font-size: 13px; }
+.prose blockquote strong { color: var(--green); }
+
+/* hr */
+.prose hr {
+  border: none;
+  border-top: 1px solid rgba(0,255,136,0.1);
+  margin: 48px 0;
+}
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid rgba(0,255,136,0.1);
+  padding: 28px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+  background: var(--bg2);
+}
+.footer-brand { font-family: 'Orbitron', monospace; font-size: 11px; letter-spacing: 4px; color: #334; }
+.footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+.footer-links a { font-size: 11px; letter-spacing: 2px; color: #334; text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--green); }
+.footer-status { display: flex; align-items: center; gap: 8px; font-size: 11px; color: #334; letter-spacing: 2px; }
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse-dot 2s ease-in-out infinite; }
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* ── MOBILE ── */
+@media (max-width: 900px) {
+  :root { --sidebar-w: 0px; }
+  nav { padding: 0 20px; }
+  .nav-center { display: none; }
+  .sidebar {
+    position: static; width: 100%;
+    border-right: none; border-bottom: 1px solid rgba(0,255,136,0.1);
+    padding: 16px 0;
+  }
+  .sidebar-section { display: flex; flex-wrap: wrap; gap: 4px; }
+  .sidebar-section-label { width: 100%; padding-top: 12px; }
+  .sidebar-link { padding: 6px 10px; font-size: 11px; }
+  .sidebar-back { padding-bottom: 16px; }
+  .doc-shell { flex-direction: column; }
+  .doc-main { margin-left: 0; }
+  .doc-content-wrap { padding: 32px 24px 80px; }
+  .prose h1 { font-size: 26px; }
+  .prose h2 { font-size: 17px; }
+  footer { padding: 20px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/docs/spectra/" class="nav-logo">SPECTRA<span>.</span></a>
+  <div class="nav-center">
+    <a href="/docs/">Docs</a>
+    <span class="nav-sep">›</span>
+    <a href="/docs/spectra/">SPECTRA</a>
+    <span class="nav-sep">›</span>
+    <span class="nav-page">{{ .Title }}</span>
+  </div>
+  <a href="https://github.com/d0uble3L/spectra" class="nav-cta" target="_blank" rel="noopener">GITHUB →</a>
+</nav>
+
+<div class="doc-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a href="/docs/spectra/" class="sidebar-back">
+      <span class="sidebar-back-arrow">←</span> SPECTRA OVERVIEW
+    </a>
+
+    <div class="sidebar-section">
+      <span class="sidebar-section-label">// SETUP</span>
+      <a href="/docs/spectra/installation/" class="sidebar-link{{ if eq .RelPermalink "/docs/spectra/installation/" }} active{{ end }}">Installation</a>
+      <a href="/docs/spectra/quickstart/" class="sidebar-link{{ if eq .RelPermalink "/docs/spectra/quickstart/" }} active{{ end }}">Quick Start</a>
+    </div>
+
+    <div class="sidebar-section">
+      <span class="sidebar-section-label">// REFERENCE</span>
+      <a href="/docs/spectra/cli-reference/" class="sidebar-link{{ if eq .RelPermalink "/docs/spectra/cli-reference/" }} active{{ end }}">CLI Reference</a>
+      <a href="/docs/spectra/configuration/" class="sidebar-link{{ if eq .RelPermalink "/docs/spectra/configuration/" }} active{{ end }}">Configuration</a>
+      <a href="/docs/spectra/scanners/" class="sidebar-link{{ if eq .RelPermalink "/docs/spectra/scanners/" }} active{{ end }}">Supported Scanners</a>
+      <a href="/docs/spectra/output-formats/" class="sidebar-link{{ if eq .RelPermalink "/docs/spectra/output-formats/" }} active{{ end }}">Output Formats</a>
+    </div>
+
+    <div class="sidebar-section">
+      <span class="sidebar-section-label">// GUIDES</span>
+      <a href="/docs/spectra/cicd-integration/" class="sidebar-link{{ if eq .RelPermalink "/docs/spectra/cicd-integration/" }} active{{ end }}">CI/CD Integration</a>
+      <a href="/docs/spectra/architecture/" class="sidebar-link{{ if eq .RelPermalink "/docs/spectra/architecture/" }} active{{ end }}">Architecture</a>
+    </div>
+
+    <div class="sidebar-section">
+      <span class="sidebar-section-label">// COMMUNITY</span>
+      <a href="/docs/spectra/contributing/" class="sidebar-link{{ if eq .RelPermalink "/docs/spectra/contributing/" }} active{{ end }}">Contributing</a>
+      <a href="/docs/spectra/license/" class="sidebar-link{{ if eq .RelPermalink "/docs/spectra/license/" }} active{{ end }}">License</a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="doc-main">
+    <div class="doc-content-wrap">
+
+      <div class="breadcrumb">
+        <a href="/docs/">Docs</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="/docs/spectra/">SPECTRA</a>
+        <span class="breadcrumb-sep">›</span>
+        <span class="breadcrumb-current">{{ .Title }}</span>
+      </div>
+
+      <article class="prose">
+        {{ .Content }}
+      </article>
+
+      <!-- PREV / NEXT -->
+      <nav class="doc-nav-footer" aria-label="doc pagination">
+        {{ with .PrevInSection }}
+        <a href="{{ .RelPermalink }}" class="doc-nav-link prev">
+          <span class="doc-nav-label">← PREVIOUS</span>
+          <span class="doc-nav-title">{{ .Title }}</span>
+        </a>
+        {{ end }}
+        {{ with .NextInSection }}
+        <a href="{{ .RelPermalink }}" class="doc-nav-link next">
+          <span class="doc-nav-label">NEXT →</span>
+          <span class="doc-nav-title">{{ .Title }}</span>
+        </a>
+        {{ end }}
+      </nav>
+
+    </div>
+
+    <footer>
+      <div class="footer-brand">SPECTRA · CYBERSECURITYOS</div>
+      <div class="footer-links">
+        <a href="/docs/spectra/">DOCS</a>
+        <a href="/posts/">BLOG</a>
+        <a href="https://github.com/d0uble3L/spectra" target="_blank" rel="noopener">GITHUB</a>
+        <a href="/docs/spectra/license/">LICENSE</a>
+        <a href="/contact/">CONTACT</a>
+      </div>
+      <div class="footer-status">
+        <div class="status-dot"></div>
+        ACTIVE DEVELOPMENT
+      </div>
+    </footer>
+  </main>
+
+</div>
+
+</body>
+</html>
