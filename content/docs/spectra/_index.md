@@ -1,7 +1,8 @@
 ---
 title: "SPECTRA"
 date: 2026-05-18
-description: "SPECTRA — Security Platform for Expert-level Correlation, Triage, and Risk Analysis. Official open-source documentation."
+description: "SPECTRA — AI-Powered Vulnerability Intelligence. Open-source CLI that transforms scanner noise into ranked findings, attack chain analysis, and executive summaries."
+layout: "spectra-landing"
 draft: false
 ---
 
