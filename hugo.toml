@@ -48,10 +48,6 @@ googleAnalytics = "YOUR_TRACKING_ID"  # Replace with your Google Analytics track
   url = "/docs/"
   weight = 3
 
-[[menu.main]]
-  name = "Store"
-  url = "https://store.cybersecurityos.net/"
-  weight = 4
 
  [[menu.main]]
   name = "Contact"
