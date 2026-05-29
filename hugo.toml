@@ -58,6 +58,11 @@ googleAnalytics = "YOUR_TRACKING_ID"  # Replace with your Google Analytics track
   url = "/contact/"
   weight = 5
 
+[[menu.main]]
+  name = "Membership"
+  url = "/founding-member/"
+  weight = 6
+
 # Enable the sitemap
 [params.sitemap]
   sitemap = true
