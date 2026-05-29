@@ -24,12 +24,6 @@ In a world where threats evolve hourly, **leadership is the ultimate security co
 
 ***
 
-Read the full post here: [What Peter Drucker Can Teach Us About Modern Cybersecurity](https://www.linkedin.com/feed/update/urn:li:activity:7397790037146451968/)
-
-Source:  
-
-- [Drucker, Peter F. *Management: Tasks, Responsibilities, Practices*. HarperBusiness](https://www.harpercollins.com/products/management-peter-f-drucker)
-
 Drucker wasn’t talking about cybersecurity.  
 But he might as well have been.
 
@@ -98,7 +92,7 @@ Supporting framework:
 > 💡 **Want to go deeper?**
 > ![Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](/posts/os-weekly/images/leadershipos.png)
 > If you’re aiming to lead a security team, break into cybersecurity, or operate with greater speed and confidence — this is the toolkit you’ve been missing:  
-> 🔗 [Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](http://store.cybersecurityos.net/l/cybersecurity-leadership-os)
+> 🔗 [Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](https://store.cybersecurityos.net/l/cybersecurity-leadership-os)
 ---
 
 ### Drucker Principle #3: What Gets Measured Gets Managed — With a Modern Twist
@@ -185,7 +179,14 @@ Because cybersecurity isn’t just technical—it’s organizational.
 > 🚀 Supercharge Your Cybersecurity Career with 🔗 [CyberSHIELD PRO Membership](https://cybersecurityos.gumroad.com/l/cybershield-membership) – Unlock Exclusive Benefits Today!  
 ---
 
-Ultimately, whether you’re spearheading enterprise risk management or mapping out your career trajectory, use this **three-step model** as a mental guide to build, defend, and evolve in today’s threat environment.  
+Drucker’s principles aren’t a historical curiosity — they’re a live diagnostic for why security programs succeed or fail. Apply them to your organization and you’ll find the gaps faster than any tool can.
 
-Stay informed, stay empowered,  
-**CyberSHIELD | CybersecurityOS**
+---
+
+Thanks for reading,
+
+Michael
+
+If you enjoy the content, then consider [buying me a coffee.](https://store.cybersecurityos.net/coffee)
+
+---

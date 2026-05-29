@@ -83,3 +83,13 @@ So the thought I’ll leave the room with: **What systems can we design so that 
 ---
 
 *For the original framework by Phil Venables, see [Good CISO / Bad CISO](https://www.philvenables.com/post/good-ciso---bad-ciso).*
+
+---
+
+Thanks for reading,
+
+Michael
+
+If you enjoy the content, then consider [buying me a coffee.](https://store.cybersecurityos.net/coffee)
+
+---

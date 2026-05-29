@@ -67,4 +67,4 @@ If you enjoy the content, then consider [buying me a coffee.](https://store.cybe
 
 ---
 
-**P.S.** Stay updated on the latest cybersecurity trends and best practices by subscribing to our newsletter or leaving your thoughts in the comments below! [Visit CyberSHIELD](https://cybershieldacademy.net)
+**P.S.** Stay updated on the latest cybersecurity trends and best practices by subscribing to our newsletter. [Visit CybersecurityOS](https://cybersecurityos.net)
