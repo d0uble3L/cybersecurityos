@@ -1,15 +1,20 @@
 {{ define "main" }}
-  <article class="pa3 pa4-ns nested-copy-line-height">
-    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy {{ $.Param "text_color" | default "mid-gray" }}">
-      {{- .Content -}}
-    </section>
-    <section class="flex-ns flex-wrap justify-around mt5">
-      {{ range .Paginator.Pages }}
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          {{ .Render "summary" }}
-        </div>
-      {{ end }}
-    </section>
-    {{- template "_internal/pagination.html" . -}}
-  </article>
+
+  {{/* Optional section description */}}
+  {{ with .Content }}
+  <div style="max-width:1200px;margin:0 auto;padding:1.5rem 1.5rem 0;color:var(--os-text-muted);font-size:.9rem;">
+    {{ . }}
+  </div>
+  {{ end }}
+
+  <!-- Post card grid -->
+  <div class="os-card-grid">
+    {{ range .Paginator.Pages }}
+      {{ .Render "summary" }}
+    {{ end }}
+  </div>
+
+  <!-- Pagination -->
+  {{- template "_internal/pagination.html" . -}}
+
 {{ end }}
