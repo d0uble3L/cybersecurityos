@@ -22,7 +22,7 @@ In this post, you’ll learn a **three-step mental model** — _Detect, Disengag
 > 💡 **Want to go deeper?**
 > ![Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](/posts/os-weekly/images/leadershipos.png)
 > If you’re aiming to lead a security team, break into cybersecurity, or operate with greater speed and confidence — this is the toolkit you’ve been missing:  
-> 🔗 [Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](http://store.cybersecurityos.net/l/cybersecurity-leadership-os)
+> 🔗 [Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](https://store.cybersecurityos.net/l/cybersecurity-leadership-os)
 
 ---
 

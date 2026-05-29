@@ -54,7 +54,7 @@ Cyber leaders must pay close attention to linguistic nuances and operational pat
 > 💡 **Want to go deeper?**
 > ![Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](/posts/os-weekly/images/leadershipos.png)
 > If you’re aiming to lead a security team, break into cybersecurity, or operate with greater speed and confidence — this is the toolkit you’ve been missing:  
-> 🔗 [Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](http://store.cybersecurityos.net/l/cybersecurity-leadership-os)
+> 🔗 [Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](https://store.cybersecurityos.net/l/cybersecurity-leadership-os)
 ---
 
 At the same time, vulnerabilities in federal cybersecurity or flaws in banking trojan infrastructures (ERMAC 3.0) bring forward a critical lesson – robust internal infrastructure is as important as external threat monitoring. 

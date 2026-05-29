@@ -7,6 +7,7 @@ featured_image:  /posts/os-weekly/images/discord.png
 description: "Explore the latest tactics used by cyber adversaries — from Discord link hijacking to strategic shifts in tech alliances — and how cybersecurity leaders can respond."
 tags: ["cybersecurity", "malware", "policy", "risk management", "tech strategy", "cybersecurityOS"]
 slug: "deconstructing-emerging-cyber-threat-vectors"
+draft: false
 ---
 In today’s dynamically shifting threat landscape, the tactics employed by cyber adversaries are evolving faster than ever. Malicious actors have transformed trusted features of mainstream platforms into vectors for impactful attacks. At **CyberSHIELD**, we believe that understanding these developments is the key to transforming risk into a strategic advantage.
 
@@ -71,4 +72,4 @@ If you enjoy the content, then consider [buying me a coffee.](https://store.cybe
 
 ---
 
-**P.S.** Stay updated on the latest cybersecurity trends and best practices by subscribing to our newsletter or leaving your thoughts in the comments below! [Visit CyberSHIELD](https://cybershieldacademy.net)
+**P.S.** Stay updated on the latest cybersecurity trends and best practices by subscribing to our newsletter. [Visit CybersecurityOS](https://cybersecurityos.net)

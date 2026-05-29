@@ -7,6 +7,7 @@ images:
 featured_image:  /posts/os-weekly/images/cyber-summer-2025.png
 description: "From sanctions evasion to privacy under pressure, discover a 3-step adaptive cybersecurity framework that leaders and professionals can use to stay ahead of evolving threats."
 tags: ["CybersecurityOS","Cybersecurity", "Threat Intelligence", "Risk Management", "Adaptive Frameworks", "Cyber Leadership"]
+draft: false
 ---
 Cybersecurity has never been more high-stakes — or more unpredictable. The playbook that kept organizations safe five years ago is crumbling in the face of today’s agile, relentless threat actors.
 
@@ -37,7 +38,7 @@ Recent events illustrate the challenges in countering modern cyber threats:
 > 💡 **Want to go deeper?**
 > ![Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](/posts/os-weekly/images/leadershipos.png)
 > If you’re aiming to lead a security team, break into cybersecurity, or operate with greater speed and confidence — this is the toolkit you’ve been missing:  
-> 🔗 [Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](http://store.cybersecurityos.net/l/cybersecurity-leadership-os)
+> 🔗 [Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](https://store.cybersecurityos.net/l/cybersecurity-leadership-os)
 ---
 
 ![Cybersecurity challenges during summer vacation season](/posts/os-weekly/images/cyber-summer-2025.png)
