@@ -3,842 +3,371 @@
 {{ end }}
 
 {{ define "main" }}
+
+{{- $gumroad := "https://cybersecurityos.gumroad.com/l/os-member" -}}
+
 <div class="fm-page">
 
-  <!-- ═══ HERO ══════════════════════════════════════════════════ -->
+  <!-- ═══ HERO ═════════════════════════════════════════════════ -->
   <section class="fm-hero">
     <div class="fm-hero-grid" aria-hidden="true"></div>
     <div class="fm-hero-glow" aria-hidden="true"></div>
     <div class="fm-hero-content">
       <div class="fm-eyebrow">
         <span class="fm-dot"></span>
-        Founding Member Access — Launch Pricing
+        CyberSHIELD OS Member — Founding Rate
       </div>
       <h1 class="fm-title">
-        Join the OS.<br>
-        <span>Get the Edge.</span>
+        Stop consuming security content.<br>
+        <span>Start operating at a higher level.</span>
       </h1>
       <p class="fm-subtitle">
-        Weekly security intelligence, leadership frameworks, and systems thinking
-        for security engineers and CISOs — from free reader to full OS access.
-        <strong>Founding member rates are locked in for life.</strong>
+        A membership for security engineers and CISOs who need more than blog posts —
+        frameworks, deep-dives, and direct access to a Deputy CISO who's built this at scale.
       </p>
-      <div class="fm-hero-badges">
-        <span class="fm-badge fm-badge--green">18+ posts published</span>
-        <span class="fm-badge fm-badge--purple">SPECTRA open-source</span>
-        <span class="fm-badge fm-badge--blue">Deputy CISO author</span>
+      <div class="fm-hero-price-block">
+        <span class="fm-hero-price-amount">$15</span>
+        <span class="fm-hero-price-cadence">/month</span>
+        <span class="fm-hero-price-or">or</span>
+        <span class="fm-hero-price-annual">$120/year</span>
+        <span class="fm-hero-price-save">save $60</span>
+      </div>
+      <div class="fm-hero-actions">
+        <a href="{{ $gumroad }}" class="fm-btn fm-btn--primary fm-btn--lg" target="_blank" rel="noopener">
+          Join as Founding Member →
+        </a>
+      </div>
+      <p class="fm-hero-guarantee">Rate locked in for life · Cancel any time · Instant access</p>
+    </div>
+  </section>
+
+  <!-- ═══ SOCIAL PROOF BAR ════════════════════════════════════ -->
+  <div class="fm-proof-bar">
+    <div class="fm-proof-bar-inner">
+      <div class="fm-proof-stat">
+        <span class="fm-proof-num">18+</span>
+        <span class="fm-proof-label">posts in the OS</span>
+      </div>
+      <div class="fm-proof-divider"></div>
+      <div class="fm-proof-stat">
+        <span class="fm-proof-num">10yr</span>
+        <span class="fm-proof-label">practitioner experience</span>
+      </div>
+      <div class="fm-proof-divider"></div>
+      <div class="fm-proof-stat">
+        <span class="fm-proof-num">Deputy CISO</span>
+        <span class="fm-proof-label">author &amp; curator</span>
+      </div>
+      <div class="fm-proof-divider"></div>
+      <div class="fm-proof-stat">
+        <span class="fm-proof-num">$15/mo</span>
+        <span class="fm-proof-label">founding rate, locked forever</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ PROBLEM ══════════════════════════════════════════════ -->
+  <section class="fm-problem">
+    <div class="fm-problem-inner">
+      <div class="fm-section-label">// The gap no one talks about</div>
+      <h2 class="fm-section-title">You're staying current. You're not getting ahead.</h2>
+      <div class="fm-problem-grid">
+        <div class="fm-problem-item">
+          <span class="fm-problem-icon">📥</span>
+          <h4>The firehose is real</h4>
+          <p>131 new CVEs disclosed every single day. Twitter threads. Newsletter overload. You're reading more than ever and still feel behind.</p>
+        </div>
+        <div class="fm-problem-item">
+          <span class="fm-problem-icon">🔧</span>
+          <h4>Tool-first, strategy-last</h4>
+          <p>Most security content teaches you how to use things. Almost none of it teaches you how to lead, prioritize, or communicate risk to people who control budgets.</p>
+        </div>
+        <div class="fm-problem-item">
+          <span class="fm-problem-icon">🪞</span>
+          <h4>No practitioner perspective</h4>
+          <p>Vendor content is marketing. Twitter is hot takes. Academic papers are theory. You need someone who's actually done the job — and will tell you what actually works.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══ PRICING CARDS ════════════════════════════════════════ -->
-  <section class="fm-pricing-section">
-    <div class="fm-section-label">// Select your tier</div>
-    <div class="fm-cards">
-
-      <!-- ── TIER 1: FREE ──────────────────────────────────── -->
-      <div class="fm-card">
-        <div class="fm-card-header">
-          <span class="fm-tier-badge fm-tier-badge--free">Free</span>
-          <h2 class="fm-card-name">Reader</h2>
-          <div class="fm-price">
-            <span class="fm-price-amount">$0</span>
-            <span class="fm-price-cadence">always free</span>
-          </div>
-          <p class="fm-card-desc">
-            The CybersecurityOS weekly feed — no paywall, no expiry.
-          </p>
-        </div>
-        <ul class="fm-features">
-          <li class="fm-feature">
-            <span class="fm-check">✓</span>
-            Weekly OS post — threat intel, mental models, leadership
-          </li>
-          <li class="fm-feature">
-            <span class="fm-check">✓</span>
-            SPECTRA and product release notes
-          </li>
-          <li class="fm-feature">
-            <span class="fm-check">✓</span>
-            All public content and docs
-          </li>
-          <li class="fm-feature fm-feature--dim">
-            <span class="fm-cross">✗</span>
-            Vault access
-          </li>
-          <li class="fm-feature fm-feature--dim">
-            <span class="fm-cross">✗</span>
-            Monthly deep-dives
-          </li>
-          <li class="fm-feature fm-feature--dim">
-            <span class="fm-cross">✗</span>
-            Async Q&A
-          </li>
-        </ul>
-        <div class="fm-card-footer">
-          <a href="/posts/" class="fm-btn fm-btn--ghost">
-            Read the OS →
-          </a>
-        </div>
+  <!-- ═══ SOLUTION ═════════════════════════════════════════════ -->
+  <section class="fm-solution">
+    <div class="fm-solution-inner">
+      <div class="fm-terminal-header">
+        <span class="fm-terminal-dot fm-terminal-dot--red"></span>
+        <span class="fm-terminal-dot fm-terminal-dot--amber"></span>
+        <span class="fm-terminal-dot fm-terminal-dot--green"></span>
+        <span class="fm-terminal-title">cybersecurityos — os-member</span>
       </div>
-
-      <!-- ── TIER 2: OS MEMBER ─────────────────────────────── -->
-      <div class="fm-card fm-card--featured">
-        <div class="fm-popular-badge">Most Popular</div>
-        <div class="fm-card-header">
-          <span class="fm-tier-badge fm-tier-badge--member">Founding Member</span>
-          <h2 class="fm-card-name">OS Member</h2>
-          <div class="fm-price">
-            <span class="fm-price-amount">$15</span>
-            <span class="fm-price-cadence">/month</span>
-          </div>
-          <div class="fm-price-alt">or $120/year <span class="fm-save-badge">Save $60</span></div>
-          <p class="fm-card-desc">
-            Full OS access — built for security engineers who want to lead,
-            not just react.
-          </p>
-        </div>
-        <ul class="fm-features">
-          <li class="fm-feature">
-            <span class="fm-check fm-check--green">✓</span>
-            Everything in Reader
-          </li>
-          <li class="fm-feature">
-            <span class="fm-check fm-check--green">✓</span>
-            Vault access — full archive of frameworks, templates, playbooks
-          </li>
-          <li class="fm-feature">
-            <span class="fm-check fm-check--green">✓</span>
-            Monthly deep-dive — long-form analysis on one security domain
-          </li>
-          <li class="fm-feature">
-            <span class="fm-check fm-check--green">✓</span>
-            Async Q&A — submit questions, get real answers
-          </li>
-          <li class="fm-feature fm-feature--dim">
-            <span class="fm-cross">✗</span>
-            Private community channel
-          </li>
-          <li class="fm-feature fm-feature--dim">
-            <span class="fm-cross">✗</span>
-            Async strategy review
-          </li>
-        </ul>
-        <div class="fm-card-footer">
-          <a href="https://store.cybersecurityos.net/l/os-member" class="fm-btn fm-btn--primary" target="_blank" rel="noopener">
-            Join as Founding Member →
-          </a>
-          <p class="fm-cta-note">Rate locked in for life · Cancel any time</p>
-        </div>
+      <div class="fm-terminal-body">
+        <p><span class="fm-prompt">$</span> cat README.md</p>
+        <p class="fm-terminal-output fm-terminal-green"># CyberSHIELD OS Member</p>
+        <p class="fm-terminal-output">A membership for security engineers who want to think, lead,</p>
+        <p class="fm-terminal-output">and operate at a higher level — built by a practitioner,</p>
+        <p class="fm-terminal-output">not a content machine.</p>
+        <p class="fm-terminal-output">&nbsp;</p>
+        <p class="fm-terminal-output fm-terminal-dim">## What you get every month</p>
+        <p class="fm-terminal-output"><span class="fm-terminal-green">+</span> Weekly OS post (public)</p>
+        <p class="fm-terminal-output"><span class="fm-terminal-green">+</span> Monthly deep-dive (members only)</p>
+        <p class="fm-terminal-output"><span class="fm-terminal-green">+</span> Full vault access — frameworks, templates, playbooks</p>
+        <p class="fm-terminal-output"><span class="fm-terminal-green">+</span> Async Q&amp;A — your questions, real answers</p>
+        <p class="fm-terminal-output">&nbsp;</p>
+        <p class="fm-terminal-output fm-terminal-dim">## Pricing</p>
+        <p class="fm-terminal-output"><span class="fm-terminal-green">$15/month</span> or <span class="fm-terminal-green">$120/year</span></p>
+        <p class="fm-terminal-output">Founding rate — locked for life at current price.</p>
+        <p>&nbsp;</p>
+        <p><span class="fm-prompt">$</span> <a href="{{ $gumroad }}" class="fm-terminal-link" target="_blank" rel="noopener">join --founding-member</a><span class="os-cursor"></span></p>
       </div>
-
-      <!-- ── TIER 3: OS PRO ────────────────────────────────── -->
-      <div class="fm-card fm-card--future">
-        <div class="fm-coming-badge">Coming Soon</div>
-        <div class="fm-card-header">
-          <span class="fm-tier-badge fm-tier-badge--pro">Future</span>
-          <h2 class="fm-card-name">OS Pro</h2>
-          <div class="fm-price">
-            <span class="fm-price-amount">$49</span>
-            <span class="fm-price-cadence">/month</span>
-          </div>
-          <p class="fm-card-desc">
-            For security leaders who want direct access — strategy reviews,
-            private community, and advisory-level depth.
-          </p>
-        </div>
-        <ul class="fm-features">
-          <li class="fm-feature">
-            <span class="fm-check fm-check--purple">✓</span>
-            Everything in OS Member
-          </li>
-          <li class="fm-feature">
-            <span class="fm-check fm-check--purple">✓</span>
-            Private Slack / Discord channel — peers + author access
-          </li>
-          <li class="fm-feature">
-            <span class="fm-check fm-check--purple">✓</span>
-            1× async strategy review/month — program, career, or risk question
-          </li>
-          <li class="fm-feature fm-feature--dim">
-            <span class="fm-cross">✗</span>
-            Not yet available
-          </li>
-        </ul>
-        <div class="fm-card-footer">
-          <a href="#notify" class="fm-btn fm-btn--ghost fm-btn--disabled" aria-disabled="true">
-            Notify Me When Live
-          </a>
-          <p class="fm-cta-note">Join OS Member to be first in line</p>
-        </div>
-      </div>
-
-    </div><!-- /fm-cards -->
+    </div>
   </section>
 
-  <!-- ═══ FOUNDING MEMBER CALLOUT ══════════════════════════════ -->
-  <section class="fm-callout">
-    <div class="fm-callout-inner">
-      <div class="fm-callout-icon">⚡</div>
-      <div>
-        <h3 class="fm-callout-title">Why "Founding Member"?</h3>
-        <p class="fm-callout-body">
-          The first cohort who join at $15/month lock in that rate permanently —
-          even when pricing increases as the vault grows. You're not just
-          subscribing. You're co-signing that security engineers deserve
-          better intelligence infrastructure.
+  <!-- ═══ WHAT YOU GET ═════════════════════════════════════════ -->
+  <section class="fm-deliverables">
+    <div class="fm-deliverables-inner">
+      <div class="fm-section-label">// What's included</div>
+      <h2 class="fm-section-title">Four things. Each one worth more than the sub.</h2>
+
+      <div class="fm-deliverable-list">
+
+        <div class="fm-deliverable">
+          <div class="fm-deliverable-num">01</div>
+          <div class="fm-deliverable-body">
+            <h3 class="fm-deliverable-title">Weekly OS Post</h3>
+            <p class="fm-deliverable-desc">
+              Every week: a curated breakdown of what matters in the threat landscape — with the mental models and
+              strategic context that tell you what to <em>do</em> about it. Not a news digest. A practitioner's read.
+            </p>
+            <ul class="fm-deliverable-bullets">
+              <li>Threat intelligence filtered through a security leader's lens</li>
+              <li>Mental models for faster, clearer decisions under pressure</li>
+              <li>Career and leadership frameworks from someone doing the job</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="fm-deliverable">
+          <div class="fm-deliverable-num">02</div>
+          <div class="fm-deliverable-body">
+            <h3 class="fm-deliverable-title">Monthly Deep-Dive <span class="fm-deliverable-badge">Members Only</span></h3>
+            <p class="fm-deliverable-desc">
+              One security domain. Full treatment. No surface-level summaries — these are the posts that take
+              weeks to write: audit readiness, GRC engineering, CISO/engineer transition, AI in the SOC, and more.
+            </p>
+            <ul class="fm-deliverable-bullets">
+              <li>Long-form analysis you won't find in a newsletter</li>
+              <li>Actionable frameworks embedded throughout</li>
+              <li>Real-world examples from ten years of practitioner work</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="fm-deliverable">
+          <div class="fm-deliverable-num">03</div>
+          <div class="fm-deliverable-body">
+            <h3 class="fm-deliverable-title">The Vault <span class="fm-deliverable-badge">Members Only</span></h3>
+            <p class="fm-deliverable-desc">
+              Full archive of every framework, template, and playbook published — plus content that never goes public.
+              The vault grows every month. Your access to everything past, present, and future is included.
+            </p>
+            <div class="fm-vault-mini-grid">
+              <div class="fm-vault-mini-item"><span>🧠</span><span>Mental Models</span></div>
+              <div class="fm-vault-mini-item"><span>🗂</span><span>IR Playbooks</span></div>
+              <div class="fm-vault-mini-item"><span>📋</span><span>Audit Templates</span></div>
+              <div class="fm-vault-mini-item"><span>🚀</span><span>Career Maps</span></div>
+              <div class="fm-vault-mini-item"><span>🤖</span><span>AI Prompts</span></div>
+              <div class="fm-vault-mini-item"><span>📊</span><span>GRC Frameworks</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fm-deliverable">
+          <div class="fm-deliverable-num">04</div>
+          <div class="fm-deliverable-body">
+            <h3 class="fm-deliverable-title">Async Q&amp;A <span class="fm-deliverable-badge">Members Only</span></h3>
+            <p class="fm-deliverable-desc">
+              Monthly: submit your real questions and get real answers. Not AI-generated, not canned.
+              Career decisions, program strategy, risk conversations, tool trade-offs — if it matters to you, ask it.
+            </p>
+            <ul class="fm-deliverable-bullets">
+              <li>Written responses from someone who's navigated the same decisions</li>
+              <li>No topic limits — career, technical, leadership, or all three</li>
+              <li>More valuable than one-off Twitter advice or a $300/hr consulting call</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="fm-deliverables-cta">
+        <a href="{{ $gumroad }}" class="fm-btn fm-btn--primary fm-btn--lg" target="_blank" rel="noopener">
+          Get full access — $15/mo →
+        </a>
+        <p class="fm-cta-note">or $120/year · Founding rate · Cancel any time</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHO IT'S FOR ═════════════════════════════════════════ -->
+  <section class="fm-for-section">
+    <div class="fm-for-inner">
+      <div class="fm-section-label">// Built for</div>
+      <h2 class="fm-section-title">This is for practitioners, not spectators.</h2>
+      <div class="fm-for-grid">
+        <div class="fm-for-item fm-for-item--yes">
+          <h4 class="fm-for-heading fm-for-heading--yes">✓ This is for you if</h4>
+          <ul class="fm-for-list">
+            <li>You're a security engineer moving into leadership</li>
+            <li>You're a CISO or deputy CISO who needs sharper frameworks</li>
+            <li>You're serious about breaking into the field and learning from someone doing the job</li>
+            <li>You want signal, not noise — one trusted source over twenty mediocre ones</li>
+            <li>You ask "why does this matter to the business?" before "what tool fixes this?"</li>
+          </ul>
+        </div>
+        <div class="fm-for-item fm-for-item--no">
+          <h4 class="fm-for-heading fm-for-heading--no">✗ Skip it if</h4>
+          <ul class="fm-for-list">
+            <li>You want step-by-step tutorials or certification prep</li>
+            <li>You're looking for vendor tool reviews</li>
+            <li>You just want a newsletter with 5 links to click every week</li>
+            <li>You're not interested in the leadership and strategy side of security</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AUTHOR ════════════════════════════════════════════════ -->
+  <section class="fm-author">
+    <div class="fm-author-inner">
+      <div class="fm-author-meta">
+        <p class="fm-author-label">// Who's behind this</p>
+        <h3 class="fm-author-name">Michael Tayo</h3>
+        <p class="fm-author-title">Information Security Lead · Deputy CISO · Master's in Cybersecurity</p>
+      </div>
+      <p class="fm-author-bio">
+        Ten years across cloud, application, and enterprise security. I've advised executives on risk, led security programs at scale, and built teams from the ground up. I hold a Master's in Cybersecurity and multiple industry certifications — but what I write about is the stuff that certificates don't teach: how to think, how to lead, and how to make security matter to the people who control resources.
+      </p>
+      <p class="fm-author-bio" style="margin-top:1rem;">
+        I built CybersecurityOS because the intelligence and frameworks I needed as a practitioner didn't exist in one place. So I built the OS I wished I had — and now I'm making it available to the people who need it most.
+      </p>
+      <div class="fm-author-links">
+        <a href="/about/" class="fm-btn fm-btn--ghost" style="font-size:.78rem;">Full bio →</a>
+        <a href="/posts/" class="fm-btn fm-btn--ghost" style="font-size:.78rem;">Read the free posts →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOUNDING MEMBER URGENCY ══════════════════════════════ -->
+  <section class="fm-urgency">
+    <div class="fm-urgency-inner">
+      <div class="fm-urgency-icon">⚡</div>
+      <div class="fm-urgency-body">
+        <h3 class="fm-urgency-title">Why "Founding Member" matters</h3>
+        <p class="fm-urgency-desc">
+          The vault grows every month. The monthly deep-dives accumulate. The Q&amp;A backlog builds.
+          As the content library expands, the price will increase for new members.
+          Join now and your $15/month is <strong>locked in permanently</strong> — even when new members pay more.
+          You're not just buying a subscription. You're locking in early-access economics.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- ═══ WHAT'S IN THE VAULT ══════════════════════════════════ -->
-  <section class="fm-vault-section">
-    <div class="fm-section-label">// What's inside the vault</div>
-    <h2 class="fm-section-title">Everything a security engineer needs to lead</h2>
-    <div class="fm-vault-grid">
-      <div class="fm-vault-item">
-        <span class="fm-vault-icon">🧠</span>
-        <h4>Mental Models</h4>
-        <p>30+ decision frameworks used at the CISO and deputy-CISO level. Detect, Disengage, Shield. Flywheel vs. Fire Station. Hazard + Outrage.</p>
-      </div>
-      <div class="fm-vault-item">
-        <span class="fm-vault-icon">🗂</span>
-        <h4>Playbooks & Templates</h4>
-        <p>Incident response runbooks, risk register templates, audit readiness checklists, SOC 2 / ISO 27001 control mappings.</p>
-      </div>
-      <div class="fm-vault-item">
-        <span class="fm-vault-icon">🛡</span>
-        <h4>Threat Intelligence</h4>
-        <p>Curated weekly signal — CVE prioritization, campaign analysis, and the context that turns noise into decisions.</p>
-      </div>
-      <div class="fm-vault-item">
-        <span class="fm-vault-icon">🚀</span>
-        <h4>Career Frameworks</h4>
-        <p>Engineer → Leader transition maps, executive communication templates, and the 8 shifts that separate senior engineers from security leaders.</p>
-      </div>
-      <div class="fm-vault-item">
-        <span class="fm-vault-icon">🤖</span>
-        <h4>AI & Automation</h4>
-        <p>Claude prompts for security workflows, SPECTRA integration guides, agentic SOC patterns, and GRC engineering blueprints.</p>
-      </div>
-      <div class="fm-vault-item">
-        <span class="fm-vault-icon">📊</span>
-        <h4>GRC & Compliance</h4>
-        <p>Audit season guides for SOC 2, ISO 27001, and NIST. Risk management OS templates. Board-ready security metric frameworks.</p>
-      </div>
-    </div>
-  </section>
+  <!-- ═══ PRICING ═══════════════════════════════════════════════ -->
+  <section class="fm-pricing-simple">
+    <div class="fm-pricing-simple-inner">
+      <div class="fm-section-label">// One tier. Everything included.</div>
+      <h2 class="fm-section-title">Simple pricing. No tiers to decode.</h2>
 
-  <!-- ═══ AUTHOR CREDIBILITY ═══════════════════════════════════ -->
-  <section class="fm-author">
-    <div class="fm-author-inner">
-      <div class="fm-author-meta">
-        <p class="fm-author-label">// Written and curated by</p>
-        <h3 class="fm-author-name">Michael Tayo</h3>
-        <p class="fm-author-title">Information Security Lead · Deputy CISO</p>
-      </div>
-      <p class="fm-author-bio">
-        A decade across cloud, application, and enterprise security.
-        Master's in Cybersecurity. I built CybersecurityOS because the
-        intelligence and frameworks I needed as a practitioner didn't exist
-        in one place — so I built the OS I wished I had.
-      </p>
-      <div class="fm-author-links">
-        <a href="/about/" class="fm-btn fm-btn--ghost" style="font-size:.78rem;">About Michael →</a>
-        <a href="/posts/" class="fm-btn fm-btn--ghost" style="font-size:.78rem;">Read the Posts →</a>
+      <div class="fm-pricing-card">
+        <div class="fm-pricing-card-left">
+          <span class="fm-tier-badge fm-tier-badge--member">OS Member</span>
+          <div class="fm-pricing-options">
+            <div class="fm-pricing-opt fm-pricing-opt--featured">
+              <div class="fm-pricing-opt-label">Monthly</div>
+              <div class="fm-pricing-opt-price">$15<span>/mo</span></div>
+              <div class="fm-pricing-opt-note">Billed monthly · Cancel any time</div>
+            </div>
+            <div class="fm-pricing-opt-divider">or</div>
+            <div class="fm-pricing-opt">
+              <div class="fm-pricing-opt-label">Annual <span class="fm-save-badge">Save $60</span></div>
+              <div class="fm-pricing-opt-price">$120<span>/yr</span></div>
+              <div class="fm-pricing-opt-note">$10/mo · Billed once per year</div>
+            </div>
+          </div>
+        </div>
+        <div class="fm-pricing-card-right">
+          <p class="fm-pricing-includes-label">Everything included:</p>
+          <ul class="fm-pricing-includes">
+            <li><span class="fm-check fm-check--green">✓</span> Weekly OS post</li>
+            <li><span class="fm-check fm-check--green">✓</span> Monthly deep-dive</li>
+            <li><span class="fm-check fm-check--green">✓</span> Full vault access</li>
+            <li><span class="fm-check fm-check--green">✓</span> Monthly async Q&amp;A</li>
+            <li><span class="fm-check fm-check--green">✓</span> Founding rate locked forever</li>
+          </ul>
+          <a href="{{ $gumroad }}" class="fm-btn fm-btn--primary" target="_blank" rel="noopener" style="margin-top:1.25rem;width:100%;">
+            Join OS Member on Gumroad →
+          </a>
+          <p class="fm-cta-note" style="margin-top:.6rem;">Powered by Gumroad · Instant access after payment</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ═══ FAQ ═══════════════════════════════════════════════════ -->
   <section class="fm-faq-section" id="faq">
-    <div class="fm-section-label">// Common questions</div>
+    <div class="fm-section-label">// Objections answered</div>
     <h2 class="fm-section-title">FAQ</h2>
     <div class="fm-faq-grid">
       <div class="fm-faq-item">
-        <h4 class="fm-faq-q">What exactly is "vault access"?</h4>
-        <p class="fm-faq-a">The vault is a growing library of frameworks, templates, playbooks, and deep-dives accessible to OS Members. Think of it as the archive of everything published — plus exclusive content never posted publicly.</p>
+        <h4 class="fm-faq-q">What do I actually get on day one?</h4>
+        <p class="fm-faq-a">Immediate access to the full vault — every framework, template, and deep-dive published to date. Plus you're enrolled for the next weekly post and monthly deep-dive the moment they drop.</p>
       </div>
       <div class="fm-faq-item">
-        <h4 class="fm-faq-q">How does async Q&A work?</h4>
-        <p class="fm-faq-a">OS Members submit questions monthly. I respond in written form — could be a quick answer, a mini-framework, or a pointed recommendation. It's not live office hours; it's asynchronous and thoughtful.</p>
+        <h4 class="fm-faq-q">How does the async Q&amp;A work?</h4>
+        <p class="fm-faq-a">Each month you can submit questions — about your career, your security program, a risk decision, a leadership challenge, anything relevant. I respond in writing. It's not live; it's thoughtful and deliberate.</p>
       </div>
       <div class="fm-faq-item">
-        <h4 class="fm-faq-q">Is the founding member rate really locked in?</h4>
-        <p class="fm-faq-a">Yes. If you join at $15/month today, that's your rate as long as you stay subscribed. Future tiers and expanded benefits will be priced higher for new members.</p>
+        <h4 class="fm-faq-q">Is the founding rate actually locked in?</h4>
+        <p class="fm-faq-a">Yes. $15/month (or $120/year) stays your rate as long as you remain a member. When pricing increases for new members, yours doesn't change. That's the founding member commitment.</p>
       </div>
       <div class="fm-faq-item">
-        <h4 class="fm-faq-q">Can I cancel at any time?</h4>
-        <p class="fm-faq-a">Yes — no contracts, no lock-in. Cancel any time and you keep access through the end of your billing period.</p>
+        <h4 class="fm-faq-q">Can I cancel?</h4>
+        <p class="fm-faq-a">Any time. No contracts, no penalties. You keep access through the end of the billing period. Gumroad handles the subscription management — it's clean and transparent.</p>
       </div>
       <div class="fm-faq-item">
-        <h4 class="fm-faq-q">What's the difference between annual and monthly?</h4>
-        <p class="fm-faq-a">Annual ($120/year) gives you two months free vs. monthly billing. Same access — you're just committing to the full year up front.</p>
+        <h4 class="fm-faq-q">I'm early in my career. Is this still for me?</h4>
+        <p class="fm-faq-a">Yes — especially the career frameworks and async Q&amp;A. You don't need to be a CISO to benefit from thinking like one. Some of the most valuable content is specifically about navigating the early and mid stages of a security career.</p>
       </div>
       <div class="fm-faq-item">
-        <h4 class="fm-faq-q">When is OS Pro launching?</h4>
-        <p class="fm-faq-a">No date set yet. OS Pro is being designed around consulting-adjacency — small cohort, meaningful access. OS Members will be first to know and first in line.</p>
+        <h4 class="fm-faq-q">What's the vault exactly?</h4>
+        <p class="fm-faq-a">The vault is the cumulative archive: every deep-dive, framework, template, and member-only post ever published, plus content that never appears in the public feed. It grows every month you're a member.</p>
       </div>
     </div>
   </section>
 
   <!-- ═══ FINAL CTA ══════════════════════════════════════════════ -->
-  <section class="fm-final-cta" id="notify">
+  <section class="fm-final-cta" id="join">
     <div class="fm-final-grid" aria-hidden="true"></div>
     <div class="fm-final-glow" aria-hidden="true"></div>
     <div class="fm-final-content">
-      <p class="fm-eyebrow">// Ready to join?</p>
-      <h2 class="fm-final-title">Lock in your founding rate today.</h2>
-      <p class="fm-final-desc">Pricing increases as the vault grows. The rate you join at is the rate you keep.</p>
+      <p class="fm-eyebrow">// The rate goes up. Your lock-in doesn't.</p>
+      <h2 class="fm-final-title">Start operating at a higher level.</h2>
+      <p class="fm-final-desc">
+        $15/month. Everything included. Founding rate locked for life.
+        Join before the price increases.
+      </p>
       <div class="fm-final-actions">
-        <a href="https://store.cybersecurityos.net/l/os-member" class="fm-btn fm-btn--primary fm-btn--lg" target="_blank" rel="noopener">
-          Join OS Member — $15/mo →
-        </a>
-        <a href="https://store.cybersecurityos.net/l/os-member-annual" class="fm-btn fm-btn--ghost fm-btn--lg" target="_blank" rel="noopener">
-          Annual — $120/year
+        <a href="{{ $gumroad }}" class="fm-btn fm-btn--primary fm-btn--lg" target="_blank" rel="noopener">
+          Join OS Member → $15/mo
         </a>
       </div>
       <p style="font-family:var(--os-font-mono);font-size:.68rem;color:var(--os-text-dim);margin-top:1.25rem;">
-        Or stay free → <a href="/posts/" style="color:var(--os-text-muted);text-decoration:none;border-bottom:1px solid var(--os-border);">Read the weekly OS</a>
+        Not ready? → <a href="/posts/" style="color:var(--os-text-muted);text-decoration:none;border-bottom:1px solid var(--os-border);">Read the free weekly posts first</a>
       </p>
     </div>
   </section>
 
 </div><!-- /fm-page -->
-
-<style>
-/* ═══════════════════════════════════════════════════════════════
-   Founding Member page styles
-   Extends the global design system (cybersecurityos.css)
-   ═══════════════════════════════════════════════════════════════ */
-
-.fm-page { background: var(--os-bg); }
-
-/* ── Hero ──────────────────────────────────────────────────── */
-.fm-hero {
-  position: relative;
-  padding: 6rem 2rem 5rem;
-  text-align: center;
-  overflow: hidden;
-}
-.fm-hero-grid {
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(var(--os-border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--os-border) 1px, transparent 1px);
-  background-size: 40px 40px;
-  opacity: 0.35;
-  pointer-events: none;
-}
-.fm-hero-glow {
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse 70% 55% at 50% 100%, var(--os-green-glow) 0%, transparent 70%);
-  pointer-events: none;
-}
-.fm-hero-content { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
-
-.fm-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--os-font-mono);
-  font-size: 0.72rem;
-  color: var(--os-green);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  margin-bottom: 1.25rem;
-  background: rgba(0,255,136,0.07);
-  border: 1px solid var(--os-border-green);
-  padding: 0.3rem 0.8rem;
-  border-radius: 2px;
-}
-.fm-dot {
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: var(--os-green);
-  box-shadow: 0 0 6px var(--os-green);
-  animation: pulse-dot 2s ease-in-out infinite;
-}
-
-.fm-title {
-  font-family: var(--os-font-heading) !important;
-  font-size: clamp(2.25rem, 6vw, 4rem);
-  font-weight: 900;
-  color: var(--os-text) !important;
-  line-height: 1.1;
-  margin: 0 auto 1.25rem;
-  letter-spacing: -0.01em;
-}
-.fm-title span { color: var(--os-green); }
-
-.fm-subtitle {
-  font-size: 1.05rem;
-  color: var(--os-text-muted);
-  max-width: 580px;
-  margin: 0 auto 2rem;
-  line-height: 1.75;
-}
-.fm-subtitle strong { color: var(--os-text); }
-
-.fm-hero-badges {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-.fm-badge {
-  font-family: var(--os-font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 0.2rem 0.6rem;
-  border-radius: 2px;
-  border: 1px solid;
-}
-.fm-badge--green  { color: var(--os-green);  border-color: var(--os-border-green); background: var(--os-green-glow); }
-.fm-badge--purple { color: var(--os-medium); border-color: rgba(163,113,247,.3); background: rgba(163,113,247,.07); }
-.fm-badge--blue   { color: var(--os-low);   border-color: rgba(88,166,255,.3);  background: rgba(88,166,255,.07); }
-
-/* ── Section chrome ────────────────────────────────────────── */
-.fm-section-label {
-  font-family: var(--os-font-mono);
-  font-size: 0.68rem;
-  color: var(--os-green);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-}
-.fm-section-title {
-  font-family: var(--os-font-heading) !important;
-  font-size: clamp(1.3rem, 3vw, 1.75rem);
-  color: var(--os-text) !important;
-  margin: 0 0 2.5rem;
-  font-weight: 700;
-}
-
-/* ── Pricing section ───────────────────────────────────────── */
-.fm-pricing-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
-}
-
-.fm-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-  align-items: start;
-}
-
-.fm-card {
-  background: var(--os-bg-surface);
-  border: 1px solid var(--os-border);
-  border-radius: var(--os-radius-md);
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  transition: border-color 0.2s, box-shadow 0.2s;
-  overflow: visible;
-}
-.fm-card--featured {
-  border-color: var(--os-border-green);
-  box-shadow: 0 0 40px rgba(0,255,136,0.10), 0 0 1px var(--os-border-green);
-  transform: translateY(-4px);
-}
-.fm-card--future { opacity: 0.75; }
-
-.fm-popular-badge {
-  position: absolute;
-  top: -13px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: var(--os-font-mono);
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  background: var(--os-green);
-  color: #080b10;
-  padding: 0.2rem 0.8rem;
-  border-radius: 2px;
-  white-space: nowrap;
-}
-.fm-coming-badge {
-  position: absolute;
-  top: -13px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: var(--os-font-mono);
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  background: var(--os-bg-elevated);
-  color: var(--os-text-dim);
-  border: 1px solid var(--os-border-bright);
-  padding: 0.2rem 0.8rem;
-  border-radius: 2px;
-  white-space: nowrap;
-}
-
-.fm-card-header {
-  padding: 2rem 1.5rem 1.25rem;
-  border-bottom: 1px solid var(--os-border);
-}
-.fm-tier-badge {
-  font-family: var(--os-font-mono);
-  font-size: 0.6rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 0.15rem 0.5rem;
-  border-radius: 2px;
-  border: 1px solid;
-  display: inline-block;
-  margin-bottom: 0.75rem;
-}
-.fm-tier-badge--free   { color: var(--os-text-dim); border-color: var(--os-border); background: var(--os-bg-elevated); }
-.fm-tier-badge--member { color: var(--os-green);  border-color: var(--os-border-green); background: var(--os-green-glow); }
-.fm-tier-badge--pro    { color: var(--os-medium); border-color: rgba(163,113,247,.3); background: rgba(163,113,247,.07); }
-
-.fm-card-name {
-  font-family: var(--os-font-heading) !important;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--os-text) !important;
-  margin: 0 0 1rem;
-}
-
-.fm-price {
-  display: flex;
-  align-items: baseline;
-  gap: 0.25rem;
-  margin-bottom: 0.25rem;
-}
-.fm-price-amount {
-  font-family: var(--os-font-heading);
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: var(--os-text);
-  line-height: 1;
-}
-.fm-card--featured .fm-price-amount { color: var(--os-green); }
-.fm-price-cadence {
-  font-family: var(--os-font-mono);
-  font-size: 0.8rem;
-  color: var(--os-text-muted);
-}
-.fm-price-alt {
-  font-family: var(--os-font-mono);
-  font-size: 0.72rem;
-  color: var(--os-text-dim);
-  margin-bottom: 0.75rem;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-.fm-save-badge {
-  background: rgba(0,255,136,0.12);
-  color: var(--os-green);
-  border: 1px solid var(--os-border-green);
-  font-size: 0.62rem;
-  padding: 0.1rem 0.4rem;
-  border-radius: 2px;
-  font-weight: 700;
-}
-.fm-card-desc {
-  font-size: 0.85rem;
-  color: var(--os-text-muted);
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* Feature list */
-.fm-features {
-  list-style: none;
-  padding: 1.25rem 1.5rem;
-  margin: 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-.fm-feature {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-  font-size: 0.85rem;
-  color: var(--os-text);
-  line-height: 1.45;
-}
-.fm-feature--dim { color: var(--os-text-dim); }
-
-.fm-check {
-  font-family: var(--os-font-mono);
-  font-size: 0.8rem;
-  color: var(--os-info);
-  flex-shrink: 0;
-  margin-top: 0.05rem;
-  font-weight: 700;
-}
-.fm-check--green  { color: var(--os-green); }
-.fm-check--purple { color: var(--os-medium); }
-.fm-cross {
-  font-family: var(--os-font-mono);
-  font-size: 0.8rem;
-  color: var(--os-text-dim);
-  flex-shrink: 0;
-  margin-top: 0.05rem;
-}
-
-.fm-card-footer {
-  padding: 1.25rem 1.5rem 1.5rem;
-  border-top: 1px solid var(--os-border);
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  align-items: stretch;
-}
-.fm-cta-note {
-  font-family: var(--os-font-mono);
-  font-size: 0.65rem;
-  color: var(--os-text-dim);
-  text-align: center;
-  margin: 0;
-}
-
-/* ── Buttons ───────────────────────────────────────────────── */
-.fm-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  font-family: var(--os-font-mono);
-  font-size: 0.82rem;
-  padding: 0.65rem 1.4rem;
-  border-radius: var(--os-radius);
-  text-decoration: none;
-  transition: all 0.2s;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-  border: 1px solid transparent;
-  text-align: center;
-}
-.fm-btn--primary {
-  background: var(--os-green);
-  color: #080b10 !important;
-  font-weight: 700;
-  border-color: var(--os-green);
-}
-.fm-btn--primary:hover {
-  background: var(--os-green-deep);
-  box-shadow: 0 0 24px rgba(0,255,136,0.25);
-  color: #080b10 !important;
-}
-.fm-btn--ghost {
-  background: transparent;
-  color: var(--os-text-muted) !important;
-  border-color: var(--os-border-bright);
-}
-.fm-btn--ghost:hover {
-  color: var(--os-text) !important;
-  border-color: var(--os-border-green);
-  background: var(--os-green-glow);
-}
-.fm-btn--disabled {
-  pointer-events: none;
-  opacity: 0.45;
-}
-.fm-btn--lg { padding: 0.85rem 2rem; font-size: 0.9rem; }
-
-/* ── Founding Member callout ────────────────────────────────── */
-.fm-callout {
-  max-width: 860px;
-  margin: 0 auto 1rem;
-  padding: 0 1.5rem;
-}
-.fm-callout-inner {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.25rem;
-  background: var(--os-bg-surface);
-  border: 1px solid var(--os-border-green);
-  border-radius: var(--os-radius-md);
-  padding: 1.5rem;
-}
-.fm-callout-icon {
-  font-size: 1.5rem;
-  flex-shrink: 0;
-  margin-top: 0.15rem;
-}
-.fm-callout-title {
-  font-family: var(--os-font-heading) !important;
-  font-size: 1rem;
-  color: var(--os-text) !important;
-  margin: 0 0 0.5rem;
-}
-.fm-callout-body {
-  font-size: 0.875rem;
-  color: var(--os-text-muted);
-  line-height: 1.7;
-  margin: 0;
-}
-
-/* ── Vault section ──────────────────────────────────────────── */
-.fm-vault-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
-  border-top: 1px solid var(--os-border);
-}
-.fm-vault-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-}
-.fm-vault-item {
-  background: var(--os-bg-surface);
-  border: 1px solid var(--os-border);
-  border-radius: var(--os-radius-md);
-  padding: 1.5rem;
-  transition: border-color 0.2s;
-}
-.fm-vault-item:hover { border-color: var(--os-border-green); }
-.fm-vault-icon { font-size: 1.5rem; display: block; margin-bottom: 0.75rem; }
-.fm-vault-item h4 {
-  font-family: var(--os-font-heading) !important;
-  font-size: 0.9rem;
-  color: var(--os-text) !important;
-  margin: 0 0 0.5rem;
-}
-.fm-vault-item p {
-  font-size: 0.82rem;
-  color: var(--os-text-muted);
-  line-height: 1.65;
-  margin: 0;
-}
-
-/* ── Author section ─────────────────────────────────────────── */
-.fm-author {
-  background: var(--os-bg-surface);
-  border-top: 1px solid var(--os-border);
-  border-bottom: 1px solid var(--os-border);
-  padding: 4rem 1.5rem;
-}
-.fm-author-inner {
-  max-width: 760px;
-  margin: 0 auto;
-}
-.fm-author-label {
-  font-family: var(--os-font-mono);
-  font-size: 0.68rem;
-  color: var(--os-green);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  margin: 0 0 0.4rem;
-}
-.fm-author-name {
-  font-family: var(--os-font-heading) !important;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--os-text) !important;
-  margin: 0 0 0.2rem;
-}
-.fm-author-title {
-  font-family: var(--os-font-mono);
-  font-size: 0.75rem;
-  color: var(--os-text-dim);
-  margin: 0 0 1.25rem;
-}
-.fm-author-bio {
-  font-size: 0.95rem;
-  color: var(--os-text-muted);
-  line-height: 1.75;
-  margin: 0 0 1.5rem;
-}
-.fm-author-links { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-
-/* ── FAQ ────────────────────────────────────────────────────── */
-.fm-faq-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
-}
-.fm-faq-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-}
-.fm-faq-item {
-  background: var(--os-bg-surface);
-  border: 1px solid var(--os-border);
-  border-radius: var(--os-radius-md);
-  padding: 1.5rem;
-}
-.fm-faq-q {
-  font-family: var(--os-font-heading) !important;
-  font-size: 0.9rem;
-  color: var(--os-text) !important;
-  margin: 0 0 0.6rem;
-}
-.fm-faq-a {
-  font-size: 0.84rem;
-  color: var(--os-text-muted);
-  line-height: 1.7;
-  margin: 0;
-}
-
-/* ── Final CTA ──────────────────────────────────────────────── */
-.fm-final-cta {
-  position: relative;
-  padding: 6rem 2rem;
-  text-align: center;
-  overflow: hidden;
-  background: var(--os-bg-surface);
-  border-top: 1px solid var(--os-border);
-}
-.fm-final-grid {
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(var(--os-border) 1px, transparent 1px),
-    linear-gradient(90deg, var(--os-border) 1px, transparent 1px);
-  background-size: 32px 32px;
-  opacity: 0.25;
-  pointer-events: none;
-}
-.fm-final-glow {
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse 50% 60% at 50% 0%, var(--os-green-glow) 0%, transparent 70%);
-  pointer-events: none;
-}
-.fm-final-content { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
-.fm-final-title {
-  font-family: var(--os-font-heading) !important;
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-weight: 900;
-  color: var(--os-text) !important;
-  margin: 0.75rem auto 1rem;
-}
-.fm-final-desc {
-  font-size: 0.95rem;
-  color: var(--os-text-muted);
-  margin: 0 auto 2.25rem;
-  max-width: 440px;
-}
-.fm-final-actions { display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
-
-/* ── Responsive ─────────────────────────────────────────────── */
-@media (max-width: 900px) {
-  .fm-cards { grid-template-columns: 1fr; }
-  .fm-card--featured { transform: none; }
-  .fm-vault-grid { grid-template-columns: repeat(2, 1fr); }
-  .fm-faq-grid { grid-template-columns: 1fr; }
-}
-@media (max-width: 600px) {
-  .fm-vault-grid { grid-template-columns: 1fr; }
-  .fm-hero { padding: 4rem 1rem 3.5rem; }
-  .fm-final-cta { padding: 4rem 1rem; }
-  .fm-author, .fm-vault-section, .fm-faq-section, .fm-pricing-section { padding-left: 1rem; padding-right: 1rem; }
-}
-</style>
 {{ end }}
