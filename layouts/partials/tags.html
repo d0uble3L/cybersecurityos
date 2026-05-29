@@ -1,0 +1,25 @@
+{{/* CVE-style severity tag badges */}}
+{{ $terms := .GetTerms "tags" }}
+{{ if $terms }}
+<ul class="os-tags">
+  {{ range $terms }}
+    {{ $slug := .LinkTitle | lower }}
+    {{ $class := "os-tag" }}
+    {{/* Map tag keywords to severity color classes */}}
+    {{ if or (in $slug "ciso") (in $slug "leadership") (in $slug "cybersecurityos") (in $slug "security") }}
+      {{ $class = "os-tag os-tag--green" }}
+    {{ else if or (in $slug "threat") (in $slug "malware") (in $slug "exploit") (in $slug "ransomware") (in $slug "breach") }}
+      {{ $class = "os-tag os-tag--amber" }}
+    {{ else if or (in $slug "ai") (in $slug "automation") (in $slug "grc") (in $slug "compliance") }}
+      {{ $class = "os-tag os-tag--purple" }}
+    {{ else if or (in $slug "critical") (in $slug "vulnerability") (in $slug "zero-day") }}
+      {{ $class = "os-tag os-tag--red" }}
+    {{ end }}
+    <li class="list" style="display:inline;">
+      <a href="{{ .RelPermalink }}" class="{{ $class }}" data-tag="{{ $slug }}">
+        {{- .LinkTitle -}}
+      </a>
+    </li>
+  {{ end }}
+</ul>
+{{ end }}

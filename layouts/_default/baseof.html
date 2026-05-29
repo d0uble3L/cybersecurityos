@@ -28,6 +28,13 @@
 
     {{ partial "site-style.html" . }}
     {{ partial "site-scripts.html" . }}
+    <!-- CybersecurityOS design system fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Share+Tech+Mono&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- CybersecurityOS design system -->
+    {{ $css := resources.Get "css/cybersecurityos.css" | minify }}
+    {{ if $css }}<link rel="stylesheet" href="{{ $css.RelPermalink }}">{{ end }}
 
     {{ block "favicon" . }}
       {{ partialCached "site-favicon.html" . }}
@@ -57,12 +64,33 @@
 	{{ block "head" . }}{{ partial "head-additions.html" . }}{{ end }}
   </head>
 
-  <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-near-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
+  <body class="ma0{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
+    <div id="os-progress"></div>
 
     {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
     <main class="pb7" role="main">
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}
+    <script>
+      // Reading progress bar
+      (function(){
+        var bar = document.getElementById('os-progress');
+        if (!bar) return;
+        function update() {
+          var s = document.documentElement;
+          var pct = s.scrollTop / (s.scrollHeight - s.clientHeight) * 100;
+          bar.style.width = Math.min(pct, 100) + '%';
+        }
+        window.addEventListener('scroll', update, { passive: true });
+      })();
+      // Mobile nav toggle
+      (function(){
+        var toggle = document.querySelector('.os-nav-toggle');
+        var links  = document.querySelector('.os-nav-links');
+        if (!toggle || !links) return;
+        toggle.addEventListener('click', function() { links.classList.toggle('open'); });
+      })();
+    </script>
   </body>
 </html>

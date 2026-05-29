@@ -1,0 +1,84 @@
+{{/* Futuristic sticky nav — overrides themes/ananke/layouts/partials/site-header.html */}}
+<header>
+  <nav class="os-nav" role="navigation" aria-label="Main navigation">
+    <!-- Brand -->
+    <a href="{{ .Site.Home.RelPermalink }}" class="os-nav-brand" aria-label="{{ .Site.Title }}">
+      <span class="os-nav-brand-prompt">~/</span>
+      {{ .Site.Title | upper }}
+      <span class="os-cursor" aria-hidden="true"></span>
+    </a>
+
+    <!-- Desktop nav links -->
+    <ul class="os-nav-links" id="os-nav-links">
+      {{ range .Site.Menus.main }}
+      <li>
+        <a href="{{ .URL }}"{{ if eq $.RelPermalink .URL }} class="active"{{ end }}>
+          {{ .Name }}
+        </a>
+      </li>
+      {{ end }}
+      <li>
+        <a href="https://store.cybersecurityos.net/" class="os-nav-cta" target="_blank" rel="noopener">
+          Store ↗
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile toggle -->
+    <button class="os-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </nav>
+
+  {{/* Page-level hero — shown on non-homepage pages that have a title */}}
+  {{ if and .Title (not .IsHome) }}
+  <div class="os-page-header">
+    <div class="os-page-header-content">
+      <p style="font-family:var(--os-font-mono);font-size:.68rem;color:var(--os-green);letter-spacing:.16em;text-transform:uppercase;margin:0 0 .5rem;">
+        {{ .CurrentSection.Title | default .Section }}
+      </p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.description }}<p>{{ . }}</p>{{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  {{/* Newsletter embed (homepage only, below hero) */}}
+  {{ if .IsHome }}
+  <div class="os-hero">
+    <div class="os-hero-grid" aria-hidden="true"></div>
+    <div class="os-hero-glow" aria-hidden="true"></div>
+    <div class="os-hero-content">
+      <p class="os-hero-eyebrow">// Security Intelligence · Weekly OS</p>
+      <h1 class="os-hero-title">
+        Built for Security Engineers.<br>
+        Powered by <em>Systems Thinking</em>.
+      </h1>
+      <p class="os-hero-desc">
+        Mental models, leadership frameworks, and threat intelligence for CISOs,
+        security engineers, and the next generation of cyber leaders.
+      </p>
+      <div class="os-hero-actions">
+        <a href="/posts/" class="os-btn os-btn-primary">Read the OS →</a>
+        <a href="/docs/" class="os-btn os-btn-ghost">View Docs</a>
+      </div>
+      <div class="os-hero-stats">
+        <div>
+          <span class="os-stat-value">18+</span>
+          <span class="os-stat-label">Weekly Posts</span>
+        </div>
+        <div>
+          <span class="os-stat-value">131</span>
+          <span class="os-stat-label">CVEs / Day (2025)</span>
+        </div>
+        <div>
+          <span class="os-stat-value">4.8M</span>
+          <span class="os-stat-label">Security Jobs Unfilled</span>
+        </div>
+        <div>
+          <span class="os-stat-value">< 5d</span>
+          <span class="os-stat-label">Median Exploit Time</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+</header>

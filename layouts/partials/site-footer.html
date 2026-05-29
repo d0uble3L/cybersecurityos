@@ -1,0 +1,44 @@
+{{/* Status-bar footer — overrides themes/ananke/layouts/partials/site-footer.html */}}
+<footer class="os-footer" role="contentinfo">
+  <div class="os-footer-inner">
+
+    <!-- Newsletter -->
+    <div style="text-align:center; margin-bottom:2rem; padding-bottom:2rem; border-bottom:1px solid var(--os-border);">
+      <p style="font-family:var(--os-font-mono);font-size:.7rem;color:var(--os-green);letter-spacing:.16em;text-transform:uppercase;margin:0 0 .75rem;">// Subscribe to the OS</p>
+      <script async data-uid="63abb6cee3" src="https://theghettoflower.kit.com/63abb6cee3/index.js"></script>
+    </div>
+
+    <!-- Footer grid -->
+    <div class="os-footer-grid">
+      <div>
+        <a href="{{ .Site.Home.Permalink }}" class="os-footer-brand">{{ .Site.Title | upper }}</a>
+        <p class="os-footer-desc">
+          Weekly security intelligence, leadership frameworks, and systems thinking
+          for the next generation of security engineers and CISOs.
+        </p>
+      </div>
+      <ul class="os-footer-links">
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+        {{ partial "social-follow.html" . }}
+      </ul>
+    </div>
+
+    <!-- Status bar -->
+    <div class="os-status-bar">
+      <div class="os-status-left">
+        <span class="os-live-badge">
+          <span class="os-live-dot"></span>
+          LIVE
+        </span>
+        <span>{{ .Site.Title }} © {{ now.Format "2006" }}</span>
+        <span>Built with Hugo · Hosted on Netlify</span>
+      </div>
+      <div class="os-status-right">
+        <span>[CybersecurityOS] v2.0 · security-focused · AI-powered</span>
+      </div>
+    </div>
+
+  </div>
+</footer>
