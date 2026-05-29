@@ -60,7 +60,7 @@ googleAnalytics = "YOUR_TRACKING_ID"  # Replace with your Google Analytics track
 
 [[menu.main]]
   name = "Membership"
-  url = "/founding-member/"
+  url = "https://cybersecurityos.gumroad.com/l/os-member"
   weight = 6
 
 # Enable the sitemap
