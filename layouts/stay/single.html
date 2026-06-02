@@ -1,0 +1,238 @@
+{{ define "header" }}
+  {{/* Re-engagement page — minimal nav only, no page header */}}
+  <header>
+    <nav class="os-nav" role="navigation" aria-label="Main navigation">
+      <a href="{{ .Site.Home.RelPermalink }}" class="os-nav-brand" aria-label="{{ .Site.Title }}">
+        <span class="os-nav-brand-prompt">~/</span>
+        {{ .Site.Title | upper }}
+        <span class="os-cursor" aria-hidden="true"></span>
+      </a>
+    </nav>
+  </header>
+{{ end }}
+
+{{ define "main" }}
+<div class="stay-page">
+
+  <!-- Background -->
+  <div class="stay-grid" aria-hidden="true"></div>
+  <div class="stay-glow" aria-hidden="true"></div>
+
+  <!-- Content -->
+  <div class="stay-content">
+
+    <!-- Checkmark -->
+    <div class="stay-check" aria-hidden="true">
+      <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="28" cy="28" r="27" stroke="var(--os-green)" stroke-width="1.5" stroke-opacity="0.4"/>
+        <circle cx="28" cy="28" r="27" stroke="var(--os-green)" stroke-width="1.5" stroke-dasharray="170" stroke-dashoffset="0" class="stay-check-ring"/>
+        <polyline points="17,28 24,35 39,20" stroke="var(--os-green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <p class="stay-eyebrow">// confirmed</p>
+    <h1 class="stay-title">You're staying.<br><span>Good call.</span></h1>
+    <p class="stay-subtitle">
+      You still have full access to everything — the weekly OS, the vault, and every post in the archive.
+      We'll keep delivering the intelligence that helps you operate at a higher level.
+    </p>
+
+    <!-- What they have -->
+    <div class="stay-access">
+      <p class="stay-access-label">// your access</p>
+      <div class="stay-access-grid">
+        <div class="stay-access-item">
+          <span class="stay-access-icon">📬</span>
+          <div>
+            <strong>Weekly OS Post</strong>
+            <span>Threat intel, mental models, leadership — every week</span>
+          </div>
+        </div>
+        <div class="stay-access-item">
+          <span class="stay-access-icon">🗂</span>
+          <div>
+            <strong>The Vault</strong>
+            <span>Full archive of frameworks, templates, and playbooks</span>
+          </div>
+        </div>
+        <div class="stay-access-item">
+          <span class="stay-access-icon">🧠</span>
+          <div>
+            <strong>Monthly Deep-Dive</strong>
+            <span>Long-form analysis on one security domain each month</span>
+          </div>
+        </div>
+        <div class="stay-access-item">
+          <span class="stay-access-icon">💬</span>
+          <div>
+            <strong>Async Q&amp;A</strong>
+            <span>Submit your questions — get real answers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="stay-actions">
+      <a href="/posts/" class="os-btn os-btn-primary">Read the latest posts →</a>
+      <a href="/docs/" class="os-btn os-btn-ghost">Browse the docs</a>
+    </div>
+
+    <!-- Sign-off -->
+    <p class="stay-signoff">
+      — Michael, <span>CybersecurityOS</span>
+    </p>
+
+  </div>
+
+</div>
+
+<style>
+.stay-page {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 1.5rem;
+}
+.stay-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(var(--os-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--os-border) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+.stay-glow {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 50%, var(--os-green-glow) 0%, transparent 70%);
+  pointer-events: none;
+}
+.stay-content {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Check icon */
+.stay-check {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+}
+.stay-check-ring {
+  animation: stay-ring 0.8s ease-out forwards;
+}
+@keyframes stay-ring {
+  from { stroke-dashoffset: 170; }
+  to   { stroke-dashoffset: 0; }
+}
+
+/* Eyebrow */
+.stay-eyebrow {
+  font-family: var(--os-font-mono);
+  font-size: 0.7rem;
+  color: var(--os-green);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem;
+}
+
+/* Title */
+.stay-title {
+  font-family: var(--os-font-heading) !important;
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  font-weight: 900;
+  color: var(--os-text) !important;
+  line-height: 1.1;
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.01em;
+}
+.stay-title span { color: var(--os-green); }
+
+/* Subtitle */
+.stay-subtitle {
+  font-size: 1rem;
+  color: var(--os-text-muted);
+  line-height: 1.75;
+  margin: 0 0 2.5rem;
+  max-width: 460px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Access grid */
+.stay-access {
+  background: var(--os-bg-surface);
+  border: 1px solid var(--os-border);
+  border-radius: var(--os-radius-md);
+  padding: 1.5rem;
+  margin-bottom: 2.25rem;
+  text-align: left;
+}
+.stay-access-label {
+  font-family: var(--os-font-mono);
+  font-size: 0.65rem;
+  color: var(--os-green);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+}
+.stay-access-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.stay-access-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+.stay-access-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+}
+.stay-access-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.stay-access-item strong {
+  font-size: 0.875rem;
+  color: var(--os-text);
+  font-weight: 600;
+}
+.stay-access-item span {
+  font-size: 0.8rem;
+  color: var(--os-text-muted);
+  line-height: 1.5;
+}
+
+/* CTAs */
+.stay-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+/* Sign-off */
+.stay-signoff {
+  font-family: var(--os-font-mono);
+  font-size: 0.75rem;
+  color: var(--os-text-dim);
+}
+.stay-signoff span { color: var(--os-green); }
+
+@media (max-width: 480px) {
+  .stay-actions { flex-direction: column; align-items: stretch; }
+}
+</style>
+{{ end }}
