@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050c1a"/>
+      <stop offset="100%" stop-color="#0b1f38"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="500" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1000" height="3" fill="#00c9e0"/>
+
+  <!-- Title -->
+  <text x="500" y="44" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f4ff">Translating Security Language for the Board</text>
+  <text x="500" y="65" text-anchor="middle" font-size="12" fill="#3d6b8c">Operational metrics vs. governance metrics — same team, different audience</text>
+
+  <!-- VS divider circle -->
+  <line x1="500" y1="80" x2="500" y2="472" stroke="#1a3a5a" stroke-width="1.5"/>
+  <circle cx="500" cy="86" r="16" fill="#0c1f38" stroke="#1a3a5a" stroke-width="1.5"/>
+  <text x="500" y="91" text-anchor="middle" font-size="12" fill="#4a7fa0" font-weight="600">vs</text>
+
+  <!-- ───── LEFT: Wrong ───── -->
+  <rect x="28" y="80" width="458" height="56" rx="9" fill="#130808"/>
+  <text x="257" y="106" text-anchor="middle" font-size="14" font-weight="700" fill="#ef4444">What Most CISOs Report</text>
+  <text x="257" y="124" text-anchor="middle" font-size="11" fill="#7f1d1d">Operational / Activity Metrics</text>
+
+  <!-- Wrong Item 1 -->
+  <rect x="28" y="148" width="458" height="58" rx="8" fill="#0f0505"/>
+  <circle cx="60" cy="177" r="15" fill="#3b0808"/>
+  <text x="60" y="183" text-anchor="middle" font-size="17" fill="#ef4444" font-weight="700">✕</text>
+  <text x="86" y="170" font-size="12.5" fill="#fca5a5" font-weight="600">Alerts triaged this quarter</text>
+  <text x="86" y="188" font-size="10.5" fill="#7f3030">Tells you the team is busy — not whether you're safe</text>
+
+  <!-- Wrong Item 2 -->
+  <rect x="28" y="216" width="458" height="58" rx="8" fill="#0f0505"/>
+  <circle cx="60" cy="245" r="15" fill="#3b0808"/>
+  <text x="60" y="251" text-anchor="middle" font-size="17" fill="#ef4444" font-weight="700">✕</text>
+  <text x="86" y="238" font-size="12.5" fill="#fca5a5" font-weight="600">Vulnerabilities found / patched</text>
+  <text x="86" y="256" font-size="10.5" fill="#7f3030">Counts don't convey business risk or priority</text>
+
+  <!-- Wrong Item 3 -->
+  <rect x="28" y="284" width="458" height="58" rx="8" fill="#0f0505"/>
+  <circle cx="60" cy="313" r="15" fill="#3b0808"/>
+  <text x="60" y="319" text-anchor="middle" font-size="17" fill="#ef4444" font-weight="700">✕</text>
+  <text x="86" y="306" font-size="12.5" fill="#fca5a5" font-weight="600">Security training completion %</text>
+  <text x="86" y="324" font-size="10.5" fill="#7f3030">Measures checkbox activity, not actual risk reduction</text>
+
+  <!-- Wrong Item 4 -->
+  <rect x="28" y="352" width="458" height="58" rx="8" fill="#0f0505"/>
+  <circle cx="60" cy="381" r="15" fill="#3b0808"/>
+  <text x="60" y="387" text-anchor="middle" font-size="17" fill="#ef4444" font-weight="700">✕</text>
+  <text x="86" y="374" font-size="12.5" fill="#fca5a5" font-weight="600">Number of security tools deployed</text>
+  <text x="86" y="392" font-size="10.5" fill="#7f3030">Tooling volume ≠ security effectiveness</text>
+
+  <!-- Wrong Item 5 -->
+  <rect x="28" y="420" width="458" height="58" rx="8" fill="#0f0505"/>
+  <circle cx="60" cy="449" r="15" fill="#3b0808"/>
+  <text x="60" y="455" text-anchor="middle" font-size="17" fill="#ef4444" font-weight="700">✕</text>
+  <text x="86" y="442" font-size="12.5" fill="#fca5a5" font-weight="600">SIEM events generated</text>
+  <text x="86" y="460" font-size="10.5" fill="#7f3030">Noise — gives the board nothing to govern</text>
+
+  <!-- ───── RIGHT: Right ───── -->
+  <rect x="514" y="80" width="458" height="56" rx="9" fill="#031410"/>
+  <text x="743" y="106" text-anchor="middle" font-size="14" font-weight="700" fill="#10b981">What Boards Actually Need</text>
+  <text x="743" y="124" text-anchor="middle" font-size="11" fill="#14532d">Risk / Governance Metrics</text>
+
+  <!-- Right Item 1 -->
+  <rect x="514" y="148" width="458" height="58" rx="8" fill="#041410"/>
+  <circle cx="546" cy="177" r="15" fill="#041e10"/>
+  <text x="546" y="183" text-anchor="middle" font-size="17" fill="#10b981" font-weight="700">✓</text>
+  <text x="572" y="170" font-size="12.5" fill="#6ee7b7" font-weight="600">Quantified risk exposure ($ALE)</text>
+  <text x="572" y="188" font-size="10.5" fill="#1a5c3a">Boards speak dollars — translate risk into dollars</text>
+
+  <!-- Right Item 2 -->
+  <rect x="514" y="216" width="458" height="58" rx="8" fill="#041410"/>
+  <circle cx="546" cy="245" r="15" fill="#041e10"/>
+  <text x="546" y="251" text-anchor="middle" font-size="17" fill="#10b981" font-weight="700">✓</text>
+  <text x="572" y="238" font-size="12.5" fill="#6ee7b7" font-weight="600">Mean Time to Detect &amp; Respond</text>
+  <text x="572" y="256" font-size="10.5" fill="#1a5c3a">Resilience — not "were we attacked?" but "how fast?"</text>
+
+  <!-- Right Item 3 -->
+  <rect x="514" y="284" width="458" height="58" rx="8" fill="#041410"/>
+  <circle cx="546" cy="313" r="15" fill="#041e10"/>
+  <text x="546" y="319" text-anchor="middle" font-size="17" fill="#10b981" font-weight="700">✓</text>
+  <text x="572" y="306" font-size="12.5" fill="#6ee7b7" font-weight="600">Crown jewel asset protection rate</text>
+  <text x="572" y="324" font-size="10.5" fill="#1a5c3a">Not "95% of systems" — the 5% might be the ones that matter</text>
+
+  <!-- Right Item 4 -->
+  <rect x="514" y="352" width="458" height="58" rx="8" fill="#041410"/>
+  <circle cx="546" cy="381" r="15" fill="#041e10"/>
+  <text x="546" y="387" text-anchor="middle" font-size="17" fill="#10b981" font-weight="700">✓</text>
+  <text x="572" y="374" font-size="12.5" fill="#6ee7b7" font-weight="600">Regulatory finding trend (closing)</text>
+  <text x="572" y="392" font-size="10.5" fill="#1a5c3a">Shows governance trajectory — not just a snapshot</text>
+
+  <!-- Right Item 5 -->
+  <rect x="514" y="420" width="458" height="58" rx="8" fill="#041410"/>
+  <circle cx="546" cy="449" r="15" fill="#041e10"/>
+  <text x="546" y="455" text-anchor="middle" font-size="17" fill="#10b981" font-weight="700">✓</text>
+  <text x="572" y="442" font-size="12.5" fill="#6ee7b7" font-weight="600">Security program ROI</text>
+  <text x="572" y="460" font-size="10.5" fill="#1a5c3a">Position security as a value creator, not a cost center</text>
+
+  <text x="970" y="492" text-anchor="end" font-size="10.5" fill="#1a3050" letter-spacing="2">CYBERSECURITYOS.NET</text>
+</svg>

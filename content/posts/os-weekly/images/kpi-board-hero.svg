@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050c1a"/>
+      <stop offset="100%" stop-color="#0c1f3a"/>
+    </linearGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#0e2440" stroke-width="0.8"/>
+    </pattern>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0c2040"/>
+      <stop offset="100%" stop-color="#071428"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Glow -->
+  <ellipse cx="300" cy="315" rx="400" ry="300" fill="#00c9e0" opacity="0.025"/>
+
+  <!-- Top border -->
+  <rect x="0" y="0" width="1200" height="4" fill="#00c9e0"/>
+
+  <!-- Left vertical accent -->
+  <rect x="82" y="128" width="4" height="330" rx="2" fill="#00c9e0"/>
+
+  <!-- OS-WEEKLY label -->
+  <rect x="106" y="128" width="130" height="24" rx="12" fill="#061e38" stroke="#00c9e0" stroke-width="1"/>
+  <text x="171" y="144" text-anchor="middle" font-size="10" fill="#00c9e0" letter-spacing="2" font-weight="600">OS-WEEKLY</text>
+
+  <!-- Title -->
+  <text x="106" y="224" font-size="56" font-weight="800" fill="#e8f4ff" letter-spacing="-1.5">Security KPIs That</text>
+  <text x="106" y="290" font-size="56" font-weight="800" fill="#00c9e0" letter-spacing="-1.5">Actually Matter</text>
+
+  <!-- Divider -->
+  <rect x="106" y="312" width="420" height="2" rx="1" fill="#1a3a5a"/>
+
+  <!-- Subtitle -->
+  <text x="106" y="345" font-size="20" fill="#7aaece" letter-spacing="0.3">What to Report to the Board</text>
+
+  <!-- Tags -->
+  <rect x="106" y="370" width="120" height="26" rx="13" fill="#051828" stroke="#00c9e0" stroke-width="1"/>
+  <text x="166" y="387" text-anchor="middle" font-size="11" fill="#00c9e0" letter-spacing="0.5">NIST CSF 2.0</text>
+
+  <rect x="236" y="370" width="106" height="26" rx="13" fill="#051828" stroke="#3b82f6" stroke-width="1"/>
+  <text x="289" y="387" text-anchor="middle" font-size="11" fill="#3b82f6" letter-spacing="0.5">ISO 27001</text>
+
+  <rect x="352" y="370" width="130" height="26" rx="13" fill="#051828" stroke="#10b981" stroke-width="1"/>
+  <text x="417" y="387" text-anchor="middle" font-size="11" fill="#10b981" letter-spacing="0.5">SEC Regulations</text>
+
+  <!-- Branding -->
+  <text x="106" y="572" font-size="12" fill="#2a5678" letter-spacing="3">CYBERSECURITYOS.NET</text>
+  <text x="106" y="591" font-size="11" fill="#1e3d56">Michael Tayo</text>
+
+  <!-- RIGHT: Mini Dashboard -->
+  <rect x="690" y="72" width="462" height="506" rx="14" fill="url(#cardBg)" stroke="#132d4d" stroke-width="1.5"/>
+
+  <!-- Dashboard header -->
+  <rect x="690" y="72" width="462" height="50" rx="14" fill="#071428"/>
+  <rect x="690" y="108" width="462" height="14" fill="#071428"/>
+  <circle cx="718" cy="97" r="6" fill="#ef4444" opacity="0.6"/>
+  <circle cx="738" cy="97" r="6" fill="#f59e0b" opacity="0.6"/>
+  <circle cx="758" cy="97" r="6" fill="#10b981" opacity="0.6"/>
+  <text x="921" y="102" text-anchor="middle" font-size="10" fill="#3d6b8c" letter-spacing="1.5">SECURITY POSTURE SUMMARY</text>
+
+  <!-- Cards Row 1 -->
+  <rect x="710" y="138" width="196" height="82" rx="7" fill="#071528" stroke="#132d4d" stroke-width="1"/>
+  <text x="726" y="157" font-size="8.5" fill="#3d6b8c" letter-spacing="1.5">CYBER RISK SCORE</text>
+  <text x="726" y="190" font-size="33" font-weight="700" fill="#e8f4ff">82</text>
+  <text x="769" y="190" font-size="13" fill="#3d6b8c">/100</text>
+  <text x="726" y="209" font-size="10" fill="#10b981">▲ +8 from Q1 · Peer avg: 78</text>
+
+  <rect x="916" y="138" width="216" height="82" rx="7" fill="#071528" stroke="#132d4d" stroke-width="1"/>
+  <text x="932" y="157" font-size="8.5" fill="#3d6b8c" letter-spacing="1">CROWN JEWEL COVERAGE</text>
+  <text x="932" y="190" font-size="33" font-weight="700" fill="#e8f4ff">100</text>
+  <text x="988" y="190" font-size="13" fill="#3d6b8c">%</text>
+  <text x="932" y="209" font-size="10" fill="#10b981">▲ All Tier 1 assets protected</text>
+
+  <!-- Cards Row 2 -->
+  <rect x="710" y="230" width="196" height="82" rx="7" fill="#071528" stroke="#132d4d" stroke-width="1"/>
+  <text x="726" y="249" font-size="8.5" fill="#3d6b8c" letter-spacing="1.5">MEAN TIME TO DETECT</text>
+  <text x="726" y="282" font-size="33" font-weight="700" fill="#e8f4ff">11</text>
+  <text x="763" y="282" font-size="13" fill="#3d6b8c"> days</text>
+  <text x="726" y="301" font-size="10" fill="#10b981">▲ Was 34 days · Ind avg: 194</text>
+
+  <rect x="916" y="230" width="216" height="82" rx="7" fill="#071528" stroke="#132d4d" stroke-width="1"/>
+  <text x="932" y="249" font-size="8.5" fill="#3d6b8c" letter-spacing="1">CRIT PATCH RATE / SLA</text>
+  <text x="932" y="282" font-size="33" font-weight="700" fill="#e8f4ff">97</text>
+  <text x="972" y="282" font-size="13" fill="#3d6b8c">%</text>
+  <text x="932" y="301" font-size="10" fill="#10b981">▲ On target</text>
+
+  <!-- Cards Row 3 -->
+  <rect x="710" y="322" width="196" height="82" rx="7" fill="#071528" stroke="#132d4d" stroke-width="1"/>
+  <text x="726" y="341" font-size="8.5" fill="#3d6b8c" letter-spacing="1.5">MEAN TIME TO RESPOND</text>
+  <text x="726" y="374" font-size="33" font-weight="700" fill="#e8f4ff">6</text>
+  <text x="748" y="374" font-size="13" fill="#3d6b8c"> hrs</text>
+  <text x="726" y="393" font-size="10" fill="#10b981">▲ Within SLA</text>
+
+  <rect x="916" y="322" width="216" height="82" rx="7" fill="#071528" stroke="#132d4d" stroke-width="1"/>
+  <text x="932" y="341" font-size="8.5" fill="#3d6b8c" letter-spacing="1">PHISHING CLICK RATE</text>
+  <text x="932" y="374" font-size="33" font-weight="700" fill="#f59e0b">6.2</text>
+  <text x="980" y="374" font-size="13" fill="#3d6b8c">%</text>
+  <text x="932" y="393" font-size="10" fill="#10b981">▲ Was 11.4%</text>
+
+  <!-- Cards Row 4 -->
+  <rect x="710" y="414" width="196" height="82" rx="7" fill="#071528" stroke="#132d4d" stroke-width="1"/>
+  <text x="726" y="433" font-size="8.5" fill="#3d6b8c" letter-spacing="1.5">OPEN REG. FINDINGS</text>
+  <text x="726" y="466" font-size="33" font-weight="700" fill="#e8f4ff">42</text>
+  <text x="726" y="485" font-size="10" fill="#10b981">▲ Down from 67</text>
+
+  <rect x="916" y="414" width="216" height="82" rx="7" fill="#071528" stroke="#132d4d" stroke-width="1"/>
+  <text x="932" y="433" font-size="8.5" fill="#3d6b8c" letter-spacing="1">SECURITY DEBT</text>
+  <text x="932" y="466" font-size="33" font-weight="700" fill="#e8f4ff">14</text>
+  <text x="970" y="466" font-size="14" fill="#3d6b8c"> items</text>
+  <text x="932" y="485" font-size="10" fill="#10b981">▲ Down from 19</text>
+
+  <!-- Footer bar -->
+  <rect x="710" y="506" width="422" height="54" rx="7" fill="#04101e"/>
+  <text x="722" y="524" font-size="8.5" fill="#3d6b8c" letter-spacing="1.5">Q3 PRIORITIES</text>
+  <text x="722" y="540" font-size="10" fill="#4a7fa0">1. Close Respond/Recover gap</text>
+  <text x="722" y="553" font-size="10" fill="#4a7fa0">2. OT patch window  ·  3. Finance phishing training</text>
+</svg>

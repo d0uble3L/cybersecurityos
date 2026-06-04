@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050c1a"/>
+      <stop offset="100%" stop-color="#0b1f38"/>
+    </linearGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#0e2440" stroke-width="0.7"/>
+    </pattern>
+  </defs>
+
+  <rect width="1000" height="560" fill="url(#bg)"/>
+  <rect width="1000" height="560" fill="url(#grid)"/>
+  <rect x="0" y="0" width="1000" height="3" fill="#00c9e0"/>
+
+  <!-- Title -->
+  <text x="500" y="48" text-anchor="middle" font-size="21" font-weight="700" fill="#e8f4ff" letter-spacing="-0.3">The Four-Tier Board Security KPI Framework</text>
+  <text x="500" y="72" text-anchor="middle" font-size="12.5" fill="#3d6b8c">Mapped to NIST CSF 2.0 and ISO 27001:2022  ·  Answer the three questions every board asks</text>
+
+  <!-- ───── TIER 1: Risk Exposure ───── -->
+  <rect x="36" y="96" width="928" height="98" rx="10" fill="#130808" stroke="#6b1414" stroke-width="1"/>
+  <rect x="36" y="96" width="6" height="98" rx="3" fill="#ef4444"/>
+  <!-- Badge -->
+  <rect x="54" y="114" width="54" height="22" rx="11" fill="#7f1d1d"/>
+  <text x="81" y="129" text-anchor="middle" font-size="10" fill="#fca5a5" font-weight="700" letter-spacing="0.5">TIER 1</text>
+  <!-- Name + question -->
+  <text x="122" y="128" font-size="16" font-weight="700" fill="#fca5a5">Risk Exposure</text>
+  <text x="122" y="149" font-size="11.5" fill="#7f3535" font-style="italic">"Are we exposed to a risk that could materially harm the business?"</text>
+  <!-- KPI chips -->
+  <rect x="122" y="163" width="142" height="22" rx="11" fill="#3b0808"/>
+  <text x="193" y="178" text-anchor="middle" font-size="10.5" fill="#ef4444">Cyber Risk Score</text>
+  <rect x="274" y="163" width="160" height="22" rx="11" fill="#3b0808"/>
+  <text x="354" y="178" text-anchor="middle" font-size="10.5" fill="#ef4444">Crown Jewel Coverage</text>
+  <rect x="444" y="163" width="152" height="22" rx="11" fill="#3b0808"/>
+  <text x="520" y="178" text-anchor="middle" font-size="10.5" fill="#ef4444">Third-Party Risk</text>
+  <rect x="606" y="163" width="196" height="22" rx="11" fill="#3b0808"/>
+  <text x="704" y="178" text-anchor="middle" font-size="10.5" fill="#ef4444">Quantified ALE (FAIR)</text>
+  <!-- NIST label -->
+  <text x="950" y="152" text-anchor="end" font-size="9.5" fill="#4a1a1a" font-style="italic">NIST: Identify, Govern  ·  ISO: Clause 6, 8</text>
+
+  <!-- ───── TIER 2: Operational Resilience ───── -->
+  <rect x="36" y="206" width="928" height="98" rx="10" fill="#120c00" stroke="#6b4000" stroke-width="1"/>
+  <rect x="36" y="206" width="6" height="98" rx="3" fill="#f59e0b"/>
+  <rect x="54" y="224" width="54" height="22" rx="11" fill="#78350f"/>
+  <text x="81" y="239" text-anchor="middle" font-size="10" fill="#fcd34d" font-weight="700" letter-spacing="0.5">TIER 2</text>
+  <text x="122" y="238" font-size="16" font-weight="700" fill="#fcd34d">Operational Resilience</text>
+  <text x="122" y="259" font-size="11.5" fill="#7a4000" font-style="italic">"If something goes wrong, can we recover — and how fast?"</text>
+  <!-- Chips -->
+  <rect x="122" y="273" width="64" height="22" rx="11" fill="#3a1c00"/>
+  <text x="154" y="288" text-anchor="middle" font-size="10.5" fill="#f59e0b">MTTD</text>
+  <rect x="196" y="273" width="64" height="22" rx="11" fill="#3a1c00"/>
+  <text x="228" y="288" text-anchor="middle" font-size="10.5" fill="#f59e0b">MTTR</text>
+  <rect x="270" y="273" width="150" height="22" rx="11" fill="#3a1c00"/>
+  <text x="345" y="288" text-anchor="middle" font-size="10.5" fill="#f59e0b">Crit Patch Rate / SLA</text>
+  <rect x="430" y="273" width="150" height="22" rx="11" fill="#3a1c00"/>
+  <text x="505" y="288" text-anchor="middle" font-size="10.5" fill="#f59e0b">IR Readiness Score</text>
+  <text x="950" y="262" text-anchor="end" font-size="9.5" fill="#4a3000" font-style="italic">NIST: Detect, Respond, Recover  ·  ISO: Clause 8.2</text>
+
+  <!-- ───── TIER 3: Compliance & Assurance ───── -->
+  <rect x="36" y="316" width="928" height="98" rx="10" fill="#040e20" stroke="#0f2a6e" stroke-width="1"/>
+  <rect x="36" y="316" width="6" height="98" rx="3" fill="#3b82f6"/>
+  <rect x="54" y="334" width="54" height="22" rx="11" fill="#1e3a8a"/>
+  <text x="81" y="349" text-anchor="middle" font-size="10" fill="#93c5fd" font-weight="700" letter-spacing="0.5">TIER 3</text>
+  <text x="122" y="348" font-size="16" font-weight="700" fill="#93c5fd">Compliance &amp; Assurance</text>
+  <text x="122" y="369" font-size="11.5" fill="#1e3a6a" font-style="italic">"Are we doing what we said we'd do?"</text>
+  <!-- Chips -->
+  <rect x="122" y="383" width="164" height="22" rx="11" fill="#0a1e4a"/>
+  <text x="204" y="398" text-anchor="middle" font-size="10.5" fill="#3b82f6">Regulatory Findings</text>
+  <rect x="296" y="383" width="184" height="22" rx="11" fill="#0a1e4a"/>
+  <text x="388" y="398" text-anchor="middle" font-size="10.5" fill="#3b82f6">NIST / ISO Control Coverage</text>
+  <rect x="490" y="383" width="156" height="22" rx="11" fill="#0a1e4a"/>
+  <text x="568" y="398" text-anchor="middle" font-size="10.5" fill="#3b82f6">Phishing Click Rate</text>
+  <text x="950" y="372" text-anchor="end" font-size="9.5" fill="#0e2040" font-style="italic">NIST: Protect, Govern  ·  ISO: Clause 9</text>
+
+  <!-- ───── TIER 4: Business Alignment ───── -->
+  <rect x="36" y="426" width="928" height="98" rx="10" fill="#031410" stroke="#0c4020" stroke-width="1"/>
+  <rect x="36" y="426" width="6" height="98" rx="3" fill="#10b981"/>
+  <rect x="54" y="444" width="54" height="22" rx="11" fill="#14532d"/>
+  <text x="81" y="459" text-anchor="middle" font-size="10" fill="#6ee7b7" font-weight="700" letter-spacing="0.5">TIER 4</text>
+  <text x="122" y="458" font-size="16" font-weight="700" fill="#6ee7b7">Business Alignment</text>
+  <text x="122" y="479" font-size="11.5" fill="#0c4020" font-style="italic">"Is security enabling — not slowing — the business?"</text>
+  <!-- Chips -->
+  <rect x="122" y="493" width="148" height="22" rx="11" fill="#041e10"/>
+  <text x="196" y="508" text-anchor="middle" font-size="10.5" fill="#10b981">Security Program ROI</text>
+  <rect x="280" y="493" width="120" height="22" rx="11" fill="#041e10"/>
+  <text x="340" y="508" text-anchor="middle" font-size="10.5" fill="#10b981">Security Debt</text>
+  <rect x="410" y="493" width="128" height="22" rx="11" fill="#041e10"/>
+  <text x="474" y="508" text-anchor="middle" font-size="10.5" fill="#10b981">Time to Secure</text>
+  <text x="950" y="482" text-anchor="end" font-size="9.5" fill="#063018" font-style="italic">NIST: Govern  ·  ISO: Clause 5</text>
+
+  <text x="960" y="548" text-anchor="end" font-size="10.5" fill="#1a3050" letter-spacing="2">CYBERSECURITYOS.NET</text>
+</svg>
