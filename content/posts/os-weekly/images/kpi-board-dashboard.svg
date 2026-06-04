@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050c1a"/>
+      <stop offset="100%" stop-color="#0b1f38"/>
+    </linearGradient>
+    <linearGradient id="frame" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0c2040"/>
+      <stop offset="100%" stop-color="#071428"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="620" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1000" height="3" fill="#00c9e0"/>
+
+  <!-- Dashboard frame -->
+  <rect x="28" y="22" width="944" height="574" rx="14" fill="url(#frame)" stroke="#132d4d" stroke-width="1.5"/>
+
+  <!-- Header bar -->
+  <rect x="28" y="22" width="944" height="54" rx="14" fill="#071428"/>
+  <rect x="28" y="62" width="944" height="14" fill="#071428"/>
+  <!-- Window dots -->
+  <circle cx="56" cy="49" r="7" fill="#ef4444" opacity="0.5"/>
+  <circle cx="78" cy="49" r="7" fill="#f59e0b" opacity="0.5"/>
+  <circle cx="100" cy="49" r="7" fill="#10b981" opacity="0.5"/>
+  <!-- Header text -->
+  <text x="500" y="44" text-anchor="middle" font-size="12" fill="#4a7fa0" letter-spacing="2" font-weight="600">SECURITY POSTURE SUMMARY — Q2 2026</text>
+  <text x="500" y="60" text-anchor="middle" font-size="9.5" fill="#1e3a5a" letter-spacing="0.5">Prepared by: CISO  |  Reviewed by: Board Audit Committee  |  Next Review: Q3 2026</text>
+
+  <!-- ─── KPI CARDS: 4 cols × 2 rows ─── -->
+
+  <!-- Row 1 -->
+
+  <!-- Card 1: Cyber Risk Score -->
+  <rect x="48" y="90" width="210" height="104" rx="8" fill="#071528" stroke="#132d4d" stroke-width="1"/>
+  <text x="64" y="110" font-size="8.5" fill="#3d6b8c" letter-spacing="1.5">CYBER RISK SCORE</text>
+  <text x="64" y="148" font-size="40" font-weight="700" fill="#f0f6ff">82</text>
+  <text x="114" y="148" font-size="14" fill="#3d6b8c">/100</text>
+  <rect x="64" y="155" width="178" height="7" rx="3.5" fill="#0a1e36"/>
+  <rect x="64" y="155" width="146" height="7" rx="3.5" fill="#10b981"/>
+  <text x="64" y="182" font-size="10" fill="#10b981">▲ +8 pts  ·  Peer avg: 78/100</text>
+
+  <!-- Card 2: Crown Jewel Coverage -->
+  <rect x="272" y="90" width="210" height="104" rx="8" fill="#071528" stroke="#132d4d" stroke-width="1"/>
+  <text x="288" y="110" font-size="8.5" fill="#3d6b8c" letter-spacing="1">CROWN JEWEL COVERAGE</text>
+  <text x="288" y="148" font-size="40" font-weight="700" fill="#f0f6ff">100</text>
+  <text x="352" y="148" font-size="14" fill="#3d6b8c">%</text>
+  <rect x="288" y="155" width="178" height="7" rx="3.5" fill="#10b981"/>
+  <text x="288" y="182" font-size="10" fill="#10b981">▲ All Tier 1 assets fully protected</text>
+
+  <!-- Card 3: MTTD -->
+  <rect x="496" y="90" width="210" height="104" rx="8" fill="#071528" stroke="#132d4d" stroke-width="1"/>
+  <text x="512" y="110" font-size="8.5" fill="#3d6b8c" letter-spacing="1.5">MEAN TIME TO DETECT</text>
+  <text x="512" y="148" font-size="40" font-weight="700" fill="#f0f6ff">11</text>
+  <text x="554" y="148" font-size="14" fill="#3d6b8c"> days</text>
+  <rect x="512" y="155" width="178" height="7" rx="3.5" fill="#0a1e36"/>
+  <rect x="512" y="155" width="30" height="7" rx="3.5" fill="#10b981"/>
+  <text x="512" y="182" font-size="10" fill="#10b981">▲ Was 34 days  ·  Ind. avg: 194 days</text>
+
+  <!-- Card 4: MTTR -->
+  <rect x="720" y="90" width="212" height="104" rx="8" fill="#071528" stroke="#132d4d" stroke-width="1"/>
+  <text x="736" y="110" font-size="8.5" fill="#3d6b8c" letter-spacing="1.5">MEAN TIME TO RESPOND</text>
+  <text x="736" y="148" font-size="40" font-weight="700" fill="#f0f6ff">6</text>
+  <text x="760" y="148" font-size="14" fill="#3d6b8c"> hrs</text>
+  <rect x="736" y="155" width="178" height="7" rx="3.5" fill="#0a1e36"/>
+  <rect x="736" y="155" width="40" height="7" rx="3.5" fill="#10b981"/>
+  <text x="736" y="182" font-size="10" fill="#10b981">▲ Within 8-hr SLA target</text>
+
+  <!-- Row 2 -->
+
+  <!-- Card 5: Crit Patch Rate -->
+  <rect x="48" y="208" width="210" height="104" rx="8" fill="#071528" stroke="#132d4d" stroke-width="1"/>
+  <text x="64" y="228" font-size="8.5" fill="#3d6b8c" letter-spacing="1">CRIT PATCH RATE / SLA</text>
+  <text x="64" y="266" font-size="40" font-weight="700" fill="#f0f6ff">97</text>
+  <text x="114" y="266" font-size="14" fill="#3d6b8c">%</text>
+  <rect x="64" y="273" width="178" height="7" rx="3.5" fill="#0a1e36"/>
+  <rect x="64" y="273" width="173" height="7" rx="3.5" fill="#10b981"/>
+  <text x="64" y="300" font-size="10" fill="#10b981">▲ 3 exceptions — all documented</text>
+
+  <!-- Card 6: Phishing Click Rate -->
+  <rect x="272" y="208" width="210" height="104" rx="8" fill="#071528" stroke="#132d4d" stroke-width="1"/>
+  <text x="288" y="228" font-size="8.5" fill="#3d6b8c" letter-spacing="1">PHISHING CLICK RATE</text>
+  <text x="288" y="266" font-size="40" font-weight="700" fill="#f59e0b">6.2</text>
+  <text x="348" y="266" font-size="14" fill="#3d6b8c">%</text>
+  <rect x="288" y="273" width="178" height="7" rx="3.5" fill="#0a1e36"/>
+  <rect x="288" y="273" width="62" height="7" rx="3.5" fill="#f59e0b"/>
+  <text x="288" y="300" font-size="10" fill="#10b981">▲ Was 11.4% 18 months ago</text>
+
+  <!-- Card 7: Regulatory Findings -->
+  <rect x="496" y="208" width="210" height="104" rx="8" fill="#071528" stroke="#132d4d" stroke-width="1"/>
+  <text x="512" y="228" font-size="8.5" fill="#3d6b8c" letter-spacing="1">OPEN REG. FINDINGS</text>
+  <text x="512" y="266" font-size="40" font-weight="700" fill="#f0f6ff">42</text>
+  <rect x="512" y="273" width="178" height="7" rx="3.5" fill="#0a1e36"/>
+  <rect x="512" y="273" width="113" height="7" rx="3.5" fill="#10b981"/>
+  <text x="512" y="300" font-size="10" fill="#10b981">▲ Down from 67 last quarter</text>
+
+  <!-- Card 8: Security Debt -->
+  <rect x="720" y="208" width="212" height="104" rx="8" fill="#071528" stroke="#132d4d" stroke-width="1"/>
+  <text x="736" y="228" font-size="8.5" fill="#3d6b8c" letter-spacing="1.5">SECURITY DEBT</text>
+  <text x="736" y="266" font-size="40" font-weight="700" fill="#f0f6ff">14</text>
+  <text x="782" y="266" font-size="15" fill="#3d6b8c"> items</text>
+  <rect x="736" y="273" width="178" height="7" rx="3.5" fill="#0a1e36"/>
+  <rect x="736" y="273" width="131" height="7" rx="3.5" fill="#10b981"/>
+  <text x="736" y="300" font-size="10" fill="#10b981">▲ Down from 19 — on track</text>
+
+  <!-- ─── NIST CSF Coverage Row ─── -->
+  <rect x="48" y="326" width="884" height="80" rx="8" fill="#040e20" stroke="#1e3a8a" stroke-width="1"/>
+  <text x="64" y="346" font-size="9" fill="#3d6b8c" letter-spacing="1.5">NIST CSF 2.0 — CONTROL COVERAGE BY FUNCTION</text>
+
+  <!-- Govern -->
+  <text x="64" y="366" font-size="10" fill="#93c5fd">Govern</text>
+  <rect x="116" y="358" width="88" height="9" rx="4.5" fill="#0c1e4a"/>
+  <rect x="116" y="358" width="75" height="9" rx="4.5" fill="#3b82f6"/>
+  <text x="208" y="367" font-size="9" fill="#3b82f6"> 85%</text>
+
+  <!-- Identify -->
+  <text x="260" y="366" font-size="10" fill="#93c5fd">Identify</text>
+  <rect x="312" y="358" width="88" height="9" rx="4.5" fill="#0c1e4a"/>
+  <rect x="312" y="358" width="77" height="9" rx="4.5" fill="#3b82f6"/>
+  <text x="404" y="367" font-size="9" fill="#3b82f6"> 88%</text>
+
+  <!-- Protect -->
+  <text x="456" y="366" font-size="10" fill="#93c5fd">Protect</text>
+  <rect x="508" y="358" width="88" height="9" rx="4.5" fill="#0c1e4a"/>
+  <rect x="508" y="358" width="80" height="9" rx="4.5" fill="#3b82f6"/>
+  <text x="600" y="367" font-size="9" fill="#3b82f6"> 91%</text>
+
+  <!-- Detect -->
+  <text x="652" y="366" font-size="10" fill="#fcd34d">Detect</text>
+  <rect x="704" y="358" width="88" height="9" rx="4.5" fill="#0c1e4a"/>
+  <rect x="704" y="358" width="73" height="9" rx="4.5" fill="#f59e0b"/>
+  <text x="796" y="367" font-size="9" fill="#f59e0b"> 83%</text>
+
+  <!-- Respond -->
+  <text x="64" y="395" font-size="10" fill="#fca5a5">Respond</text>
+  <rect x="116" y="387" width="88" height="9" rx="4.5" fill="#0c1e4a"/>
+  <rect x="116" y="387" width="69" height="9" rx="4.5" fill="#ef4444"/>
+  <text x="208" y="396" font-size="9" fill="#ef4444"> 79%  ◄ gap</text>
+
+  <!-- Recover -->
+  <text x="260" y="395" font-size="10" fill="#fca5a5">Recover</text>
+  <rect x="312" y="387" width="88" height="9" rx="4.5" fill="#0c1e4a"/>
+  <rect x="312" y="387" width="65" height="9" rx="4.5" fill="#ef4444"/>
+  <text x="404" y="396" font-size="9" fill="#ef4444"> 74%  ◄ gap</text>
+
+  <text x="916" y="396" text-anchor="end" font-size="9" fill="#1e3a8a" font-style="italic">Investment needed: Q3 priority</text>
+
+  <!-- ─── Q3 Priorities ─── -->
+  <rect x="48" y="418" width="884" height="148" rx="8" fill="#031410" stroke="#0c4020" stroke-width="1"/>
+  <text x="64" y="440" font-size="9" fill="#6ee7b7" letter-spacing="1.5" font-weight="600">Q3 2026 BOARD PRIORITIES</text>
+
+  <!-- P1 -->
+  <rect x="64" y="450" width="24" height="24" rx="5" fill="#041e10"/>
+  <text x="76" y="466" text-anchor="middle" font-size="13" fill="#10b981" font-weight="700">1</text>
+  <text x="98" y="464" font-size="12" fill="#e8f4ff" font-weight="600">Close Respond / Recover NIST CSF gap</text>
+  <text x="98" y="479" font-size="10" fill="#1a5c3a">Currently 11% below target on both functions  ·  Owner: CISO  ·  Budget: Approved  ·  Target: Q3 close</text>
+
+  <!-- P2 -->
+  <rect x="64" y="492" width="24" height="24" rx="5" fill="#041e10"/>
+  <text x="76" y="508" text-anchor="middle" font-size="13" fill="#10b981" font-weight="700">2</text>
+  <text x="98" y="506" font-size="12" fill="#e8f4ff" font-weight="600">OT legacy system patch window — 3 Tier 2 systems elevated risk</text>
+  <text x="98" y="521" font-size="10" fill="#1a5c3a">Requires planned maintenance window  ·  Owner: VP Engineering  ·  Target: August maintenance cycle</text>
+
+  <!-- P3 -->
+  <rect x="64" y="534" width="24" height="24" rx="5" fill="#041e10"/>
+  <text x="76" y="550" text-anchor="middle" font-size="13" fill="#10b981" font-weight="700">3</text>
+  <text x="98" y="548" font-size="12" fill="#e8f4ff" font-weight="600">Targeted phishing training — Finance and EA cohorts at 14.2% click rate</text>
+  <text x="98" y="563" font-size="10" fill="#1a5c3a">Owner: Security Awareness Lead  ·  Target: Training complete July 31</text>
+
+  <text x="962" y="610" text-anchor="end" font-size="10.5" fill="#1a3050" letter-spacing="2">CYBERSECURITYOS.NET</text>
+</svg>

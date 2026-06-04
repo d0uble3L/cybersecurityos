@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050c1a"/>
+      <stop offset="100%" stop-color="#0b1f38"/>
+    </linearGradient>
+    <linearGradient id="barEq" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#991b1b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="barTg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="barCo" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="barMg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="520" fill="url(#bg)"/>
+  <rect x="0" y="0" width="960" height="3" fill="#ef4444"/>
+
+  <!-- Title -->
+  <text x="480" y="46" text-anchor="middle" font-size="19" font-weight="700" fill="#e8f4ff">The Cost of Missing Board Visibility</text>
+  <text x="480" y="68" text-anchor="middle" font-size="12" fill="#3d6b8c">Real-world breach costs tied to absent board-level KPIs</text>
+
+  <!-- Scale guide -->
+  <text x="280" y="92" text-anchor="middle" font-size="9.5" fill="#1e3a5a">$100M</text>
+  <line x1="280" y1="96" x2="280" y2="446" stroke="#0e2440" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="496" y="92" text-anchor="middle" font-size="9.5" fill="#1e3a5a">$300M</text>
+  <line x1="496" y1="96" x2="496" y2="446" stroke="#0e2440" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="712" y="92" text-anchor="middle" font-size="9.5" fill="#1e3a5a">$500M</text>
+  <line x1="712" y1="96" x2="712" y2="446" stroke="#0e2440" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="900" y="92" text-anchor="middle" font-size="9.5" fill="#1e3a5a">$700M</text>
+  <line x1="900" y1="96" x2="900" y2="446" stroke="#0e2440" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Axis -->
+  <line x1="172" y1="98" x2="172" y2="446" stroke="#1a3a5a" stroke-width="1.5"/>
+
+  <!-- ───── ROW 1: Equifax 2017 ───── -->
+  <!-- Label -->
+  <text x="164" y="134" text-anchor="end" font-size="13" font-weight="700" fill="#e8f4ff">Equifax</text>
+  <text x="164" y="149" text-anchor="end" font-size="10" fill="#4a7fa0">2017</text>
+  <!-- Bar: $700M → full width 728px -->
+  <rect x="172" y="118" width="728" height="30" rx="4" fill="url(#barEq)"/>
+  <text x="908" y="138" font-size="13" fill="#ef4444" font-weight="700">$700M+</text>
+  <!-- Note -->
+  <rect x="172" y="151" width="728" height="22" rx="4" fill="#1a0808"/>
+  <text x="184" y="165" font-size="10.5" fill="#7f3030">Root cause: Critical patch 79 days overdue. No board patch-rate KPI to surface it.</text>
+
+  <!-- ───── ROW 2: Target 2013 ───── -->
+  <text x="164" y="212" text-anchor="end" font-size="13" font-weight="700" fill="#e8f4ff">Target</text>
+  <text x="164" y="227" text-anchor="end" font-size="10" fill="#4a7fa0">2013</text>
+  <!-- Bar: $300M → 312px -->
+  <rect x="172" y="196" width="312" height="30" rx="4" fill="url(#barTg)"/>
+  <text x="492" y="216" font-size="13" fill="#f59e0b" font-weight="700">  $300M+</text>
+  <rect x="172" y="229" width="312" height="22" rx="4" fill="#100a00"/>
+  <text x="184" y="243" font-size="10.5" fill="#6b3010">Root cause: No third-party risk KPI. Vendor credentials used as breach entry point.</text>
+
+  <!-- ───── ROW 3: Capital One 2019 ───── -->
+  <text x="164" y="291" text-anchor="end" font-size="13" font-weight="700" fill="#e8f4ff">Capital One</text>
+  <text x="164" y="306" text-anchor="end" font-size="10" fill="#4a7fa0">2019</text>
+  <!-- Bar: $300M → 312px -->
+  <rect x="172" y="275" width="312" height="30" rx="4" fill="url(#barCo)"/>
+  <text x="492" y="295" font-size="13" fill="#f59e0b" font-weight="700">  $300M+</text>
+  <rect x="172" y="308" width="312" height="22" rx="4" fill="#100a00"/>
+  <text x="184" y="322" font-size="10.5" fill="#6b3010">Root cause: Cloud misconfiguration invisible at board level. No crown jewel coverage KPI.</text>
+
+  <!-- ───── ROW 4: MGM 2023 ───── -->
+  <text x="164" y="370" text-anchor="end" font-size="13" font-weight="700" fill="#e8f4ff">MGM Resorts</text>
+  <text x="164" y="385" text-anchor="end" font-size="10" fill="#4a7fa0">2023</text>
+  <!-- Bar: $100M → 104px -->
+  <rect x="172" y="354" width="104" height="30" rx="4" fill="url(#barMg)"/>
+  <text x="284" y="374" font-size="13" fill="#3b82f6" font-weight="700">  $100M+</text>
+  <rect x="172" y="387" width="350" height="22" rx="4" fill="#060e20"/>
+  <text x="184" y="401" font-size="10.5" fill="#1e3a8a">Root cause: IR plan never tested against social engineering. No IR readiness KPI.</text>
+
+  <!-- Bottom quote -->
+  <rect x="172" y="428" width="768" height="46" rx="8" fill="#071528" stroke="#132d4d" stroke-width="1"/>
+  <text x="556" y="447" text-anchor="middle" font-size="12" fill="#4a7fa0" font-style="italic">"In every case, the board had no metrics to ask about the risk</text>
+  <text x="556" y="465" text-anchor="middle" font-size="12" fill="#4a7fa0" font-style="italic">— and no governance structure to catch it."</text>
+
+  <text x="940" y="510" text-anchor="end" font-size="10.5" fill="#1a3050" letter-spacing="2">CYBERSECURITYOS.NET</text>
+</svg>
