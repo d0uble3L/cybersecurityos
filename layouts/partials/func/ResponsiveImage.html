@@ -1,18 +1,22 @@
 {{/*
   ResponsiveImage
   Renders an optimised image element. When passed a Hugo image resource it
-  produces a <picture> with WebP + srcset; otherwise a plain lazy-loaded <img>.
+  produces a <picture> with WebP + srcset; otherwise a plain <img>.
 
   Call with a dict:
     resource — Hugo image resource (from GetFeaturedImageObject); may be empty
     url      — Fallback absolute URL string (from GetFeaturedImage)
     alt      — Alt text string
     class    — CSS class string
+    lazy     — Boolean: true (default) adds loading="lazy"; false emits
+               loading="eager" for above-the-fold / LCP images
 */}}
 {{ $resource := .resource }}
 {{ $url      := .url }}
 {{ $alt      := .alt   | default "" }}
 {{ $class    := .class | default "" }}
+{{ $lazy     := .lazy  | default true }}
+{{ $loading  := cond $lazy "lazy" "eager" }}
 
 {{ if $resource }}
   {{/* Page-bundle image: process into WebP + JPEG at two breakpoints */}}
@@ -29,16 +33,16 @@
       width="{{ $jpg800.Width }}"
       height="{{ $jpg800.Height }}"
       alt="{{ $alt }}"
-      loading="lazy"
+      loading="{{ $loading }}"
       decoding="async"
       {{ with $class }}class="{{ . }}"{{ end }}>
   </picture>
 {{ else if $url }}
-  {{/* Static-dir image: serve as-is with lazy loading */}}
+  {{/* Static-dir image: serve as-is */}}
   <img
     src="{{ $url }}"
     alt="{{ $alt }}"
-    loading="lazy"
+    loading="{{ $loading }}"
     decoding="async"
     {{ with $class }}class="{{ . }}"{{ end }}>
 {{ end }}

@@ -5,11 +5,17 @@
   Falls back to an empty string for static-dir images, which are handled by
   the original GetFeaturedImage partial as plain URLs.
 
+  For pages that set featured_image as an absolute site path
+  (e.g. /posts/section/images/cover.jpg), the filename is extracted with
+  path.Base so Resources.GetMatch can locate it within the page bundle.
+
   @return  Hugo image resource, or empty string.
 */}}
 {{ $resource := "" }}
 {{ with .Params.featured_image }}
-  {{ with $.Resources.GetMatch . }}
+  {{/* Extract just the filename so absolute paths resolve inside the bundle */}}
+  {{ $filename := path.Base . }}
+  {{ with $.Resources.GetMatch (printf "**/%s" $filename) }}
     {{ $resource = . }}
   {{ end }}
 {{ else }}
