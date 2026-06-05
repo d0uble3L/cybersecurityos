@@ -48,14 +48,15 @@
       {{ partial "tags.html" . }}
     </header>
 
-    <!-- Featured image -->
+    <!-- Featured image (LCP element — load eagerly) -->
     {{ if or $featuredRes $featuredURL }}
     <div class="os-article-image">
       {{ partial "func/ResponsiveImage.html" (dict
           "resource" $featuredRes
           "url"      $featuredURL
           "alt"      .Title
-          "class"    "os-article-feat-img") }}
+          "class"    "os-article-feat-img"
+          "lazy"     false) }}
     </div>
     {{ end }}
 
