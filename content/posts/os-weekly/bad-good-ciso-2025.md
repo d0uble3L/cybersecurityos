@@ -15,7 +15,7 @@ Inspired by [Phil Venables’ *Good CISO / Bad CISO* framework](https://www.phil
 
 I’ve spent the past decade working across cloud, application, and enterprise security. I currently serve as an Information Security Lead and Deputy CISO.
 
-My work centers on **advising executives on risk, resilience, and security strategy** while ensuring that security aligns with broader business priorities. 
+My work centers on **advising executives on risk, resilience, and security strategy** while ensuring that security aligns with broader business priorities.
 
 Along the way, I’ve earned a Master’s degree in Cybersecurity and several industry certifications, but what has mattered most is applying that knowledge to real-world challenges: **leading teams, scaling security programs, and building trust with stakeholders.**
 
@@ -35,7 +35,6 @@ What stands out in Venables’ framework is that many “bad” CISO traits don�
 - 🎨 [Carrd](https://try.carrd.co/trilltayo) — Build beautiful, responsive landing pages in minutes. Perfect for portfolios, waitlists, and personal branding.  
 
 ---
-
 
 ## The Mental Models That Matter
 

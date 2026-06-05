@@ -171,6 +171,7 @@ Turn your mitigations into tickets before you leave the session. Threat models t
 Let's make this concrete. Say you're building a new login flow with email/password + MFA.
 
 **Components:**
+
 - Login form (browser)
 - `/auth/login` endpoint
 - User credentials database
@@ -198,6 +199,7 @@ This is a 20-minute exercise for a senior engineer who knows the system. It prod
 **The rule: threat model when the attack surface changes.**
 
 That includes:
+
 - New features that handle new data types
 - New external integrations (APIs, webhooks, OAuth flows)
 - Changes to authentication or authorization logic

@@ -75,6 +75,7 @@ The parser module lives in `spectra/parsers/`. Each parser:
 3. Is registered in `spectra/parsers/__init__.py`
 
 A new parser should include:
+
 - Auto-detection logic (how SPECTRA recognizes this format without `--scanner`)
 - Normalization to the `Finding` schema
 - Sample output in `tests/samples/<scanner>/`

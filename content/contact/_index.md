@@ -13,4 +13,4 @@ Whether you have questions, feedback, or partnership inquiries, feel free to rea
 
 I’m open to collaborations, speaking engagements, podcasts, keynotes, workshops, conferences, and more. Let’s connect and make something great together!
 
-{{< form-contact action="https://formspree.io/f/xrbznpkl" >}}
+{{< form-contact action="<https://formspree.io/f/xrbznpkl>" >}}

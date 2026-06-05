@@ -63,6 +63,7 @@ This normalization layer is why SPECTRA can provide consistent analysis quality 
 The normalized findings are passed to Claude using a structured system prompt that encodes the security analyst role, prioritization criteria, and output format requirements.
 
 **Analyst system prompt responsibilities:**
+
 - Define the triage methodology (EPSS-weighted, attack-chain-aware, context-calibrated)
 - Specify output structure (executive summary, ranked findings, attack chains, remediation)
 - Set the audience model (engineer-level vs. CISO-level language calibration)
@@ -87,6 +88,7 @@ The analyst system prompt — which is large and static — is cached after the 
 This is the mechanism that makes SPECTRA viable for continuous pipeline use at production scan volumes. Without caching, running analysis on every PR would be cost-prohibitive for most teams.
 
 **Cache behavior:**
+
 - Cache is populated on the first call with a given system prompt
 - The cache TTL is 5 minutes for standard caching; extended caching (up to 1 hour) is available with `cache_control: {"type": "ephemeral"}` on the system block
 - Token usage output (`--usage`) shows `cache_read_input_tokens` and `cache_creation_input_tokens` so you can monitor cache efficiency

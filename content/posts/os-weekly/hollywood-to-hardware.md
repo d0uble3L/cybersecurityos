@@ -10,7 +10,7 @@ images:
 featured_image:  /posts/os-weekly/images/hbo-security.png
 ---
 
-In today’s hyperconnected world, cybersecurity threats are no longer confined to shadowy corners of the internet—they’re playing out on streaming screens and lurking inside the very devices we trust. From the dramatized high-stakes exploits on HBO Max to stealthy hardware flaws buried deep in enterprise infrastructure, the risks are both visible and invisible. 
+In today’s hyperconnected world, cybersecurity threats are no longer confined to shadowy corners of the internet—they’re playing out on streaming screens and lurking inside the very devices we trust. From the dramatized high-stakes exploits on HBO Max to stealthy hardware flaws buried deep in enterprise infrastructure, the risks are both visible and invisible.
 
 For seasoned security leaders and ambitious newcomers alike, understanding these evolving threats isn’t just theory...it’s the difference between resilience and ruin.
 
@@ -85,7 +85,7 @@ Remember these mental models:
 - **For Aspiring Professionals:** Build a foundation with concrete, actionable projects and regular skill updates.  
 - **For Startups/SMBs:** Prioritize scalable and repeatable processes that build a resilient cybersecurity posture.
 
-If you found this helpful, learn the thinking that separates leaders from followers. 
+If you found this helpful, learn the thinking that separates leaders from followers.
 
 🚀 Supercharge Your Cybersecurity Career with [**CyberSHIELD PRO Membership**](https://cybersecurityos.gumroad.com/l/cybershield-membership) – Unlock Exclusive Benefits Today!
 
