@@ -36,14 +36,14 @@ The full license text is available at [apache.org/licenses/LICENSE-2.0](https://
 
 ### What the Apache 2.0 License Permits
 
-| You may | Condition |
-|---|---|
-| Use SPECTRA commercially | No restrictions |
-| Modify SPECTRA | Must preserve copyright and license notices |
-| Distribute SPECTRA | Must include the Apache 2.0 license |
-| Distribute modified versions | Must state changes made; must include the Apache 2.0 license |
-| Use privately without disclosure | No requirement to open-source modifications used internally |
-| Sublicense | Permitted under Apache 2.0 terms |
+| You may                          | Condition                                                    |
+| -------------------------------- | ------------------------------------------------------------ |
+| Use SPECTRA commercially         | No restrictions                                              |
+| Modify SPECTRA                   | Must preserve copyright and license notices                  |
+| Distribute SPECTRA               | Must include the Apache 2.0 license                          |
+| Distribute modified versions     | Must state changes made; must include the Apache 2.0 license |
+| Use privately without disclosure | No requirement to open-source modifications used internally  |
+| Sublicense                       | Permitted under Apache 2.0 terms                             |
 
 The Apache License 2.0 also includes an **express patent license grant** from all contributors — meaning contributors grant you a license to any patents they hold that are necessarily infringed by their contribution. This is the primary protection the Apache 2.0 license provides beyond the MIT License.
 
@@ -91,12 +91,12 @@ SPECTRA depends on third-party open-source packages. Their licenses are included
 
 Key dependencies include:
 
-| Package | License |
-|---|---|
-| `anthropic` (Anthropic SDK) | MIT |
-| `click` (CLI framework) | BSD-3-Clause |
-| `rich` (terminal formatting) | MIT |
-| `pydantic` (data validation) | MIT |
+| Package                            | License      |
+| ---------------------------------- | ------------ |
+| `anthropic` (Anthropic SDK)        | MIT          |
+| `click` (CLI framework)            | BSD-3-Clause |
+| `rich` (terminal formatting)       | MIT          |
+| `pydantic` (data validation)       | MIT          |
 | `python-dotenv` (env file loading) | BSD-3-Clause |
 
 ---

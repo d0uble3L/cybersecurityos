@@ -14,11 +14,11 @@ SPECTRA produces two output formats: **Markdown** (human-readable) and **JSON** 
 
 ### Format Options
 
-| Value | Files Generated | Use Case |
-|---|---|---|
-| `markdown` (default) | `<output>.md` | Reports, executive briefings, GRC documentation |
-| `json` | `<output>.json` | SIEM integration, ticketing automation, dashboards |
-| `both` | `<output>.md` + `<output>.json` | Full reporting + downstream automation |
+| Value                | Files Generated                 | Use Case                                           |
+| -------------------- | ------------------------------- | -------------------------------------------------- |
+| `markdown` (default) | `<output>.md`                   | Reports, executive briefings, GRC documentation    |
+| `json`               | `<output>.json`                 | SIEM integration, ticketing automation, dashboards |
+| `both`               | `<output>.md` + `<output>.json` | Full reporting + downstream automation             |
 
 ```bash
 spectra analyze trivy.json --format both --output reports/scan-2026-05-18

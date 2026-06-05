@@ -22,14 +22,14 @@ Here are the key models I rely on — and why they’re game-changers for securi
 
 ## 🧠 First Principles Thinking
 
-> *“Boil things down to their fundamental truths and reason up from there.”* – Elon Musk
+> _“Boil things down to their fundamental truths and reason up from there.”_ – Elon Musk
 
 First principles thinking forces you to challenge assumptions.
 
-Instead of accepting “we need more tools to reduce risk,” you ask:  
+Instead of accepting “we need more tools to reduce risk,” you ask:
 
-- What is the *actual* risk?  
-- Where does the exposure really begin?  
+- What is the _actual_ risk?
+- Where does the exposure really begin?
 - What must be true to reduce that risk?
 
 In security, this helps you avoid throwing money at dashboards and start focusing on the controls, policies, and accountability that move the needle.
@@ -40,13 +40,13 @@ In security, this helps you avoid throwing money at dashboards and start focusin
 
 Inversion is about flipping the problem.
 
-Instead of asking: *“How do we build a secure environment?”*  
-You ask: *“What would cause our environment to be insecure?”*
+Instead of asking: _“How do we build a secure environment?”_  
+You ask: _“What would cause our environment to be insecure?”_
 
-This backward lens helps surface blind spots, like:  
+This backward lens helps surface blind spots, like:
 
-- Lack of asset visibility  
-- Over-permissioned roles  
+- Lack of asset visibility
+- Over-permissioned roles
 - Shadow IT or weak vendor management
 
 Think like an attacker. Then build like a defender.
@@ -57,9 +57,9 @@ Think like an attacker. Then build like a defender.
 
 Every control or decision has ripple effects.
 
-For example: enforcing strict MFA might reduce phishing — but could also increase IT support load, user friction, and onboarding time.  
+For example: enforcing strict MFA might reduce phishing — but could also increase IT support load, user friction, and onboarding time.
 
-Second-order thinkers ask: *“And then what?”*
+Second-order thinkers ask: _“And then what?”_
 
 This model helps leaders balance **security and business operations** instead of reacting blindly.
 
@@ -85,7 +85,8 @@ Certainty is an illusion in cybersecurity.
 
 Risk isn’t binary — it’s probabilities layered on context.
 
-Strong leaders don’t say “We’re 100% safe.” They say:  
+Strong leaders don’t say “We’re 100% safe.” They say:
+
 > “Given what we know, this risk is likely low/medium/high, and here’s our rationale.”
 
 This shift encourages transparency, prioritization, and informed tradeoffs.
@@ -107,7 +108,7 @@ The best leaders embed themselves in the trenches while keeping strategic altitu
 
 Leadership in cybersecurity isn’t just about being technically sharp. It’s about **thinking clearly under pressure**, communicating risk, and building trust across the organization.
 
-These mental models don’t guarantee perfect decisions — but they’ll help you make *better* ones, more consistently.
+These mental models don’t guarantee perfect decisions — but they’ll help you make _better_ ones, more consistently.
 
 If you are new to cybersecurity... **Check this out!:** [Break Into Cybersecurity: A First Principles Strategy for Career Starters](https://store.cybersecurityos.net/l/cybersecurity-career-first-principles)
 

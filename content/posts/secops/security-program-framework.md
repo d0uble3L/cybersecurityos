@@ -19,6 +19,7 @@ This blog will outline how to build a security program that effectively aligns w
 The NIST Cybersecurity Framework (CSF) is a comprehensive set of guidelines developed by the National Institute of Standards and Technology (NIST) that assists organizations in managing and reducing cybersecurity risk. Its core structure is organized into five functions—**Identify, Protect, Detect, Respond, and Recover**—which together provide a holistic approach to cybersecurity risk management.
 
 ![NIST Cybersecurity Framework](/posts/secops/images/nist-csf.png)
+
 > Source: [Accorian - NIST Cybersecurity Framework](https://www.google.com/url?sa=i&url=https%3A%2F%2Faccorian.com%2Fnist-csf%2F&psig=AOvVaw00HdwfjilTHYvx_16jAelH&ust=1731721970221000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNDN3pid3YkDFQAAAAAdAAAAABAR)
 
 - **Identify** involves understanding the context, systems, and risks that define the organization’s cybersecurity posture.
@@ -34,6 +35,7 @@ By adopting the NIST CSF, organizations can establish a flexible, adaptive frame
 SOC 2 is a widely recognized auditing standard developed by the American Institute of CPAs (AICPA). It is particularly valuable for service providers managing client data as it emphasizes **data security, confidentiality, availability, processing integrity, and privacy**—known as the Trust Service Criteria (TSC). SOC 2 controls provide a structured approach for assessing how an organization protects information.
 
 ![SOC 2 Compliance](/posts/secops/images/soc2.png)
+
 > Source: [CompliancePoint - SOC 2](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.compliancepoint.com%2Fregulations%2Fsoc-2%2F&psig=AOvVaw3ZNjBSOqwZFBuP9wAoag3w&ust=1731722078178000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJjhh8yd3YkDFQAAAAAdAAAAABAE)
 
 For SOC 2 compliance, organizations must implement robust controls to safeguard information and demonstrate continuous compliance through audits. These criteria align closely with security functions in the NIST CSF, making it easier to combine both frameworks in a unified program.
@@ -49,6 +51,7 @@ The NIST CSF and SOC 2 Trust Service Criteria overlap in many areas, making them
 Mapping these frameworks allows organizations to streamline control implementation, focusing on both risk reduction and compliance. By cross-mapping NIST functions and SOC 2 controls, companies can develop a layered security posture that satisfies both regulatory requirements and practical cybersecurity needs.
 
 ![Understanding NIST CSF](/posts/secops/images/csf.png)
+
 > Source: [ArcticWolf - Understanding and Implementing the NIST CSF](https://www.google.com/url?sa=i&url=https%3A%2F%2Farcticwolf.com%2Funderstanding-and-implementing-the-nist-csf-2-0-cybersecurity-framework%2F&psig=AOvVaw00HdwfjilTHYvx_16jAelH&ust=1731721970221000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNDN3pid3YkDFQAAAAAdAAAAABAa)
 
 ## Building Blocks of a Security Program Aligned with NIST and SOC 2
@@ -98,7 +101,7 @@ Our [NIST & SOC 2 Security Program Checklist](https://trilltayo.gumroad.com/l/se
 
 ![NIST & SOC 2 Security Program Checklist](/posts/secops/images/sec-program-checklist.png)
 
-*Image Source: [CyberSHIELD | CybersecurityOS. Gumroad](https://trilltayo.gumroad.com/l/sec-program-checklist)*
+_Image Source: [CyberSHIELD | CybersecurityOS. Gumroad](https://trilltayo.gumroad.com/l/sec-program-checklist)_
 
 **Ready to strengthen your security program? [Get your checklist today!](https://trilltayo.gumroad.com/l/sec-program-checklist)**
 

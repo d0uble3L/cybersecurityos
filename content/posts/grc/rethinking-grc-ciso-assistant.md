@@ -20,7 +20,7 @@ One of the main issues in traditional GRC is the tendency to prioritize complian
 
 ![CISO Assistant](/posts/grc/images/iso27005.svg) <!-- Callout for image -->
 [CISO Assistant Risk Model](https://intuitem.gitbook.io/ciso-assistant/model/risk)
-*Source: [Intuitem GitBook - CISO Assistant Risk Model](https://intuitem.gitbook.io/ciso-assistant/model/risk)*
+_Source: [Intuitem GitBook - CISO Assistant Risk Model](https://intuitem.gitbook.io/ciso-assistant/model/risk)_
 
 Decoupling compliance from security allows CISOs to implement controls that address real risks while ensuring compliance naturally follows. By putting security first, organizations can stay protected without being driven by the rigid requirements of a specific framework.
 
@@ -37,7 +37,7 @@ This is where tools like **CISO Assistant** shine, offering an open-source appro
 ![CISO Assistant](/posts/grc/images/ciso-assist.webp) <!-- Callout for image -->
 [CISO Assistant](https://intuitem.gitbook.io/ciso-assistant) allows organizations to unify practices and controls in one place, simplifying GRC management for teams of all sizes.
 [CISO Assistant Website](https://intuitem.com)
-*Source: [Intuitem - CISO Assistant](https://intuitem.com/)*
+_Source: [Intuitem - CISO Assistant](https://intuitem.com/)_
 
 ---
 
@@ -46,7 +46,7 @@ This is where tools like **CISO Assistant** shine, offering an open-source appro
 As organizations grow, **scaling GRC** becomes a major challenge. Multiple departments, teams, and even geographic regions create fragmented practices, and maintaining visibility across all of them is difficult. The key is to have systems that enable **multi-tenancy** while still giving CISOs an aggregated, high-level view of the organization’s overall security posture
 
 ![CISO Assistant](/posts/grc/images/ciso-assist-matrix.png) <!-- Callout for image -->
-*Source: [Intuitem - CISO Assistant](https://intuitem.com/)*
+_Source: [Intuitem - CISO Assistant](https://intuitem.com/)_
 
 By **aggregating data and simplifying reporting**, CISOs can stay on top of security without losing track of specific department or team activities. Centralizing GRC efforts not only improves governance and risk management but also makes compliance easier to manage at scale.
 

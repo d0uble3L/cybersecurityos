@@ -131,7 +131,7 @@ spectra-analysis:
       - reports/
     expire_in: 30 days
   variables:
-    ANTHROPIC_API_KEY: $ANTHROPIC_API_KEY  # Set in GitLab CI/CD variables
+    ANTHROPIC_API_KEY: $ANTHROPIC_API_KEY # Set in GitLab CI/CD variables
 ```
 
 ---
@@ -172,11 +172,11 @@ pipeline {
 
 ### Secrets Management
 
-| Platform | How to add `ANTHROPIC_API_KEY` |
-|---|---|
+| Platform       | How to add `ANTHROPIC_API_KEY`                                     |
+| -------------- | ------------------------------------------------------------------ |
 | GitHub Actions | Settings → Secrets and variables → Actions → New repository secret |
-| GitLab CI | Settings → CI/CD → Variables → Add variable |
-| Jenkins | Manage Jenkins → Credentials → Add Credentials (Secret text) |
+| GitLab CI      | Settings → CI/CD → Variables → Add variable                        |
+| Jenkins        | Manage Jenkins → Credentials → Add Credentials (Secret text)       |
 
 ---
 

@@ -127,14 +127,14 @@ SPECTRA is open to contributions that add parsers for additional scanner formats
 
 ### Scanner Comparison
 
-| Feature | Trivy | Semgrep | Generic |
-|---|---|---|---|
-| Auto-detection | ✓ | ✓ | — |
-| JSON structured input | ✓ | ✓ | — |
-| CVE mapping | ✓ | ✓ (CWE) | Depends on input |
-| SAST findings | — | ✓ | ✓ |
-| Infrastructure/container | ✓ | — | ✓ |
-| Pentest notes | — | — | ✓ |
+| Feature                  | Trivy | Semgrep | Generic          |
+| ------------------------ | ----- | ------- | ---------------- |
+| Auto-detection           | ✓     | ✓       | —                |
+| JSON structured input    | ✓     | ✓       | —                |
+| CVE mapping              | ✓     | ✓ (CWE) | Depends on input |
+| SAST findings            | —     | ✓       | ✓                |
+| Infrastructure/container | ✓     | —       | ✓                |
+| Pentest notes            | —     | —       | ✓                |
 
 ---
 

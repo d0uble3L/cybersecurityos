@@ -13,8 +13,8 @@ This documentation covers open-source tools developed and maintained by Cybersec
 
 ### Projects
 
-| Project | Version | Description |
-|---|---|---|
+| Project                   | Version     | Description                                                                                                                          |
+| ------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | [SPECTRA](/docs/spectra/) | v0.x (Beta) | AI-powered vulnerability triage CLI — transforms scanner output into ranked findings, attack chain analysis, and executive summaries |
 
 ---

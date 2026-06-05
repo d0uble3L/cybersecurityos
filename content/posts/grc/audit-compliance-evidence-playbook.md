@@ -89,11 +89,11 @@ Every document requires:
 
 Create a matrix correlating your organizational controls to specific audit frameworks:
 
-| Control | Policy Reference | Evidence Location | Framework(s) | Last Updated | Owner |
-|---------|------------------|-------------------|--------------|--------------| -----|
-| Access Control - Principle of Least Privilege | SEC-001 | /compliance/access-control/ | SOC 2, ISO 27001 | 2026-01-15 | Security Team |
-| Incident Response Plan | SEC-005 | /compliance/incident-response/ | SOC 2, HIPAA | 2025-11-20 | CISO |
-| Third-Party Risk Assessment | RMP-002 | /compliance/vendor-risk/ | SOC 2, ISO 27001 | 2026-02-01 | Procurement |
+| Control                                       | Policy Reference | Evidence Location              | Framework(s)     | Last Updated | Owner         |
+| --------------------------------------------- | ---------------- | ------------------------------ | ---------------- | ------------ | ------------- |
+| Access Control - Principle of Least Privilege | SEC-001          | /compliance/access-control/    | SOC 2, ISO 27001 | 2026-01-15   | Security Team |
+| Incident Response Plan                        | SEC-005          | /compliance/incident-response/ | SOC 2, HIPAA     | 2025-11-20   | CISO          |
+| Third-Party Risk Assessment                   | RMP-002          | /compliance/vendor-risk/       | SOC 2, ISO 27001 | 2026-02-01   | Procurement   |
 
 This mapping ensures nothing is missed and makes audit scoping transparent.
 
@@ -375,12 +375,12 @@ The investment in establishing this playbook pays dividends across multiple audi
 
 ## Quick Reference: SLO Summary
 
-| SLO | Target | Measurement | Owner |
-|-----|--------|-------------|-------|
-| Evidence Availability | 95% current & accessible within 24h | Weekly | Compliance Officer |
-| Policy Updates | 100% current 30 days before audit | Quarterly | Compliance Officer |
-| Documentation Accuracy | 100% accuracy, corrections in 48h | Per audit | Audit Coordinator |
-| Auditor Request Response | 90% within 48h, 100% within 5 days | Weekly | Audit Lead |
-| Control Test Evidence | 100% complete before testing | 2 weeks prior | Control Owners |
+| SLO                      | Target                              | Measurement   | Owner              |
+| ------------------------ | ----------------------------------- | ------------- | ------------------ |
+| Evidence Availability    | 95% current & accessible within 24h | Weekly        | Compliance Officer |
+| Policy Updates           | 100% current 30 days before audit   | Quarterly     | Compliance Officer |
+| Documentation Accuracy   | 100% accuracy, corrections in 48h   | Per audit     | Audit Coordinator  |
+| Auditor Request Response | 90% within 48h, 100% within 5 days  | Weekly        | Audit Lead         |
+| Control Test Evidence    | 100% complete before testing        | 2 weeks prior | Control Owners     |
 
 ---

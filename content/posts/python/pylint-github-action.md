@@ -10,7 +10,7 @@ title: "Pylint Power-Up: Automated Code Quality Checks for GitHub Projects"
 
 Pylint is a powerful tool for analyzing Python code to ensure it follows coding standards and best practices. Integrating Pylint into your GitHub repository as part of your CI/CD pipeline helps maintain clean, readable, and error-free code. Here's a quick guide on how to configure Pylint in GitHub using GitHub Actions.
 
-* GitHub Repo Source: [d0uble3l. GitHub](https://github.com/d0uble3L/pylint-demo)*
+- GitHub Repo Source: [d0uble3l. GitHub](https://github.com/d0uble3L/pylint-demo)\*
 
 ## Set Up a GitHub Action for Pylint
 
@@ -36,22 +36,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.x'
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pylint
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pylint
 
-    - name: Run Pylint
-      run: pylint **/*.py
-
+      - name: Run Pylint
+        run: pylint **/*.py
 ```
 
 ## Step 2: Commit and Push
@@ -70,7 +69,7 @@ Now, every time you push or open a pull request, GitHub Actions will automatical
 
 ![pyLint running](/posts/python/images/py-lint.jpg)
 
-*Image Source: [d0uble3l. GitHub](https://github.com/d0uble3L/pylint-demo)*
+_Image Source: [d0uble3l. GitHub](https://github.com/d0uble3L/pylint-demo)_
 
 ### DEMO
 
@@ -96,11 +95,11 @@ if __name__ == "__main__":
 
 #### Issues in the Script
 
-* Variable naming: Using sum as a variable name will trigger a Pylint warning because sum is a built-in Python function.
+- Variable naming: Using sum as a variable name will trigger a Pylint warning because sum is a built-in Python function.
 
-* Missing docstring: The greet function is missing a docstring, which will trigger a warning for code documentation.
+- Missing docstring: The greet function is missing a docstring, which will trigger a warning for code documentation.
 
-* Formatting: Depending on your Pylint settings, the script may raise warnings about code formatting (line lengths, spacing, etc.).
+- Formatting: Depending on your Pylint settings, the script may raise warnings about code formatting (line lengths, spacing, etc.).
 
 You can run Pylint on this file using:
 
@@ -112,7 +111,7 @@ This will give you a summary of code quality issues and suggestions on how to im
 
 ![pyLint findings](/posts/python/images/pylint-fail.jpg)
 
-*Image Source: [d0uble3l. GitHub](https://github.com/d0uble3L/pylint-demo)*
+_Image Source: [d0uble3l. GitHub](https://github.com/d0uble3L/pylint-demo)_
 
 ## Conclusion
 

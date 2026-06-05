@@ -5,7 +5,7 @@ draft: false
 tags: ["security", "leadership", "CISO", "cybersecurity", "CybersecurityOS"]
 description: "Most security programs fail silently. Learn why leadership is the ultimate security control and how to fix organizational gaps that technology can't solve."
 images:
-    -  /posts/os-weekly/images/security_leadership_image.png
+  - /posts/os-weekly/images/security_leadership_image.png
 featured_image: /posts/os-weekly/images/security_leadership_image.png
 ---
 
@@ -128,14 +128,15 @@ To help you translate this insight into action, check out [Cybersecurity Leaders
 - Elevate your program's impact
 
 ---
-> 💡 **If you found this helpful, learn the thinking that separates leaders from followers**
-> ![Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](/posts/os-weekly/images/pro-os.png)
-> 🚀 Supercharge Your Cybersecurity Career with 🔗 [CyberSHIELD PRO Membership](https://cybersecurityos.gumroad.com/l/cybershield-membership) – Unlock Exclusive Benefits Today!  
----
+
+> 💡 **If you found this helpful, learn the thinking that separates leaders from followers** > ![Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](/posts/os-weekly/images/pro-os.png)
+> 🚀 Supercharge Your Cybersecurity Career with 🔗 [CyberSHIELD PRO Membership](https://cybersecurityos.gumroad.com/l/cybershield-membership) – Unlock Exclusive Benefits Today!
 
 ---
 
-*This post is brought to you by [Make](https://www.make.com/en/register?pc=trilltayo) — AI automation you can visually build and orchestrate in real time. Make brings no-code automation and AI agents into one visual-first platform so you can build with speed and scale with control.*
+---
+
+_This post is brought to you by [Make](https://www.make.com/en/register?pc=trilltayo) — AI automation you can visually build and orchestrate in real time. Make brings no-code automation and AI agents into one visual-first platform so you can build with speed and scale with control._
 
 ---
 

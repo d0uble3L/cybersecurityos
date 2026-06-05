@@ -2,12 +2,39 @@
 title: "SPECTRA: AI-Powered Vulnerability Triage That Actually Works for Security Teams"
 date: 2026-05-10
 description: "SPECTRA is an open-source, AI-powered CLI that transforms raw scanner output from Trivy, Semgrep, and Nessus into ranked findings, attack chain analysis, and executive summaries — powered by Claude. Here's why it matters for modern security teams."
-tags: ["AI", "DevSecOps", "Automation", "Vulnerability Management", "Claude", "Security Engineering", "SAST", "Trivy", "Semgrep", "AppSec", "GRC", "Shift Left Security"]
+tags:
+  [
+    "AI",
+    "DevSecOps",
+    "Automation",
+    "Vulnerability Management",
+    "Claude",
+    "Security Engineering",
+    "SAST",
+    "Trivy",
+    "Semgrep",
+    "AppSec",
+    "GRC",
+    "Shift Left Security",
+  ]
 categories: ["os-weekly"]
-keywords: ["AI vulnerability triage", "AI security scanner", "SPECTRA security tool", "Claude AI security", "vulnerability management automation", "DevSecOps tools 2026", "attack chain analysis", "security triage automation", "Trivy AI analysis", "Semgrep triage", "open source security AI"]
+keywords:
+  [
+    "AI vulnerability triage",
+    "AI security scanner",
+    "SPECTRA security tool",
+    "Claude AI security",
+    "vulnerability management automation",
+    "DevSecOps tools 2026",
+    "attack chain analysis",
+    "security triage automation",
+    "Trivy AI analysis",
+    "Semgrep triage",
+    "open source security AI",
+  ]
 draft: false
 images:
-    - /posts/os-weekly/images/spectra-attack-chain.svg
+  - /posts/os-weekly/images/spectra-attack-chain.svg
 featured_image: /posts/os-weekly/images/spectra-hero-banner.svg
 ---
 
@@ -83,7 +110,7 @@ Modern prioritization frameworks like [EPSS](https://www.first.org/epss/) (Explo
 **SPECTRA applies AI reasoning across all of these dimensions simultaneously.** Rather than sorting by score, it evaluates:
 
 - Which findings are chained — and whether those chains form exploitable attack paths
-- Whether a finding's context in *your* environment elevates or reduces its actual risk
+- Whether a finding's context in _your_ environment elevates or reduces its actual risk
 - How to communicate the findings at the right level for each audience (engineer vs. CISO vs. board)
 
 This is the kind of analysis that previously required a senior analyst with deep context. SPECTRA makes it reproducible and scalable.
@@ -140,13 +167,13 @@ docker compose run --rm analyze scans/trivy.json --format both --output /app/rep
 
 ### Supported Scanners
 
-| Scanner | Format | Auto-detect |
-|---|---|:---:|
-| [Trivy](https://trivy.dev/) | JSON | ✓ |
-| [Semgrep](https://semgrep.dev/) | JSON | ✓ |
-| Nessus / OpenVAS | Text | via `--scanner generic` |
-| Burp Suite | Text export | via `--scanner generic` |
-| Pentest notes | Plain text | via `--scanner generic` |
+| Scanner                         | Format      |       Auto-detect       |
+| ------------------------------- | ----------- | :---------------------: |
+| [Trivy](https://trivy.dev/)     | JSON        |            ✓            |
+| [Semgrep](https://semgrep.dev/) | JSON        |            ✓            |
+| Nessus / OpenVAS                | Text        | via `--scanner generic` |
+| Burp Suite                      | Text export | via `--scanner generic` |
+| Pentest notes                   | Plain text  | via `--scanner generic` |
 
 ---
 
@@ -165,7 +192,6 @@ The philosophy behind SPECTRA reflects a pattern I keep coming back to: the best
 Most security tools are built for security teams in isolation. SPECTRA is built for how modern organizations actually operate — where developers own their services, pipelines move fast, and security teams are too small to manually review everything in their queue.
 
 ![The philosophy behind SPECTRA reflects a pattern I keep coming back to: the best security tooling removes friction rather than adding it. ](/posts/os-weekly/images/spectra-attack-chain.svg)
-
 
 When AI-assisted triage is embedded directly into the development workflow, security stops being a gate at the end of the process and becomes a continuous, contextual signal throughout. That's what secure-by-design looks like in practice — not just architecture decisions made at the whiteboard, but tooling that makes the secure path the frictionless path.
 

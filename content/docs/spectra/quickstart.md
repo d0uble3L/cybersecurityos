@@ -84,12 +84,12 @@ Open the Markdown report to see:
 
 ### Common Options at a Glance
 
-| Flag | Description | Example |
-|---|---|---|
-| `--format` | Output format: `markdown`, `json`, or `both` | `--format both` |
-| `--output` | Output file path (no extension needed) | `--output reports/scan1` |
-| `--scanner` | Force scanner type: `trivy`, `semgrep`, `generic` | `--scanner generic` |
-| `--usage` | Print token usage stats after analysis | `--usage` |
+| Flag        | Description                                       | Example                  |
+| ----------- | ------------------------------------------------- | ------------------------ |
+| `--format`  | Output format: `markdown`, `json`, or `both`      | `--format both`          |
+| `--output`  | Output file path (no extension needed)            | `--output reports/scan1` |
+| `--scanner` | Force scanner type: `trivy`, `semgrep`, `generic` | `--scanner generic`      |
+| `--usage`   | Print token usage stats after analysis            | `--usage`                |
 
 ---
 
