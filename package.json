@@ -1,8 +1,12 @@
 {
   "scripts": {
-    "lint:md": "markdownlint \"content/**/*.md\""
+    "lint:md": "markdownlint \"content/**/*.md\"",
+    "lint:format": "prettier --check \"content/**/*.md\" \"assets/**/*.css\"",
+    "format": "prettier --write \"content/**/*.md\" \"assets/**/*.css\"",
+    "build:search": "pagefind --source public"
   },
   "devDependencies": {
+    "pagefind": "^1.3.0",
     "prettier": "^3.3.3",
     "markdownlint-cli": "^0.48.0"
   }

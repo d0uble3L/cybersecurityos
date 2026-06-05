@@ -61,7 +61,7 @@
     {{ end }}
 
     <!-- Article body -->
-    <div class="os-prose">
+    <div class="os-prose" data-pagefind-body>
       {{ .Content }}
     </div>
 
@@ -70,6 +70,19 @@
       {{ partial "tags.html" . }}
       {{ partial "social-share.html" . }}
     </div>
+
+    <!-- Related posts -->
+    {{ $related := .Site.RegularPages.Related . | first 3 }}
+    {{ with $related }}
+    <aside class="os-related" aria-label="Related posts">
+      <h2 class="os-related-heading">Related Posts</h2>
+      <div class="os-related-grid">
+        {{ range . }}
+          {{ .Render "summary" }}
+        {{ end }}
+      </div>
+    </aside>
+    {{ end }}
 
     <!-- Comments -->
     <div style="margin-top:2.5rem;">

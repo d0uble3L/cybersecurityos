@@ -26,15 +26,16 @@
       ">
     {{ end }}
 
-    {{ partial "site-style.html" . }}
-    {{ partial "site-scripts.html" . }}
-    <!-- CybersecurityOS design system fonts -->
+    <!-- Critical font connections (early so browser starts DNS+TCP before CSS parse) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Share+Tech+Mono&family=Inter:wght@400;500;600&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Share+Tech+Mono&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- CybersecurityOS design system -->
     {{ $css := resources.Get "css/cybersecurityos.css" | minify }}
     {{ if $css }}<link rel="stylesheet" href="{{ $css.RelPermalink }}">{{ end }}
+    {{ partial "site-style.html" . }}
+    {{ partial "site-scripts.html" . }}
 
     {{ block "favicon" . }}
       {{ partialCached "site-favicon.html" . }}
@@ -61,6 +62,7 @@
     {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
       {{ template "_internal/google_analytics.html" . }}
     {{ end }}
+    {{ partial "structured-data.html" . }}
 	{{ block "head" . }}{{ partial "head-additions.html" . }}{{ end }}
     <!-- Kit: sticky banner (early load so it renders above viewport content) -->
     <script async data-uid="1201517798" src="https://theghettoflower.kit.com/1201517798/index.js"></script>

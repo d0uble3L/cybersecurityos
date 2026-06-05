@@ -1,0 +1,7 @@
+layouts/
+themes/
+public/
+resources/
+node_modules/
+*.toml
+*.lock
