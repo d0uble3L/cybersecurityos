@@ -18,7 +18,7 @@ If you enjoy the content, then consider [buying me a coffee.](https://store.cybe
 
 ## Ebooks
 
-[Seven Cybersecurity Experts on Cyber Fusion: Collaborative Security to Defend the Modern Threat Landscape](https://www.anomali.com/resources/ebooks/seven-cybersecurity-experts-on-cyber-fusion) 
+[Seven Cybersecurity Experts on Cyber Fusion: Collaborative Security to Defend the Modern Threat Landscape](https://www.anomali.com/resources/ebooks/seven-cybersecurity-experts-on-cyber-fusion)
 
 ## Podcasts
 

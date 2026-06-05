@@ -57,7 +57,7 @@ Cyber leaders must pay close attention to linguistic nuances and operational pat
 > 🔗 [Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](https://store.cybersecurityos.net/l/cybersecurity-leadership-os)
 ---
 
-At the same time, vulnerabilities in federal cybersecurity or flaws in banking trojan infrastructures (ERMAC 3.0) bring forward a critical lesson – robust internal infrastructure is as important as external threat monitoring. 
+At the same time, vulnerabilities in federal cybersecurity or flaws in banking trojan infrastructures (ERMAC 3.0) bring forward a critical lesson – robust internal infrastructure is as important as external threat monitoring.
 
 ![ERMAC V3.0 banking trojan source code leak.](/posts/os-weekly/images/ermac.png)
 

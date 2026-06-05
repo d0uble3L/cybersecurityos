@@ -166,7 +166,6 @@ Most security tools are built for security teams in isolation. SPECTRA is built 
 
 ![The philosophy behind SPECTRA reflects a pattern I keep coming back to: the best security tooling removes friction rather than adding it. ](/posts/os-weekly/images/spectra-attack-chain.svg)
 
-
 When AI-assisted triage is embedded directly into the development workflow, security stops being a gate at the end of the process and becomes a continuous, contextual signal throughout. That's what secure-by-design looks like in practice — not just architecture decisions made at the whiteboard, but tooling that makes the secure path the frictionless path.
 
 > For a deeper look at how I think about AI embedded in security workflows, see: [Claude AI Use Cases for Security Teams and Startups in 2026](https://www.cybersecurityos.net/posts/os-weekly/claude-ai-use-cases-startup-cybersecurity-2026/)

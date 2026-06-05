@@ -44,6 +44,7 @@ During internal testing, Claude Opus 4.6 [identified over 500 previously unknown
 **The practical workflow:** Don't use Claude as a replacement for your existing SAST pipeline — use it as the next layer. Run Semgrep or Snyk in CI/CD to catch the deterministic stuff automatically. Escalate flagged PRs and any high-risk code paths (auth, payment flows, PII handlers) to Claude for contextual analysis. This two-stage approach keeps your CI pipeline fast while putting Claude's reasoning where it matters most.
 
 **Prompt that works:**
+
 ```
 Review this [authentication/payment/data access] function for security issues.
 Assume an attacker can control [describe input vectors]. Focus on:
@@ -68,6 +69,7 @@ Every startup hits the same wall: a prospect's security questionnaire lands, the
 Claude excels at the unglamorous work of translating security requirements into policy documents that are technically accurate, logically consistent, and written in plain language that non-engineers can actually follow.
 
 **Where this is genuinely powerful:**
+
 - Gap-analyzing your current controls against **NIST CSF 2.0** or **CIS Controls v8** — feed Claude your control inventory and the framework, and ask it to identify where you're exposed
 - Drafting SOC 2 Type II policies (access control, change management, availability) that align to your actual tech stack
 - Producing HIPAA/GDPR data processing records that map data flows to legal bases
@@ -76,6 +78,7 @@ Claude excels at the unglamorous work of translating security requirements into 
 [Industry analysts note](https://www.valencesecurity.com/saas-security-terms/claude-security-governing-enterprise-ai-use-with-anthropic-claude) that Claude's strong reasoning makes it effective at producing documentation that is not just grammatically correct but logically consistent — an important distinction when an auditor is checking whether your policies actually describe how you operate.
 
 **Prompt that works:**
+
 ```
 I'm preparing for a SOC 2 Type II audit. My infrastructure is [describe: cloud provider, key services, data types handled].
 Draft an Access Control Policy aligned to the CC6.1–CC6.3 Trust Services Criteria. Include:
@@ -94,25 +97,24 @@ Format for a non-technical audience. Flag anywhere my current setup may create g
 **How to start:** Start with the document causing the most immediate friction — usually an incident response plan or an access control policy. Prompt Claude with your specific tech stack and ask for a first draft. Iterate from there with your actual procedures.
 
 ---
- 
+
 ## 🧪 Promoted: Build the Home Lab That Gets You Hired
- 
+
 **You're studying. You're watching tutorials. But when the interviewer asks about hands-on experience — you freeze.**
- 
+
 Theory alone doesn't get you hired. Practice does.
- 
+
 **[The Cybersecurity Home Lab Blueprint](https://store.cybersecurityos.net/l/cybersecurityos-home-lab-blueprint)** is a step-by-step Notion guide that walks you through building a complete practice environment — from zero — on any computer, for free (or close to it).
- 
+
 - ✅ No IT background required
 - ✅ No expensive hardware
 - ✅ Real attack and defense scenarios you can demo in interviews
- 
-Stop learning in theory. Start building the lab that gets you the job.
- 
-**👉 [Get the Home Lab Blueprint →](https://store.cybersecurityos.net/l/cybersecurityos-home-lab-blueprint)**
- 
----
 
+Stop learning in theory. Start building the lab that gets you the job.
+
+**👉 [Get the Home Lab Blueprint →](https://store.cybersecurityos.net/l/cybersecurityos-home-lab-blueprint)**
+
+---
 
 ## 3. Incident Response Planning and Triage Automation
 
@@ -131,6 +133,7 @@ Use Claude to build playbooks mapped to [MITRE ATT&CK](https://attack.mitre.org/
 Claude can parse raw logs, summarize alert sequences, cross-reference indicators of compromise against threat intelligence, and draft executive-level situation reports — tasks that typically consume the first critical hour of any response. [Security practitioners building Claude-powered SOC workflows](https://fazal-sec.medium.com/claude-skills-ai-powered-cybersecurity-the-complete-guide-to-building-intelligent-security-7bb7e9d14c8e) report measurable reductions in MTTR and lower false positive rates through structured contextual analysis.
 
 **Prompt that works (during active triage):**
+
 ```
 I'm investigating a potential credential compromise. Here is the relevant log data: [paste sanitized logs].
 Analyze for:
@@ -163,6 +166,7 @@ For open-source dependencies and third-party libraries, the risk isn't just know
 Claude's code reasoning can help here. Give it a dependency, describe how your application uses it, and ask it to model what a compromised version could access. Layer this on top of SBOM (Software Bill of Materials) generation for your most critical services — Claude can help you interpret SBOM output and prioritize which dependencies warrant deeper review.
 
 **Prompt that works:**
+
 ```
 Review this vendor's SOC 2 Type II summary and security questionnaire responses [paste content].
 My use case: this vendor will have [describe: read/write access to customer data, production database integration, SSO integration, etc.].
@@ -180,20 +184,21 @@ Identify:
 **How to start:** Create a standard vendor tier classification (critical, high, medium, low) based on data access and system integration depth. Build a Claude-assisted review template for each tier. For Tier 1 vendors — those with access to production data or core systems — run a full deep-dive using Claude before contracts are signed.
 
 ---
- 
+
 ## 💡 Sponsor: Invest in Energy Infrastructure with Energea
- 
+
 While you're building your security career, put your money to work in real assets.
- 
+
 **[Energea](https://www.energea.com/get-started/referral?r=00u6mrl3tb7pT1riI4x7)** gives you direct access to private solar energy markets — the kind of infrastructure investments previously reserved for institutional investors.
- 
+
 | | |
 |---|---|
 | **Total Invested** | $472M |
 | **Realized Return (IRR)** | 12.04% |
 | **Total Capacity** | 584 MW |
- 
+
 **Why Energea?**
+
 - **High-yield returns** — double-digit IRR across top-tier global solar projects
 - **Real asset diversification** — uncorrelated with stock market volatility
 - **Inflation protection** — cash flows secured by long-term, inflation-indexed contracts
@@ -201,9 +206,9 @@ While you're building your security career, put your money to work in real asset
 - **Impact** — invest in the energy transition
 
 **👉 [Start Investing with Energea →](https://www.energea.com/get-started/referral?r=00u6mrl3tb7pT1riI4x7)**
- 
+
 *Sponsored. Investment involves risk. Past returns do not guarantee future performance.*
- 
+
 ---
 
 ## 5. Security Automation and Agentic Workflow Orchestration
@@ -269,8 +274,8 @@ Move quickly. But build in the right controls from day one. The teams that autom
 
 ![Top 5 Claude AI Use Cases for Startup Cybersecurity Teams in 2026](/posts/os-weekly/images/claude-code-security.jpeg)
 
-
 **Resources to get started:**
+
 - [Claude Code Security](https://www.anthropic.com/news/claude-code-security) — Anthropic's reasoning-based vulnerability scanner
 - [Project Glasswing](https://www.anthropic.com/glasswing) — Anthropic's AI-powered defensive security initiative  
 - [Anthropic API Documentation](https://docs.anthropic.com) — For building custom security automation

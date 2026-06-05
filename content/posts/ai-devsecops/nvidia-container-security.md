@@ -44,7 +44,7 @@ Picture this: multiple LLM agents working in the background, automating everythi
 
 ### Ready to Try It Out?
 
-If you’re as intrigued as I am, good news: you can try the **NIM Agent Blueprint** for free. Just head over to [build.nvidia.com](https://build.nvidia.com) and see how it fits into your security stack. 
+If you’re as intrigued as I am, good news: you can try the **NIM Agent Blueprint** for free. Just head over to [build.nvidia.com](https://build.nvidia.com) and see how it fits into your security stack.
 
 Oh, and heads up: they’ve got a downloadable vulnerability analysis version on the way that’s going to make container security even smoother. Keep an eye out for it.
 

@@ -19,7 +19,7 @@ This week, three very different stories converge to expose the deeper seams of o
 
 Imagine a scenario: A sanctioned individual operates in plain sight.
 ![Big Tech's varied reactions to U.S. Treasury sanctions](/posts/os-weekly/images/bigtech.png)
-Despite U.S. Treasury sanctions levied against a key figure linked to cryptocurrency scams, major American tech platforms still harbor this threat. 
+Despite U.S. Treasury sanctions levied against a key figure linked to cryptocurrency scams, major American tech platforms still harbor this threat.
 This isn’t just about regulatory oversights—it’s a wake-up call for cybersecurity leaders to re-examine internal risk assessments and compliance protocols.
 
 **Key Takeaways:**

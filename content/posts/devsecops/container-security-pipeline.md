@@ -93,7 +93,7 @@ If everything goes well, you should see an output like this:
 }
 ```
 
-2. Store your AWS credentials (`AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`) as **secrets** in your GitHub repository:
+1. Store your AWS credentials (`AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`) as **secrets** in your GitHub repository:
    - Go to **Settings > Secrets and Variables > Actions > New repository secret**.
    - Add the credentials with names `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
 
