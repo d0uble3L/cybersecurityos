@@ -49,12 +49,9 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
       - name: Install Node.js dependencies
-        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+        run: npm ci
       - name: Check code style with Prettier
-        # Allow non-zero exit so CI can continue even if formatting issues exist
-        continue-on-error: true
-        run: |
-          npx prettier --check .
+        run: npm run lint:format
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache

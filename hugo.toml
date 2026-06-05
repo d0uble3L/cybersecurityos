@@ -6,8 +6,10 @@ theme = "ananke"
 # SEO Metadata
 description = "A comprehensive resource for cybersecurity professionals, providing insights, tools, and services."
 keywords = "cybersecurity, security tools, professional development, best practices"
-author = "Your Name"  # Replace with your actual name or organization
-googleAnalytics = "YOUR_TRACKING_ID"  # Replace with your Google Analytics tracking ID
+author = "Michael Tayo"
+# To enable Google Analytics add your tracking ID:
+# [services.googleAnalytics]
+#   id = "G-XXXXXXXXXX"
 
 # Permalinks
 [permalinks]
@@ -24,7 +26,7 @@ googleAnalytics = "YOUR_TRACKING_ID"  # Replace with your Google Analytics track
   favicon = "images/c-os-l.svg"   # Path to your favicon
   site_logo = "images/c-os.svg" 
   showSocialLinks = true        # Show social links in the footer (if supported by the theme)
-  paginate = 10                  # this is set low for demonstrating with dummy content. Set to a higher number
+  paginate = 20
   rss = "index.xml" #rss
   show_reading_time = true
 
