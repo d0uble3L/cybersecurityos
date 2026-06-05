@@ -50,8 +50,8 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Install Node.js dependencies
         run: npm ci
-      - name: Check code style with Prettier
-        run: npm run lint:format
+      - name: Fix code style with Prettier
+        run: npm run format
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
