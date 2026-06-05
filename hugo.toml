@@ -50,6 +50,11 @@ googleAnalytics = "YOUR_TRACKING_ID"  # Replace with your Google Analytics track
 
 
  [[menu.main]]
+  name = "Search"
+  url = "/search/"
+  weight = 4
+
+[[menu.main]]
   name = "Contact"
   url = "/contact/"
   weight = 5

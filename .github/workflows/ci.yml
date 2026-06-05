@@ -41,3 +41,8 @@ jobs:
         env:
           HUGO_ENV: production
         run: hugo --minify --gc
+      - name: Check internal links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --offline --include-verbatim './public/**/*.html'
+          fail: true

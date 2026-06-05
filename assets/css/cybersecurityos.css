@@ -1159,6 +1159,15 @@ article.pa3, article.pa4-ns { background: transparent !important; }
   .fm-urgency, .fm-pricing-simple { padding-left: 1rem; padding-right: 1rem; }
 }
 
+/* ─── Focus Styles ──────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--os-green);
+  outline-offset: 2px;
+  border-radius: var(--os-radius);
+}
+/* Remove the default outline only when :focus-visible is supported */
+:focus:not(:focus-visible) { outline: none; }
+
 /* ─── Skip Navigation Link ──────────────────────────────────── */
 .os-skip-link {
   position: absolute;
@@ -1191,3 +1200,57 @@ article.pa3, article.pa4-ns { background: transparent !important; }
   height: auto;
   display: block;
 }
+
+/* ─── Related Posts ─────────────────────────────────────────── */
+.os-related {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--os-border);
+}
+.os-related-heading {
+  font-family: var(--os-font-mono);
+  font-size: 0.7rem;
+  color: var(--os-green);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin: 0 0 1.5rem;
+}
+.os-related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+@media (max-width: 600px) {
+  .os-related-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── Search Page (Pagefind UI overrides) ───────────────────── */
+.os-search-page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 5rem;
+}
+.pagefind-ui__search-input {
+  background: var(--os-bg-surface) !important;
+  border: 1px solid var(--os-border) !important;
+  border-radius: var(--os-radius) !important;
+  color: var(--os-text) !important;
+  font-family: var(--os-font-mono) !important;
+  font-size: 0.9rem !important;
+}
+.pagefind-ui__search-input:focus-visible {
+  border-color: var(--os-border-green) !important;
+  outline: 2px solid var(--os-green) !important;
+  outline-offset: 2px !important;
+}
+.pagefind-ui__result {
+  background: var(--os-bg-surface) !important;
+  border: 1px solid var(--os-border) !important;
+  border-radius: var(--os-radius-md) !important;
+}
+.pagefind-ui__result-title a {
+  color: var(--os-text) !important;
+  font-family: var(--os-font-heading) !important;
+}
+.pagefind-ui__result-title a:hover { color: var(--os-green) !important; }
+.pagefind-ui__result-excerpt { color: var(--os-text-muted) !important; font-size: 0.85rem !important; }
