@@ -4,6 +4,8 @@
 {{ end }}
 
 {{ define "main" }}
+  {{ $featuredURL := partial "func/GetFeaturedImage.html" . }}
+  {{ $featuredRes := partial "func/GetFeaturedImageObject.html" . }}
   <div class="os-article-wrap">
 
     <!-- Article header -->
@@ -45,6 +47,17 @@
       <!-- Tags -->
       {{ partial "tags.html" . }}
     </header>
+
+    <!-- Featured image -->
+    {{ if or $featuredRes $featuredURL }}
+    <div class="os-article-image">
+      {{ partial "func/ResponsiveImage.html" (dict
+          "resource" $featuredRes
+          "url"      $featuredURL
+          "alt"      .Title
+          "class"    "os-article-feat-img") }}
+    </div>
+    {{ end }}
 
     <!-- Article body -->
     <div class="os-prose">

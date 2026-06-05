@@ -14,7 +14,7 @@
     {{ if and $production $public }}
       <meta name="robots" content="index, follow">
     {{ else }}
-      <meta name="robots" content="index, follow">
+      <meta name="robots" content="noindex, nofollow">
     {{ end }}
     {{ with .Params.author | default .Site.Params.author }}
       <meta name="author" content = "
@@ -67,10 +67,11 @@
   </head>
 
   <body class="ma0{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
+    <a class="os-skip-link" href="#main-content">Skip to main content</a>
     <div id="os-progress"></div>
 
     {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
-    <main class="pb7" role="main">
+    <main id="main-content" class="pb7" role="main">
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}
@@ -91,7 +92,10 @@
         var toggle = document.querySelector('.os-nav-toggle');
         var links  = document.querySelector('.os-nav-links');
         if (!toggle || !links) return;
-        toggle.addEventListener('click', function() { links.classList.toggle('open'); });
+        toggle.addEventListener('click', function() {
+          var isOpen = links.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
       })();
     </script>
     <!-- Kit: popup (late load — fires after page is interactive) -->

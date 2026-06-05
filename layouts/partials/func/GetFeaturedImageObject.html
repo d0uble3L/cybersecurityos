@@ -1,0 +1,22 @@
+{{/*
+  GetFeaturedImageObject
+  Returns the featured image as a Hugo image resource when it is a page-bundle
+  resource (enables Hugo's image-processing pipeline — resize, WebP, srcset).
+  Falls back to an empty string for static-dir images, which are handled by
+  the original GetFeaturedImage partial as plain URLs.
+
+  @return  Hugo image resource, or empty string.
+*/}}
+{{ $resource := "" }}
+{{ with .Params.featured_image }}
+  {{ with $.Resources.GetMatch . }}
+    {{ $resource = . }}
+  {{ end }}
+{{ else }}
+  {{ with .Resources.ByType "image" }}
+    {{ with .GetMatch "**{feature,cover}*" }}
+      {{ $resource = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ return $resource }}

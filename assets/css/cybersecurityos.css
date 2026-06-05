@@ -1158,3 +1158,36 @@ article.pa3, article.pa4-ns { background: transparent !important; }
   .fm-problem, .fm-solution, .fm-deliverables, .fm-for-section,
   .fm-urgency, .fm-pricing-simple { padding-left: 1rem; padding-right: 1rem; }
 }
+
+/* ─── Skip Navigation Link ──────────────────────────────────── */
+.os-skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: var(--os-bg-elevated);
+  color: var(--os-green);
+  font-family: var(--os-font-mono);
+  font-size: 0.875rem;
+  border: 1px solid var(--os-border-green);
+  border-radius: var(--os-radius);
+  text-decoration: none;
+  transition: top 0.1s;
+}
+.os-skip-link:focus {
+  top: 1rem;
+}
+
+/* ─── Article featured image ────────────────────────────────── */
+.os-article-image {
+  margin: 1.5rem 0 2rem;
+  border-radius: var(--os-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--os-border);
+}
+.os-article-feat-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

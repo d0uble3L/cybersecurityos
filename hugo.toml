@@ -59,9 +59,22 @@ googleAnalytics = "YOUR_TRACKING_ID"  # Replace with your Google Analytics track
   url = "https://cybersecurityos.gumroad.com/l/os-member"
   weight = 6
 
-# Enable the sitemap
-[params.sitemap]
-  sitemap = true
+# Image processing pipeline (WebP conversion, quality, EXIF stripping)
+[imaging]
+  quality = 85
+  resampleFilter = "Lanczos"
+
+[imaging.exif]
+  includeFields = ""
+  excludeFields = ".*"
+  disableDate = true
+  disableLatLong = true
+
+# Sitemap
+[sitemap]
+  changefreq = "weekly"
+  filename   = "sitemap.xml"
+  priority   = 0.5
 
 [services]
   [services.disqus]
