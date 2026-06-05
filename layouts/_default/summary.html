@@ -1,10 +1,15 @@
 {{/* Post card — used in list.html and index.html card grid */}}
-{{ $featured := partial "func/GetFeaturedImage.html" . }}
+{{ $featuredURL := partial "func/GetFeaturedImage.html" . }}
+{{ $featuredRes := partial "func/GetFeaturedImageObject.html" . }}
 
 <article class="os-card">
-  {{ if $featured }}
+  {{ if or $featuredRes $featuredURL }}
     <a href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true">
-      <img class="os-card-img" src="{{ $featured }}" alt="{{ .Title }}" loading="lazy">
+      {{ partial "func/ResponsiveImage.html" (dict
+          "resource" $featuredRes
+          "url"      $featuredURL
+          "alt"      .Title
+          "class"    "os-card-img") }}
     </a>
   {{ end }}
 

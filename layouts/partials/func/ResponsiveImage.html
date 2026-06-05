@@ -1,0 +1,44 @@
+{{/*
+  ResponsiveImage
+  Renders an optimised image element. When passed a Hugo image resource it
+  produces a <picture> with WebP + srcset; otherwise a plain lazy-loaded <img>.
+
+  Call with a dict:
+    resource — Hugo image resource (from GetFeaturedImageObject); may be empty
+    url      — Fallback absolute URL string (from GetFeaturedImage)
+    alt      — Alt text string
+    class    — CSS class string
+*/}}
+{{ $resource := .resource }}
+{{ $url      := .url }}
+{{ $alt      := .alt   | default "" }}
+{{ $class    := .class | default "" }}
+
+{{ if $resource }}
+  {{/* Page-bundle image: process into WebP + JPEG at two breakpoints */}}
+  {{ $webp800 := $resource.Resize "800x webp q85" }}
+  {{ $webp400 := $resource.Resize "400x webp q85" }}
+  {{ $jpg800  := $resource.Resize "800x q85" }}
+  <picture>
+    <source
+      type="image/webp"
+      srcset="{{ $webp400.RelPermalink }} 400w, {{ $webp800.RelPermalink }} 800w"
+      sizes="(max-width: 600px) 400px, 800px">
+    <img
+      src="{{ $jpg800.RelPermalink }}"
+      width="{{ $jpg800.Width }}"
+      height="{{ $jpg800.Height }}"
+      alt="{{ $alt }}"
+      loading="lazy"
+      decoding="async"
+      {{ with $class }}class="{{ . }}"{{ end }}>
+  </picture>
+{{ else if $url }}
+  {{/* Static-dir image: serve as-is with lazy loading */}}
+  <img
+    src="{{ $url }}"
+    alt="{{ $alt }}"
+    loading="lazy"
+    decoding="async"
+    {{ with $class }}class="{{ . }}"{{ end }}>
+{{ end }}
