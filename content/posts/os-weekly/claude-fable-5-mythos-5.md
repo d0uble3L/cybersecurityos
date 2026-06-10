@@ -7,11 +7,18 @@ categories: ["AI & Security"]
 description: "Anthropic just released Claude Fable 5 — its most capable public model ever — alongside Claude Mythos 5, the most powerful cybersecurity model in the world. Here's what the split-frontier strategy means for defenders, leaders, and aspiring professionals."
 slug: "claude-fable-5-mythos-5-cybersecurity"
 show_reading_time: true
+featured_image: /posts/os-weekly/images/sec-ai-1.png
+images:
+    - /posts/os-weekly/images/sec-ai-1.png
+    - /posts/os-weekly/images/sec-ai-2.png
+    - /posts/os-weekly/images/sec-ai-3.png
 ---
 
 On June 9, 2026, Anthropic did something it had never done before: it shipped a **Mythos-class model to the public**. [Claude Fable 5 and Claude Mythos 5](https://www.anthropic.com/news/claude-fable-5-mythos-5) are the same underlying model wearing two very different sets of guardrails — and that single design decision says a lot about where frontier AI and cybersecurity are headed.
 
 For security leaders, defenders, and anyone building a career in this field, this isn't just another model release. It's a preview of how the most capable systems will be governed when their cyber capabilities outrun the safety norms we've relied on.
+
+![AI and cybersecurity converging at the frontier — Claude Fable 5 and Mythos 5 represent a new era of governed capability](/posts/os-weekly/images/sec-ai-1.png)
 
 > 💡 **Want to lead with clarity in the AI era?**
 > If you're aiming to lead a security team, break into cybersecurity, or operate with greater speed and confidence, this is the toolkit you've been missing:
@@ -32,7 +39,7 @@ Anthropic's framing is that the frontier has been deliberately **split in two**:
 
 ## What Fable 5 Can Actually Do
 
-Fable 5 is, by the numbers, Anthropic's most capable generally available model to date. A few benchmark highlights making the rounds:
+Fable 5 is, by the numbers, Anthropic's most capable generally available model to date. A few benchmark highlights making the rounds:[^benchmarks]
 
 - **80.3%** on SWE-Bench Pro — well ahead of Claude Opus 4.8 (69.2%) and GPT-5.5 (58.6%).
 - The first model to exceed **90%** on Hex's analytical benchmark.
@@ -40,13 +47,15 @@ Fable 5 is, by the numbers, Anthropic's most capable generally available model t
 
 Translation for practitioners: this is a model strong enough to meaningfully accelerate software engineering, threat research, detection engineering, and the kind of analytical knowledge work that fills a SOC analyst's day.
 
+![Security analysts using AI to accelerate triage, threat research, and detection engineering at scale](/posts/os-weekly/images/sec-ai-2.png)
+
 ---
 
 ## The Safeguard That Makes Public Release Possible
 
 Here's the part security professionals should pay closest attention to.
 
-Anthropic says Fable 5's broad release is only possible because of a new **fallback safeguard**. When a user touches a defined high-risk area — **cybersecurity, biology, chemistry, or distillation** — Fable 5 declines to answer with its full capability and instead falls back to **Claude Opus 4.8** to deliver a safer response.
+Anthropic says Fable 5's broad release is only possible because of a new **fallback safeguard**.[^safeguard] When a user touches a defined high-risk area — **cybersecurity, biology, chemistry, or distillation** — Fable 5 declines to answer with its full capability and instead falls back to **Claude Opus 4.8** to deliver a safer response.
 
 Ask it how to synthesize a toxin like ricin, and it won't just refuse; it routes the request to a less capable, more conservative model. Anthropic reports this fallback triggers in **fewer than 5% of sessions**.
 
@@ -64,7 +73,9 @@ For defenders, that last point is the tell: AI labs now treat offensive cyber ca
 
 If Fable 5 is the frontier with the dangerous edges sanded off, **Mythos 5 is the edge itself.**
 
-Mythos 5 is being deployed first through **Project Glasswing** — Anthropic's collaboration with the US government to put frontier capability in the hands of cyber defenders and critical-infrastructure providers. It's an upgrade to the earlier Claude Mythos Preview, and Anthropic describes it as having the **strongest cybersecurity capabilities of any model in the world.**
+Mythos 5 is being deployed first through **Project Glasswing** — Anthropic's collaboration with the US government to put frontier capability in the hands of cyber defenders and critical-infrastructure providers.[^glasswing] It's an upgrade to the earlier Claude Mythos Preview, and Anthropic describes it as having the **strongest cybersecurity capabilities of any model in the world.**
+
+![The dual-frontier architecture: Fable 5 for the public ecosystem, Mythos 5 for vetted defenders through Project Glasswing](/posts/os-weekly/images/sec-ai-3.png)
 
 Access is deliberately narrow:
 
@@ -98,6 +109,35 @@ This release rewards a clear head. Here's how to think about it depending on whe
 
 ---
 
+## Put the Model to Work: SPECTRA
+
+Reading about Fable 5's capabilities is one thing. Putting them to work on real security data is another.
+
+**[SPECTRA](https://github.com/d0uble3L/spectra)** — Security Platform for Expert-level Correlation, Triage, and Risk Analysis — is an open-source CLI built on Claude that sits downstream of Trivy, Semgrep, Nessus, and any text-based scanner output. It does what Fable 5 is strongest at: contextual reasoning across findings, attack chain identification, and audience-appropriate reporting.
+
+![SPECTRA intelligence pipeline — from raw scanner noise to ranked findings, attack chains, and executive summaries](/posts/os-weekly/images/spectra-workflow.svg)
+
+One command turns raw JSON into ranked findings, exploitable attack chains, and executive summaries ready for leadership briefings — automatically. For teams who want to operationalize the models this release is about, SPECTRA is the practical starting point.
+
+> **[Get SPECTRA on GitHub →](https://github.com/d0uble3L/spectra)**
+> Read the full breakdown: [SPECTRA: AI-Powered Vulnerability Triage That Actually Works](/posts/os-weekly/spectra-overview-claude-ai-security/)
+
+---
+
+## Stop Getting Textbook Answers from AI
+
+You've tried using AI for security work. The answers come back generic, hedged, sometimes hallucinated. You spend more time re-prompting and verifying than you save.
+
+The difference isn't the model. **It's the prompt.**
+
+**[The AI Prompt Cybersecurity Guide](https://store.cybersecurityos.net/l/ai-prompt-cybersecurity-guide)** is a field manual, not a theory book. Six prompting techniques rebuilt specifically for security work, plus ten copy-paste templates you can use today on real tickets — SOC alert triage, phishing analysis, vulnerability triage, IR initial assessment, threat modeling, detection rule review, executive briefings, and more.
+
+Every example uses a real security context: MITRE ATT&CK, STRIDE, CVSS, NIST 800-53. Every template is built to produce ticket-ready, exec-ready, or pipeline-ready output — analyst-grade answers, not textbook ones.
+
+> **[Stop getting textbook answers. Start getting analyst-grade ones. →](https://store.cybersecurityos.net/l/ai-prompt-cybersecurity-guide)**
+
+---
+
 ## Final Thoughts
 
 The Fable 5 / Mythos 5 launch is the clearest statement yet that frontier AI and cybersecurity have fully converged. The most capable model on the planet now ships in two versions because its cyber capabilities are too sharp to release unguarded — and the defenders who get the full edge get it through a government-backed, controlled channel.
@@ -117,9 +157,23 @@ Stay informed, stay empowered,
 
 ### Sources
 
+[^benchmarks]: Benchmark figures sourced from Vellum's independent analysis and Anthropic's official release notes. See: [Claude Fable 5 & Claude Mythos 5 Benchmarks Explained — Vellum](https://www.vellum.ai/blog/claude-fable-5-and-mythos-5-benchmarks-explained); [Claude Fable 5 and Claude Mythos 5 — Anthropic](https://www.anthropic.com/news/claude-fable-5-mythos-5).
+
+[^safeguard]: Fallback safeguard and trigger rate reported in Anthropic's official release. See: [Anthropic releases Fable 5, the first public Mythos-class model — NBC News](https://www.nbcnews.com/tech/security/fable-5-anthropic-release-public-mythos-claude-model-rcna349104).
+
+[^glasswing]: Project Glasswing details and Mythos 5 deployment scope confirmed via CNBC and MacRumors coverage of the release. See: [Anthropic releases Mythos-like AI model to the public, Claude Fable 5 — CNBC](https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html); [Anthropic Launches Claude Fable 5, Its First Public Mythos-Class Model — MacRumors](https://www.macrumors.com/2026/06/09/anthropic-fable-5/).
+
+**Primary sources:**
+
 - [Claude Fable 5 and Claude Mythos 5 — Anthropic](https://www.anthropic.com/news/claude-fable-5-mythos-5)
 - [Anthropic releases Mythos-like AI model to the public, Claude Fable 5 — CNBC](https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html)
 - [Anthropic releases Fable 5, the first public Mythos-class model — NBC News](https://www.nbcnews.com/tech/security/fable-5-anthropic-release-public-mythos-claude-model-rcna349104)
 - [Anthropic Launches Claude Fable 5, Its First Public Mythos-Class Model — MacRumors](https://www.macrumors.com/2026/06/09/anthropic-fable-5/)
 - [Claude Fable 5 & Claude Mythos 5 Benchmarks Explained — Vellum](https://www.vellum.ai/blog/claude-fable-5-and-mythos-5-benchmarks-explained)
 - [Claude Fable 5 & Mythos 5: The Frontier, Split in Two — Digital Applied](https://www.digitalapplied.com/blog/claude-fable-5-mythos-5-release-benchmarks-2026)
+
+**Related reading:**
+
+- [SPECTRA: AI-Powered Vulnerability Triage That Actually Works — CybersecurityOS](/posts/os-weekly/spectra-overview-claude-ai-security/)
+- [Top 5 Claude AI Use Cases for Startup Cybersecurity in 2026 — CybersecurityOS](/posts/os-weekly/top-5-claude-ai-use-cases-startup-cybersecurity-2026/)
+- [Anthropic Claude Code Security — Public Beta](https://www.anthropic.com/news/claude-code-security)
