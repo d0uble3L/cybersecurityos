@@ -7,9 +7,9 @@ categories: ["AI & Security"]
 description: "Anthropic just released Claude Fable 5 — its most capable public model ever — alongside Claude Mythos 5, the most powerful cybersecurity model in the world. Here's what the split-frontier strategy means for defenders, leaders, and aspiring professionals."
 slug: "claude-fable-5-mythos-5-cybersecurity"
 show_reading_time: true
-featured_image: /posts/os-weekly/images/sec-ai-1.png
+featured_image: /posts/os-weekly/images/fable-5.png
 images:
-    - /posts/os-weekly/images/sec-ai-1.png
+    - /posts/os-weekly/images/fable-5.png
     - /posts/os-weekly/images/sec-ai-2.png
     - /posts/os-weekly/images/sec-ai-3.png
 ---
@@ -18,7 +18,7 @@ On June 9, 2026, Anthropic did something it had never done before: it shipped a 
 
 For security leaders, defenders, and anyone building a career in this field, this isn't just another model release. It's a preview of how the most capable systems will be governed when their cyber capabilities outrun the safety norms we've relied on.
 
-![AI and cybersecurity converging at the frontier — Claude Fable 5 and Mythos 5 represent a new era of governed capability](/posts/os-weekly/images/sec-ai-1.png)
+![Claude Fable 5 and Mythos 5 — the frontier, split in two](/posts/os-weekly/images/fable-5.png)
 
 > 💡 **Want to lead with clarity in the AI era?**
 > If you're aiming to lead a security team, break into cybersecurity, or operate with greater speed and confidence, this is the toolkit you've been missing:
@@ -34,6 +34,8 @@ The headline of this release is a *governance* idea, not just a capability one.
 - **Claude Mythos 5** is the *same base model* with safeguards lifted in sensitive domains. It carries the strongest cybersecurity capabilities of any model in the world, and is being released through restricted channels only.
 
 Anthropic's framing is that the frontier has been deliberately **split in two**: maximum capability for the public, *minus* the dangerous edges — and the full, unrestricted edge reserved for vetted defenders.
+
+![Anthropic — the lab behind Claude Fable 5 and Mythos 5](/posts/os-weekly/images/anthropic.png)
 
 ---
 
