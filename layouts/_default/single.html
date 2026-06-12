@@ -10,6 +10,11 @@
 
     <!-- Article header -->
     <header class="os-article-header">
+      {{ with .CurrentSection }}
+        {{ if not .IsHome }}
+        <a href="{{ .RelPermalink }}" class="os-article-back">&larr; Back to {{ .Title | default $.Section }}</a>
+        {{ end }}
+      {{ end }}
       <p class="os-article-section">
         {{ .CurrentSection.Title | default .Section }}
       </p>
@@ -71,8 +76,14 @@
       {{ partial "social-share.html" . }}
     </div>
 
-    <!-- Related posts -->
-    {{ $related := .Site.RegularPages.Related . | first 3 }}
+    <!-- Related posts (prefer same-section matches, fall back to site-wide) -->
+    {{ $sectionPages := where .Site.RegularPages "Section" .Section }}
+    {{ $sectionRelated := $sectionPages.Related . | first 3 }}
+    {{ $related := $sectionRelated }}
+    {{ if lt (len $related) 3 }}
+      {{ $more := .Site.RegularPages.Related . | first 3 }}
+      {{ $related = (union $sectionRelated $more) | first 3 }}
+    {{ end }}
     {{ with $related }}
     <aside class="os-related" aria-label="Related posts">
       <h2 class="os-related-heading">Related Posts</h2>

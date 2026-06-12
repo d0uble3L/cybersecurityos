@@ -11,6 +11,10 @@
           "alt"      .Title
           "class"    "os-card-img") }}
     </a>
+  {{ else }}
+    <a href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true" class="os-card-img os-card-img--placeholder">
+      <span>{{ .CurrentSection.Title | default .Section }}</span>
+    </a>
   {{ end }}
 
   <div class="os-card-body">
@@ -20,8 +24,8 @@
 
     <p class="os-card-excerpt">{{ .Summary | plainify | truncate 120 }}</p>
 
-    {{/* Tags */}}
-    {{ partial "tags.html" . }}
+    {{/* Tags (capped to keep card heights consistent) */}}
+    {{ partial "tags.html" (dict "page" . "limit" 4) }}
 
     {{/* Card footer */}}
     <div class="os-card-footer">
