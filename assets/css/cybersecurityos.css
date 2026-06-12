@@ -33,7 +33,7 @@
   /* Text */
   --os-text:       #e6edf3;
   --os-text-muted: #8b949e;
-  --os-text-dim:   #484f58;
+  --os-text-dim:   #6e7681;
 
   /* Fonts */
   --os-font-heading: 'Orbitron', 'Segoe UI', sans-serif;
@@ -373,6 +373,22 @@ article.pa3, article.pa4-ns { background: transparent !important; }
   transition: opacity 0.2s;
 }
 .os-card:hover .os-card-img { opacity: 1; }
+.os-card-img--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(var(--os-border) 1px, transparent 1px) 0 0 / 100% 16px,
+    linear-gradient(90deg, var(--os-border) 1px, transparent 1px) 0 0 / 16px 100%,
+    var(--os-bg-elevated);
+}
+.os-card-img--placeholder span {
+  font-family: var(--os-font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--os-text-dim);
+}
 
 .os-card-body {
   padding: 1.25rem;
@@ -466,6 +482,7 @@ article.pa3, article.pa4-ns { background: transparent !important; }
 .os-tag--purple:hover { background: rgba(163,113,247,0.14); }
 .os-tag--red    { color: var(--os-critical); border-color: rgba(255,69,58,0.30);    background: rgba(255,69,58,0.07); }
 .os-tag--red:hover    { background: rgba(255,69,58,0.14); }
+.os-tag--more   { color: var(--os-text-dim); border-color: var(--os-border); background: transparent; }
 
 /* ─── Single Post / Article ─────────────────────────────────── */
 .os-article-wrap {
@@ -478,6 +495,18 @@ article.pa3, article.pa4-ns { background: transparent !important; }
   margin-bottom: 2.5rem;
   padding-bottom: 1.5rem;
 }
+.os-article-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--os-font-mono);
+  font-size: 0.72rem;
+  color: var(--os-text-muted);
+  text-decoration: none;
+  margin-bottom: 1.25rem;
+  transition: color 0.15s;
+}
+.os-article-back:hover { color: var(--os-green); }
 .os-article-section {
   font-family: var(--os-font-mono);
   font-size: 0.68rem;
@@ -599,13 +628,18 @@ article.pa3, article.pa4-ns { background: transparent !important; }
   line-height: 1.65;
 }
 
-/* Tables */
+/* Tables — wrapped in .os-table-wrap at runtime so wide tables scroll on mobile */
+.os-table-wrap {
+  overflow-x: auto;
+  margin: 1.75rem 0;
+  -webkit-overflow-scrolling: touch;
+}
 .os-prose table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1.75rem 0;
   font-size: 0.875rem;
 }
+.os-table-wrap table { margin: 0; }
 .os-prose thead th {
   font-family: var(--os-font-mono);
   font-size: 0.68rem;

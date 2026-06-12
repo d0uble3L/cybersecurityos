@@ -99,6 +99,15 @@
           toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         });
       })();
+      // Wrap wide tables so they scroll horizontally on small screens
+      (function(){
+        document.querySelectorAll('.os-prose table').forEach(function(table) {
+          var wrap = document.createElement('div');
+          wrap.className = 'os-table-wrap';
+          table.parentNode.insertBefore(wrap, table);
+          wrap.appendChild(table);
+        });
+      })();
     </script>
     <!-- Kit: popup (late load — fires after page is interactive) -->
     <script async data-uid="216ee976c6" src="https://theghettoflower.kit.com/216ee976c6/index.js"></script>

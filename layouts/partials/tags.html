@@ -1,8 +1,21 @@
-{{/* CVE-style severity tag badges */}}
-{{ $terms := .GetTerms "tags" }}
+{{/* CVE-style severity tag badges.
+  Usage: partial "tags.html" . — render all tags for the page
+         partial "tags.html" (dict "page" . "limit" 4) — cap tags shown, with a "+N" overflow badge
+*/}}
+{{ $page := . }}
+{{ $limit := 0 }}
+{{ if reflect.IsMap . }}
+  {{ $page = .page }}
+  {{ $limit = .limit | default 0 }}
+{{ end }}
+{{ $terms := $page.GetTerms "tags" }}
 {{ if $terms }}
 <ul class="os-tags">
-  {{ range $terms }}
+  {{ $shown := $terms }}
+  {{ if and (gt $limit 0) (gt (len $terms) $limit) }}
+    {{ $shown = first $limit $terms }}
+  {{ end }}
+  {{ range $shown }}
     {{ $slug := .LinkTitle | lower }}
     {{ $class := "os-tag" }}
     {{/* Map tag keywords to severity color classes */}}
@@ -19,6 +32,11 @@
       <a href="{{ .RelPermalink }}" class="{{ $class }}" data-tag="{{ $slug }}">
         {{- .LinkTitle -}}
       </a>
+    </li>
+  {{ end }}
+  {{ if and (gt $limit 0) (gt (len $terms) $limit) }}
+    <li class="list" style="display:inline;">
+      <span class="os-tag os-tag--more">+{{ sub (len $terms) $limit }}</span>
     </li>
   {{ end }}
 </ul>
