@@ -4,8 +4,8 @@ title = "CybersecurityOS"
 theme = "ananke"
 
 # SEO Metadata
-description = "A comprehensive resource for cybersecurity professionals, providing insights, tools, and services."
-keywords = "cybersecurity, security tools, professional development, best practices"
+description = "Weekly security intelligence, mental models, and leadership frameworks for security engineers, CISOs, and the next generation of cyber leaders — written by a practicing Deputy CISO."
+keywords = "cybersecurity, security leadership, CISO frameworks, security engineering, threat intelligence, AI security, DevSecOps, mental models, cyber risk management"
 author = "Michael Tayo"
 # To enable Google Analytics add your tracking ID:
 # [services.googleAnalytics]

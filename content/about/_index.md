@@ -29,3 +29,7 @@ I'm working on turning these frameworks and insights into a comprehensive guide 
 When I'm not thinking about security architecture, you'll find me exploring the intersections of fitness, travel, music, and food.
 
 Let's build more resilient systems together.
+
+## Go Deeper
+
+If these frameworks are useful, **[become an OS Member](/founding-member/)** — the founding-rate membership for security leaders who want the deeper playbooks, templates, and frameworks behind the weekly posts. Not ready for that yet? Start with the **[free weekly posts](/posts/)**.
