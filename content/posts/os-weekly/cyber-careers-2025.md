@@ -4,7 +4,7 @@ date: 2025-10-02
 draft: false
 description: "Explore the evolving world of cybersecurity careers, the transformative impact of AI in Security Operations Centers, and the rise of GRC engineering. Learn practical insights for aspiring professionals and discover how curiosity, mentorship, and automation are shaping the future of security."
 tags: ["Cybersecurity", "AI", "SOC", "cloud security", "GRC","CyberSHIELD", "CybersecurityOS"]
-categories: ["Career Development", "AI & Security"]
+categories: ["Career Development", "AI and Security"]
 images:
     -  /posts/os-weekly/images/cyber-careers-2025.png
 featured_image:  /posts/os-weekly/images/cyber-careers-2025.png

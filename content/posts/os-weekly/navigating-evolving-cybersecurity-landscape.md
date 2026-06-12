@@ -6,7 +6,7 @@ images:
 featured_image:  /posts/os-weekly/images/adtech.png
 description: "Explore the latest trends in dark ad tech, disinformation, self-aware cybersecurity strategies, and policy impacts — for both leaders and aspiring professionals."
 tags: ["Cybersecurity", "disinformation", "adtech", "strategy", "policy","CybersecurityOS"]
-categories: ["Threat Intelligence", "Cyber Policy & Resilience"]
+categories: ["Threat Intelligence", "Cyber Policy and Resilience"]
 slug: "navigating-evolving-cybersecurity-landscape"
 draft: false
 ---

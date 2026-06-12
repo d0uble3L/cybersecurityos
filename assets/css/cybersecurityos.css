@@ -994,8 +994,9 @@ article.pa3, article.pa4-ns { background: transparent !important; }
   gap: 0; padding: 1.25rem 1.5rem; flex-wrap: wrap;
 }
 .fm-proof-stat { text-align: center; padding: 0.5rem 2rem; }
-.fm-proof-num   { font-family: var(--os-font-heading); font-size: 1.3rem; font-weight: 700; color: var(--os-green); display: block; }
-.fm-proof-label { font-family: var(--os-font-mono); font-size: 0.65rem; color: var(--os-text-dim); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-top: 0.2rem; }
+/* Shares the .os-stat-value / .os-stat-label component used in the homepage hero */
+.fm-proof-stat .os-stat-value { font-size: 1.3rem; }
+.fm-proof-stat .os-stat-label { font-size: 0.65rem; margin-top: 0.2rem; }
 .fm-proof-divider { width: 1px; height: 2.5rem; background: var(--os-border); flex-shrink: 0; }
 
 /* ── Problem ─── */
