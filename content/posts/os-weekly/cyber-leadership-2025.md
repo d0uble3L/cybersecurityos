@@ -2,7 +2,8 @@
 title: "What Peter Drucker Can Teach Us About Modern Cybersecurity"
 date: 2025-11-22
 description: "Why the greatest cybersecurity failures aren’t technical—they’re managerial. Lessons from Peter Drucker for today’s threat landscape."
-tags: ["cybersecurity", "leadership", "management", "Peter Drucker", "CISO", "security culture", "CybersecurityOS"]
+tags: ["Cybersecurity", "leadership", "management", "Peter Drucker", "CISO", "security culture", "CybersecurityOS"]
+categories: ["Leadership"]
 draft: false
 images:
     -  /posts/os-weekly/images/pd-cyber-defense-2025.png

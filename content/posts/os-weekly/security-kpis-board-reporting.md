@@ -4,7 +4,7 @@ date: 2026-06-03
 draft: false
 author: "Michael Tayo"
 tags: ["CISO", "security KPIs", "board reporting", "cybersecurity metrics", "security leadership", "NIST CSF", "ISO 27001", "CybersecurityOS", "risk management", "cyber risk"]
-categories: ["Leadership", "CybersecurityOS", "Frameworks", "GRC"]
+categories: ["Leadership", "GRC & Compliance", "Frameworks"]
 slug: "security-kpis-board-reporting"
 description: "Most CISOs report the wrong security metrics to the board. This guide covers the KPIs that actually matter — mapped to business risk, boardroom language, and real-world examples from organizations like Target, MGM, and Equifax."
 images:

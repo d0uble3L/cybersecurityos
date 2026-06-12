@@ -2,7 +2,8 @@
 title: "3-Step Mental Models to Outpace Emerging Cybersecurity Threats in 2025"
 date: 2025-07-20
 draft: false
-tags: ["cybersecurityOS","cybersecurity", "mental models", "security leadership", "emerging threats"]
+tags: ["CybersecurityOS","Cybersecurity", "mental models", "security leadership", "emerging threats"]
+categories: ["Threat Intelligence", "Leadership"]
 description: "A practical mental model—Detect, Disengage, Shield—for anticipating and responding to fast-evolving cyber threats. Designed for CISOs, security teams, and career climbers."
 slug: "3-step-mental-models-cyber-threats-2025"
 images:

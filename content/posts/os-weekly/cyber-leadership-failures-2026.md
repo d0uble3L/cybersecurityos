@@ -2,7 +2,8 @@
 title: "Why “Good” Security Programs Still Fail (It’s Not the Technology)"
 date: 2026-01-31
 draft: false
-tags: ["security", "leadership", "CISO", "cybersecurity", "CybersecurityOS"]
+tags: ["security", "leadership", "CISO", "Cybersecurity", "CybersecurityOS"]
+categories: ["Leadership"]
 description: "Most security programs fail silently. Learn why leadership is the ultimate security control and how to fix organizational gaps that technology can't solve."
 images:
     -  /posts/os-weekly/images/security_leadership_image.png

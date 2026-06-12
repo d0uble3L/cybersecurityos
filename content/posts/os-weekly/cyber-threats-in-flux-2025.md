@@ -7,6 +7,7 @@ images:
 featured_image:  /posts/os-weekly/images/cyber-summer-2025.png
 description: "From sanctions evasion to privacy under pressure, discover a 3-step adaptive cybersecurity framework that leaders and professionals can use to stay ahead of evolving threats."
 tags: ["CybersecurityOS","Cybersecurity", "Threat Intelligence", "Risk Management", "Adaptive Frameworks", "Cyber Leadership"]
+categories: ["Threat Intelligence", "Leadership"]
 draft: false
 ---
 Cybersecurity has never been more high-stakes — or more unpredictable. The playbook that kept organizations safe five years ago is crumbling in the face of today’s agile, relentless threat actors.

@@ -3,6 +3,7 @@ title: "Cybersecurity’s Double-Edged Sword: Lessons from Hollywood Hacking to 
 date: 2025-08-10
 draft: false
 tags: ["CybersecurityOS","Cybersecurity", "Hardware Security", "Cyber Governance", "Incident Response", "Cyber Threats"]
+categories: ["Threat Intelligence"]
 description: "From HBO Max cybercrime dramas to firmware flaws in enterprise hardware, discover the lessons every cybersecurity leader, startup founder, and aspiring professional needs to know in 2025."
 slug: "hollywood-to-hardware-2025"
 images:
