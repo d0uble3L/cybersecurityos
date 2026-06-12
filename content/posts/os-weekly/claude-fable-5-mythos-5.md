@@ -3,7 +3,7 @@ title: "The Frontier, Split in Two: What Claude Fable 5 and Mythos 5 Mean for Cy
 date: 2026-06-10
 draft: false
 tags: ["CybersecurityOS", "Cybersecurity", "Artificial Intelligence", "Claude", "Anthropic", "AI Safety", "Cyber Defense"]
-categories: ["AI & Security"]
+categories: ["AI and Security"]
 description: "Anthropic just released Claude Fable 5 — its most capable public model ever — alongside Claude Mythos 5, the most powerful cybersecurity model in the world. Here's what the split-frontier strategy means for defenders, leaders, and aspiring professionals."
 slug: "claude-fable-5-mythos-5-cybersecurity"
 show_reading_time: true

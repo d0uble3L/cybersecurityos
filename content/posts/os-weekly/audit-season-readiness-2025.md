@@ -3,7 +3,7 @@ title: "How to Prepare for Audit Season: A Cybersecurity Leader’s Guide to SOC
 date: 2025-11-09
 description: "Learn how cybersecurity professionals can prepare for audit season across SOC 2, ISO 27001, and NIST frameworks by mastering governance, risk management, control assurance, and compliance readiness."
 tags: ["Cybersecurity", "CybersecurityOS", "SOC2", "ISO27001", "NIST", "audit readiness", "governance", "compliance", "risk management", "assurance"]
-categories: ["GRC & Compliance"]
+categories: ["GRC and Compliance"]
 slug: "audit-season-readiness-2025"
 draft: false
 images:

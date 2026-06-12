@@ -3,7 +3,7 @@ title: "SPECTRA: AI-Powered Vulnerability Triage That Actually Works for Securit
 date: 2026-05-10
 description: "SPECTRA is an open-source, AI-powered CLI that transforms raw scanner output from Trivy, Semgrep, and Nessus into ranked findings, attack chain analysis, and executive summaries — powered by Claude. Here's why it matters for modern security teams."
 tags: ["AI", "DevSecOps", "Automation", "Vulnerability Management", "Claude", "Security Engineering", "SAST", "Trivy", "Semgrep", "AppSec", "GRC", "Shift Left Security"]
-categories: ["AI & Security", "Security Engineering"]
+categories: ["AI and Security", "Security Engineering"]
 keywords: ["AI vulnerability triage", "AI security scanner", "SPECTRA security tool", "Claude AI security", "vulnerability management automation", "DevSecOps tools 2026", "attack chain analysis", "security triage automation", "Trivy AI analysis", "Semgrep triage", "open source security AI"]
 draft: false
 images:

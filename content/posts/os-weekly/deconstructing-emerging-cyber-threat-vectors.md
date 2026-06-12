@@ -6,7 +6,7 @@ images:
 featured_image:  /posts/os-weekly/images/discord.png
 description: "Explore the latest tactics used by cyber adversaries — from Discord link hijacking to strategic shifts in tech alliances — and how cybersecurity leaders can respond."
 tags: ["Cybersecurity", "malware", "policy", "risk management", "tech strategy", "CybersecurityOS"]
-categories: ["Threat Intelligence", "Cyber Policy & Resilience"]
+categories: ["Threat Intelligence", "Cyber Policy and Resilience"]
 slug: "deconstructing-emerging-cyber-threat-vectors"
 draft: false
 ---

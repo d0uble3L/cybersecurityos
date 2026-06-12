@@ -3,7 +3,7 @@ title: "Cyber Resilience in Real Time: New Realities, Rapid Responses, and Next-
 date: 2025-07-13
 description: "From global arrests to legacy system failures, the threat landscape is evolving. Here's a 3-step framework to modernize your cybersecurity defense and stay ahead."
 tags: ["CybersecurityOS","Cybersecurity", "AI", "vulnerability management", "cross-border", "incident response"]
-categories: ["Cyber Policy & Resilience", "AI & Security"]
+categories: ["Cyber Policy and Resilience", "AI and Security"]
 slug: "cyber-resilience-real-time"
 draft: false
 images:
