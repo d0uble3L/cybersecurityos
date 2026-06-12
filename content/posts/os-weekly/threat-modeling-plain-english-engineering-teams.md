@@ -4,7 +4,7 @@ date: 2026-05-31
 draft: false
 author: "Michael Tayo"
 tags: ["threat modeling", "cybersecurity", "security engineering", "STRIDE", "DevSecOps", "CybersecurityOS", "appsec", "secure by design"]
-categories: ["Security Engineering", "CybersecurityOS"]
+categories: ["Security Engineering"]
 slug: "threat-modeling-plain-english-engineering-teams"
 description: "A practical, no-jargon guide to threat modeling for engineering teams. Learn STRIDE, how to run your first threat model, and how to make it a sustainable part of your SDLC — not a one-time exercise."
 images:

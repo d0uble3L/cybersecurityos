@@ -15,8 +15,8 @@ tags:
   - supply-chain
   - soar
 categories:
-  - Cybersecurity
-  - AI Tools
+  - AI & Security
+  - Security Engineering
 slug: "claude-ai-use-cases-startup-cybersecurity-2026"
 images:
     -  /posts/os-weekly/images/sec-ai-1.png

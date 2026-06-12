@@ -2,7 +2,8 @@
 title: "Cyber Resilience 3.0: From Sanctions Gaps to Stress-Test Sharks and Open Source Innovation"
 date: 2025-07-06
 description: "Explore the evolving frontiers of cybersecurity: regulatory blind spots, real-world resilience lessons from a mechanical shark, and how open source is reshaping cyber policy."
-tags: ["CybersecurityOS","cybersecurity", "resilience", "open source", "compliance", "cyber policy"]
+tags: ["CybersecurityOS","Cybersecurity", "resilience", "open source", "compliance", "cyber policy"]
+categories: ["Cyber Policy & Resilience"]
 slug: "cyber-resilience-3-0"
 draft: false
 images:

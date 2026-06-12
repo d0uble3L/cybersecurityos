@@ -177,5 +177,5 @@ Stay informed, stay empowered,
 **Related reading:**
 
 - [SPECTRA: AI-Powered Vulnerability Triage That Actually Works — CybersecurityOS](/posts/os-weekly/spectra-overview-claude-ai-security/)
-- [Top 5 Claude AI Use Cases for Startup Cybersecurity in 2026 — CybersecurityOS](/posts/os-weekly/top-5-claude-ai-use-cases-startup-cybersecurity-2026/)
+- [Top 5 Claude AI Use Cases for Startup Cybersecurity in 2026 — CybersecurityOS](/posts/os-weekly/claude-ai-use-cases-startup-cybersecurity-2026/)
 - [Anthropic Claude Code Security — Public Beta](https://www.anthropic.com/news/claude-code-security)

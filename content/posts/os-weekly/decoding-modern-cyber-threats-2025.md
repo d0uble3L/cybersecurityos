@@ -3,6 +3,7 @@ title: "Decoding Modern Cyber Threats: A 3-Step Model for Leaders & Emerging Pro
 date: 2025-09-01
 draft: false
 tags: ["CybersecurityOS","Cybersecurity", "Cyber Threats", "Risk Management", "Frameworks", "Career Development"]
+categories: ["Threat Intelligence", "Career Development"]
 description: "From scam gambling sites to abused forensic tools and concierge cybersecurity services, discover a 3-step model for leaders and aspiring professionals to build resilience against modern cyber threats."
 slug: "decoding-modern-cyber-threats-2025"
 images:

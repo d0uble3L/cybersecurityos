@@ -2,8 +2,8 @@
 title: "From Security Engineer to Security Leader: What Changes?"
 date: 2026-03-28
 draft: false
-tags: ["cybersecurity", "cybersecurityOS","leadership", "career growth", "security engineering"]
-categories: ["Cybersecurity Careers", "Leadership"]
+tags: ["Cybersecurity", "CybersecurityOS","leadership", "career growth", "security engineering"]
+categories: ["Career Development", "Leadership"]
 images:
     -  /posts/os-weekly/images/enginer-to-leader.png
 featured_image:  /posts/os-weekly/images/enginer-to-leader.png

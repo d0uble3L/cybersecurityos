@@ -5,7 +5,8 @@ images:
     -  /posts/os-weekly/images/solutions.png
 featured_image:  /posts/os-weekly/images/solutions.png
 description: "Explore how platform vulnerabilities, shifting tech alliances, and a 3-step framework can elevate both your cybersecurity posture and your professional growth."
-tags: ["CybersecurityOS","cybersecurity", "career", "framework", "ransomware", "discord", "strategic risk"]
+tags: ["CybersecurityOS","Cybersecurity", "career", "framework", "ransomware", "discord", "strategic risk"]
+categories: ["Career Development", "Threat Intelligence"]
 slug: "reshaping-cybersecurity-framework-career-growth"
 draft: false
 ---

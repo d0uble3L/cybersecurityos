@@ -3,8 +3,8 @@ title: "Good CISO vs. Bad CISO: The Hidden Mindsets That Make or Break Security 
 description: "The difference between a good and bad CISO isn’t tools or budget—it’s mindset, systems, and strategy. Learn the mental models every security leader should master."
 date: 2025-09-28
 author: "Michael Tayo"
-tags: ["CISO", "security leadership", "CISO mindset", "cybersecurity","CybersecurityOS"]
-categories: ["Leadership", "CybersecurityOS", "Cybersecurity","Frameworks"]
+tags: ["CISO", "security leadership", "CISO mindset", "Cybersecurity","CybersecurityOS"]
+categories: ["Leadership", "Frameworks"]
 images:
     -  /posts/os-weekly/images/good-ciso-bad-ciso-25.png
 featured_image: /posts/os-weekly/images/good-ciso-bad-ciso-25.png

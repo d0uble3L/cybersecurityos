@@ -3,6 +3,7 @@ title: "Cyber Threats Reimagined: Strategic Frameworks for Defeating Evolving At
 date: 2025-08-17
 draft: false
 tags: ["CybersecurityOS", "APT", "Threat Intelligence", "Frameworks", "Cyber Leadership"]
+categories: ["Threat Intelligence", "Frameworks"]
 description: "From mobile phishing to APTs and AI-driven threats, explore the strategic frameworks that help cybersecurity leaders, analysts, and startups stay ahead in 2025."
 slug: "cyber-threats-reimagined-2025"
 images:
