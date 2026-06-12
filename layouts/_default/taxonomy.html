@@ -7,18 +7,13 @@
   </div>
   {{ end }}
 
-  <!-- All terms (tags/categories) as a badge grid -->
-  <div style="max-width:1200px;margin:2rem auto;padding:0 1.5rem;">
-    <ul class="os-tags" style="gap:.5rem;">
-      {{ range .Data.Terms.Alphabetical }}
-        <li style="display:inline;">
-          <a href="{{ .Page.RelPermalink }}" class="os-tag" style="font-size:.8rem;padding:.3rem .8rem;">
-            {{ .Page.LinkTitle }}
-            <span style="opacity:.55;font-size:.7em;margin-left:.3rem;">({{ .Count }})</span>
-          </a>
-        </li>
-      {{ end }}
-    </ul>
+  <!-- Post card grid for this tag/category -->
+  <div class="os-card-grid">
+    {{ range .Paginator.Pages }}
+      {{ .Render "summary" }}
+    {{ end }}
   </div>
+
+  {{- template "_internal/pagination.html" . -}}
 
 {{ end }}
