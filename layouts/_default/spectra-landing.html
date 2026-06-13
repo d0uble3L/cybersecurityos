@@ -252,19 +252,32 @@ section { padding: 100px 48px; max-width: 1200px; margin: 0 auto; }
 .t-dim { color: #334433; }
 
 /* USE CASES */
-.usecase-list { display: flex; flex-direction: column; gap: 2px; margin-top: 48px; }
+e.usecase-list { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 48px; }
 .usecase {
-  display: grid; grid-template-columns: 80px 1fr 1fr;
-  gap: 32px; align-items: center;
+  display: flex; flex-direction: column; gap: 10px;
   padding: 32px 40px;
   background: var(--bg2);
   border: 1px solid rgba(0,255,136,0.08);
   transition: all 0.2s;
 }
 .usecase:hover { border-color: rgba(0,255,136,0.25); background: rgba(0,255,136,0.02); }
-.usecase-num { font-family: 'Orbitron', monospace; font-size: 28px; font-weight: 700; color: var(--green); opacity: 0.3; }
-.usecase-title { font-size: 14px; letter-spacing: 2px; color: var(--white); }
+.usecase-icon {
+  width: 40px; height: 40px; margin-bottom: 8px;
+  border: 1px solid rgba(0,255,136,0.4); display: flex;
+  align-items: center; justify-content: center;
+  color: var(--green); font-size: 18px;
+}
+.usecase-tag { font-size: 10px; letter-spacing: 3px; color: var(--green); opacity: 0.7; }
+.usecase-title {
+  font-family: 'Orbitron', monospace; font-weight: 700;
+  font-size: 14px; letter-spacing: 2px; color: var(--white);
+}
 .usecase-desc { font-size: 13px; color: var(--text-dim); line-height: 1.7; }
+.usecase-cta {
+  font-size: 11px; letter-spacing: 2px; color: var(--green);
+  text-decoration: none; opacity: 0.8; margin-top: auto; padding-top: 8px;
+}
+.usecase-cta:hover { opacity: 1; }
 
 /* CTA */
 .cta-section {
@@ -281,7 +294,16 @@ section { padding: 100px 48px; max-width: 1200px; margin: 0 auto; }
   font-size: clamp(32px, 5vw, 64px); color: var(--white);
   margin-bottom: 20px; position: relative;
 }
-.cta-sub { font-size: 15px; color: var(--text-dim); margin-bottom: 48px; position: relative; letter-spacing: 1px; }
+.cta-sub { font-size: 15px; color: var(--text-dim); margin-bottom: 32px; position: relative; letter-spacing: 1px; }
+.cta-workflows {
+  display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;
+  margin-bottom: 32px; position: relative;
+}
+.cta-workflows a {
+  font-size: 11px; letter-spacing: 3px; color: var(--green);
+  opacity: 0.6; text-decoration: none; transition: opacity 0.2s;
+}
+.cta-workflows a:hover { opacity: 1; }
 .cta-actions { display: flex; gap: 16px; justify-content: center; position: relative; flex-wrap: wrap; }
 .code-block {
   background: #000; border: 1px solid rgba(0,255,136,0.2);
@@ -332,8 +354,8 @@ footer {
   .problem-grid { grid-template-columns: 1fr; }
   .features-grid { grid-template-columns: 1fr; }
   .terminal-wrap { grid-template-columns: 1fr; }
-  .usecase { grid-template-columns: 1fr; gap: 12px; padding: 24px; }
-  .usecase-num { display: none; }
+  .usecase-list { grid-template-columns: 1fr; }
+  .usecase { padding: 24px; }
   .hero-stats { gap: 30px; }
   footer { padding: 32px 24px; }
   .cta-section { padding: 80px 24px; }
@@ -346,6 +368,7 @@ footer {
 <nav>
   <a href="/docs/spectra/" class="nav-logo">SPECTRA<span>.</span></a>
   <div class="nav-links">
+    <a href="#usecases">Use Cases</a>
     <a href="/docs/spectra/installation/">Install</a>
     <a href="/docs/spectra/quickstart/">Quick Start</a>
     <a href="/docs/spectra/cli-reference/">CLI Docs</a>
@@ -359,11 +382,12 @@ footer {
   <div class="hero-grid"></div>
   <div class="hero-glow"></div>
   <div class="scan-hero"></div>
-  <p class="hero-label">▸ CYBERSECURITYOS · OPEN SOURCE</p>
+  <p class="hero-label">▸ AI VULNERABILITY INTELLIGENCE · OPEN SOURCE</p>
   <h1 class="hero-title">SPECTRA</h1>
-  <p class="hero-sub">AI-powered vulnerability intelligence that turns scanner noise into ranked, actionable findings your team can act on today.</p>
+  <p class="hero-sub">One CLI that turns scanner noise into the artifact your team actually needs — a prioritized remediation plan, a CI/CD security signal, a red team narrative, or board-ready compliance evidence.</p>
   <div class="hero-actions">
     <a href="/docs/spectra/quickstart/" class="btn-primary">GET STARTED →</a>
+    <a href="#usecases" class="btn-secondary">SEE USE CASES ↓</a>
     <a href="https://github.com/d0uble3L/spectra" class="btn-secondary" target="_blank" rel="noopener">GITHUB ↗</a>
   </div>
   <div class="hero-stats">
@@ -385,6 +409,45 @@ footer {
     </div>
   </div>
 </section>
+
+<!-- USE CASES -->
+<div class="band">
+<section id="usecases">
+  <span class="section-label">// WHO IT'S FOR</span>
+  <h2 class="section-title">Built for Four<br>Production Workflows.</h2>
+  <p class="section-body">131 new CVEs land today. Almost none of them matter. SPECTRA decides which ones do — and turns that decision into the artifact each of these workflows actually needs.</p>
+  <div class="usecase-list">
+    <div class="usecase" id="usecase-vulnmgmt">
+      <div class="usecase-icon">◆</div>
+      <span class="usecase-tag">FOR APPSEC &amp; VULN MANAGEMENT TEAMS</span>
+      <div class="usecase-title">VULNERABILITY MANAGEMENT</div>
+      <p class="usecase-desc">Stop drowning in scanner output. SPECTRA ranks what matters, chains what connects, and produces the prioritized remediation plan your team needs — not a spreadsheet of CVEs sorted by CVSS.</p>
+      <a href="/docs/spectra/quickstart/" class="usecase-cta">→ RUN YOUR FIRST ANALYSIS</a>
+    </div>
+    <div class="usecase" id="usecase-devsecops">
+      <div class="usecase-icon">⚙</div>
+      <span class="usecase-tag">FOR PLATFORM &amp; DEVOPS ENGINEERS</span>
+      <div class="usecase-title">DEVSECOPS PIPELINE</div>
+      <p class="usecase-desc">Plug SPECTRA into your CI/CD pipeline and get actionable security context on every build — without flooding developers with noise that kills velocity and trust.</p>
+      <a href="/docs/spectra/cicd-integration/" class="usecase-cta">→ VIEW CI/CD INTEGRATION GUIDE</a>
+    </div>
+    <div class="usecase" id="usecase-redteam">
+      <div class="usecase-icon">⬡</div>
+      <span class="usecase-tag">FOR RED TEAMS &amp; PENTESTERS</span>
+      <div class="usecase-title">RED TEAM REPORTING</div>
+      <p class="usecase-desc">Transform raw engagement findings into chained attack narratives that actually land with leadership. Connect your findings into the story that drives remediation investment.</p>
+      <a href="/docs/spectra/output-formats/#markdown-report-structure" class="usecase-cta">→ SEE ATTACK CHAIN REPORTING</a>
+    </div>
+    <div class="usecase" id="usecase-grc">
+      <div class="usecase-icon">▤</div>
+      <span class="usecase-tag">FOR GRC &amp; COMPLIANCE OFFICERS</span>
+      <div class="usecase-title">GRC &amp; COMPLIANCE REPORTING</div>
+      <p class="usecase-desc">Generate board-ready risk summaries automatically — technical findings translated into the business-risk language your leadership and auditors expect, without the manual write-up overhead.</p>
+      <a href="/docs/spectra/output-formats/#json-report-structure" class="usecase-cta">→ SEE JSON REPORT STRUCTURE</a>
+    </div>
+  </div>
+</section>
+</div>
 
 <!-- PROBLEM -->
 <div class="band-alt">
@@ -496,36 +559,6 @@ footer {
   </div>
 </div>
 
-<!-- USE CASES -->
-<div class="band">
-<section id="usecases">
-  <span class="section-label">// USE CASES</span>
-  <h2 class="section-title">Built for Four<br>Production Workflows.</h2>
-  <div class="usecase-list">
-    <div class="usecase">
-      <div class="usecase-num">01</div>
-      <div class="usecase-title">VULNERABILITY MANAGEMENT</div>
-      <p class="usecase-desc">Stop drowning in scanner output. SPECTRA ranks what matters, chains what connects, and produces the prioritized remediation plan your team needs — not a spreadsheet of CVEs sorted by CVSS.</p>
-    </div>
-    <div class="usecase">
-      <div class="usecase-num">02</div>
-      <div class="usecase-title">DEVSECOPS PIPELINE</div>
-      <p class="usecase-desc">Plug SPECTRA into your CI/CD pipeline and get actionable security context on every build — without flooding developers with noise that kills velocity and trust.</p>
-    </div>
-    <div class="usecase">
-      <div class="usecase-num">03</div>
-      <div class="usecase-title">RED TEAM REPORTING</div>
-      <p class="usecase-desc">Transform raw engagement findings into chained attack narratives that actually land with leadership. SPECTRA connects your findings into the story that drives remediation investment.</p>
-    </div>
-    <div class="usecase">
-      <div class="usecase-num">04</div>
-      <div class="usecase-title">GRC &amp; COMPLIANCE REPORTING</div>
-      <p class="usecase-desc">Generate board-ready risk summaries and compliance evidence automatically. Map findings to controls. Produce the artifacts your auditors need without the manual overhead.</p>
-    </div>
-  </div>
-</section>
-</div>
-
 <!-- DOCS NAVIGATION -->
 <div class="band">
 <section id="docs">
@@ -601,8 +634,14 @@ footer {
 <div class="band">
 <section class="cta-section" style="max-width:100%;">
   <div class="cta-glow"></div>
-  <h2 class="cta-title">Start Triaging Smarter<br>Today.</h2>
-  <p class="cta-sub">Open source. No vendor lock-in. Runs in your environment. Powered by Claude.</p>
+  <h2 class="cta-title">Pick Your Workflow.<br>Ship the Output It Needs.</h2>
+  <p class="cta-sub">Vulnerability management, DevSecOps, red team reporting, or GRC — SPECTRA fits the workflow you already run. Open source, runs in your environment, powered by Claude.</p>
+  <div class="cta-workflows">
+    <a href="#usecase-vulnmgmt">VULN MANAGEMENT</a>
+    <a href="#usecase-devsecops">DEVSECOPS</a>
+    <a href="#usecase-redteam">RED TEAM</a>
+    <a href="#usecase-grc">GRC</a>
+  </div>
   <div class="cta-actions">
     <a href="/posts/os-weekly/spectra-overview-claude-ai-security/" class="btn-primary">READ THE FULL POST →</a>
     <a href="https://github.com/d0uble3L/spectra" class="btn-secondary" target="_blank" rel="noopener">GITHUB ↗</a>
