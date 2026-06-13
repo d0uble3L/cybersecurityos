@@ -1,7 +1,7 @@
 ---
 title: "SPECTRA"
 date: 2026-05-18
-description: "SPECTRA — AI-Powered Vulnerability Intelligence. Open-source CLI that transforms scanner noise into ranked findings, attack chain analysis, and executive summaries."
+description: "SPECTRA — AI-Powered Vulnerability Intelligence. Open-source CLI for vulnerability management, DevSecOps pipelines, red team reporting, and GRC — turns scanner noise into ranked findings, attack chain analysis, and executive summaries."
 layout: "spectra-landing"
 draft: false
 cascade:
