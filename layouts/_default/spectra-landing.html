@@ -279,6 +279,36 @@ e.usecase-list { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin
 }
 .usecase-cta:hover { opacity: 1; }
 
+/* SPECTRA MEANING */
+.spectra-phrase {
+  font-size: clamp(16px, 2.2vw, 22px); letter-spacing: 1px;
+  color: var(--text); max-width: 720px; line-height: 1.6;
+  margin-bottom: 20px;
+}
+.spectra-phrase-accent {
+  color: var(--green); font-weight: 700;
+  text-shadow: 0 0 12px rgba(0,255,136,0.4);
+}
+.spectra-grid {
+  display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; margin-top: 48px;
+}
+.spectra-letter {
+  background: var(--bg2); border: 1px solid rgba(0,255,136,0.08);
+  padding: 28px 14px; text-align: center;
+  transition: border-color 0.3s, background 0.3s;
+}
+.spectra-letter:hover { border-color: rgba(0,255,136,0.3); background: rgba(0,255,136,0.02); }
+.spectra-char {
+  font-family: 'Orbitron', monospace; font-size: 40px; font-weight: 900;
+  color: var(--green); line-height: 1; margin-bottom: 12px;
+  text-shadow: 0 0 20px rgba(0,255,136,0.3);
+}
+.spectra-word {
+  font-family: 'Orbitron', monospace; font-size: 11px; font-weight: 700;
+  color: var(--white); letter-spacing: 2px; margin-bottom: 10px;
+}
+.spectra-desc { font-size: 12px; color: var(--text-dim); line-height: 1.6; }
+
 /* CTA */
 .cta-section {
   text-align: center; padding: 120px 48px;
@@ -356,6 +386,7 @@ footer {
   .terminal-wrap { grid-template-columns: 1fr; }
   .usecase-list { grid-template-columns: 1fr; }
   .usecase { padding: 24px; }
+  .spectra-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-stats { gap: 30px; }
   footer { padding: 32px 24px; }
   .cta-section { padding: 80px 24px; }
@@ -409,6 +440,53 @@ footer {
     </div>
   </div>
 </section>
+
+<!-- THE NAME -->
+<div class="band">
+<section id="meaning">
+  <span class="section-label">// THE NAME</span>
+  <h2 class="section-title">What SPECTRA<br>Stands For.</h2>
+  <p class="spectra-phrase">Security <span class="spectra-phrase-accent">P</span>latform for <span class="spectra-phrase-accent">E</span>xpert-level <span class="spectra-phrase-accent">C</span>orrelation, <span class="spectra-phrase-accent">T</span>riage, and <span class="spectra-phrase-accent">R</span>isk <span class="spectra-phrase-accent">A</span>nalysis.</p>
+  <p class="section-body">AI-powered vulnerability intelligence that turns scanner noise into ranked, actionable findings your team can act on today.</p>
+  <div class="spectra-grid">
+    <div class="spectra-letter">
+      <div class="spectra-char">S</div>
+      <div class="spectra-word">SECURITY</div>
+      <p class="spectra-desc">Built for the teams on the front line of vulnerability management, DevSecOps, red teaming, and GRC.</p>
+    </div>
+    <div class="spectra-letter">
+      <div class="spectra-char">P</div>
+      <div class="spectra-word">PLATFORM</div>
+      <p class="spectra-desc">One tool that sits downstream of Trivy, Semgrep, Nessus, Burp Suite, and any JSON scanner output.</p>
+    </div>
+    <div class="spectra-letter">
+      <div class="spectra-char">E</div>
+      <div class="spectra-word">EXPERT-LEVEL</div>
+      <p class="spectra-desc">Reasons about findings the way a senior analyst would, powered by Claude.</p>
+    </div>
+    <div class="spectra-letter">
+      <div class="spectra-char">C</div>
+      <div class="spectra-word">CORRELATION</div>
+      <p class="spectra-desc">Connects related findings into the exploit chains an attacker would actually follow.</p>
+    </div>
+    <div class="spectra-letter">
+      <div class="spectra-char">T</div>
+      <div class="spectra-word">TRIAGE</div>
+      <p class="spectra-desc">Ranks what matters by real-world exploitability, not raw CVSS scores.</p>
+    </div>
+    <div class="spectra-letter">
+      <div class="spectra-char">R</div>
+      <div class="spectra-word">RISK</div>
+      <p class="spectra-desc">Translates technical findings into the business-risk language leadership and auditors expect.</p>
+    </div>
+    <div class="spectra-letter">
+      <div class="spectra-char">A</div>
+      <div class="spectra-word">ANALYSIS</div>
+      <p class="spectra-desc">Produces the prioritized plan, narrative, or report your workflow needs &mdash; not just a score.</p>
+    </div>
+  </div>
+</section>
+</div>
 
 <!-- USE CASES -->
 <div class="band">
