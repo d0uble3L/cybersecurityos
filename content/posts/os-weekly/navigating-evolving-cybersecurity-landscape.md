@@ -2,10 +2,10 @@
 title: "Navigating the Evolving Cybersecurity Landscape: From Dark AdTech to Strategic Self-Awareness"
 date: 2025-06-15
 images:
-    -  /posts/os-weekly/images/adtech.png
-featured_image:  /posts/os-weekly/images/adtech.png
+  - /posts/os-weekly/images/adtech.png
+featured_image: /posts/os-weekly/images/adtech.png
 description: "Explore the latest trends in dark ad tech, disinformation, self-aware cybersecurity strategies, and policy impacts — for both leaders and aspiring professionals."
-tags: ["Cybersecurity", "disinformation", "adtech", "strategy", "policy","CybersecurityOS"]
+tags: ["Cybersecurity", "disinformation", "adtech", "strategy", "policy", "CybersecurityOS"]
 categories: ["Threat Intelligence", "Cyber Policy and Resilience"]
 slug: "navigating-evolving-cybersecurity-landscape"
 draft: false
@@ -44,15 +44,15 @@ Beyond high-tech threats, the foundation of effective cybersecurity is knowing t
 
 In practice, building a repeatable security process involves:
 
-1. **Assessment:** Conduct regular vulnerability scans and risk assessments.  
-2. **Mitigation:** Implement standardized policies to address identified risks.  
+1. **Assessment:** Conduct regular vulnerability scans and risk assessments.
+2. **Mitigation:** Implement standardized policies to address identified risks.
 3. **Evaluation:** Continuously test and refine processes to adapt to new threats.
 
 [Talos Intelligence²](https://blog.talosintelligence.com/know-thyself-know-thy-environment/) emphasizes that consistent self-awareness, combined with robust process implementation, is key to a resilient security posture. This strategic approach empowers leaders and analysts alike—regardless of their experience level.
 
 ## Policy Initiatives and Public-Private Collaboration
 
-![Policy Initiatives and Public-Private Collaboration](/posts/os-weekly/images/trump.png)
+![Policy Initiatives and Public-Private Collaboration](/posts/os-weekly/images/public-private-policy-collaboration.png)
 
 Not all cybersecurity challenges are technology-based. Policy decisions, such as those seen with recent executive orders, require similar strategic rigor. Feedback on initiatives from former President Trump’s cybersecurity executive order shows:
 
@@ -83,14 +83,14 @@ Whether you’re shaping an organization’s security posture or kickstarting yo
 
 ## 📬 Stay in the Loop
 
-*If you found this helpful, join thousands of security pros and career climbers who subscribe to [**CybersecurityOS**](https://bio.link/cybershieldacademy) — weekly insights, tools, and frameworks for growth.*
+_If you found this helpful, join thousands of security pros and career climbers who subscribe to [**CybersecurityOS**](https://bio.link/cybershieldacademy) — weekly insights, tools, and frameworks for growth._
 
 ---
 
 ### Footnotes
 
-1. Krebs on Security – [Adtech exploitation through fake CAPTCHAs](https://krebsonsecurity.com/2025/06/inside-a-dark-adtech-empire-fed-by-fake-captchas/)  
-2. Talos Intelligence – [Self-awareness and environmental awareness](https://blog.talosintelligence.com/know-thyself-know-thy-environment/)  
+1. Krebs on Security – [Adtech exploitation through fake CAPTCHAs](https://krebsonsecurity.com/2025/06/inside-a-dark-adtech-empire-fed-by-fake-captchas/)
+2. Talos Intelligence – [Self-awareness and environmental awareness](https://blog.talosintelligence.com/know-thyself-know-thy-environment/)
 3. SecurityWeek – [Reactions to Trump’s cybersecurity executive order](https://www.securityweek.com/industry-reactions-to-trump-cybersecurity-executive-order-feedback-friday/)
 
 ---
