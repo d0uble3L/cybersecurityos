@@ -10,5 +10,5 @@ npm-debug.log*
 
 ## MacOS & Editor Files ##
 .DS_Store
-hugo_build.lock
+.hugo_build.lock
 *.swp

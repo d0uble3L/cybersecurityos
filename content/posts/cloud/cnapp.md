@@ -6,7 +6,7 @@ tags: ["CNAPP", "Cloud Security", "Agentless Security", "Workload Protection"]
 images:
   - /posts/cloud/images/cnapp.webp
 featured_image: "/posts/cloud/images/cnapp.webp"
-categories: ["Cybersecurity", "Cloud Security"]
+categories: ["Cloud Security"]
 description: "Explore how Cloud-Native Application Protection Platforms (CNAPP) offer agentless security and workload protection in modern cloud environments."
 ---
 
@@ -37,7 +37,7 @@ Traditionally, securing workloads in the cloud required installing agents on eac
 
 ![The Rise of Agentless Security](/posts/cloud/images/aqua.png)
 
-*Image Source: [AquaSec](https://www.aquasec.com/cloud-native-academy/cspm/agentless-vs-agent-based-security/)*
+_Image Source: [AquaSec](https://www.aquasec.com/cloud-native-academy/cspm/agentless-vs-agent-based-security/)_
 
 Enter **agentless security**, a growing trend in CNAPPs. As the name suggests, agentless security removes the need for installing and managing agents on individual workloads. Instead, it leverages the cloud provider’s APIs and event streams to gain visibility into cloud environments without the operational friction of deploying agents.
 
@@ -54,7 +54,7 @@ While agentless security simplifies cloud protection, it may not offer the same 
 
 ![Workload Protection in CNAPP](/posts/cloud/images/zscaler.png)
 
-*Image Source: [ZScaler](https://www.zscaler.com/resources/security-terms-glossary/what-is-cloud-native-application-protection-platform-cnapp)*
+_Image Source: [ZScaler](https://www.zscaler.com/resources/security-terms-glossary/what-is-cloud-native-application-protection-platform-cnapp)_
 
 Workload protection is one of the key pillars of CNAPP, focusing on safeguarding the various workloads (such as containers, VMs, and serverless functions) that make up modern cloud-native applications. These workloads are highly dynamic, often short-lived, and can exist in multiple environments across development and production.
 
@@ -86,7 +86,7 @@ For most organizations, a **hybrid approach** is often best, combining agentless
 
 ![hybrid approach tto cloud security](/posts/cloud/images/consolidate.png)
 
-*Image Source: [Sysdig](https://sysdig.com/)*
+_Image Source: [Sysdig](https://sysdig.com/)_
 
 ## The Future of CNAPP and Cloud Workload Protection
 

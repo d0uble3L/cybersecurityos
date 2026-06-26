@@ -23,6 +23,8 @@ jobs:
         run: npm ci
       - name: Run markdownlint
         run: npm run lint:md
+      - name: Check formatting
+        run: npm run lint:format
 
   hugo-build:
     name: Hugo Build
@@ -32,8 +34,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb \

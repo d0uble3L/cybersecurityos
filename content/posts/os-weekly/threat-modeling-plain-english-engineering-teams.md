@@ -3,16 +3,26 @@ title: "Threat Modeling in Plain English: A Guide for Engineering Teams"
 date: 2026-05-31
 draft: false
 author: "Michael Tayo"
-tags: ["threat modeling", "cybersecurity", "security engineering", "STRIDE", "DevSecOps", "CybersecurityOS", "appsec", "secure by design"]
+tags:
+  [
+    "threat modeling",
+    "cybersecurity",
+    "security engineering",
+    "STRIDE",
+    "DevSecOps",
+    "CybersecurityOS",
+    "appsec",
+    "secure by design",
+  ]
 categories: ["Security Engineering"]
 slug: "threat-modeling-plain-english-engineering-teams"
 description: "A practical, no-jargon guide to threat modeling for engineering teams. Learn STRIDE, how to run your first threat model, and how to make it a sustainable part of your SDLC — not a one-time exercise."
 images:
-    - /posts/os-weekly/images/process.png
+  - /posts/os-weekly/images/process.png
 featured_image: /posts/os-weekly/images/process.png
 ---
 
-Most engineering teams know they *should* be doing threat modeling.
+Most engineering teams know they _should_ be doing threat modeling.
 
 Very few actually do it — and the ones who try often produce a document that gets filed away and never looked at again.
 
@@ -40,13 +50,13 @@ You ask that question about your system, you write down the answers, and you dec
 
 ## Why Most Teams Skip It (And Why That's Expensive)
 
-The most common objection: *"We don't have time."*
+The most common objection: _"We don't have time."_
 
 The real cost of not doing it: your team spends hours on a security incident post-mortem for something that was obvious in hindsight. A missing authentication check. An over-privileged service account. An unauthenticated API endpoint that shouldn't be public.
 
 Most vulnerabilities that cause serious incidents aren't sophisticated. They're foreseeable. They show up in threat models. They get fixed for free at design time and they cost enormously when exploited at runtime.
 
-The other objection: *"That's what the security team is for."*
+The other objection: _"That's what the security team is for."_
 
 Security teams are too small to be in every design review. The only scalable answer is engineers who can think adversarially about their own systems. That's not optional anymore — it's a core engineering skill.
 
@@ -73,21 +83,20 @@ STRIDE is the most practical threat modeling framework for engineers. It's a mne
 
 ![Threat Modeling Process — structured thinking about how a system can be attacked](/posts/os-weekly/images/process.png)
 
-| Letter | Threat | What it means | Example |
-|--------|--------|---------------|---------|
-| **S** | Spoofing | Impersonating something or someone | Attacker forges a JWT to act as another user |
-| **T** | Tampering | Modifying data or code | Attacker alters a query parameter to change an order total |
-| **R** | Repudiation | Denying that an action occurred | User denies placing a fraudulent order — no audit log to prove otherwise |
-| **I** | Information Disclosure | Exposing data to unauthorized parties | Stack trace in a 500 error leaks internal file paths and versions |
-| **D** | Denial of Service | Making a system unavailable | Unauthenticated endpoint hammered with requests; no rate limiting |
-| **E** | Elevation of Privilege | Gaining capabilities beyond what's authorized | Standard user accesses admin API endpoint due to missing authorization check |
+| Letter | Threat                 | What it means                                 | Example                                                                      |
+| ------ | ---------------------- | --------------------------------------------- | ---------------------------------------------------------------------------- |
+| **S**  | Spoofing               | Impersonating something or someone            | Attacker forges a JWT to act as another user                                 |
+| **T**  | Tampering              | Modifying data or code                        | Attacker alters a query parameter to change an order total                   |
+| **R**  | Repudiation            | Denying that an action occurred               | User denies placing a fraudulent order — no audit log to prove otherwise     |
+| **I**  | Information Disclosure | Exposing data to unauthorized parties         | Stack trace in a 500 error leaks internal file paths and versions            |
+| **D**  | Denial of Service      | Making a system unavailable                   | Unauthenticated endpoint hammered with requests; no rate limiting            |
+| **E**  | Elevation of Privilege | Gaining capabilities beyond what's authorized | Standard user accesses admin API endpoint due to missing authorization check |
 
 You don't need to memorize these. Print this table. Keep it in your design docs template. Ask "does STRIDE apply here?" for every trust boundary you cross.
 
 ---
 
-> 💡 **Want to go deeper on security engineering frameworks?**
-> ![Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](/posts/os-weekly/images/leadershipos.png)
+> 💡 **Want to go deeper on security engineering frameworks?** > ![Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](/posts/os-weekly/images/leadershipos.png)
 > Built for engineers moving into security leadership — 30+ mental models, decision frameworks, and real-world guides.
 > 🔗 [Cybersecurity Leadership OS](https://store.cybersecurityos.net/l/cybersecurity-leadership-os)
 
@@ -180,15 +189,15 @@ Let's make this concrete. Say you're building a new login flow with email/passwo
 
 **Applying STRIDE:**
 
-| Component | Threat | Specific concern | Mitigation |
-|-----------|--------|------------------|------------|
-| Login form | **S** Spoofing | Attacker creates a fake login page (phishing) | Enforce HTTPS + HSTS; consider passkeys |
-| `/auth/login` | **D** DoS | Brute-force / credential stuffing | Rate limiting, account lockout, CAPTCHA |
-| `/auth/login` | **T** Tampering | Request body manipulation | Validate all inputs server-side; don't trust client |
-| Credentials DB | **I** Info disclosure | SQL injection leaks password hashes | Parameterized queries; bcrypt/Argon2 hashing |
-| Session token | **S** Spoofing | Token theft via XSS | HttpOnly + Secure cookie flags; CSP headers |
-| MFA service | **E** Elevation | MFA bypass if fallback is weak | No SMS-only fallback for sensitive actions; enforce app-based TOTP |
-| Redis session store | **T** Tampering | Session fixation | Regenerate session ID on authentication |
+| Component           | Threat                | Specific concern                              | Mitigation                                                         |
+| ------------------- | --------------------- | --------------------------------------------- | ------------------------------------------------------------------ |
+| Login form          | **S** Spoofing        | Attacker creates a fake login page (phishing) | Enforce HTTPS + HSTS; consider passkeys                            |
+| `/auth/login`       | **D** DoS             | Brute-force / credential stuffing             | Rate limiting, account lockout, CAPTCHA                            |
+| `/auth/login`       | **T** Tampering       | Request body manipulation                     | Validate all inputs server-side; don't trust client                |
+| Credentials DB      | **I** Info disclosure | SQL injection leaks password hashes           | Parameterized queries; bcrypt/Argon2 hashing                       |
+| Session token       | **S** Spoofing        | Token theft via XSS                           | HttpOnly + Secure cookie flags; CSP headers                        |
+| MFA service         | **E** Elevation       | MFA bypass if fallback is weak                | No SMS-only fallback for sensitive actions; enforce app-based TOTP |
+| Redis session store | **T** Tampering       | Session fixation                              | Regenerate session ID on authentication                            |
 
 This is a 20-minute exercise for a senior engineer who knows the system. It produces seven specific, actionable security requirements before a line of code is written.
 
@@ -222,7 +231,7 @@ The right model:
 Design review → Threat model session → Security requirements in tickets
       ↓
 Development → Developers aware of specific threats for this feature
-      ↓  
+      ↓
 Code review → "Does this change address the threat we identified?"
       ↓
 Testing → Specific test cases for identified threats (not just happy-path)
@@ -245,13 +254,13 @@ You don't need specialized tooling to start. A whiteboard beats most tools for t
 
 When you do want to formalize:
 
-| Tool | Best for | Notes |
-|------|----------|-------|
-| **OWASP Threat Dragon** | Teams wanting an open-source, diagram-first tool | Free; integrates with git |
-| **Microsoft Threat Modeling Tool** | Windows shops using Azure | Free; STRIDE-native |
-| **draw.io / Miro** | Teams already using these for architecture diagrams | Low friction; no new tool to learn |
-| **OWASP pytm** | Teams who want threat models as code | Python-based; generates diagrams from code |
-| **IriusRisk** | Enterprise teams wanting automated threat generation | Paid; most powerful for complex systems |
+| Tool                               | Best for                                             | Notes                                      |
+| ---------------------------------- | ---------------------------------------------------- | ------------------------------------------ |
+| **OWASP Threat Dragon**            | Teams wanting an open-source, diagram-first tool     | Free; integrates with git                  |
+| **Microsoft Threat Modeling Tool** | Windows shops using Azure                            | Free; STRIDE-native                        |
+| **draw.io / Miro**                 | Teams already using these for architecture diagrams  | Low friction; no new tool to learn         |
+| **OWASP pytm**                     | Teams who want threat models as code                 | Python-based; generates diagrams from code |
+| **IriusRisk**                      | Enterprise teams wanting automated threat generation | Paid; most powerful for complex systems    |
 
 Start with whatever lets you draw a DFD and list threats. Sophistication comes later.
 
@@ -287,15 +296,14 @@ A threat model from 18 months ago for a system that has been rewritten twice is 
 
 ---
 
-> 💡 **If you found this helpful, learn the thinking that separates security engineers from security leaders.**
-> ![CyberSHIELD PRO Membership](/posts/os-weekly/images/pro-os.png)
+> 💡 **If you found this helpful, learn the thinking that separates security engineers from security leaders.** > ![CyberSHIELD PRO Membership](/posts/os-weekly/images/pro-os.png)
 > 🚀 Supercharge your security career with 🔗 [CyberSHIELD PRO Membership](https://cybersecurityos.gumroad.com/l/cybershield-membership) — frameworks, deep-dives, and async Q&A every month.
 
 ---
 
 ## Further Reading
 
-- [Adam Shostack, *Threat Modeling: Designing for Security*](https://www.wiley.com/en-us/Threat+Modeling%3A+Designing+for+Security-p-9781118809990) — the definitive book on the subject
+- [Adam Shostack, _Threat Modeling: Designing for Security_](https://www.wiley.com/en-us/Threat+Modeling%3A+Designing+for+Security-p-9781118809990) — the definitive book on the subject
 - [OWASP Threat Modeling Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html)
 - [OWASP Threat Dragon](https://owasp.org/www-project-threat-dragon/) — open-source threat modeling tool
 - [Microsoft SDL Threat Modeling](https://www.microsoft.com/en-us/securityengineering/sdl/threatmodeling) — where STRIDE originated

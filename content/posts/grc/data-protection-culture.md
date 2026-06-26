@@ -5,7 +5,16 @@ images:
   - /posts/grc/images/data-gov-v-tools.png
 featured_image: "/posts/grc/images/data-gov-v-tools.png"
 description: "A no-nonsense look at why true data protection starts with governance, executive oversight, and culture — not just technology. A must-read for modern security professionals."
-tags: ["Data Protection", "Data Governance", "Cybersecurity", "Compliance", "AI Security", "Security Culture"]
+tags:
+  [
+    "Data Protection",
+    "Data Governance",
+    "Cybersecurity",
+    "Compliance",
+    "AI Security",
+    "Security Culture",
+  ]
+categories: ["GRC and Compliance", "Leadership"]
 ---
 
 Let’s get one thing straight: **you can't solve data protection with just technology**. I see it over and over — organizations jumping headfirst into tools like DLP (Data Loss Prevention) systems, AI-based monitoring, and cloud-native security suites, thinking they're bulletproof because of the tech stack. They're not.
@@ -18,7 +27,7 @@ And if you stick around until the end, I’ll share **five real-world action ite
 
 You can’t protect what you don’t control, and you can’t control what you haven’t defined. That’s where **data governance** comes in. It’s the framework — the policies, the roles, the accountability structure — that sets the rules for how data is handled across an organization.
 
-William Stallings puts it well in *Effective Cybersecurity*: governance isn't optional — it's the foundation. It tells the organization what “good” looks like. Without this, your teams are just reacting, not managing risk.
+William Stallings puts it well in _Effective Cybersecurity_: governance isn't optional — it's the foundation. It tells the organization what “good” looks like. Without this, your teams are just reacting, not managing risk.
 
 And executive oversight isn’t a one-and-done check-in — it’s an ongoing commitment. Board-level engagement on cybersecurity is essential for ensuring funding, alignment, and urgency.
 

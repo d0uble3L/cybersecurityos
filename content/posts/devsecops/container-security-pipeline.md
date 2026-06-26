@@ -2,6 +2,7 @@
 title: "Building a Secure DevSecOps Pipeline: Deploying to Amazon ECR with GitHub Actions and Trivy"
 date: 2024-12-03
 tags: ["DevSecOps", "AWS", "GitHub Actions", "Container Security", "Trivy"]
+categories: ["Security Engineering"]
 description: "Learn how to set up a secure CI/CD pipeline to deploy container images to Amazon ECR using GitHub Actions and Trivy."
 images:
   - /posts/devsecops/images/devsecops-trivy.webp
