@@ -4,6 +4,7 @@ date = 2024-09-25T23:29:07-05:00
 draft = false
 featured_image = "/posts/ai-devsecops/images/ai-devsecop-cover.webp"
 tags =  ["DevSecOps","CI/CD","AI","Artificial Intelligence", "Cybersecurity"]
+categories = ["AI and Security", "Security Engineering"]
 description = "One significant shift has been the integration of DevSecOps and the philosophy of shifting security left. With the rapid advancement of artificial intelligence (AI), its implications for these areas are profound."
 +++
 

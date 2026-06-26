@@ -2,11 +2,22 @@
 date: 2025-02-08T10:58:08-04:00
 description: "Exploring the evolution of cyber warfare through the lens of Moonlight Maze and Stuxnet, and the regulatory frameworks they inspired."
 images:
-- /posts/secops/images/cyberops.webp
+  - /posts/secops/images/cyberops.webp
 featured_image: "/posts/secops/images/cyberops.webp"
-tags: ["cybersecurity", "cyber warfare", "espionage", "Stuxnet", "Moonlight Maze", "risk-management", "regulations"]
+tags:
+  [
+    "cybersecurity",
+    "cyber warfare",
+    "espionage",
+    "Stuxnet",
+    "Moonlight Maze",
+    "risk-management",
+    "regulations",
+  ]
 title: "Inside the Digital Battlefield: The Evolution of Cyber Warfare"
+categories: ["Threat Intelligence", "Cyber Policy and Resilience"]
 ---
+
 ## Cyber Warfare: The Digital Frontline
 
 Cyber operations have come a long way, evolving from obscure espionage missions to full-scale digital warfare. These operations shape modern technology, influence global conflicts, and redefine the meaning of security in a hyper-connected world. Today, we’re diving into the strategic goals of cyber operations, the infamous Moonlight Maze and Stuxnet incidents, and the laws they helped bring into existence. Buckle up—this is where cybersecurity meets history.
@@ -78,14 +89,14 @@ If you enjoy the content, then consider [buying me a coffee.](https://store.cybe
 
 ### Sources
 
-1. Çetinkaya, Şeref, and Sami Terzi. “Analysing The Effects of Cyber Security on National Security From A Realist Perspective: ‘Stuxnet’ Example.” *Turkish Journal of Security Studies / Güvenlik Calışmalari Dergisi*, vol. 26, no. 1, June 2024, pp. 38–51.
+1. Çetinkaya, Şeref, and Sami Terzi. “Analysing The Effects of Cyber Security on National Security From A Realist Perspective: ‘Stuxnet’ Example.” _Turkish Journal of Security Studies / Güvenlik Calışmalari Dergisi_, vol. 26, no. 1, June 2024, pp. 38–51.
 
-2. Marko Arik, et al. “Optimizing Offensive Cyber Operation Planner‘s Development: Exploring Tailored Training Paths and Framework Evolution.” *Frontiers in Computer Science*, vol. 6, June 2024.
+2. Marko Arik, et al. “Optimizing Offensive Cyber Operation Planner‘s Development: Exploring Tailored Training Paths and Framework Evolution.” _Frontiers in Computer Science_, vol. 6, June 2024.
 
-3. Watford, Jeremy. “A New Framework for Cyber Operations: Reevaluating Traditional Military Activities and Intelligence Collection in the Digital Age.” *Journal of National Security Law & Policy*, vol. 14, no. 1, Jan. 2024, pp. 151–77.
+3. Watford, Jeremy. “A New Framework for Cyber Operations: Reevaluating Traditional Military Activities and Intelligence Collection in the Digital Age.” _Journal of National Security Law & Policy_, vol. 14, no. 1, Jan. 2024, pp. 151–77.
 
-4. Sule, Babayo, et al. “Countering Cybercrimes as the Strategy of Enhancing Sustainable Digital Economy in Nigeria.” *Journal of Financial Crime*, vol. 30, no. 6, Dec. 2023, pp. 1557–74.
+4. Sule, Babayo, et al. “Countering Cybercrimes as the Strategy of Enhancing Sustainable Digital Economy in Nigeria.” _Journal of Financial Crime_, vol. 30, no. 6, Dec. 2023, pp. 1557–74.
 
-5. Atkins, Sean, and Chappell Lawson. “An Improvised Patchwork: Success and Failure in Cybersecurity Policy for Critical Infrastructure.” *Public Administration Review*, vol. 81, no. 5, Sept. 2021, pp. 847–61.
+5. Atkins, Sean, and Chappell Lawson. “An Improvised Patchwork: Success and Failure in Cybersecurity Policy for Critical Infrastructure.” _Public Administration Review_, vol. 81, no. 5, Sept. 2021, pp. 847–61.
 
-6. Perols, Rebecca R. “The Impact of the Type of Cybersecurity Assurance Service and Cybersecurity Incidents on Investor Perceptions and Decisions.” *Auditing: A Journal of Practice & Theory*, vol. 43, no. 3, Aug. 2024, pp. 187–202.
+6. Perols, Rebecca R. “The Impact of the Type of Cybersecurity Assurance Service and Cybersecurity Incidents on Investor Perceptions and Decisions.” _Auditing: A Journal of Practice & Theory_, vol. 43, no. 3, Aug. 2024, pp. 187–202.
