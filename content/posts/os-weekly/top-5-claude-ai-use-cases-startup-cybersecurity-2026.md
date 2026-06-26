@@ -19,8 +19,8 @@ categories:
   - Security Engineering
 slug: "claude-ai-use-cases-startup-cybersecurity-2026"
 images:
-    -  /posts/os-weekly/images/sec-ai-1.png
-featured_image:  /posts/os-weekly/images/sec-ai-1.png
+  - /posts/os-weekly/images/sec-ai-1.png
+featured_image: /posts/os-weekly/images/sec-ai-1.png
 ---
 
 The cybersecurity landscape shifted dramatically in 2026. With the launch of [Claude Code Security](https://www.anthropic.com/news/claude-code-security) in February and the subsequent release of [Claude Mythos Preview](https://www.anthropic.com/glasswing) through Project Glasswing, AI-powered security is no longer a luxury reserved for enterprise teams with eight-figure budgets.
@@ -191,11 +191,11 @@ While you're building your security career, put your money to work in real asset
 
 **[Energea](https://www.energea.com/get-started/referral?r=00u6mrl3tb7pT1riI4x7)** gives you direct access to private solar energy markets — the kind of infrastructure investments previously reserved for institutional investors.
 
-| | |
-|---|---|
-| **Total Invested** | $472M |
+|                           |        |
+| ------------------------- | ------ |
+| **Total Invested**        | $472M  |
 | **Realized Return (IRR)** | 12.04% |
-| **Total Capacity** | 584 MW |
+| **Total Capacity**        | 584 MW |
 
 **Why Energea?**
 
@@ -207,7 +207,7 @@ While you're building your security career, put your money to work in real asset
 
 **👉 [Start Investing with Energea →](https://www.energea.com/get-started/referral?r=00u6mrl3tb7pT1riI4x7)**
 
-*Sponsored. Investment involves risk. Past returns do not guarantee future performance.*
+_Sponsored. Investment involves risk. Past returns do not guarantee future performance._
 
 ---
 
@@ -277,7 +277,7 @@ Move quickly. But build in the right controls from day one. The teams that autom
 **Resources to get started:**
 
 - [Claude Code Security](https://www.anthropic.com/news/claude-code-security) — Anthropic's reasoning-based vulnerability scanner
-- [Project Glasswing](https://www.anthropic.com/glasswing) — Anthropic's AI-powered defensive security initiative  
+- [Project Glasswing](https://www.anthropic.com/glasswing) — Anthropic's AI-powered defensive security initiative
 - [Anthropic API Documentation](https://docs.anthropic.com) — For building custom security automation
 - [MITRE ATT&CK Framework](https://attack.mitre.org/) — For structuring threat-informed defense
 - [NIST SP 800-61](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf) — Incident handling guide
@@ -286,4 +286,4 @@ Move quickly. But build in the right controls from day one. The teams that autom
 
 ---
 
-*This post reflects publicly available information as of April 2026. Claude Code Security is currently in limited research preview for Enterprise and Team customers.*
+_This post reflects publicly available information as of April 2026. Claude Code Security is currently in limited research preview for Enterprise and Team customers._

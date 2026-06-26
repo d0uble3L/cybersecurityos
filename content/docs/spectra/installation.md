@@ -14,14 +14,14 @@ SPECTRA runs anywhere Python 3.9+ is available. Three install paths are supporte
 
 ### System Requirements
 
-| Requirement | Minimum |
-|---|---|
-| Python | 3.9+ |
-| pip | 21.0+ |
+| Requirement       | Minimum                                                   |
+| ----------------- | --------------------------------------------------------- |
+| Python            | 3.9+                                                      |
+| pip               | 21.0+                                                     |
 | Anthropic API key | Required ([get one here](https://console.anthropic.com/)) |
-| Operating system | Linux, macOS, Windows (WSL2 recommended) |
-| Memory | 512 MB RAM minimum |
-| Disk | 100 MB for source + dependencies |
+| Operating system  | Linux, macOS, Windows (WSL2 recommended)                  |
+| Memory            | 512 MB RAM minimum                                        |
+| Disk              | 100 MB for source + dependencies                          |
 
 ---
 

@@ -39,31 +39,31 @@ SPECTRA_MAX_TOKENS=4096
 
 ### Required Variables
 
-| Variable | Description |
-|---|---|
+| Variable            | Description                                                                                    |
+| ------------------- | ---------------------------------------------------------------------------------------------- |
 | `ANTHROPIC_API_KEY` | Your Anthropic API key. Obtain one at [console.anthropic.com](https://console.anthropic.com/). |
 
 ---
 
 ### Optional Variables
 
-| Variable | Default | Description |
-|---|---|---|
-| `SPECTRA_MODEL` | `claude-sonnet-4-6` | Claude model to use for analysis. See supported models below. |
-| `SPECTRA_FORMAT` | `markdown` | Default output format: `markdown`, `json`, or `both`. |
-| `SPECTRA_OUTPUT` | `./spectra_report` | Default output path prefix. |
-| `SPECTRA_MAX_TOKENS` | `4096` | Maximum response tokens. Increase for large scans. |
-| `SPECTRA_SCANNER` | _(auto)_ | Force scanner detection: `trivy`, `semgrep`, `generic`. |
+| Variable             | Default             | Description                                                   |
+| -------------------- | ------------------- | ------------------------------------------------------------- |
+| `SPECTRA_MODEL`      | `claude-sonnet-4-6` | Claude model to use for analysis. See supported models below. |
+| `SPECTRA_FORMAT`     | `markdown`          | Default output format: `markdown`, `json`, or `both`.         |
+| `SPECTRA_OUTPUT`     | `./spectra_report`  | Default output path prefix.                                   |
+| `SPECTRA_MAX_TOKENS` | `4096`              | Maximum response tokens. Increase for large scans.            |
+| `SPECTRA_SCANNER`    | _(auto)_            | Force scanner detection: `trivy`, `semgrep`, `generic`.       |
 
 ---
 
 ### Supported Claude Models
 
-| Model | ID | Notes |
-|---|---|---|
-| Claude Sonnet 4.6 (default) | `claude-sonnet-4-6` | Best balance of speed and quality for most analysis workloads |
-| Claude Opus 4.7 | `claude-opus-4-7` | Highest quality — recommended for complex multi-scanner batch runs |
-| Claude Haiku 4.5 | `claude-haiku-4-5-20251001` | Fastest and lowest cost — suitable for high-volume pipeline use |
+| Model                       | ID                          | Notes                                                              |
+| --------------------------- | --------------------------- | ------------------------------------------------------------------ |
+| Claude Sonnet 4.6 (default) | `claude-sonnet-4-6`         | Best balance of speed and quality for most analysis workloads      |
+| Claude Opus 4.7             | `claude-opus-4-7`           | Highest quality — recommended for complex multi-scanner batch runs |
+| Claude Haiku 4.5            | `claude-haiku-4-5-20251001` | Fastest and lowest cost — suitable for high-volume pipeline use    |
 
 Override the model per-run with the `--model` flag:
 

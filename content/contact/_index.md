@@ -1,10 +1,9 @@
 ---
 title: Contact
-featured_image: ''
+featured_image: ""
 omit_header_text: true
-description: ''
+description: ""
 type: page
-
 ---
 
 ## I'd love to hear from you

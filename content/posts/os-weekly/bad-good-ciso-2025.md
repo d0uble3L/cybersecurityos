@@ -3,15 +3,15 @@ title: "Good CISO vs. Bad CISO: The Hidden Mindsets That Make or Break Security 
 description: "The difference between a good and bad CISO isn’t tools or budget—it’s mindset, systems, and strategy. Learn the mental models every security leader should master."
 date: 2025-09-28
 author: "Michael Tayo"
-tags: ["CISO", "security leadership", "CISO mindset", "Cybersecurity","CybersecurityOS"]
+tags: ["CISO", "security leadership", "CISO mindset", "Cybersecurity", "CybersecurityOS"]
 categories: ["Leadership", "Frameworks"]
 images:
-    -  /posts/os-weekly/images/good-ciso-bad-ciso-25.png
+  - /posts/os-weekly/images/good-ciso-bad-ciso-25.png
 featured_image: /posts/os-weekly/images/good-ciso-bad-ciso-25.png
 draft: false
 ---
 
-Inspired by [Phil Venables’ *Good CISO / Bad CISO* framework](https://www.philvenables.com/post/good-ciso---bad-ciso), this piece explores the mental models that distinguish effective security leaders from those trapped in reactive cycles.
+Inspired by [Phil Venables’ _Good CISO / Bad CISO_ framework](https://www.philvenables.com/post/good-ciso---bad-ciso), this piece explores the mental models that distinguish effective security leaders from those trapped in reactive cycles.
 
 I’ve spent the past decade working across cloud, application, and enterprise security. I currently serve as an Information Security Lead and Deputy CISO.
 
@@ -29,10 +29,10 @@ What stands out in Venables’ framework is that many “bad” CISO traits don�
 
 ### Sponsored By
 
-💡 Power your growth with the tools I personally use:  
+💡 Power your growth with the tools I personally use:
 
-- 🚀 [Hypefury](https://hypefury.com/?via=trilltayo) — The ultimate tool for growing your audience and automating Twitter threads that actually go viral.  
-- 🎨 [Carrd](https://try.carrd.co/trilltayo) — Build beautiful, responsive landing pages in minutes. Perfect for portfolios, waitlists, and personal branding.  
+- 🚀 [Hypefury](https://hypefury.com/?via=trilltayo) — The ultimate tool for growing your audience and automating Twitter threads that actually go viral.
+- 🎨 [Carrd](https://try.carrd.co/trilltayo) — Build beautiful, responsive landing pages in minutes. Perfect for portfolios, waitlists, and personal branding.
 
 ---
 
@@ -42,12 +42,12 @@ What stands out in Venables’ framework is that many “bad” CISO traits don�
 
 ### Flywheel vs. Fire Station
 
-- A good CISO builds compounding systems (think AWS’s “security is everyone’s job” model).  
+- A good CISO builds compounding systems (think AWS’s “security is everyone’s job” model).
 - A bad one runs from incident to incident, counting tickets.
 
 ### Leverage vs. Force
 
-- The best CISOs scale through automation, influence, and culture.  
+- The best CISOs scale through automation, influence, and culture.
 - The worst rely on brute force and more tools.
 
 ### Hazard + Outrage
@@ -56,8 +56,9 @@ Risk isn’t just technical—it’s how stakeholders feel about it. Ignoring pe
 
 ## Executive Level (Vision & Accountability)
 
-- **Action Item:** Frame board updates around business resilience and trust capital, not just vulnerabilities patched.  
-  - *Example:* “Our phishing resilience improved by 30%—which directly reduces potential fraud losses by $XM.”
+- **Action Item:** Frame board updates around business resilience and trust capital, not just vulnerabilities patched.
+
+  - _Example:_ “Our phishing resilience improved by 30%—which directly reduces potential fraud losses by $XM.”
 
 - **Action Item:** Teach boards meta-questions—e.g., “What assumptions are we making about our cloud dependencies?”
 
@@ -81,7 +82,7 @@ So the thought I’ll leave the room with: **What systems can we design so that 
 
 ---
 
-*For the original framework by Phil Venables, see [Good CISO / Bad CISO](https://www.philvenables.com/post/good-ciso---bad-ciso).*
+_For the original framework by Phil Venables, see [Good CISO / Bad CISO](https://www.philvenables.com/post/good-ciso---bad-ciso)._
 
 ---
 
