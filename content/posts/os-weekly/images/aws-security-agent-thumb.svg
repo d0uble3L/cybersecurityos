@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050c1a"/>
+      <stop offset="100%" stop-color="#0c1f3a"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#0e2440" stroke-width="0.7"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <rect width="800" height="420" fill="url(#grid)"/>
+
+  <!-- Top accent -->
+  <rect x="0" y="0" width="800" height="4" fill="#00c9e0"/>
+
+  <!-- Left bar -->
+  <rect x="52" y="62" width="4" height="248" rx="2" fill="#00c9e0"/>
+
+  <!-- OS-WEEKLY chip -->
+  <rect x="72" y="62" width="106" height="22" rx="11" fill="#061e38" stroke="#00c9e0" stroke-width="1"/>
+  <text x="125" y="77" text-anchor="middle" font-size="9.5" fill="#00c9e0" letter-spacing="2" font-weight="600">OS-WEEKLY</text>
+  <text x="188" y="77" font-size="9.5" fill="#3d6b8c" letter-spacing="1">JUN 25, 2026</text>
+
+  <!-- Title -->
+  <text x="72" y="142" font-size="34" font-weight="800" fill="#e8f4ff" letter-spacing="-1">AWS Security</text>
+  <text x="72" y="182" font-size="34" font-weight="800" fill="#00c9e0" letter-spacing="-1">Agent</text>
+
+  <!-- Divider -->
+  <rect x="72" y="200" width="280" height="2" rx="1" fill="#1a3a5a"/>
+
+  <!-- Subtitle -->
+  <text x="72" y="228" font-size="14.5" fill="#7aaece">Continuous AppSec, design to deploy</text>
+
+  <!-- Tags -->
+  <rect x="72" y="250" width="100" height="22" rx="11" fill="#051828" stroke="#00c9e0" stroke-width="1"/>
+  <text x="122" y="265" text-anchor="middle" font-size="10" fill="#00c9e0">Pentesting</text>
+
+  <rect x="180" y="250" width="100" height="22" rx="11" fill="#051828" stroke="#f59e0b" stroke-width="1"/>
+  <text x="230" y="265" text-anchor="middle" font-size="10" fill="#f59e0b">Threat Models</text>
+
+  <!-- Branding -->
+  <text x="72" y="388" font-size="11" fill="#1e3d56" letter-spacing="2.5">CYBERSECURITYOS.NET</text>
+
+  <!-- Right: capability cards -->
+  <rect x="480" y="64" width="248" height="68" rx="7" fill="#071528" stroke="#00c9e0" stroke-width="1"/>
+  <rect x="480" y="64" width="4" height="68" fill="#00c9e0"/>
+  <text x="494" y="82" font-size="8" fill="#00c9e0" letter-spacing="1" font-weight="700">ON-DEMAND · 24/7</text>
+  <text x="494" y="100" font-size="12.5" fill="#f0f6ff" font-weight="600">Autonomous Pentesting</text>
+  <text x="494" y="118" font-size="9.5" fill="#5a8aa8">Weeks of testing compressed to hours</text>
+
+  <rect x="480" y="142" width="248" height="68" rx="7" fill="#071528" stroke="#10b981" stroke-width="1"/>
+  <rect x="480" y="142" width="4" height="68" fill="#10b981"/>
+  <text x="494" y="160" font-size="8" fill="#10b981" letter-spacing="1" font-weight="700">PROOF-BASED FINDINGS</text>
+  <text x="494" y="178" font-size="12.5" fill="#f0f6ff" font-weight="600">Validated Exploit Paths</text>
+  <text x="494" y="196" font-size="9.5" fill="#5a8aa8">Auto-PRs with ready-to-implement fixes</text>
+
+  <rect x="480" y="220" width="248" height="68" rx="7" fill="#071528" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="480" y="220" width="4" height="68" fill="#3b82f6"/>
+  <text x="494" y="238" font-size="8" fill="#3b82f6" letter-spacing="1" font-weight="700">EVERY PR · EVERY REPO</text>
+  <text x="494" y="256" font-size="12.5" fill="#f0f6ff" font-weight="600">Continuous Validation</text>
+  <text x="494" y="274" font-size="9.5" fill="#5a8aa8">Inline review comments at dev velocity</text>
+
+  <rect x="480" y="298" width="248" height="68" rx="7" fill="#031410" stroke="#f59e0b" stroke-width="1"/>
+  <text x="494" y="317" font-size="8" fill="#f7b955" letter-spacing="1.2">DESIGN-PHASE COVERAGE</text>
+  <text x="494" y="335" font-size="12" fill="#f0f6ff" font-weight="600">STRIDE Threat Modeling</text>
+  <text x="494" y="353" font-size="9.5" fill="#4a7fa0">Trust boundaries mapped before code</text>
+</svg>
