@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050c1a"/>
+      <stop offset="100%" stop-color="#0c1f3a"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#0e2440" stroke-width="0.7"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <rect width="800" height="420" fill="url(#grid)"/>
+
+  <!-- Top accent -->
+  <rect x="0" y="0" width="800" height="4" fill="#00c9e0"/>
+
+  <!-- Left bar -->
+  <rect x="52" y="56" width="4" height="254" rx="2" fill="#00c9e0"/>
+
+  <!-- OS-WEEKLY chip -->
+  <rect x="72" y="56" width="106" height="22" rx="11" fill="#061e38" stroke="#00c9e0" stroke-width="1"/>
+  <text x="125" y="71" text-anchor="middle" font-size="9.5" fill="#00c9e0" letter-spacing="2" font-weight="600">OS-WEEKLY</text>
+  <text x="188" y="71" font-size="9.5" fill="#3d6b8c" letter-spacing="1">JUN 28, 2026</text>
+
+  <!-- Title -->
+  <text x="72" y="128" font-size="27" font-weight="800" fill="#e8f4ff" letter-spacing="-1">Access Brokers,</text>
+  <text x="72" y="166" font-size="27" font-weight="800" fill="#e8f4ff" letter-spacing="-1">Stolen Tokens &amp;</text>
+  <text x="72" y="204" font-size="27" font-weight="800" fill="#00c9e0" letter-spacing="-1">the Human Factor</text>
+
+  <!-- Divider -->
+  <rect x="72" y="222" width="280" height="2" rx="1" fill="#1a3a5a"/>
+
+  <!-- Subtitle -->
+  <text x="72" y="250" font-size="14.5" fill="#7aaece">Where most breaches still start and stop</text>
+
+  <!-- Tags -->
+  <rect x="72" y="272" width="98" height="22" rx="11" fill="#051828" stroke="#f59e0b" stroke-width="1"/>
+  <text x="121" y="287" text-anchor="middle" font-size="10" fill="#f59e0b">Ransomware</text>
+
+  <rect x="178" y="272" width="100" height="22" rx="11" fill="#051828" stroke="#ef4444" stroke-width="1"/>
+  <text x="228" y="287" text-anchor="middle" font-size="10" fill="#ef4444">OAuth Breach</text>
+
+  <!-- Branding -->
+  <text x="72" y="388" font-size="11" fill="#1e3d56" letter-spacing="2.5">CYBERSECURITYOS.NET</text>
+
+  <!-- Right: alert cards -->
+  <rect x="480" y="62" width="248" height="68" rx="7" fill="#071528" stroke="#f59e0b" stroke-width="1"/>
+  <rect x="480" y="62" width="4" height="68" fill="#f59e0b"/>
+  <text x="494" y="80" font-size="8" fill="#f59e0b" letter-spacing="1" font-weight="700">ACCESS BROKER</text>
+  <text x="494" y="98" font-size="12.5" fill="#f0f6ff" font-weight="600">Mistic Backdoor / KongTuke</text>
+  <text x="494" y="116" font-size="9.5" fill="#5a8aa8">Foothold sold on to ransomware crews</text>
+
+  <rect x="480" y="140" width="248" height="68" rx="7" fill="#071528" stroke="#ef4444" stroke-width="1"/>
+  <rect x="480" y="140" width="4" height="68" fill="#ef4444"/>
+  <text x="494" y="158" font-size="8" fill="#ef4444" letter-spacing="1" font-weight="700">SCOPE WIDENS</text>
+  <text x="494" y="176" font-size="12.5" fill="#f0f6ff" font-weight="600">Salesforce / Icarus Breach</text>
+  <text x="494" y="194" font-size="9.5" fill="#5a8aa8">Stolen OAuth tokens drive data exfiltration</text>
+
+  <rect x="480" y="218" width="248" height="68" rx="7" fill="#071528" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="480" y="218" width="4" height="68" fill="#3b82f6"/>
+  <text x="494" y="236" font-size="8" fill="#3b82f6" letter-spacing="1" font-weight="700">GUILTY PLEA</text>
+  <text x="494" y="254" font-size="12.5" fill="#f0f6ff" font-weight="600">Scattered Spider Pleads Guilty</text>
+  <text x="494" y="272" font-size="9.5" fill="#5a8aa8">TfL hacking trial cut short on day one</text>
+
+  <rect x="480" y="296" width="248" height="68" rx="7" fill="#031410" stroke="#10b981" stroke-width="1"/>
+  <text x="494" y="315" font-size="8" fill="#6ee7b7" letter-spacing="1.2">THE HUMAN FACTOR</text>
+  <text x="494" y="333" font-size="12" fill="#f0f6ff" font-weight="600">Talos &amp; AI Chatbot Trust</text>
+  <text x="494" y="351" font-size="9.5" fill="#4a7fa0">Why policy breaks down under pressure</text>
+</svg>
