@@ -24,9 +24,9 @@
   <text x="188" y="71" font-size="9.5" fill="#3d6b8c" letter-spacing="1">JUN 28, 2026</text>
 
   <!-- Title -->
-  <text x="72" y="128" font-size="30" font-weight="800" fill="#e8f4ff" letter-spacing="-1">New Ransomware,</text>
-  <text x="72" y="166" font-size="30" font-weight="800" fill="#e8f4ff" letter-spacing="-1">Stolen Tokens &amp;</text>
-  <text x="72" y="204" font-size="30" font-weight="800" fill="#00c9e0" letter-spacing="-1">the Human Factor</text>
+  <text x="72" y="128" font-size="27" font-weight="800" fill="#e8f4ff" letter-spacing="-1">Access Brokers,</text>
+  <text x="72" y="166" font-size="27" font-weight="800" fill="#e8f4ff" letter-spacing="-1">Stolen Tokens &amp;</text>
+  <text x="72" y="204" font-size="27" font-weight="800" fill="#00c9e0" letter-spacing="-1">the Human Factor</text>
 
   <!-- Divider -->
   <rect x="72" y="222" width="280" height="2" rx="1" fill="#1a3a5a"/>
@@ -47,9 +47,9 @@
   <!-- Right: alert cards -->
   <rect x="480" y="62" width="248" height="68" rx="7" fill="#071528" stroke="#f59e0b" stroke-width="1"/>
   <rect x="480" y="62" width="4" height="68" fill="#f59e0b"/>
-  <text x="494" y="80" font-size="8" fill="#f59e0b" letter-spacing="1" font-weight="700">TARGETS RECENT FILES</text>
-  <text x="494" y="98" font-size="12.5" fill="#f0f6ff" font-weight="600">Prinz Eugen Ransomware</text>
-  <text x="494" y="116" font-size="9.5" fill="#5a8aa8">Plus Mistic backdoor / KongTuke broker</text>
+  <text x="494" y="80" font-size="8" fill="#f59e0b" letter-spacing="1" font-weight="700">ACCESS BROKER</text>
+  <text x="494" y="98" font-size="12.5" fill="#f0f6ff" font-weight="600">Mistic Backdoor / KongTuke</text>
+  <text x="494" y="116" font-size="9.5" fill="#5a8aa8">Foothold sold on to ransomware crews</text>
 
   <rect x="480" y="140" width="248" height="68" rx="7" fill="#071528" stroke="#ef4444" stroke-width="1"/>
   <rect x="480" y="140" width="4" height="68" fill="#ef4444"/>
@@ -59,12 +59,12 @@
 
   <rect x="480" y="218" width="248" height="68" rx="7" fill="#071528" stroke="#3b82f6" stroke-width="1"/>
   <rect x="480" y="218" width="4" height="68" fill="#3b82f6"/>
-  <text x="494" y="236" font-size="8" fill="#3b82f6" letter-spacing="1" font-weight="700">~100K SITES</text>
-  <text x="494" y="254" font-size="12.5" fill="#f0f6ff" font-weight="600">Gravity SMTP Plugin Flaw</text>
-  <text x="494" y="272" font-size="9.5" fill="#5a8aa8">Plus Popa botnet tied to a NASDAQ firm</text>
+  <text x="494" y="236" font-size="8" fill="#3b82f6" letter-spacing="1" font-weight="700">GUILTY PLEA</text>
+  <text x="494" y="254" font-size="12.5" fill="#f0f6ff" font-weight="600">Scattered Spider Pleads Guilty</text>
+  <text x="494" y="272" font-size="9.5" fill="#5a8aa8">TfL hacking trial cut short on day one</text>
 
   <rect x="480" y="296" width="248" height="68" rx="7" fill="#031410" stroke="#10b981" stroke-width="1"/>
   <text x="494" y="315" font-size="8" fill="#6ee7b7" letter-spacing="1.2">THE HUMAN FACTOR</text>
-  <text x="494" y="333" font-size="12" fill="#f0f6ff" font-weight="600">Phishing Tests &amp; AI Trust</text>
+  <text x="494" y="333" font-size="12" fill="#f0f6ff" font-weight="600">Talos &amp; AI Chatbot Trust</text>
   <text x="494" y="351" font-size="9.5" fill="#4a7fa0">Why policy breaks down under pressure</text>
 </svg>
