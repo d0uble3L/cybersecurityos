@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050c1a"/>
+      <stop offset="100%" stop-color="#0c1f3a"/>
+    </linearGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#0e2440" stroke-width="0.8"/>
+    </pattern>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0c2040"/>
+      <stop offset="100%" stop-color="#071428"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Glow -->
+  <ellipse cx="300" cy="315" rx="400" ry="300" fill="#ef4444" opacity="0.02"/>
+
+  <!-- Top border — red accent for threat-intel tone -->
+  <rect x="0" y="0" width="1200" height="4" fill="#ef4444"/>
+
+  <!-- Left vertical accent -->
+  <rect x="82" y="108" width="4" height="402" rx="2" fill="#ef4444"/>
+
+  <!-- Category label -->
+  <rect x="106" y="108" width="168" height="24" rx="12" fill="#1a0a0a" stroke="#ef4444" stroke-width="1"/>
+  <text x="190" y="124" text-anchor="middle" font-size="10" fill="#ef4444" letter-spacing="2" font-weight="600">THREAT INTELLIGENCE</text>
+  <text x="284" y="124" font-size="11" fill="#3d6b8c" letter-spacing="1">JULY 4, 2026</text>
+
+  <!-- Title -->
+  <text x="106" y="198" font-size="34" font-weight="800" fill="#e8f4ff" letter-spacing="-0.5">Scattered Spider's Playbook</text>
+  <text x="106" y="244" font-size="34" font-weight="800" fill="#e8f4ff" letter-spacing="-0.5">Is Simple. Your Defense</text>
+  <text x="106" y="290" font-size="34" font-weight="800" fill="#ef4444" letter-spacing="-0.5">Needs to Be Simpler.</text>
+
+  <!-- Divider -->
+  <rect x="106" y="314" width="440" height="2" rx="1" fill="#2a1a1a"/>
+
+  <!-- Subtitle -->
+  <text x="106" y="346" font-size="17" fill="#9ab0c8" letter-spacing="0.2">£29M lost. 10M records exposed. One phone call.</text>
+
+  <!-- Stat chips -->
+  <rect x="106" y="372" width="130" height="28" rx="14" fill="#1a0a0a" stroke="#ef4444" stroke-width="1"/>
+  <text x="171" y="390" text-anchor="middle" font-size="11" fill="#ef4444" letter-spacing="0.3">Social Engineering</text>
+
+  <rect x="244" y="372" width="96" height="28" rx="14" fill="#051828" stroke="#f59e0b" stroke-width="1"/>
+  <text x="292" y="390" text-anchor="middle" font-size="11" fill="#f59e0b" letter-spacing="0.3">Help Desk</text>
+
+  <rect x="348" y="372" width="84" height="28" rx="14" fill="#051828" stroke="#10b981" stroke-width="1"/>
+  <text x="390" y="390" text-anchor="middle" font-size="11" fill="#10b981" letter-spacing="0.3">FIDO2 / MFA</text>
+
+  <!-- Branding -->
+  <text x="106" y="572" font-size="12" fill="#2a5678" letter-spacing="3">CYBERSECURITYOS.NET</text>
+  <text x="106" y="591" font-size="11" fill="#1e3d56">Deputy CISO Perspective · Security Leadership</text>
+
+  <!-- RIGHT: Attack chain dashboard -->
+  <rect x="690" y="72" width="462" height="506" rx="14" fill="url(#cardBg)" stroke="#1f0d0d" stroke-width="1.5"/>
+
+  <!-- Dashboard header -->
+  <rect x="690" y="72" width="462" height="50" rx="14" fill="#0a0a1a"/>
+  <rect x="690" y="108" width="462" height="14" fill="#0a0a1a"/>
+  <circle cx="718" cy="97" r="6" fill="#ef4444" opacity="0.7"/>
+  <circle cx="738" cy="97" r="6" fill="#f59e0b" opacity="0.6"/>
+  <circle cx="758" cy="97" r="6" fill="#10b981" opacity="0.6"/>
+  <text x="921" y="102" text-anchor="middle" font-size="10" fill="#3d3d5c" letter-spacing="1.5">THE SCATTERED SPIDER PLAYBOOK</text>
+
+  <!-- Attack Step 1 -->
+  <rect x="710" y="138" width="422" height="82" rx="7" fill="#0d0a1a" stroke="#f59e0b" stroke-width="1"/>
+  <rect x="710" y="138" width="4" height="82" fill="#f59e0b"/>
+  <text x="726" y="159" font-size="9" fill="#f59e0b" letter-spacing="1.2" font-weight="700">STEP 1 · OSINT</text>
+  <text x="726" y="179" font-size="14" fill="#e8f4ff" font-weight="600">LinkedIn → Impersonation</text>
+  <text x="726" y="199" font-size="10.5" fill="#5a7a8a">Build a convincing employee persona from public data</text>
+  <text x="726" y="213" font-size="10.5" fill="#5a7a8a">before picking up the phone</text>
+
+  <!-- Attack Step 2 -->
+  <rect x="710" y="230" width="422" height="82" rx="7" fill="#1a0505" stroke="#ef4444" stroke-width="1"/>
+  <rect x="710" y="230" width="4" height="82" fill="#ef4444"/>
+  <text x="726" y="251" font-size="9" fill="#ef4444" letter-spacing="1.2" font-weight="700">STEP 2 · HELP DESK CALL</text>
+  <text x="726" y="271" font-size="14" fill="#e8f4ff" font-weight="600">Password + MFA Device Reset</text>
+  <text x="726" y="291" font-size="10.5" fill="#5a7a8a">One 10-minute call. One help desk agent. Full access.</text>
+  <text x="726" y="305" font-size="10.5" fill="#5a7a8a">MGM: LinkedIn → call → $100M in losses</text>
+
+  <!-- Attack Step 3 -->
+  <rect x="710" y="322" width="422" height="82" rx="7" fill="#0d0a1a" stroke="#8b5cf6" stroke-width="1"/>
+  <rect x="710" y="322" width="4" height="82" fill="#8b5cf6"/>
+  <text x="726" y="343" font-size="9" fill="#8b5cf6" letter-spacing="1.2" font-weight="700">STEP 3 · MFA BYPASS</text>
+  <text x="726" y="363" font-size="14" fill="#e8f4ff" font-weight="600">SIM Swap · Push Bombing</text>
+  <text x="726" y="383" font-size="10.5" fill="#5a7a8a">TfL: SIM swap via Telegram "Star Chat" channel</text>
+  <text x="726" y="397" font-size="10.5" fill="#5a7a8a">intercepted employee MFA codes in transit</text>
+
+  <!-- Defense footer -->
+  <rect x="710" y="414" width="422" height="146" rx="7" fill="#031410"/>
+  <text x="722" y="436" font-size="9" fill="#10b981" letter-spacing="1.5" font-weight="700">THE DEFENSIVE ANSWER</text>
+  <rect x="722" y="445" width="390" height="1" fill="#0d2d24"/>
+  <text x="726" y="465" font-size="11" fill="#6ee7b7">✓  Phishing-resistant MFA (FIDO2/WebAuthn)</text>
+  <text x="726" y="484" font-size="11" fill="#6ee7b7">✓  Callback verification before credential resets</text>
+  <text x="726" y="503" font-size="11" fill="#6ee7b7">✓  Separate password reset from MFA registration</text>
+  <text x="726" y="522" font-size="11" fill="#6ee7b7">✓  Quarterly vishing exercises on your help desk</text>
+  <text x="726" y="545" font-size="9.5" fill="#2a5c4a">CISA + FBI Joint Advisory AA23-320A (updated July 2025)</text>
+</svg>
