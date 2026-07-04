@@ -11,8 +11,20 @@
     {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
     {{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
     {{ $public := not .Params.private }}
-    {{ if and $production $public }}
+    {{/* Noindex thin taxonomy pages: all /tags/ and /social/ pages, and /categories/ with < 3 posts */}}
+    {{- $noindex := false }}
+    {{- if in (slice "taxonomy" "term") .Kind }}
+      {{- $taxPlural := .Data.Plural | default "" }}
+      {{- if or (eq $taxPlural "tags") (eq $taxPlural "social") }}
+        {{- $noindex = true }}
+      {{- else if and (eq $taxPlural "categories") (lt (len .Pages) 3) }}
+        {{- $noindex = true }}
+      {{- end }}
+    {{- end }}
+    {{ if and $production $public (not $noindex) }}
       <meta name="robots" content="index, follow">
+    {{ else if $noindex }}
+      <meta name="robots" content="noindex, follow">
     {{ else }}
       <meta name="robots" content="noindex, nofollow">
     {{ end }}

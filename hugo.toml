@@ -2,6 +2,7 @@ baseURL = "https://cybersecurityos.net"
 languageCode = "en-us"
 title = "CybersecurityOS"
 theme = "ananke"
+enableGitInfo = true
 
 # SEO Metadata
 description = "Weekly security intelligence, mental models, and leadership frameworks for security engineers, CISOs, and the next generation of cyber leaders — written by a practicing Deputy CISO."
@@ -11,10 +12,6 @@ author = "Michael Tayo"
 # [services.googleAnalytics]
 #   id = "G-XXXXXXXXXX"
 
-# Permalinks
-[permalinks]
-  post = "/blog/:year/:month/:day/:slug/"  # Customize the permalink structure for blog posts
-
 # Taxonomies: add social taxonomy to address deprecation of .Site.Social
 [taxonomies]
   tag = "tags"
@@ -23,8 +20,9 @@ author = "Michael Tayo"
 
 # Params (Optional: Adjust as needed based on your theme)
 [params]
+  env = "production"
   favicon = "images/c-os-l.svg"   # Path to your favicon
-  site_logo = "images/c-os.svg" 
+  site_logo = "images/c-os.svg"
   showSocialLinks = true        # Show social links in the footer (if supported by the theme)
   paginate = 20
   rss = "index.xml" #rss
