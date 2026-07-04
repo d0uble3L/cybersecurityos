@@ -1,0 +1,29 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {{- range .Data.Pages }}
+  {{- /*
+    Exclude /tags/, /social/, and all their term pages — these are thin listing
+    pages (most have 1-2 posts) that waste crawl budget. Category pages with
+    fewer than 3 posts are also excluded. Everything else (posts, sections,
+    docs, home) is included with differentiated priority.
+  */ -}}
+  {{- $taxPlural := "" }}
+  {{- if in (slice "taxonomy" "term") .Kind }}
+    {{- $taxPlural = .Data.Plural | default "" }}
+  {{- end }}
+  {{- $skip := false }}
+  {{- if eq $taxPlural "tags" }}{{- $skip = true }}{{- end }}
+  {{- if eq $taxPlural "social" }}{{- $skip = true }}{{- end }}
+  {{- if and (eq $taxPlural "categories") (lt (len .Pages) 3) }}{{- $skip = true }}{{- end }}
+  {{- if not $skip }}
+  <url>
+    <loc>{{ .Permalink }}</loc>
+    {{- if not .Lastmod.IsZero }}
+    <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05+00:00" | safeHTML }}</lastmod>
+    {{- end }}
+    <changefreq>{{ if .IsHome }}daily{{ else if eq .Kind "page" }}weekly{{ else }}monthly{{ end }}</changefreq>
+    <priority>{{ if .IsHome }}1.0{{ else if eq .Kind "page" }}0.8{{ else if eq .Kind "section" }}0.5{{ else }}0.4{{ end }}</priority>
+  </url>
+  {{- end }}
+  {{- end }}
+</urlset>
