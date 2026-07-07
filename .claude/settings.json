@@ -1,0 +1,14 @@
+{
+  "extraKnownMarketplaces": {
+    "claude-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "d0uble3L/claude-plugins"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "content-ops@claude-plugins": true,
+    "dev-workflow@claude-plugins": true
+  }
+}
