@@ -1,14 +1,14 @@
 {
+  "enabledPlugins": {
+    "content-ops@d0uble3l-plugins": true,
+    "dev-workflow@d0uble3l-plugins": true
+  },
   "extraKnownMarketplaces": {
-    "claude-plugins": {
+    "d0uble3l-plugins": {
       "source": {
         "source": "github",
         "repo": "d0uble3L/claude-plugins"
       }
     }
-  },
-  "enabledPlugins": {
-    "content-ops@claude-plugins": true,
-    "dev-workflow@claude-plugins": true
   }
 }
