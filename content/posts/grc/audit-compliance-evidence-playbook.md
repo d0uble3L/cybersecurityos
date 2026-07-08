@@ -6,6 +6,18 @@ description: "A comprehensive operational playbook for organizations to prepare 
 categories: ["GRC and Compliance", "Security Operations"]
 tags: ["audit-readiness", "compliance", "evidence-management", "slo", "governance", "grc"]
 author: "Cybersecurity OS"
+keywords: "audit readiness operational playbook, compliance evidence management security, security audit preparation SLO, RACI audit governance, SOC 2 ISO 27001 audit calendar, continuous compliance monitoring, evidence repository security audit"
+faq:
+  - q: "What is continuous audit readiness and how does it differ from periodic audit preparation?"
+    a: "Continuous audit readiness embeds audit preparation into daily operational practices so that when an audit arrives, evidence is already current, controls are already tested, and documentation is already complete. Periodic preparation treats audits as discrete events requiring a last-minute scramble — a model that produces stressful reviews, incomplete evidence packs, and lower audit scores than organizations with mature continuous-readiness practices."
+  - q: "What should a centralized compliance evidence repository contain?"
+    a: "Policy and procedure documentation with version history, system architecture and design documents, change logs, access control lists and user provisioning records, security training records, incident response logs and post-mortems, vulnerability scan results with remediation tracking, and backup and disaster recovery test results. Together these constitute the audit evidence package for most major compliance frameworks."
+  - q: "What is an audit calendar and why does every organization need one?"
+    a: "An audit calendar documents all audit types — regulatory, customer, internal, third-party — along with their frequencies, scopes, and deadlines for the next 12–24 months. It enables proactive resource allocation, prevents scheduling conflicts between simultaneous audit periods, and ensures evidence collection is spread across the year rather than concentrated in a pre-audit panic that compromises quality."
+  - q: "What does a RACI model for audit governance look like?"
+    a: "The Audit Lead owns overall preparation and coordination. Technical Leads ensure technical evidence is audit-ready. The Compliance Officer manages regulatory relationships and reporting. Cross-Functional Representatives from engineering, operations, security, and legal ensure all areas are engaged and can provide evidence on request. The RACI makes accountability explicit and prevents the assumption that someone else will handle evidence collection."
+  - q: "What are SLOs for audit reporting and how do you establish them?"
+    a: "Audit reporting SLOs define how quickly specific evidence types must be produced on auditor request — for example, access logs within four hours, policy documentation within 24 hours, and vendor contracts within 48 hours. Establishing SLOs creates internal accountability, enables realistic commitments to auditors, and surfaces bottlenecks in evidence collection before they become audit findings that affect the final report."
 ---
 
 Security audits are inevitable for most organizations, whether driven by regulatory requirements, customer mandates, or internal governance.

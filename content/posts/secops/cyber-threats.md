@@ -16,6 +16,19 @@ tags:
   ]
 title: "Breaking Down Cyber Threats: Malware, Attacks, and How to Fight Back"
 categories: ["Threat Intelligence"]
+author: "Michael Tayo"
+keywords: "malware types cybersecurity, DDoS attack botnet defense, Trojan horse threat vector, virus hoax social engineering, WannaCry ransomware worm, NotPetya blended threat supply chain, Mirai botnet IoT DDoS, cyber threat landscape defense strategies"
+faq:
+  - q: "What is the difference between a virus, a worm, and ransomware?"
+    a: "A virus attaches to legitimate files and spreads when those files are executed, corrupting or deleting data. A worm spreads independently across networks without needing a host file — WannaCry is a worm that encrypted files worldwide and demanded ransom. Ransomware encrypts victim data and extorts payment for decryption keys. All three are forms of malicious code but spread and cause harm through different mechanisms."
+  - q: "What are DDoS attacks and how are they used by attackers?"
+    a: "Distributed Denial-of-Service attacks use botnets — networks of compromised devices — to flood a target with traffic, overwhelming it and causing service outages. Attackers use DDoS for extortion, political disruption, or as a smokescreen for deeper intrusions happening while defenders focus on the flood. The Mirai botnet in 2016 weaponized compromised IoT devices to take down Twitter, Netflix, and major DNS providers simultaneously."
+  - q: "What is a blended threat and why is NotPetya the defining example?"
+    a: "A blended threat combines multiple attack techniques — malware, phishing, and network exploits — to maximize damage and evade defenses designed for single-vector attacks. NotPetya spread through a compromised software update (supply chain), deployed ransomware and wiper malware simultaneously, and used stolen credentials and EternalBlue to propagate across networks — crippling global supply chains because each defensive layer was defeated by a different component."
+  - q: "What is a virus hoax and why is it a security problem?"
+    a: "A virus hoax is misinformation about a nonexistent threat — like the Good Times hoax that falsely claimed opening an email would destroy a hard drive. Hoaxes spread through email and social media, consuming IT resources responding to fictional incidents, causing unnecessary panic, and sometimes prompting users to take actions that genuinely harm their systems. They exploit the same social engineering mechanisms as real phishing campaigns."
+  - q: "What are the most effective defenses against malware and blended threats?"
+    a: "Defense-in-depth: network segmentation to limit lateral movement, up-to-date endpoint protection with behavioral detection, prompt patching of known vulnerabilities, regular backups isolated from network access, and user education on phishing and social engineering. The Mirai and NotPetya attacks both exploited predictable, preventable weaknesses — default IoT credentials and an unpatched SMB vulnerability — that basic hygiene would have mitigated."
 ---
 
 ## The Threat of Viruses, Malicious Code, and Virus Hoaxes

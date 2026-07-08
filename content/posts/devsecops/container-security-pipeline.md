@@ -7,6 +7,19 @@ description: "Learn how to set up a secure CI/CD pipeline to deploy container im
 images:
   - /posts/devsecops/images/devsecops-trivy.webp
 featured_image: "/posts/devsecops/images/devsecops-trivy.webp"
+author: "Michael Tayo"
+keywords: "DevSecOps container security pipeline GitHub Actions, Amazon ECR deployment security, Trivy vulnerability scanner Docker, secure CI/CD container pipeline, Docker image vulnerability scan gate, container security automation workflow"
+faq:
+  - q: "What is Trivy and why is it used for container security scanning?"
+    a: "Trivy is an open-source vulnerability scanner from Aqua Security that detects known CVEs in container images, OS packages, language-specific packages, and application dependencies. It integrates natively with GitHub Actions, making it straightforward to add vulnerability scanning as a mandatory CI/CD gate that blocks container images containing critical vulnerabilities from reaching a registry."
+  - q: "How does a GitHub Actions workflow enforce container security before pushing to Amazon ECR?"
+    a: "The workflow checks out the repository, configures AWS credentials for ECR access, builds the Docker image, runs Trivy to scan for vulnerabilities, and pushes to ECR only if the scan passes. The security gate in the scan step means containers with critical or high-severity CVEs never reach the registry — vulnerability remediation must happen before the image can be pushed."
+  - q: "What is Amazon ECR and why is it used as a container registry?"
+    a: "Amazon Elastic Container Registry is AWS's managed container image registry providing secure storage and version control for Docker images with native IAM integration. Using ECR centralizes container artifact management, enforces access controls on who can push and pull images, and integrates with AWS security services for ongoing container vulnerability scanning after the initial pipeline push."
+  - q: "What does security baked in rather than bolted on mean in a DevSecOps pipeline?"
+    a: "Security baked in means vulnerability scanning, secrets detection, and compliance checks run automatically as mandatory pipeline steps rather than as optional post-deployment reviews. When security gates block a build, developers get immediate feedback in the same workflow they use for other code quality checks — making security a natural part of development rather than an external audit that happens weeks after code is written."
+  - q: "How should teams handle Trivy findings that block a deployment?"
+    a: "Review the finding in context: is the CVE actually exploitable in your container's specific configuration? Is a patched version of the dependency available? Can a compensating control be applied while waiting for an upstream fix? The goal is risk-informed decision-making — not blindly failing every build with a known CVE, but not ignoring critical findings in production-bound images either."
 ---
 
 In today’s rapidly evolving tech landscape, incorporating security into every step of the development lifecycle is essential. [DevSecOps](https://owasp.org/www-project-devsecops/) ensures that security is baked into the process, not bolted on afterward.

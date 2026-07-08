@@ -32,6 +32,17 @@ show_reading_time: true
 featured_image: /posts/os-weekly/images/aws-security-agent-thumb.svg
 images:
   - /posts/os-weekly/images/aws-security-agent-hero.svg
+faq:
+  - q: "What is AWS Security Agent and what can it do?"
+    a: "AWS Security Agent is a frontier AI agent inside AWS Continuum that runs on-demand penetration tests, builds threat models using the STRIDE framework, reviews code and design for vulnerabilities, and provides continuous security validation at development speed — turning periodic security assessments into automated, repeatable workflows integrated directly into the development process."
+  - q: "How does AWS Security Agent perform penetration testing?"
+    a: "AWS Security Agent conducts AI-driven penetration tests on demand, simulating attacker techniques against cloud infrastructure and application code. Unlike periodic manual pen tests that happen once or twice a year, it can run continuously as part of a DevSecOps pipeline, providing near-real-time validation that defenses hold up against current attack patterns."
+  - q: "What is STRIDE threat modeling and how does AWS Security Agent apply it?"
+    a: "STRIDE categorizes threats as Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege. AWS Security Agent applies STRIDE systematically to architecture designs, identifying how each component and data flow could be attacked — producing threat models that surface risk before code is written rather than after it is deployed and exploitable."
+  - q: "How does AWS Security Agent shift security left in the development lifecycle?"
+    a: "By integrating security assessment — code review, design review, architecture analysis — directly into the development workflow, AWS Security Agent enables developers and security engineers to identify and fix vulnerabilities at the point of creation. This shift-left approach reduces remediation cost dramatically and prevents vulnerable code from reaching production environments where exploitation risk is highest."
+  - q: "What types of vulnerabilities can AWS Security Agent identify?"
+    a: "AWS Security Agent analyzes code and design documents for authentication weaknesses, authorization bypasses, injection risks, insecure data handling, and misconfigured cloud permissions. By combining static analysis reasoning with threat modeling context, it catches complex, context-dependent vulnerabilities that traditional rule-based scanners miss because they lack the ability to reason about how components interact."
 ---
 
 Most security programs are still built around a calendar, not a codebase. A pen test gets scheduled once or twice a year. A design review happens at a milestone meeting. By the time either one produces a finding, the application it was testing has already shipped four more releases.

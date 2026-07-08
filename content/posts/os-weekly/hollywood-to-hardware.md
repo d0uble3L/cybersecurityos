@@ -17,6 +17,19 @@ slug: "hollywood-to-hardware-2025"
 images:
   - /posts/os-weekly/images/hbo-security.png
 featured_image: /posts/os-weekly/images/hbo-security.png
+author: "Michael Tayo"
+keywords: "ReVault firmware vulnerability Broadcom Dell ControlVault3, FISMA failures EPA DHS GSA 2025, hardware cybersecurity vulnerabilities, Lenovo webcam security flaw Linux, TechCrunch impersonation social engineering, firmware patch management IoT security"
+faq:
+  - q: "What are the ReVault flaws in Broadcom and Dell ControlVault3 firmware?"
+    a: "The ReVault vulnerabilities, reported by Cisco Talos, affect System-on-Chip firmware in Broadcom and Dell's ControlVault3 hardware security module. These flaws can turn trusted hardware components against the environments they are meant to protect. Mitigation requires regular firmware audits, timely patch application, and active engagement with hardware vendors on transparent vulnerability disclosure practices."
+  - q: "Which federal agencies failed FISMA cybersecurity standards in 2025?"
+    a: "The EPA, DHS, and GSA all received failing grades against FISMA cybersecurity standards. The failures point to systemic gaps in continuous training, resource allocation for infrastructure reviews, and dynamic compliance monitoring. These are not just bureaucratic shortfalls — they represent real risk to the systems and data these agencies manage on behalf of the public."
+  - q: "How can organizations respond to hardware-based security vulnerabilities?"
+    a: "The recommended approach: Audit and Assess — regularly examine firmware and API integrations for anomalies; Patch and Update — ensure timely implementation of vendor-issued firmware fixes and do not rely on OS-level patching alone for hardware components; and Collaborate — engage hardware vendors to support transparent vulnerability disclosure so fixes are available before mass exploitation occurs."
+  - q: "What security risks do Lenovo webcam vulnerabilities expose in enterprise environments?"
+    a: "Vulnerabilities in Linux-based Lenovo webcams could allow attackers to exploit device firmware to gain unauthorized access to video streams or use the webcam as an entry point into the broader network. The flaw illustrates that IoT and peripheral hardware — often excluded from enterprise patch management cycles — represent real attack surfaces that security teams must actively manage."
+  - q: "How did scammers impersonate TechCrunch to target companies?"
+    a: "Threat actors ran fake outreach campaigns impersonating TechCrunch journalists, using the publication's credibility to lower recipients' guard and extract sensitive information or gain access to company contacts. The campaign is a reminder that trusted brand names are a social engineering vector: verification of sender identity is essential before responding to any unsolicited media, partnership, or vendor inquiry regardless of apparent source."
 ---
 
 In today’s hyperconnected world, cybersecurity threats are no longer confined to shadowy corners of the internet—they’re playing out on streaming screens and lurking inside the very devices we trust. From the dramatized high-stakes exploits on HBO Max to stealthy hardware flaws buried deep in enterprise infrastructure, the risks are both visible and invisible.

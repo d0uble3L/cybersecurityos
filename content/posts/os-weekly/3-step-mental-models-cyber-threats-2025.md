@@ -10,6 +10,19 @@ slug: "3-step-mental-models-cyber-threats-2025"
 images:
   - /posts/os-weekly/images/fido.png
 featured_image: /posts/os-weekly/images/fido.png
+author: "Michael Tayo"
+keywords: "Detect Disengage Shield mental model, cybersecurity mental models 2025, SharePoint zero-day exploitation, FIDO security key bypass QR code MFA, AI hiring system breach, password security vulnerabilities, cybersecurity leadership frameworks"
+faq:
+  - q: "What is the Detect-Disengage-Shield mental model for cybersecurity?"
+    a: "The three-step model provides a structured approach to emerging threats: Detect means auditing both internal and third-party systems to read between the lines of vulnerabilities — catching weak authentication before attackers do. Disengage means taking strategic pauses to restore analytical clarity, so teams can distinguish real threats from noise like QR-code phishing lures. Shield means implementing frameworks, educating continuously, and iterating defenses based on real-time intelligence."
+  - q: "How did attackers exploit AI hiring systems in 2025?"
+    a: "Organizations like Paradox.ai faced breaches because sensitive AI hiring systems were protected by weak passwords such as '123456'. The incidents underscore that AI-driven platforms containing millions of personal records require the same authentication rigor as any privileged system — robust MFA, strong password policies, and continuous monitoring of third-party vendor security posture."
+  - q: "Why did CISA flag the Microsoft SharePoint zero-day in 2025?"
+    a: "A zero-day vulnerability in Microsoft SharePoint was actively exploited, breaching more than 75 global organizations. CISA's warning highlights that even systems believed to be patched can harbor newly discovered risks. Continuous monitoring and a proactive patch management cycle — not periodic reviews — are the only defenses against vulnerabilities discovered after your last audit window."
+  - q: "What is the cybersecurity risk of QR code attacks on MFA systems?"
+    a: "QR-code scams emerged as an MFA bypass technique, tricking users into scanning codes that redirect authentication flows to attacker-controlled systems. Because QR codes are visually opaque — users can't inspect the destination URL before scanning — they bypass the skepticism users apply to typed links. FIDO2 hardware keys and passkeys are resistant to this attack class because authentication is cryptographically bound to the legitimate origin."
+  - q: "How does cognitive disengagement improve security decision-making under pressure?"
+    a: "Research shows that stepping away from screens reduces cognitive fatigue and sharpens analytical capabilities. Security professionals who build scheduled disengagement into their workflow make better triage decisions, distinguish genuine alerts from clever deception more reliably, and avoid the compounding errors that come from sustained high-alert states. Strategic pauses are a performance practice, not a productivity loss."
 ---
 
 Cyber threats aren’t just evolving — they’re outpacing traditional defenses at alarming speed.

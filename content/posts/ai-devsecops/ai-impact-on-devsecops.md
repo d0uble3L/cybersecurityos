@@ -6,6 +6,27 @@ featured_image = "/posts/ai-devsecops/images/ai-devsecop-cover.webp"
 tags =  ["DevSecOps","CI/CD","AI","Artificial Intelligence", "Cybersecurity"]
 categories = ["AI and Security", "Security Engineering"]
 description = "One significant shift has been the integration of DevSecOps and the philosophy of shifting security left. With the rapid advancement of artificial intelligence (AI), its implications for these areas are profound."
+author = "Michael Tayo"
+keywords = "AI DevSecOps CI/CD pipeline, shift left security practices, Jenkins security pipeline, TruffleHog secrets scanning, OWASP Dependency-Check SCA, SonarQube SAST, OWASP ZAP DAST, secure software development lifecycle"
+[[faq]]
+q = "What is DevSecOps and how does it improve software security?"
+a = "DevSecOps integrates security practices within the DevOps process, making security a shared responsibility throughout the software development lifecycle rather than a final check before deployment. By shifting security left — catching vulnerabilities during development rather than after — organizations reduce the cost of fixes and the likelihood of shipping exploitable code into production."
+
+[[faq]]
+q = "What security tools are commonly used in a DevSecOps CI/CD pipeline?"
+a = "A typical secure CI/CD pipeline combines: TruffleHog or Gitleaks for secrets scanning, OWASP Dependency-Check or Snyk for Software Composition Analysis, SonarQube or Semgrep for Static Application Security Testing, and OWASP ZAP or Burp Suite for Dynamic Application Security Testing. These tools catch different vulnerability classes at different stages of the pipeline."
+
+[[faq]]
+q = "What is shift-left security and why does it matter?"
+a = "Shifting left means moving security checks earlier in the development lifecycle — into the developer's workflow, the pull request review, and the build pipeline — rather than running them after code reaches production. Vulnerabilities caught during development cost a fraction of what they cost to remediate post-deployment, and shift-left practices close the gap between vulnerability introduction and detection to near zero."
+
+[[faq]]
+q = "How does TruffleHog protect a CI/CD pipeline?"
+a = "TruffleHog scans Git repository history and current code for hardcoded secrets — API keys, credentials, connection strings — that should never have been committed. Running it as an early pipeline stage catches exposed secrets before they are pushed to shared environments or production, where they become exploitable attack surfaces accessible to anyone with repository access."
+
+[[faq]]
+q = "What is Software Composition Analysis and how does OWASP Dependency-Check work?"
+a = "Software Composition Analysis identifies known vulnerabilities in third-party libraries and open-source dependencies used in your application. OWASP Dependency-Check scans project dependencies against the National Vulnerability Database, flagging packages with known CVEs. This catches supply chain risk introduced by vulnerable dependencies without requiring manual research for each library version in use."
 +++
 
 As artificial intelligence (AI) rapidly advances, its profound implications for these practices offer unprecedented opportunities to further strengthen our security posture and streamline processes.

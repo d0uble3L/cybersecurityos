@@ -36,6 +36,18 @@ draft: false
 images:
   - /posts/os-weekly/images/spectra-attack-chain.svg
 featured_image: /posts/os-weekly/images/spectra-hero-banner.svg
+author: "Michael Tayo"
+faq:
+  - q: "What is SPECTRA and what problem does it solve?"
+    a: "SPECTRA (Security Platform for Expert-level Correlation, Triage, and Risk Analysis) is an open-source, AI-powered CLI that sits downstream of existing security scanners and transforms raw output into ranked, actionable findings. It addresses the core problem facing security teams: scanner volume is outpacing analyst capacity, with 131 new CVEs disclosed per day in 2025 and a global security skills gap of 4.8 million unfilled positions."
+  - q: "Which security scanners does SPECTRA integrate with?"
+    a: "SPECTRA ingests output from Trivy for container and dependency scanning, Semgrep for static analysis, and generic scanner formats including Nessus and Burp Suite pentest notes. A single SPECTRA command processes these inputs and produces ranked findings, attack chain analysis, and executive summaries — regardless of which scanner generated the source data."
+  - q: "What is attack chain analysis and how does SPECTRA generate it?"
+    a: "Attack chain analysis connects related vulnerabilities into exploitable paths — showing how an attacker could chain a misconfigured IAM role, an unpatched dependency, and an exposed endpoint to achieve a specific objective. SPECTRA uses Claude's reasoning capabilities to correlate findings across scanner outputs and model how individual vulnerabilities combine into actual attack scenarios, not just isolated findings."
+  - q: "How does SPECTRA rank vulnerabilities beyond CVSS scores?"
+    a: "SPECTRA calibrates findings by real-world severity rather than raw CVSS scores — factoring in exploitability in context, attack chain position, asset criticality, and active exploitation status. A CVSS 7.5 vulnerability at the head of an attack chain may rank higher than a CVSS 9.0 finding in an isolated, unexposed component with no realistic exploitation path."
+  - q: "How do you run SPECTRA in a security workflow?"
+    a: "SPECTRA is an open-source CLI. A single command analyzes a scanner output file: spectra analyze trivy.json --format both --output reports/run1. It can also pipe Semgrep output directly. Output is human-readable for analyst review and structured for integration with ticketing systems and security dashboards — enabling both immediate triage and longer-term tracking of remediation progress."
 ---
 
 Security teams are not losing the fight because of bad tools. They're losing it because of volume.

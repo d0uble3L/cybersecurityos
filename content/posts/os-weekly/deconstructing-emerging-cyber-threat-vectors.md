@@ -9,6 +9,19 @@ tags: ["Cybersecurity", "malware", "policy", "risk management", "tech strategy",
 categories: ["Threat Intelligence", "Cyber Policy and Resilience"]
 slug: "deconstructing-emerging-cyber-threat-vectors"
 draft: false
+author: "Michael Tayo"
+keywords: "Discord vanity link hijacking malware, Skuld information stealer, AsyncRAT trojan Discord, Google Scale AI partnership risk, Trump cybersecurity executive order 2025, federal network security policy, cyber policy public-private collaboration 3-step framework"
+faq:
+  - q: "How are attackers hijacking Discord vanity links to deliver malware?"
+    a: "Threat actors are exploiting Discord's vanity link registration feature to redirect users to malicious servers. By hijacking these trusted-looking links, attackers distribute the Skuld information stealer and AsyncRAT trojan to victims who trust the familiar Discord platform. Security leaders should implement automated monitoring to detect unauthorized vanity link registrations within their communities."
+  - q: "What are the Skuld information stealer and AsyncRAT trojan?"
+    a: "Skuld is an information-stealing malware that harvests credentials, browser data, and session tokens from infected systems. AsyncRAT is a remote access trojan that grants attackers persistent, covert control over victim machines. Both were distributed through the Discord vanity link hijacking campaign, combining data theft with remote access for maximum impact."
+  - q: "Why did Google reportedly reconsider its partnership with Scale AI?"
+    a: "Google was reportedly reconsidering its Scale AI partnership after Meta significantly escalated its own investment in the company. The concern centered on strategic alignment — a key vendor serving a direct competitor can create conflicts of interest and expose proprietary workflows. The incident underscores the importance of assessing strategic risk when major clients share critical AI vendors."
+  - q: "What did Trump's 2025 cybersecurity executive order require?"
+    a: "The executive order mandated revamped security controls over federal networks and critical infrastructure, aiming to modernize risk management through enhanced public-private collaboration. While experts acknowledged the need for updated standards, critics noted the absence of explicit enforcement mechanisms and questioned whether sufficient resources and actionable implementation guidance would follow."
+  - q: "What is a 3-step framework for adapting to cybersecurity policy changes?"
+    a: "The framework includes: Assessment — continuously evaluating how new policies align with internal security strategy; Collaboration — establishing communication channels with government bodies and industry peers to share best practices; and Implementation — adopting agile, iterative compliance methods that evolve alongside both the threat environment and advancing technology, rather than treating policy as a static checklist."
 ---
 
 In today’s dynamically shifting threat landscape, the tactics employed by cyber adversaries are evolving faster than ever. Malicious actors have transformed trusted features of mainstream platforms into vectors for impactful attacks. At **CyberSHIELD**, we believe that understanding these developments is the key to transforming risk into a strategic advantage.
