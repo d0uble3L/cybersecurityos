@@ -2364,3 +2364,117 @@ article.pa4-ns {
   color: var(--os-text-muted) !important;
   font-size: 0.85rem !important;
 }
+
+/* ─── Author Bio (AEO E-E-A-T signal) ──────────────────────── */
+.os-author-bio {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: var(--os-bg-elevated);
+  border: 1px solid var(--os-border);
+  border-left: 3px solid var(--os-green);
+  border-radius: var(--os-radius-md);
+}
+.os-author-bio-avatar {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--os-green-deep), #0d4a2a);
+  border: 2px solid var(--os-border-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--os-font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--os-green);
+  letter-spacing: 0.05em;
+}
+.os-author-bio-body {
+  flex: 1;
+  min-width: 0;
+}
+.os-author-bio-name {
+  font-family: var(--os-font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--os-text);
+  margin: 0 0 0.2rem;
+  letter-spacing: 0.04em;
+}
+.os-author-bio-title {
+  font-family: var(--os-font-mono);
+  font-size: 0.72rem;
+  color: var(--os-green);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem;
+}
+.os-author-bio-desc {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--os-text-muted);
+  margin: 0 0 0.85rem;
+}
+.os-author-bio-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.os-author-bio-links a {
+  font-family: var(--os-font-mono);
+  font-size: 0.75rem;
+  color: var(--os-green);
+  text-decoration: none;
+  border: 1px solid var(--os-border-green);
+  border-radius: var(--os-radius);
+  padding: 0.2rem 0.65rem;
+  transition: background 0.15s;
+}
+.os-author-bio-links a:hover {
+  background: var(--os-green-glow);
+}
+@media (max-width: 480px) {
+  .os-author-bio { flex-direction: column; gap: 1rem; }
+}
+
+/* ─── FAQ Shortcode Blocks ───────────────────────────────────── */
+.os-faq-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--os-border);
+}
+.os-faq-heading {
+  font-family: var(--os-font-mono);
+  font-size: 0.7rem;
+  color: var(--os-green);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin: 0 0 1.5rem;
+}
+.os-faq-item {
+  border: 1px solid var(--os-border);
+  border-radius: var(--os-radius-md);
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+.os-faq-question {
+  font-family: var(--os-font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--os-text);
+  padding: 1rem 1.25rem;
+  margin: 0;
+  background: var(--os-bg-elevated);
+  border-bottom: 1px solid var(--os-border);
+}
+.os-faq-answer {
+  padding: 1rem 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--os-text-muted);
+}
+.os-faq-answer p { margin: 0; }

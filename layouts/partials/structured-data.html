@@ -1,6 +1,16 @@
-{{/* JSON-LD structured data — Article schema for posts, WebSite schema for homepage */}}
+{{/* JSON-LD structured data for AEO/GEO — Article + BreadcrumbList + FAQPage + WebSite + Organization */}}
+
 {{ if .IsPage }}
 {{ $author := .Params.author | default site.Params.author }}
+{{ $authorName := "" }}
+{{ if reflect.IsSlice $author }}{{ $authorName = delimit $author ", " }}{{ else }}{{ $authorName = $author }}{{ end }}
+{{ $image := "" }}
+{{ with .Params.featured_image }}{{ $image = printf "%s%s" (strings.TrimRight "/" site.BaseURL) . }}{{ end }}
+{{ $keywords := "" }}
+{{ with .Params.keywords }}{{ $keywords = . }}{{ else }}{{ with .Params.tags }}{{ $keywords = delimit . ", " }}{{ end }}{{ end }}
+{{ $section := .CurrentSection.Title | default .Section }}
+
+{{/* Article schema */}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -9,24 +19,95 @@
   "description": {{ with .Description }}{{ . | jsonify }}{{ else }}{{ .Summary | plainify | truncate 160 | jsonify }}{{ end }},
   "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
   "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "wordCount": {{ .WordCount }},
+  "articleSection": {{ $section | jsonify }},
+  "keywords": {{ $keywords | jsonify }},
   "author": {
     "@type": "Person",
-    "name": {{ if reflect.IsSlice $author }}{{ delimit $author ", " | jsonify }}{{ else }}{{ $author | jsonify }}{{ end }}
+    "name": {{ $authorName | jsonify }},
+    "url": "https://cybersecurityos.net/about/",
+    "jobTitle": "Deputy CISO",
+    "sameAs": [
+      "https://www.linkedin.com/company/cybershieldacademy/",
+      "https://twitter.com/cyb3rshi3ld"
+    ]
   },
   "publisher": {
     "@type": "Organization",
     "name": {{ site.Title | jsonify }},
-    "url": {{ site.BaseURL | jsonify }}
+    "url": {{ site.BaseURL | jsonify }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://cybersecurityos.net/images/c-os.svg"
+    }
   },
   "url": {{ .Permalink | jsonify }},
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": {{ .Permalink | jsonify }}
-  }{{ with .Params.featured_image }},
-  "image": {{ printf "%s%s" (strings.TrimRight "/" site.BaseURL) . | jsonify }}{{ end }}
+  },
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".os-article-title", ".os-prose > p:first-of-type"]
+  }{{ if $image }},
+  "image": {
+    "@type": "ImageObject",
+    "url": {{ $image | jsonify }}
+  }{{ end }}
 }
 </script>
+
+{{/* BreadcrumbList */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": {{ site.BaseURL | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ $section | jsonify }},
+      "item": {{ .CurrentSection.Permalink | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ .Title | jsonify }},
+      "item": {{ .Permalink | jsonify }}
+    }
+  ]
+}
+</script>
+
+{{/* FAQPage schema — auto-generated from `faq:` front matter list */}}
+{{ with .Params.faq }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{{ range $i, $item := . }}{{ if $i }},{{ end }}
+    {
+      "@type": "Question",
+      "name": {{ $item.q | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ $item.a | jsonify }}
+      }
+    }{{ end }}
+  ]
+}
+</script>
+{{ end }}
+
 {{ else if .IsHome }}
+
+{{/* WebSite schema with SearchAction */}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -44,4 +125,30 @@
   }
 }
 </script>
+
+{{/* Organization schema — sameAs for cross-platform authority */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": {{ site.Title | jsonify }},
+  "url": {{ site.BaseURL | jsonify }},
+  "description": {{ site.Params.description | jsonify }},
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://cybersecurityos.net/images/c-os.svg"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/cybershieldacademy/",
+    "https://twitter.com/cyb3rshi3ld"
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Michael Tayo",
+    "jobTitle": "Deputy CISO",
+    "url": "https://cybersecurityos.net/about/"
+  }
+}
+</script>
+
 {{ end }}

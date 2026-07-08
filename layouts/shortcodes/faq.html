@@ -1,0 +1,8 @@
+{{/* FAQ item shortcode — use inside {{< faqs >}} wrapper
+   Usage: {{< faq q="Question text?" >}}Answer text.{{< /faq >}} */}}
+<div class="os-faq-item" itemscope itemtype="https://schema.org/Question">
+  <h3 class="os-faq-question" itemprop="name">{{ .Get "q" }}</h3>
+  <div class="os-faq-answer" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+    <div itemprop="text">{{ .Inner | markdownify }}</div>
+  </div>
+</div>

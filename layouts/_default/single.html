@@ -76,6 +76,9 @@
       {{ partial "social-share.html" . }}
     </div>
 
+    <!-- Author bio (E-E-A-T signal) -->
+    {{ partial "author-bio.html" . }}
+
     <!-- Related posts (prefer same-section matches, fall back to site-wide) -->
     {{ $sectionPages := where .Site.RegularPages "Section" .Section }}
     {{ $sectionRelated := $sectionPages.Related . | first 3 }}
