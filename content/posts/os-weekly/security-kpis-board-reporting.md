@@ -22,6 +22,18 @@ description: "Most CISOs report the wrong security metrics to the board. This gu
 images:
   - /posts/os-weekly/images/kpi-board-hero.svg
 featured_image: /posts/os-weekly/images/kpi-thumbnail.svg
+keywords: "security KPIs board reporting CISO, cybersecurity metrics board communication, SEC cybersecurity disclosure rules, NIST CSF 2.0 Govern function, ISO 27001 clause 9.3 management review, leading vs lagging security indicators, business-aligned security metrics"
+faq:
+  - q: "What security KPIs should a CISO actually report to the board?"
+    a: "KPIs should answer three board questions: Are we exposed to a material risk? Can we recover if something goes wrong? Are we doing what we said we would do? That means leading indicators like mean time to detect/respond, critical asset patch coverage, and phishing simulation click rates — not operational metrics like alerts triaged or vulnerabilities closed. Every metric brought to the board should map to one of those three questions."
+  - q: "Why do most security metrics fail in the boardroom?"
+    a: "Security teams are trained to measure activity while boards need risk governance visibility — those are completely different things. Operational metrics answer 'are we busy?' Boards need to know 'are we exposed?' The disconnect runs deeper than presentation style: most security metrics are lagging indicators that measure what already happened, while boards need a balance of leading indicators (what is likely to happen) and lagging indicators (what happened and how we responded)."
+  - q: "What do the new SEC cybersecurity disclosure rules require?"
+    a: "Public companies must disclose material cybersecurity incidents within four business days and provide annual disclosures covering cybersecurity risk management, strategy, and governance — including explicit description of board oversight of cybersecurity risk. This makes security board reporting a legal obligation under securities law, not just a leadership best practice."
+  - q: "What is the difference between leading and lagging security indicators?"
+    a: "Lagging indicators measure what already happened: mean time to respond, breach count, cost per incident. Leading indicators predict what is likely to happen: phishing simulation click rates, age of unpatched critical CVEs, identity risk exposure across privileged accounts. Boards need both — lagging indicators for accountability over past performance, leading indicators for forward-looking risk governance decisions."
+  - q: "How does NIST CSF 2.0 change the role of board-level security reporting?"
+    a: "NIST CSF 2.0 elevated the Govern function to a first-class function for the first time, placing risk governance — including board and executive reporting — at the center of the framework rather than treating it as an afterthought. This directly validates the shift from viewing board reporting as overhead to treating it as a core security program function with its own objectives, owners, and measurable outcomes."
 ---
 
 Most CISOs walk into board meetings and report something like this:

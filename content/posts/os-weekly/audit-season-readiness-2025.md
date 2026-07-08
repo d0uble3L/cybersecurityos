@@ -21,6 +21,19 @@ draft: false
 images:
   - /posts/os-weekly/images/audit-season-readiness-2025.png
 featured_image: /posts/os-weekly/images/audit-season-readiness-2025.png
+author: "Michael Tayo"
+keywords: "audit season readiness SOC 2 ISO 27001 NIST, GRC audit management, cybersecurity compliance audit preparation, risk control mapping audit, control assurance audit, governance compliance cybersecurity audit"
+faq:
+  - q: "How should cybersecurity leaders prepare for audit season?"
+    a: "Effective audit preparation covers four domains: governance alignment (updated policies with executive sign-off), risk management and control mapping (linking controls to SOC 2, ISO 27001, and NIST CSF), assurance (evidence that controls function as designed), and compliance tracking (documented accountability across all control owners). Treating these as ongoing operational practices — not pre-audit sprints — produces consistently audit-ready posture."
+  - q: "What governance actions must be completed before an audit?"
+    a: "Update and approve your Information Security Policy with version history and review dates. Reconfirm risk appetite and ensure it is reflected in the audit plan. Define named owners for each control and each reporting line. Maintain board-level visibility on security metrics and open audit findings. When governance is explicit and current, auditors see a mature, self-aware organization rather than a reactive one."
+  - q: "How do you map controls across SOC 2, ISO 27001, and NIST CSF simultaneously?"
+    a: "Start with a risk assessment and treatment plan, then select applicable ISO 27001 Annex A controls. Cross-reference each Annex A control to the corresponding NIST CSF function and SOC 2 Trust Service Criterion — many controls satisfy all three frameworks. This cross-mapping eliminates redundant implementation effort and allows a single control library to demonstrate compliance across multiple frameworks simultaneously."
+  - q: "What is the difference between control testing and assurance in an audit?"
+    a: "Control testing verifies that a specific control operates as designed — running a test to confirm a firewall rule blocks prohibited traffic, for instance. Assurance goes further: it provides evidence to stakeholders that the control has been tested, that the test results were reviewed, and that any exceptions were remediated. Assurance is the documented chain of evidence that auditors rely on to form their opinion."
+  - q: "How can security teams demonstrate audit readiness continuously rather than seasonally?"
+    a: "Integrate evidence collection into normal operational workflows: generate access control reports on a defined schedule, run automated control tests against a compliance calendar, and store outputs in a centralized evidence repository with version history. This turns audit preparation from a seasonal crunch into a continuous background process — when auditors request evidence, it already exists and is current."
 ---
 
 As we enter **audit season**, cybersecurity leaders and teams face more than just the usual pressures of incident response and vulnerability management.

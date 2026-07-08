@@ -20,6 +20,18 @@ description: "A practical, no-jargon guide to threat modeling for engineering te
 images:
   - /posts/os-weekly/images/process.png
 featured_image: /posts/os-weekly/images/process.png
+keywords: "threat modeling engineering teams, STRIDE threat modeling guide, threat modeling SDLC integration, trust boundary analysis software, adversarial thinking software development, secure by design engineering, threat model four questions, security design review"
+faq:
+  - q: "What is threat modeling and why should engineering teams do it?"
+    a: "Threat modeling is structured thinking about how your system could be attacked — done before the attack happens. Most vulnerabilities that cause serious incidents are foreseeable: missing authentication checks, over-privileged service accounts, unauthenticated API endpoints. They show up in threat models and cost nothing to fix at design time, but cost enormously when exploited at runtime. No special tools or security certification are required to run one."
+  - q: "What are the four questions that power every threat model?"
+    a: "What are we building? What can go wrong? What are we going to do about it? Did we do a good enough job? These four questions underlie every threat modeling methodology — STRIDE, PASTA, LINDDUN — and can be answered in a single design session. Every threat modeling framework is ultimately a structured answer to these four questions applied to a specific system."
+  - q: "What is STRIDE and how does it apply to software design?"
+    a: "STRIDE is a threat categorization framework: Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege. Engineers apply STRIDE to each component and data flow in their design to systematically ask 'how could an attacker abuse this interaction?' — surfacing threats that forward-design thinking misses because it focuses on what the system should do, not what an adversary would do."
+  - q: "How do you run a threat modeling session that engineers will actually use?"
+    a: "Keep it to a single session tied to a specific design decision, not an open-ended exercise. Focus on trust boundaries — where data crosses from less-trusted to more-trusted components. Document findings in the same system the team uses for work, and treat the output as a checklist for the PR review rather than a compliance artifact. If the output requires a separate tool or process to consult, it will not get consulted."
+  - q: "Why does threat modeling belong to engineers, not just the security team?"
+    a: "Security teams are too small to be in every design review. Engineers have the deepest contextual knowledge about how components interact — that context is exactly what makes a threat model accurate rather than generic. The only scalable answer to securing a modern software organization is engineers who can think adversarially about their own systems. Threat modeling is a core engineering skill, like code review, not a security team deliverable."
 ---
 
 Most engineering teams know they _should_ be doing threat modeling.

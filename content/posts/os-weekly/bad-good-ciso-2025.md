@@ -9,6 +9,18 @@ images:
   - /posts/os-weekly/images/good-ciso-bad-ciso-25.png
 featured_image: /posts/os-weekly/images/good-ciso-bad-ciso-25.png
 draft: false
+keywords: "good CISO vs bad CISO mindset, Phil Venables CISO framework, flywheel vs fire station security leadership, CISO board communication, security culture building, security champion network, CISO mental models, cybersecurity executive strategy"
+faq:
+  - q: "What is the core difference between a good CISO and a bad CISO?"
+    a: "The core difference is between building compounding systems versus running from incident to incident. Good CISOs build flywheels — security becomes everyone's job, knowledge compounds, and risk reduction accelerates over time. Bad CISOs operate fire stations — they count tickets, respond to the loudest alarm, and leave the underlying risk architecture unchanged. The distinction is not intelligence or effort; it is whether leadership creates systems or just manages activity."
+  - q: "What is the Flywheel vs. Fire Station model for CISO leadership?"
+    a: "Inspired by Phil Venables' Good CISO/Bad CISO framework: the flywheel CISO builds compounding systems where automation, culture, and shared ownership create security momentum. The fire station CISO measures success by incidents handled and tickets closed. The flywheel produces better security outcomes over time because it addresses root causes; the fire station keeps teams permanently reactive and never closes the gap between threat and defense."
+  - q: "How should a CISO frame security updates for the board?"
+    a: "Frame board updates around business resilience and trust capital, not technical metrics. Instead of reporting vulnerabilities patched, say: 'Our phishing resilience improved 30%, directly reducing potential fraud losses by $X million.' Teach boards meta-questions — 'What assumptions are we making about our cloud dependencies?' — so they can evaluate risk quality, not just activity volume."
+  - q: "What does Hazard + Outrage mean in CISO risk communication?"
+    a: "Risk has two components: the objective hazard (probability and impact of the threat) and the outrage (how stakeholders feel about it). Ignoring the outrage dimension — even when the technical hazard is manageable — is how small incidents spiral into organizational crises. CISOs who address both the technical facts and the stakeholder perception of risk make better decisions and maintain credibility under pressure."
+  - q: "How can a CISO build security culture that scales beyond the security team?"
+    a: "Create a security champions network inside engineering so security knowledge compounds instead of bottlenecking in one team. Leverage procurement as a force multiplier — rather than buying another monitoring tool, push SaaS providers to meet higher security baselines before contract renewal. Each of these scales security impact far beyond what the security team's headcount alone can achieve."
 ---
 
 Inspired by [Phil Venables’ _Good CISO / Bad CISO_ framework](https://www.philvenables.com/post/good-ciso---bad-ciso), this piece explores the mental models that distinguish effective security leaders from those trapped in reactive cycles.

@@ -1,0 +1,9 @@
+{{/* FAQ section wrapper — wraps multiple {{< faq >}} items with FAQPage microdata
+   Usage:
+   {{< faqs >}}
+   {{< faq q="Question?" >}}Answer.{{< /faq >}}
+   {{< /faqs >}} */}}
+<section class="os-faq-section" itemscope itemtype="https://schema.org/FAQPage" aria-label="Frequently asked questions">
+  <h2 class="os-faq-heading">Frequently Asked Questions</h2>
+  {{ .Inner }}
+</section>

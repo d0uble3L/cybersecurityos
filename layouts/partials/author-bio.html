@@ -1,0 +1,19 @@
+{{/* Author bio — E-E-A-T signal for AEO/GEO. Rendered at the bottom of every single post. */}}
+{{ $author := .Params.author | default .Site.Params.author }}
+{{ $authorName := "" }}
+{{ if reflect.IsSlice $author }}{{ $authorName = delimit $author ", " }}{{ else }}{{ $authorName = $author }}{{ end }}
+<aside class="os-author-bio" aria-label="About the author" itemscope itemtype="https://schema.org/Person">
+  <div class="os-author-bio-avatar" aria-hidden="true">MT</div>
+  <div class="os-author-bio-body">
+    <p class="os-author-bio-name" itemprop="name">{{ $authorName }}</p>
+    <p class="os-author-bio-title" itemprop="jobTitle">Deputy CISO &middot; Security Practitioner &middot; Educator</p>
+    <p class="os-author-bio-desc" itemprop="description">
+      Michael Tayo is a practicing Deputy CISO and the founder of CybersecurityOS &mdash; a weekly intelligence platform built for security engineers, aspiring CISOs, and the next generation of security leaders. He writes about threat intelligence, security leadership, and the mental models that help practitioners make better decisions under pressure.
+    </p>
+    <div class="os-author-bio-links">
+      <a href="https://www.linkedin.com/company/cybershieldacademy/" rel="noopener noreferrer" target="_blank" itemprop="sameAs">LinkedIn</a>
+      <a href="https://twitter.com/cyb3rshi3ld" rel="noopener noreferrer" target="_blank" itemprop="sameAs">Twitter / X</a>
+      <a href="https://cybersecurityos.net" itemprop="url">CybersecurityOS</a>
+    </div>
+  </div>
+</aside>

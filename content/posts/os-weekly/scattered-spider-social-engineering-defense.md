@@ -22,6 +22,19 @@ images:
   - /posts/os-weekly/images/scattered-spider-defense-hero.svg
 featured_image: /posts/os-weekly/images/scattered-spider-defense-thumb.svg
 keywords: "scattered spider, social engineering defense, vishing, help desk security, phishing resistant MFA, FIDO2, security leadership, Transport for London hack"
+faq:
+  - q: "What is Scattered Spider and how do they operate?"
+    a: "Scattered Spider (also known as UNC3944, Octo Tempest, and Muddled Libra) is a cybercriminal group composed largely of native English-speaking teenagers and young adults from the US and UK. They conduct attacks through social engineering — calling IT help desks while impersonating employees, using LinkedIn research to build convincing personas, and bypassing MFA via SIM swapping or push bombing. They do not rely on technical exploits."
+  - q: "How does Scattered Spider bypass MFA?"
+    a: "Scattered Spider uses three methods to bypass MFA: push bombing (sending repeated MFA push notifications until the user approves out of fatigue), SIM swapping (redirecting the victim's phone number to an attacker-controlled device to intercept SMS codes), and social engineering the IT help desk into registering a new MFA device on the attacker's behalf. The third method is the most effective and requires no technical capability."
+  - q: "How much did the Scattered Spider attack on Transport for London cost?"
+    a: "The Scattered Spider attack on Transport for London (TfL), which ran August 31 through September 3, 2024, resulted in £29 million in total losses and recovery costs. The breach exposed personal data for an estimated 10 million people and forced all 28,000 TfL employees to reset their passwords in person at a TfL office. Two members, Thalha Jubair and Owen Flowers, pleaded guilty on June 22, 2026."
+  - q: "What is the most effective defense against Scattered Spider-style social engineering?"
+    a: "The three highest-leverage defenses are: deploying FIDO2/WebAuthn hardware keys or passkeys for all privileged accounts, which cannot be intercepted by SIM swap or push bombing; formalizing help desk identity verification with callback protocols to numbers on file and requiring manager co-authorization for MFA device changes; and running quarterly vishing red team exercises against IT support staff to find gaps before attackers do."
+  - q: "Why does separating password reset and MFA device registration matter?"
+    a: "When a help desk can reset a password and register a new MFA device in the same call, an attacker who passes identity verification once has bypassed your entire identity stack. Requiring two independent verification events — or out-of-band manager confirmation — for MFA device registration breaks the attack chain. This single process change eliminates Scattered Spider's most commonly used help desk bypass route."
+  - q: "What is phishing-resistant MFA and why is FIDO2 better than push notifications?"
+    a: "Phishing-resistant MFA uses cryptographic hardware binding so authentication cannot succeed unless the user is physically present with their registered device. FIDO2/WebAuthn hardware keys and passkeys meet this standard. Unlike push notifications, which can be approved by a fatigued user, or SMS OTPs, which can be intercepted via SIM swap, FIDO2 credentials are tied to a specific origin and device — there is nothing to intercept, forward, or socially engineer."
 ---
 
 On June 22, 2026, Thalha Jubair, 20, and Owen Flowers, 18 — both from the UK — walked into Woolwich Crown Court and pleaded guilty on day one of a trial that had been set to run six weeks. Their target: Transport for London. Their tool: a phone call.

@@ -9,6 +9,19 @@ slug: "cyber-threats-reimagined-2025"
 images:
   - /posts/os-weekly/images/cyber-threats-reimagined-2025.png
 featured_image: /posts/os-weekly/images/cyber-threats-reimagined-2025.png
+author: "Michael Tayo"
+keywords: "APT groups 2025, UAT-7237 Taiwan web hosting attack, mobile phishing brokerage accounts, ERMAC 3.0 banking trojan, ramp and dump scheme, advanced persistent threats framework, cybersecurity agile defense posture"
+faq:
+  - q: "What is UAT-7237 and who does it target?"
+    a: "UAT-7237 is an advanced persistent threat group identified in 2025 that targets Taiwanese web hosting infrastructure. Researchers found overlaps with UAT-5918, suggesting shared tactics, tools, or personnel. The group's campaigns highlight that regional threat actors are not isolated — linguistic and operational pattern analysis is necessary to distinguish and preempt their targeted campaigns."
+  - q: "How are mobile phishing attacks targeting brokerage accounts in 2025?"
+    a: "Attackers are using stolen card data not for direct fund withdrawals but to reroute assets into mobile wallets while manipulating foreign stock prices in ramp-and-dump schemes. These multi-layered operations move well beyond simple credential theft, exploiting mobile payment systems and securities markets simultaneously."
+  - q: "What happened with the ERMAC 3.0 banking trojan source code leak?"
+    a: "The ERMAC 3.0 banking trojan's source code leaked, exposing how even sophisticated malware can be compromised by weaknesses in its own deployment infrastructure. The leak demonstrated that robust internal infrastructure is as critical as external threat monitoring — flaws within a malicious actor's own systems can neutralize their tools before defenders even intervene."
+  - q: "What is the assess-adopt-integrate framework for cybersecurity defense?"
+    a: "The framework starts with Assess and Prioritize — mapping critical assets and using threat intel feeds to understand attacker methodologies. The second step is Adopt Agile Countermeasures — diversifying controls from user education to advanced monitoring. The third is Integrate and Communicate — building cross-functional teams that marry technical insight with business risk assessment to keep both leaders and practitioners aligned."
+  - q: "Why are reactive cybersecurity defenses insufficient in 2025?"
+    a: "The 2025 threat landscape features APT groups that continuously refine methods, mobile phishing schemes targeting financial systems, and hardware vulnerabilities that bypass traditional perimeter defenses. Reactive defenses fail because attackers operate faster than patch cycles and exploit trust in legitimate platforms. Organizations need proactive frameworks that anticipate attacker evolution rather than respond to it after the fact."
 ---
 
 The cyber battlefield is being redrawn.

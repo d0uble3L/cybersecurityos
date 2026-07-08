@@ -9,6 +9,19 @@ tags: ["Cybersecurity", "disinformation", "adtech", "strategy", "policy", "Cyber
 categories: ["Threat Intelligence", "Cyber Policy and Resilience"]
 slug: "navigating-evolving-cybersecurity-landscape"
 draft: false
+author: "Michael Tayo"
+keywords: "dark adtech fake CAPTCHAs disinformation, cybersecurity self-awareness repeatable processes, Trump cybersecurity executive order industry reaction, public-private cybersecurity collaboration, digital advertising ecosystem threats, vulnerability assessment framework, security posture continuous improvement"
+faq:
+  - q: "How are disinformation actors exploiting fake CAPTCHAs in dark adtech?"
+    a: "Disinformation campaigns are using fake CAPTCHA prompts to circumvent social media content moderation systems, funneling traffic through hardened dark adtech infrastructure. These networks are intricately linked, making traditional countermeasures less effective. Proactive monitoring, partnerships with tech researchers, and stronger regulatory oversight of digital advertising ecosystems are the recommended countermeasures."
+  - q: "What does self-awareness mean in a cybersecurity context?"
+    a: "In cybersecurity, self-awareness means continuously understanding your organization's own internal vulnerabilities — not just external threats. It involves routine internal audits to identify critical gaps, fostering a culture of continuous improvement, and building repeatable, verifiable process-oriented defenses. The assess-mitigate-evaluate cycle operationalizes this self-awareness into actionable risk reduction."
+  - q: "What were the main industry criticisms of Trump's 2025 cybersecurity executive order?"
+    a: "While experts broadly recognized the need for updated federal security standards, the main criticisms were the absence of detailed implementation guidance, insufficient resourcing commitments, and the lack of explicit enforcement mechanisms. Successful cybersecurity policy must include actionable steps, cross-sector support, and measurable outcomes — not just a broad mandate to modernize."
+  - q: "What is a repeatable security process and why does it matter?"
+    a: "A repeatable security process is a standardized, documented cycle for identifying and addressing risk that any trained team member can execute consistently. It covers Assessment, Mitigation, and Evaluation. Repeatability matters because ad hoc responses to threats are slower, less consistent, and harder to improve over time — they produce institutional knowledge that lives only in individuals rather than in durable processes."
+  - q: "How should cybersecurity leaders respond to dark adtech threats?"
+    a: "Leaders should invest in proactive monitoring tools that detect anomalous advertising traffic and fake CAPTCHA infrastructure, forge partnerships with security researchers tracking disinformation networks, and advocate for enhanced regulatory oversight of digital advertising ecosystems. Because these networks are deeply interconnected, industry coordination is essential — no single organization can effectively monitor the full scope of dark adtech infrastructure."
 ---
 
 Cyber threats are evolving faster than ever, and the challenges we face are multifaceted. In today’s post, we explore emerging trends in disinformation, how powerful adversaries leverage fake CAPTCHAs and dark ad tech, and why strategic self-awareness in cybersecurity is more critical than ever. We also reflect on the ongoing dialogue around government-led cybersecurity initiatives.

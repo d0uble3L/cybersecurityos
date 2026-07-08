@@ -10,6 +10,19 @@ draft: false
 images:
   - /posts/os-weekly/images/cyber-resilience-3-0-shark.png
 featured_image: /posts/os-weekly/images/cyber-resilience-3-0-shark.png
+author: "Michael Tayo"
+keywords: "cyber resilience 3.0, sanctions gap cryptocurrency compliance, stress-test mental model cybersecurity, EU Cybersecurity Act open source critique, KYC real-time sanction checks, resilience through redundancy security, open source security policy, Bruce mechanical shark analogy"
+faq:
+  - q: "What is the Stress-Test Shark mental model for cybersecurity resilience?"
+    a: "Drawn from the operational failures of Bruce, a 25-foot mechanical shark exposed to corrosive saltwater on the Jaws set, the model holds that real-world testing exposes vulnerabilities that lab simulations miss. Just as Bruce revealed unforeseen corrosive damage, live stress tests surface hidden failure modes in security systems. Resilience requires anticipating hidden failures, building redundancy across testing conditions, and iterating continuously based on what breaks under real-world stress."
+  - q: "Why are cryptocurrency sanctions gaps a cybersecurity governance problem?"
+    a: "When sanctioned individuals continue operating on major tech platforms because KYC processes are static and manual, it demonstrates that compliance structures cannot keep pace with agile threat actors who rebrand and restructure faster than annual review cycles. Security leaders must push for dynamic, automated sanction screening that flags newly sanctioned entities in real time — the same urgency applied to CVE patching should apply to third-party and platform risk."
+  - q: "What is the Open Source Initiative's critique of the EU Cybersecurity Act?"
+    a: "OSI argued that open-source software is not just code — it is a model of transparent, community-driven security development. Applying proprietary-vendor compliance standards to open-source projects risks stifling innovation and adding regulatory overhead that community maintainers cannot sustain. Effective cyber policy must distinguish between commercial products and open-source ecosystems, empowering community security rather than treating it as a compliance liability."
+  - q: "What does resilience through redundancy mean in practice?"
+    a: "Diversifying testing scenarios, defense mechanisms, and monitoring approaches so that no single failure collapses the system. In practice: multiple detection layers with different sensors and logic, backup communication channels for incident response, and redundant identity verification that does not rely on a single MFA method. Redundancy is not duplication for its own sake — it is ensuring that the failure of any single component degrades rather than eliminates defensive capability."
+  - q: "How should security leaders respond to regulatory blind spots like sanctions gaps in tech platforms?"
+    a: "Upgrade KYC to real-time, automated screening that triggers on newly added sanctions entries without manual review cycles. Integrate compliance checks into vendor onboarding and annual renewal workflows. Build rapid-response frameworks that activate automatically when a threat actor crosses a defined threshold — for instance, when a counterparty appears on a new OFAC list — rather than waiting for a periodic compliance review to surface the risk."
 ---
 
 In an era where adversaries evolve faster than defenses, cyber resilience is no longer about playing catch-up—it's about anticipating the next paradigm shift.

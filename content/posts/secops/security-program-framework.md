@@ -7,6 +7,19 @@ featured_image: "/posts/secops/images/sec-program.webp"
 tags: ["security", "compliance", "NIST", "SOC 2", "cybersecurity", "risk-management", "GRC"]
 title: "Building Blocks of a Security Program: Aligning with NIST Framework & SOC 2 Controls"
 categories: ["Frameworks", "Security Operations"]
+author: "Michael Tayo"
+keywords: "NIST cybersecurity framework SOC 2 alignment, security program building blocks CISO, NIST CSF identify protect detect respond recover, SOC 2 trust service criteria, NIST SOC 2 control mapping, cybersecurity compliance program design"
+faq:
+  - q: "What is the NIST Cybersecurity Framework and its five core functions?"
+    a: "The NIST CSF is a set of guidelines that helps organizations manage and reduce cybersecurity risk. Its five functions are: Identify (understand context, systems, and risks), Protect (implement safeguards for critical services), Detect (identify cybersecurity events in a timely manner), Respond (plan and mitigate events when they occur), and Recover (maintain resilience and restore capabilities after incidents). Together they form a holistic risk management cycle."
+  - q: "What is SOC 2 and how does it differ from the NIST CSF?"
+    a: "SOC 2 is an auditing standard developed by the AICPA that assesses how service organizations protect client data across five Trust Service Criteria: Security, Confidentiality, Availability, Processing Integrity, and Privacy. While NIST CSF is a flexible risk management framework used internally to strengthen security posture, SOC 2 is an external audit standard that produces a report attesting to third parties that your controls meet defined criteria."
+  - q: "How do NIST CSF and SOC 2 map to each other?"
+    a: "NIST's Identify and Protect functions align with SOC 2's Security and Confidentiality criteria. NIST's Detect and Respond align with Processing Integrity and Availability. NIST's Recover supports SOC 2's Availability criterion. Cross-mapping allows organizations to build controls once that satisfy both frameworks simultaneously, eliminating duplicated implementation effort and streamlining compliance management."
+  - q: "What are the essential building blocks of a security program aligned with both NIST and SOC 2?"
+    a: "Risk assessment process, asset inventory, access control policies, incident response plan, change management procedures, security awareness training, vulnerability management program, audit logging and monitoring, business continuity and disaster recovery planning, and vendor risk management. Each building block maps to multiple NIST functions and SOC 2 criteria, creating layered coverage across both frameworks."
+  - q: "How should a CISO prioritize implementation when building a security program from scratch?"
+    a: "Start with Identify — you cannot protect what you do not know you have. Run a risk assessment and asset inventory first. Then implement the highest-priority Protect controls: access management, patching, and encryption. Establish Detect capabilities early to gain visibility before an incident occurs. Respond and Recover planning can be built iteratively as the foundational controls mature and the team gains operational experience."
 ---
 
 Creating a resilient security program that meets industry standards is crucial for today’s organizations, especially with the rising expectations around data security and regulatory compliance.

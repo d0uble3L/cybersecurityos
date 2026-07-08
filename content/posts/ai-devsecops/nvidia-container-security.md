@@ -7,6 +7,27 @@ images = ["/posts/ai-devsecops/images/nvidia-container.webp"]
 tags =  ["DevSecOps","CI/CD","AI","Artificial Intelligence", "Cybersecurity"]
 categories = ["AI and Security", "Security Engineering"]
 description = "NVIDIA’s cooking up something that’ll make your life a whole lot easier—and faster. The NIM Agent Blueprint is an AI-driven, GPU-powered answer to container security woes, turning the days-long process of vulnerability analysis into a matter of seconds."
+author = "Michael Tayo"
+keywords = "NVIDIA NIM Agent Blueprint container security, NVIDIA Morpheus cybersecurity AI SDK, GPU vulnerability triage automation, CVE analysis seconds AI, LLM vulnerability management, RAG vulnerability assessment container, AI-powered container CVE scanning"
+[[faq]]
+q = "What is the NVIDIA NIM Agent Blueprint for container security?"
+a = "The NIM Agent Blueprint is an AI-driven, GPU-accelerated container security solution built on NVIDIA Morpheus that uses Retrieval-Augmented Generation and asynchronous GPU processing to simultaneously analyze multiple container vulnerabilities. It transforms a process that previously took days into one that completes in seconds, using LLM agents to automate vulnerability triage, analysis, and remediation prioritization."
+
+[[faq]]
+q = "How does NVIDIA Morpheus power AI-based vulnerability management?"
+a = "NVIDIA Morpheus is a cybersecurity AI SDK that leverages GPU acceleration for real-time threat detection and vulnerability analysis. In the NIM Agent Blueprint, Morpheus enables parallelized processing of vulnerability scan results — multiple LLM agents work simultaneously to assess, verify, and generate VEX justifications for container CVEs at GPU speed rather than sequential CPU processing speed."
+
+[[faq]]
+q = "Why does container security benefit from GPU acceleration?"
+a = "Container environments produce enormous volumes of CVEs — the CVE database surpassed 200K reported vulnerabilities by end of 2023. Analyzing hundreds of data points for a single container using CPU-bound tools takes hours or days. GPU parallelization allows simultaneous analysis of multiple CVEs across multiple containers, reducing triage time from days to seconds and enabling security teams to keep pace with continuous deployment cycles."
+
+[[faq]]
+q = "What is Vulnerability Exploitability eXchange (VEX) and how does AI help generate it?"
+a = "VEX is a standard format for communicating whether a specific CVE is actually exploitable in a given software product's context. Manually generating VEX justifications for each CVE is time-consuming and requires security expertise. LLM agents in the NIM Agent Blueprint automate VEX generation by analyzing whether each vulnerability is exploitable in the target container's actual configuration rather than just flagging it as a known CVE."
+
+[[faq]]
+q = "How can security teams try the NVIDIA NIM Agent Blueprint?"
+a = "The blueprint is available at build.nvidia.com. Security teams can integrate it with existing vulnerability scanning workflows — it sits downstream of traditional scanners, ingesting their output and applying AI-driven analysis to prioritize findings. NVIDIA also has a downloadable vulnerability analysis version designed to make container security deployment even more straightforward for teams without GPU infrastructure."
 +++
 
 Let’s be real—cybersecurity is getting crazier by the day. The number of vulnerabilities out there is skyrocketing, and keeping up with them is like playing whack-a-mole on expert level. By the end of 2023, the CVE database was pushing past 200K reported vulnerabilities. Now, imagine trying to sift through hundreds of data points just to assess a _single_ container for risks. Yeah, no thanks.

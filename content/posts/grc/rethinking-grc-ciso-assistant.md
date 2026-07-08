@@ -7,6 +7,19 @@ featured_image: "/posts/grc/images/rethinking-grc.webp"
 description: "Exploring how CISOs can manage Governance, Risk, and Compliance (GRC) in an evolving landscape, while prioritizing real security over rigid compliance frameworks."
 tags: ["GRC", "CISO", "Cybersecurity", "Risk Management", "Compliance"]
 categories: ["GRC and Compliance", "Leadership"]
+author: "Michael Tayo"
+keywords: "GRC CISO rethinking compliance vs security, CISO Assistant open source GRC platform, risk-based GRC management, agile GRC compliance continuous assessment, multi-framework control mapping, real-time risk assessment CISO, GRC automation decoupling"
+faq:
+  - q: "Why is traditional GRC failing modern CISOs?"
+    a: "Traditional GRC approaches are slow, inflexible, and prioritize compliance checklists over actual security. They rely on fragmented tools — spreadsheets, point solutions, disconnected documents — that create silos, delay remediation, and measure compliance activity rather than risk reduction. As threats evolve faster than annual audit cycles, the gap between compliance posture and actual security posture widens invisibly."
+  - q: "What does it mean to decouple compliance from security?"
+    a: "Decoupling means building security controls that address real risks first, then demonstrating those controls satisfy compliance requirements — rather than letting compliance requirements dictate security decisions. When compliance is a byproduct of effective security rather than its driver, organizations are more resilient and less likely to pass audits while remaining exposed to the threats that actually matter."
+  - q: "What is CISO Assistant and why does it matter?"
+    a: "CISO Assistant is an open-source GRC platform that decouples compliance from risk management and unifies controls, risk assessments, and compliance mapping in a single system. It enables multi-framework control mapping — the same control can satisfy NIST, ISO 27001, SOC 2, and HIPAA requirements simultaneously — eliminating the duplication and siloing that fragments traditional GRC programs."
+  - q: "How should CISOs approach GRC in agile development environments?"
+    a: "Replace periodic audits with continuous, real-time risk assessments aligned with development sprint cycles. Map reusable controls that satisfy multiple frameworks simultaneously rather than duplicating compliance effort per framework. This makes compliance lightweight enough to integrate into CI/CD pipelines rather than treating it as a separate governance layer that development teams see as an obstacle."
+  - q: "What is multi-tenancy in GRC and why does it matter for scale?"
+    a: "Multi-tenancy allows a single GRC platform to manage multiple departments, teams, and geographic regions while giving each unit scoped visibility into its own controls and risks. This gives CISOs an aggregated view of overall security posture without losing the granularity needed for department-level accountability — critical as organizations grow beyond what manual spreadsheet-based GRC can reliably track."
 ---
 
 As the digital threat landscape evolves, **Governance, Risk, and Compliance (GRC)** has become an essential focus for every CISO. But managing GRC today feels like juggling endless responsibilities—compliance demands, security risks, and resource constraints—all while trying to protect your organization. Traditional GRC approaches aren’t cutting it anymore. They’re slow, inflexible, and often prioritize compliance over actual security.

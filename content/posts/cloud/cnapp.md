@@ -8,6 +8,19 @@ images:
 featured_image: "/posts/cloud/images/cnapp.webp"
 categories: ["Cloud Security"]
 description: "Explore how Cloud-Native Application Protection Platforms (CNAPP) offer agentless security and workload protection in modern cloud environments."
+author: "Michael Tayo"
+keywords: "CNAPP cloud native application protection platform, agentless cloud security vs agent-based, CSPM cloud security posture management, cloud workload protection CWPP, IAM cloud identity security, container VM serverless security runtime, broader cloud context CNAPP"
+faq:
+  - q: "What is a CNAPP and what does it protect?"
+    a: "A Cloud-Native Application Protection Platform is an integrated security solution that protects cloud-native applications across their entire lifecycle — from development through production. It combines Cloud Security Posture Management, Cloud Workload Protection, Identity and Access Management, and application security into a unified platform, replacing the fragmented point solutions that traditional cloud security stacks require."
+  - q: "What is agentless security and what are its trade-offs?"
+    a: "Agentless security gains visibility into cloud environments by leveraging cloud provider APIs and event streams rather than deploying software agents on each workload. Benefits include simplified deployment, seamless scalability with dynamic workloads, faster time-to-value, and reduced resource overhead. The trade-off is that agentless may not provide the same depth of real-time runtime visibility as agent-based solutions for certain in-memory threat scenarios."
+  - q: "What is Cloud Security Posture Management (CSPM)?"
+    a: "CSPM continuously monitors cloud infrastructure configurations against security best practices and compliance requirements, detecting misconfigurations before they become breaches. It answers: are our cloud resources configured as they should be? — covering S3 bucket permissions, network security group rules, IAM policy scope, and encryption settings across multi-cloud and hybrid environments."
+  - q: "How does CNAPP address container and serverless workload security?"
+    a: "CNAPP's Cloud Workload Protection component secures containers, virtual machines, and serverless functions by monitoring for vulnerabilities, detecting runtime threats, and enforcing security policies across workloads that may exist for only minutes before terminating. This runtime protection complements shift-left vulnerability scanning by catching threats that emerge after deployment."
+  - q: "Why is broader cloud context the missing piece in traditional CNAPP implementations?"
+    a: "Traditional security tools analyze workloads in isolation — they flag a misconfigured container or an overly permissive IAM role but do not show how those findings connect. Broader cloud context correlates findings across workloads, identities, network paths, and data flows to identify which combinations create actual attack paths — rather than generating disconnected lists of individual misconfigurations that overwhelm security teams."
 ---
 
 The rapid evolution of cloud environments has brought transformative benefits for businesses, but it has also introduced significant security challenges. As organizations increasingly move to cloud-native architectures, traditional security tools and approaches are struggling to keep up.
