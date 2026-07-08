@@ -2438,7 +2438,10 @@ article.pa4-ns {
   background: var(--os-green-glow);
 }
 @media (max-width: 480px) {
-  .os-author-bio { flex-direction: column; gap: 1rem; }
+  .os-author-bio {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 
 /* ─── FAQ Shortcode Blocks ───────────────────────────────────── */
@@ -2477,4 +2480,6 @@ article.pa4-ns {
   line-height: 1.7;
   color: var(--os-text-muted);
 }
-.os-faq-answer p { margin: 0; }
+.os-faq-answer p {
+  margin: 0;
+}
