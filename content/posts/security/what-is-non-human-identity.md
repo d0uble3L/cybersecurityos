@@ -67,6 +67,10 @@ Every internet-connected device — a sensor, a camera, a networked medical devi
 
 This is the fastest-growing category — and the one most security teams are least prepared for. An AI agent that browses the web, reads emails, calls APIs, queries databases, or executes code does so using credentials. Those credentials are non-human identities with real access to real systems. Unlike a static automation script, AI agents can take unexpected actions based on the content they encounter, which makes the permissions they hold especially important to scope tightly.
 
+![Illustration of an AI agent identity card alongside a digital figure and scales of justice, representing Estonia's proposal for state-issued IDs for AI agents](/posts/security/images/estonia-ai-agent-state-ids.png)
+
+The identity question is no longer purely technical, either. Estonia has floated the idea of state-issued IDs for AI agents — a legal precedent that treats agentic AI as an entity that can hold a verifiable, government-recognized identity, distinct from the human or organization that deployed it. Whether or not that specific proposal goes anywhere, it signals where this is headed: NHI governance is starting to intersect with legal and regulatory identity frameworks, not just IAM tooling.
+
 If you're interested in the specific risk profile of AI agents as an attack surface, the [GPT-Red research I covered earlier](/posts/ai-devsecops/gpt-red-self-improvement-robustness/) is a good illustration of how adversaries are already thinking about this.
 
 ## Why Non-Human Identities Are Multiplying
