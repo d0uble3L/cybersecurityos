@@ -42,4 +42,4 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-Sitemap: https://cybersecurityos.net/sitemap.xml
+Sitemap: https://www.cybersecurityos.net/sitemap.xml
