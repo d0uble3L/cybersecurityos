@@ -55,17 +55,33 @@ Service accounts are user accounts created specifically for applications or auto
 
 API keys and tokens are static secrets that grant a service access to an API. They're everywhere: in `.env` files, CI/CD pipelines, application configs, and sometimes committed directly to version control by accident. Unlike user sessions, API keys don't expire on their own, don't enforce MFA, and can't be traced back to a person — just the application (if you're lucky) or a long-dead project (if you're not).
 
+![Illustration of stolen authentication tokens visualized as a glowing digital key on a holographic display](/posts/security/images/ms-office-token-theft.png)
+
+Token theft is exactly this risk playing out at nation-state scale: Russian state-backed hackers have been caught stealing OAuth tokens from Microsoft Office integrations, using the stolen tokens to impersonate legitimate applications and bypass MFA entirely — because the token, not a password, is what the target system trusts.
+
 ### Bots and RPA Scripts
 
 Robotic process automation (RPA) bots authenticate to systems to perform repetitive tasks: scraping data, processing invoices, updating records. They often run under service accounts or hardcoded credentials, and they touch sensitive systems at scale — making a compromised RPA credential a high-value target.
+
+![Illustration of a botnet command structure with a red-lit network map connecting compromised nodes](/posts/security/images/china-botnet-military.png)
+
+The same dynamic scales up to nation-state botnets: a network of compromised, credentialed nodes acting as a single non-human actor at massive scale. Whether it's an RPA bot with a stale service account or thousands of hijacked devices in a botnet, the underlying failure is the same — an identity kept running long after anyone was watching it.
 
 ### IoT and Device Identities
 
 Every internet-connected device — a sensor, a camera, a networked medical device, a factory controller — has an identity it uses to communicate with backend systems. These credentials are often embedded in firmware, rarely rotated, and difficult to audit across large device fleets. IoT credentials are a favorite persistence mechanism for nation-state actors because they're easy to overlook.
 
+![Illustration of networking routers chained and padlocked together, representing device-level supply chain security controls](/posts/security/images/iot-router-supply-chain.png)
+
+Regulators are starting to treat this as a supply chain problem rather than just a configuration problem — the FCC's move to ban foreign-made routers over supply chain and cyber risk is a direct acknowledgment that a device's embedded identity and firmware provenance are now national security concerns, not just an IT hygiene checkbox.
+
 ### AI Agents
 
 This is the fastest-growing category — and the one most security teams are least prepared for. An AI agent that browses the web, reads emails, calls APIs, queries databases, or executes code does so using credentials. Those credentials are non-human identities with real access to real systems. Unlike a static automation script, AI agents can take unexpected actions based on the content they encounter, which makes the permissions they hold especially important to scope tightly.
+
+![Illustration of an AI agent identity card alongside a digital figure and scales of justice, representing Estonia's proposal for state-issued IDs for AI agents](/posts/security/images/estonia-ai-agent-state-ids.png)
+
+The identity question is no longer purely technical, either. Estonia has floated the idea of state-issued IDs for AI agents — a legal precedent that treats agentic AI as an entity that can hold a verifiable, government-recognized identity, distinct from the human or organization that deployed it. Whether or not that specific proposal goes anywhere, it signals where this is headed: NHI governance is starting to intersect with legal and regulatory identity frameworks, not just IAM tooling.
 
 If you're interested in the specific risk profile of AI agents as an attack surface, the [GPT-Red research I covered earlier](/posts/ai-devsecops/gpt-red-self-improvement-robustness/) is a good illustration of how adversaries are already thinking about this.
 
