@@ -29,7 +29,7 @@ Let me give you my honest read.
 
 ## The 84% stat is an indictment, not a flex
 
-![Illustration of automated pentesting limitations in cybersecurity](https://www.dropbox.com/scl/fi/18umm662t8it90jdanlgc/Automated-pentesting-limitations-in-cybersecurity..png?rlkey=t0lbfxfpv3enuv7luvrrbq6ch&raw=1)
+![Illustration of automated pentesting limitations in cybersecurity](/posts/ai-devsecops/images/automated-pentesting-limitations.png)
 
 The number that's getting the most attention: GPT-Red achieved an 84% attack success rate on indirect prompt injection scenarios, compared to 13% for human red-teamers working the same environments.
 
@@ -53,7 +53,7 @@ The gap between "OpenAI has this capability internally" and "defenders at most o
 
 ## The numbers matter — but read them carefully
 
-![Illustration of cybersecurity risk detection capabilities of GPT-5.5 and successor models](https://www.dropbox.com/scl/fi/yg99qf8kcsxsg1p68ipj1/Cybersecurity-risk-detection-by-GPT-5.5..png?rlkey=h7e6evo6p53fkx8mws3rhh5ku&raw=1)
+![Illustration of cybersecurity risk detection capabilities of GPT-5.5 and successor models](/posts/ai-devsecops/images/cybersecurity-risk-detection-gpt55.png)
 
 The robustness numbers on GPT-5.6 Sol are genuinely good:
 
@@ -77,7 +77,7 @@ What's the iteration budget on your incident response process? Because an automa
 
 ## What I'd actually do if I were you
 
-![Illustration of enhancing AI agents' cybersecurity skills and security posture](https://www.dropbox.com/scl/fi/1hus1ym57knkej6slo1n6/Enhancing-AI-agents-cybersecurity-skills.png?rlkey=c81h5uuwa1c2v646x9f5hj85v&raw=1)
+![Illustration of enhancing AI agents' cybersecurity skills and security posture](/posts/ai-devsecops/images/enhancing-ai-agents-cybersecurity-skills.png)
 
 GPT-Red is not something you'll get access to. OpenAI made that choice deliberately. But the underlying threat — automated, iterative prompt injection against your specific agent harness — is coming regardless of whether the tool is publicly available.
 
