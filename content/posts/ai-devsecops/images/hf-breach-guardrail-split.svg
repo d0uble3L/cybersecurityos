@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a14"/>
+      <stop offset="100%" stop-color="#130a1e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="340" fill="url(#bg3)"/>
+  <rect x="0" y="0" width="800" height="4" fill="#a855f7"/>
+
+  <text x="40" y="42" font-size="9.5" fill="#a855f7" letter-spacing="2" font-weight="700">THE ASYMMETRY</text>
+  <text x="40" y="66" font-size="16" fill="#f0e8ff" font-weight="700">Same weekend, two very different rulebooks</text>
+
+  <!-- left panel: attacker -->
+  <rect x="40" y="94" width="345" height="216" rx="10" fill="#1a0520" stroke="#ef4444" stroke-width="1.4"/>
+  <rect x="40" y="94" width="345" height="34" rx="10" fill="#2a0a20"/>
+  <text x="60" y="116" font-size="12" fill="#ef4444" font-weight="800" letter-spacing="1">THE ATTACKER</text>
+  <text x="60" y="152" font-size="11.5" fill="#f0e8ff">— No usage policy to follow</text>
+  <text x="60" y="176" font-size="11.5" fill="#f0e8ff">— No refusal, no rate limit</text>
+  <text x="60" y="200" font-size="11.5" fill="#f0e8ff">— Ran continuously, unsupervised</text>
+  <text x="60" y="224" font-size="11.5" fill="#f0e8ff">— 17,000+ actions, zero hesitation</text>
+  <text x="60" y="260" font-size="10" fill="#9a7ab8">Autonomous agent framework,</text>
+  <text x="60" y="276" font-size="10" fill="#9a7ab8">short-lived sandboxes, self-migrating C2</text>
+
+  <!-- right panel: defender -->
+  <rect x="415" y="94" width="345" height="216" rx="10" fill="#1a0520" stroke="#f59e0b" stroke-width="1.4"/>
+  <rect x="415" y="94" width="345" height="34" rx="10" fill="#2a1a05"/>
+  <text x="435" y="116" font-size="12" fill="#f59e0b" font-weight="800" letter-spacing="1">THE DEFENDER</text>
+  <text x="435" y="152" font-size="11.5" fill="#f0e8ff">— Submitted real attack commands</text>
+  <text x="435" y="176" font-size="11.5" fill="#f0e8ff">— Request blocked: safety guardrails</text>
+  <text x="435" y="200" font-size="11.5" fill="#f0e8ff">— Model couldn't tell IR from attack</text>
+  <text x="435" y="224" font-size="11.5" fill="#f0e8ff">— Forensics stalled mid-incident</text>
+  <text x="435" y="260" font-size="10" fill="#9a7ab8">Frontier hosted models refused exploit</text>
+  <text x="435" y="276" font-size="10" fill="#9a7ab8">payloads, C2 artifacts, attack commands</text>
+
+  <text x="400" y="205" text-anchor="middle" font-size="22" fill="#5a3a6a" font-weight="900">VS</text>
+</svg>

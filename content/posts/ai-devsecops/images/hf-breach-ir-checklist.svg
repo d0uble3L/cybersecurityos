@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a14"/>
+      <stop offset="100%" stop-color="#130a1e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="320" fill="url(#bg4)"/>
+  <rect x="0" y="0" width="800" height="4" fill="#10b981"/>
+
+  <text x="40" y="42" font-size="9.5" fill="#10b981" letter-spacing="2" font-weight="700">TIER-0 IR READINESS</text>
+  <text x="40" y="66" font-size="16" fill="#f0e8ff" font-weight="700">Treat "bring your own model" like offline backups</text>
+
+  <g font-size="12">
+    <rect x="40" y="92" width="20" height="20" rx="4" fill="none" stroke="#10b981" stroke-width="1.6"/>
+    <path d="M44 102 L49 108 L57 96" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="72" y="107" fill="#f0e8ff" font-weight="600">Pre-vetted, self-hosted model for forensic/IR use — tested before you need it</text>
+
+    <rect x="40" y="134" width="20" height="20" rx="4" fill="none" stroke="#10b981" stroke-width="1.6"/>
+    <path d="M44 144 L49 150 L57 138" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="72" y="149" fill="#f0e8ff" font-weight="600">Contractual/technical carve-outs with AI vendors for security research and IR</text>
+
+    <rect x="40" y="176" width="20" height="20" rx="4" fill="none" stroke="#10b981" stroke-width="1.6"/>
+    <path d="M44 186 L49 192 L57 180" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="72" y="191" fill="#f0e8ff" font-weight="600">Red-team your own AI tooling's refusal behavior, not just your infra</text>
+
+    <rect x="40" y="218" width="20" height="20" rx="4" fill="none" stroke="#10b981" stroke-width="1.6"/>
+    <path d="M44 228 L49 234 L57 222" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="72" y="233" fill="#f0e8ff" font-weight="600">Don't outsource "attacker vs. defender" judgment to a model that can't tell</text>
+  </g>
+
+  <text x="40" y="288" font-size="10.5" fill="#5a3a6a">Sourced under pressure, mid-incident, is not a readiness plan.</text>
+</svg>
