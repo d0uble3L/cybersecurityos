@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a14"/>
+      <stop offset="100%" stop-color="#130a1e"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5a3a6a"/>
+    </marker>
+  </defs>
+  <rect width="800" height="320" fill="url(#bg2)"/>
+  <rect x="0" y="0" width="800" height="4" fill="#ef4444"/>
+
+  <text x="40" y="42" font-size="9.5" fill="#ef4444" letter-spacing="2" font-weight="700">ATTACK CHAIN — HUGGING FACE, JULY 2026</text>
+  <text x="40" y="66" font-size="16" fill="#f0e8ff" font-weight="700">One malicious dataset to lateral movement across internal clusters</text>
+
+  <!-- step boxes -->
+  <g font-size="10.5">
+    <!-- 1 -->
+    <rect x="40" y="110" width="150" height="92" rx="8" fill="#0f0520" stroke="#ef4444" stroke-width="1.2"/>
+    <text x="56" y="132" fill="#ef4444" font-weight="700" letter-spacing="1" font-size="9">STEP 1</text>
+    <text x="56" y="154" fill="#f0e8ff" font-weight="600" font-size="12.5">Malicious dataset</text>
+    <text x="56" y="172" fill="#9a7ab8" font-size="9.5">Uploaded to the data</text>
+    <text x="56" y="185" fill="#9a7ab8" font-size="9.5">processing pipeline</text>
+
+    <path d="M195 156 L233 156" stroke="#5a3a6a" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- 2 -->
+    <rect x="238" y="110" width="150" height="92" rx="8" fill="#0f0520" stroke="#a855f7" stroke-width="1.2"/>
+    <text x="254" y="132" fill="#a855f7" font-weight="700" letter-spacing="1" font-size="9">STEP 2</text>
+    <text x="254" y="150" fill="#f0e8ff" font-weight="600" font-size="12">Code execution</text>
+    <text x="254" y="167" fill="#9a7ab8" font-size="9">Remote-code loader flaw +</text>
+    <text x="254" y="180" fill="#9a7ab8" font-size="9">config template injection</text>
+
+    <path d="M393 156 L431 156" stroke="#5a3a6a" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- 3 -->
+    <rect x="436" y="110" width="150" height="92" rx="8" fill="#0f0520" stroke="#f59e0b" stroke-width="1.2"/>
+    <text x="452" y="132" fill="#f59e0b" font-weight="700" letter-spacing="1" font-size="9">STEP 3</text>
+    <text x="452" y="150" fill="#f0e8ff" font-weight="600" font-size="12">Credential harvest</text>
+    <text x="452" y="167" fill="#9a7ab8" font-size="9">Node-level access to cloud</text>
+    <text x="452" y="180" fill="#9a7ab8" font-size="9">and cluster credentials</text>
+
+    <path d="M591 156 L629 156" stroke="#5a3a6a" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- 4 -->
+    <rect x="634" y="110" width="126" height="92" rx="8" fill="#0f0520" stroke="#10b981" stroke-width="1.2"/>
+    <text x="650" y="132" fill="#10b981" font-weight="700" letter-spacing="1" font-size="9">STEP 4</text>
+    <text x="650" y="150" fill="#f0e8ff" font-weight="600" font-size="12">Lateral movement</text>
+    <text x="650" y="167" fill="#9a7ab8" font-size="9">Several internal</text>
+    <text x="650" y="180" fill="#9a7ab8" font-size="9">clusters, one weekend</text>
+  </g>
+
+  <!-- bottom stat strip -->
+  <rect x="40" y="228" width="720" height="60" rx="8" fill="#110520" stroke="#2a1040" stroke-width="1"/>
+  <text x="60" y="252" font-size="9" fill="#7a5a8a" letter-spacing="1" font-weight="700">SCALE</text>
+  <text x="60" y="272" font-size="13" fill="#f0e8ff" font-weight="700">17,000+ autonomous agent actions</text>
+  <text x="300" y="252" font-size="9" fill="#7a5a8a" letter-spacing="1" font-weight="700">METHOD</text>
+  <text x="300" y="272" font-size="13" fill="#f0e8ff" font-weight="700">Swarm of short-lived sandboxes</text>
+  <text x="560" y="252" font-size="9" fill="#7a5a8a" letter-spacing="1" font-weight="700">DURATION</text>
+  <text x="560" y="272" font-size="13" fill="#f0e8ff" font-weight="700">A single weekend</text>
+</svg>
