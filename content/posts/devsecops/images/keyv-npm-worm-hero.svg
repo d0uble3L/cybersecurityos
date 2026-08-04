@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050c1a"/>
+      <stop offset="100%" stop-color="#0c1f3a"/>
+    </linearGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#0e2440" stroke-width="0.8"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Glow -->
+  <ellipse cx="300" cy="315" rx="400" ry="300" fill="#ef4444" opacity="0.02"/>
+
+  <!-- Top border — red accent for threat-intel tone -->
+  <rect x="0" y="0" width="1200" height="4" fill="#ef4444"/>
+
+  <!-- Left vertical accent -->
+  <rect x="82" y="108" width="4" height="402" rx="2" fill="#ef4444"/>
+
+  <!-- Category label -->
+  <rect x="106" y="108" width="182" height="24" rx="12" fill="#1a0a0a" stroke="#ef4444" stroke-width="1"/>
+  <text x="197" y="124" text-anchor="middle" font-size="10" fill="#ef4444" letter-spacing="2" font-weight="600">SUPPLY CHAIN ATTACK</text>
+  <text x="300" y="124" font-size="11" fill="#3d6b8c" letter-spacing="1">AUGUST 4, 2026</text>
+
+  <!-- Title -->
+  <text x="106" y="196" font-size="40" font-weight="800" fill="#e8f4ff" letter-spacing="-1">The keyv Worm Turned</text>
+  <text x="106" y="244" font-size="40" font-weight="800" fill="#e8f4ff" letter-spacing="-1">Credential Rotation</text>
+  <text x="106" y="292" font-size="40" font-weight="800" fill="#ef4444" letter-spacing="-1">Into a Trigger.</text>
+
+  <!-- Divider -->
+  <rect x="106" y="318" width="420" height="2" rx="1" fill="#2a1a1a"/>
+
+  <!-- Subtitle -->
+  <text x="106" y="350" font-size="15" fill="#9ab0c8">400+ npm packages. Nine organizations. Thirty minutes.</text>
+  <text x="106" y="374" font-size="15" fill="#9ab0c8">Signed with valid GitHub Actions provenance.</text>
+
+  <!-- Stat strip -->
+  <rect x="106" y="400" width="132" height="60" rx="7" fill="#0a1628" stroke="#1e3d56" stroke-width="1"/>
+  <text x="172" y="426" text-anchor="middle" font-size="21" font-weight="800" fill="#ef4444">127M</text>
+  <text x="172" y="446" text-anchor="middle" font-size="9.5" fill="#5a7a8a">keyv weekly dl</text>
+
+  <rect x="248" y="400" width="132" height="60" rx="7" fill="#0a1628" stroke="#1e3d56" stroke-width="1"/>
+  <text x="314" y="426" text-anchor="middle" font-size="21" font-weight="800" fill="#f59e0b">2B+</text>
+  <text x="314" y="446" text-anchor="middle" font-size="9.5" fill="#5a7a8a">monthly installs</text>
+
+  <rect x="390" y="400" width="136" height="60" rx="7" fill="#0a1628" stroke="#1e3d56" stroke-width="1"/>
+  <text x="458" y="426" text-anchor="middle" font-size="21" font-weight="800" fill="#8b5cf6">~1/sec</text>
+  <text x="458" y="446" text-anchor="middle" font-size="9.5" fill="#5a7a8a">republish rate</text>
+
+  <!-- Tags -->
+  <rect x="106" y="476" width="120" height="24" rx="12" fill="#1a0a0a" stroke="#ef4444" stroke-width="1"/>
+  <text x="166" y="492" text-anchor="middle" font-size="10" fill="#ef4444">Shai-Hulud</text>
+
+  <rect x="234" y="476" width="112" height="24" rx="12" fill="#0d0a1a" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="290" y="492" text-anchor="middle" font-size="10" fill="#8b5cf6">npm preinstall</text>
+
+  <rect x="354" y="476" width="128" height="24" rx="12" fill="#051828" stroke="#10b981" stroke-width="1"/>
+  <text x="418" y="492" text-anchor="middle" font-size="10" fill="#10b981">--ignore-scripts</text>
+
+  <!-- Branding -->
+  <text x="106" y="562" font-size="11" fill="#1e3d56" letter-spacing="3">CYBERSECURITYOS.NET</text>
+
+  <!-- Right column: attack chain -->
+  <text x="710" y="122" font-size="9" fill="#3d6b8c" letter-spacing="2" font-weight="700">EXECUTION CHAIN</text>
+
+  <!-- Stage 1 -->
+  <rect x="710" y="136" width="422" height="76" rx="7" fill="#0d0a1a" stroke="#f59e0b" stroke-width="1"/>
+  <rect x="710" y="136" width="4" height="76" fill="#f59e0b"/>
+  <text x="726" y="156" font-size="9" fill="#f59e0b" letter-spacing="1.2" font-weight="700">STAGE 1 · SOURCE COMPROMISE</text>
+  <text x="726" y="176" font-size="14" fill="#e8f4ff" font-weight="600">Maintainer GitHub Account</text>
+  <text x="726" y="196" font-size="10.5" fill="#5a7a8a">Push to main → cut release → CI signs it. Valid provenance.</text>
+
+  <!-- Stage 2 -->
+  <rect x="710" y="222" width="422" height="76" rx="7" fill="#1a0505" stroke="#ef4444" stroke-width="1"/>
+  <rect x="710" y="222" width="4" height="76" fill="#ef4444"/>
+  <text x="726" y="242" font-size="9" fill="#ef4444" letter-spacing="1.2" font-weight="700">STAGE 2 · INSTALL-TIME EXECUTION</text>
+  <text x="726" y="262" font-size="14" fill="#e8f4ff" font-weight="600">"preinstall": "node setup.mjs"</text>
+  <text x="726" y="282" font-size="10.5" fill="#5a7a8a">Drops Bun runtime, runs Math_Symbol.js before your code.</text>
+
+  <!-- Stage 3 -->
+  <rect x="710" y="308" width="422" height="76" rx="7" fill="#0d0a1a" stroke="#8b5cf6" stroke-width="1"/>
+  <rect x="710" y="308" width="4" height="76" fill="#8b5cf6"/>
+  <text x="726" y="328" font-size="9" fill="#8b5cf6" letter-spacing="1.2" font-weight="700">STAGE 3 · HARVEST &amp; EXFILTRATE</text>
+  <text x="726" y="348" font-size="14" fill="#e8f4ff" font-weight="600">Cloud, Vault, K8s, CI Secrets</text>
+  <text x="726" y="368" font-size="10.5" fill="#5a7a8a">Pushed to PUBLIC repos: "Shai-Hulud: Here We Go Again"</text>
+
+  <!-- Stage 4 -->
+  <rect x="710" y="394" width="422" height="76" rx="7" fill="#1a0505" stroke="#ef4444" stroke-width="1"/>
+  <rect x="710" y="394" width="4" height="76" fill="#ef4444"/>
+  <text x="726" y="414" font-size="9" fill="#ef4444" letter-spacing="1.2" font-weight="700">STAGE 4 · PERSIST &amp; PROPAGATE</text>
+  <text x="726" y="434" font-size="14" fill="#e8f4ff" font-weight="600">.claude/ hooks · .vscode/ tasks</text>
+  <text x="726" y="454" font-size="10.5" fill="#5a7a8a">Survives node_modules wipe. Re-fires on folder open.</text>
+
+  <!-- Dead-man switch warning -->
+  <rect x="710" y="480" width="422" height="80" rx="7" fill="#1a0505" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="722" y="502" font-size="9" fill="#ef4444" letter-spacing="1.5" font-weight="700">⚠  DEAD-MAN SWITCH</text>
+  <rect x="722" y="511" width="390" height="1" fill="#3d1414"/>
+  <text x="726" y="531" font-size="12" fill="#fca5a5" font-weight="600">Revoking the stolen token detonates the payload.</text>
+  <text x="726" y="550" font-size="10.5" fill="#8b5a5a">Isolate the host FIRST. Rotate from clean ground second.</text>
+</svg>
