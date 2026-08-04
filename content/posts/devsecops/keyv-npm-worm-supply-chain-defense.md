@@ -80,7 +80,7 @@ Here is the detail that should worry you most: **the compiled library output was
 
 **Stage 0 — `preinstall`.** npm runs lifecycle scripts automatically, as root-equivalent user context in most CI images, before your test suite, before your linter, before anything you wrote. `npm install` is not a download operation. It is a remote code execution primitive that the ecosystem has agreed to call a feature.
 
-**Stage 1 — the Bun sidestep.** `setup.mjs` checks whether the Bun runtime is present. If not, it downloads Bun 1.3.13 from the runtime's *official GitHub releases page*. This is clever operational security: the download is from a legitimate, high-reputation domain that virtually no egress policy blocks and no threat feed flags. The malware then hands off to a 727,680-byte compiled bundle running under Bun rather than Node — which sidesteps a good deal of Node-focused runtime monitoring.
+**Stage 1 — the Bun sidestep.** `setup.mjs` checks whether the Bun runtime is present. If not, it downloads Bun 1.3.13 from the runtime's _official GitHub releases page_. This is clever operational security: the download is from a legitimate, high-reputation domain that virtually no egress policy blocks and no threat feed flags. The malware then hands off to a 727,680-byte compiled bundle running under Bun rather than Node — which sidesteps a good deal of Node-focused runtime monitoring.
 
 **Stage 2 — harvest.** The payload collects GitHub and npm tokens, AWS, GCP and Azure credentials, Stripe keys, HashiCorp Vault tokens, Kubernetes configs, database connection strings, and private keys. On CI, it reads GitHub Actions secrets out of runner memory — which means secrets you correctly kept out of the filesystem and injected only at runtime were still taken.
 
@@ -92,7 +92,7 @@ Here is the detail that should worry you most: **the compiled library output was
 
 npm package provenance has been the ecosystem's flagship answer to supply chain attacks. Sigstore attestations, build transparency, the whole apparatus. This incident is the clearest demonstration yet of what it does and does not cover.
 
-The attacker did not steal a publishing token and push from a laptop. They compromised the *source*, then let the project's own legitimate release workflow do the publishing. GitHub Actions built the package, signed the attestation, and pushed to npm — exactly as designed, exactly as it does for every clean release.
+The attacker did not steal a publishing token and push from a laptop. They compromised the _source_, then let the project's own legitimate release workflow do the publishing. GitHub Actions built the package, signed the attestation, and pushed to npm — exactly as designed, exactly as it does for every clean release.
 
 **Provenance attests that a package was built from a specific commit in a specific repository. It does not attest that the commit is trustworthy.** When the source is poisoned, provenance signs the poison with a perfectly valid signature.
 
@@ -120,7 +120,7 @@ Here is the finding that should change how you sequence your response.
 
 The payload installs a **dead-man switch**. It polls GitHub using the credential it stole, and when that credential is revoked, it executes a destructive handler — reporting indicates an attempt to wipe the affected machine.
 
-Read that against the first line of essentially every credential-compromise runbook in existence: *rotate the credential immediately.*
+Read that against the first line of essentially every credential-compromise runbook in existence: _rotate the credential immediately._
 
 In this incident, **rotation is the detonator.** An organization that follows textbook incident response — detect, revoke, rotate — hands the attacker a destructive outcome on every infected host simultaneously. The attacker did not just steal your secrets. They weaponized your recovery procedure and turned your speed against you.
 
@@ -168,7 +168,7 @@ Confirmed-malicious versions reported by Microsoft Threat Intelligence include `
 - New org members, changed permissions, or modified branch protection
 - Unexpected workflow files or self-hosted runner registrations
 
-**7. Assume every exfiltrated secret is public.** The exfiltration destination was a *public* GitHub repository. Anyone could clone it. This is not a targeted-attacker-holds-your-data situation; it is a published-on-the-open-internet situation. Rotate accordingly, and check whether any leaked credential grants access to customer data — that may carry breach notification obligations.
+**7. Assume every exfiltrated secret is public.** The exfiltration destination was a _public_ GitHub repository. Anyone could clone it. This is not a targeted-attacker-holds-your-data situation; it is a published-on-the-open-internet situation. Rotate accordingly, and check whether any leaked credential grants access to customer data — that may carry breach notification obligations.
 
 ### Hour 8–48: Rebuild and verify
 
@@ -228,7 +228,7 @@ The honest caveat: some legitimate packages genuinely need install scripts, most
 
 ### 2. Eliminate long-lived publishing tokens
 
-Move to **npm trusted publishing** with OIDC. Short-lived, workflow-scoped credentials cannot be harvested from a developer machine because they do not exist there. This does not stop a source-compromise attack like this one, but it removes the fuel the worm used to *spread* — the standing npm tokens sitting on developer laptops and in CI secret stores.
+Move to **npm trusted publishing** with OIDC. Short-lived, workflow-scoped credentials cannot be harvested from a developer machine because they do not exist there. This does not stop a source-compromise attack like this one, but it removes the fuel the worm used to _spread_ — the standing npm tokens sitting on developer laptops and in CI secret stores.
 
 Pair it with mandatory 2FA for all writes and publishing actions at the account, organization, and package level.
 
@@ -266,7 +266,7 @@ When the next advisory drops naming forty packages, the question "were we expose
 
 Add an explicit containment-before-revocation step for supply chain compromise:
 
-> **Supply chain credential compromise:** Isolate affected hosts from the network and capture forensic images *before* revoking any credential. Malware in this class may implement destructive handlers triggered by credential revocation. Rotate from a separate clean system only after containment is confirmed.
+> **Supply chain credential compromise:** Isolate affected hosts from the network and capture forensic images _before_ revoking any credential. Malware in this class may implement destructive handlers triggered by credential revocation. Rotate from a separate clean system only after containment is confirmed.
 
 If you take one procedural change from this post, take that one.
 
