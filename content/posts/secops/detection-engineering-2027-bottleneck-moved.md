@@ -53,6 +53,8 @@ Meanwhile, Gartner has been reported as expecting 75% of SOCs to deploy AI analy
 
 ## Detections Now Have Two Audiences
 
+![AI analyst robot working through security alerts at a laptop](https://www.dropbox.com/scl/fi/1hus1ym57knkej6slo1n6/Enhancing-AI-agents-cybersecurity-skills.png?rlkey=c81h5uuwa1c2v646x9f5hj85v&raw=1)
+
 Most detections are written for a human who already knows the environment. The title is terse. The description is one sentence. The context lives in the analyst's head.
 
 An agent doesn't have that head. It has what you give it and whatever it can query. If the detection is thin, the agent fills the gap with guesses. A confident wrong answer is worse than a slow right one.
@@ -68,6 +70,8 @@ Here's a position some will push back on: write the detection for the agent firs
 Expected benign explanations are the field most teams skip. They're also the one that matters most. An agent that knows what normal looks like can close the backup-job alert correctly and say why. An agent that doesn't will either escalate everything or start closing things that merely look similar.
 
 ## Glass Box, Not Black Box
+
+![AI agents working inside a transparent glass enclosure](https://www.dropbox.com/scl/fi/u80fel3eejspbjeteph9n/AI-agents-and-cybersecurity-skills.png?rlkey=10i6306vyiqn7ragmnte687hz&raw=1)
 
 You can't tune automation you can't inspect.
 
@@ -90,6 +94,8 @@ This matters more now, not less. The agent-ready detection described above is a 
 The fix is slow and unglamorous. Pair analysts with engineers. Make code review a normal part of shipping a rule. Hire for the skill or train for it on purpose, with time on the calendar. A tool purchase is not a skills plan.
 
 ## Detection Moves Toward the Data
+
+![Shield over a network of connected data nodes and pipelines](https://www.dropbox.com/scl/fi/zvrggemlkwon90klqls69/Forensic-readiness-for-AI-containment-breaches.png?rlkey=b5ofqn2lzi2qqdvd7uo8z23aw&raw=1)
 
 The old assumption was simple: send everything to the SIEM and detect there. That assumption is breaking, mostly on cost.
 
@@ -152,3 +158,15 @@ For leaders:
 ## One Question
 
 If an agent closed an alert in your SOC yesterday, could you explain to your regulator today exactly why?
+
+---
+
+## Tools I Use
+
+A quick aside from me, separate from the argument above. These aren't detection platforms; they're what I use around the work.
+
+**[Make](https://www.make.com/en/register?pc=trilltayo)** is my glue layer for the boring parts: CVE feeds filtered by severity into a morning digest, IOC enrichment against WHOIS and VirusTotal, alerts routed to chat. It's a fast way to prototype a SOAR-lite playbook before you decide whether it deserves real engineering time. (Affiliate link: it supports CyberShield at no cost to you.)
+
+**[Canva](https://www.canva.com/join/vqp-gcy-fgx)** is where I build the one-pagers that carry the "technical fact, business risk, business impact" chain to leadership: threat briefs, ATT&CK overlays, incident timelines. If your detection work isn't getting budget, the problem is often the slide, not the rule. (Affiliate link: it supports CyberShield at no cost to you.)
+
+**[Hypefury](https://hypefury.com/?via=trilltayo)** keeps my writeups and lab notes going out on a schedule, so sharing what I learn doesn't eat into the time I spend learning it. Publishing your detection work is one of the better ways to build a reputation in this field. (Affiliate link: it supports CyberShield at no cost to you.)
