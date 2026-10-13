@@ -5,7 +5,7 @@
 {{ $authorName := "" }}
 {{ if reflect.IsSlice $author }}{{ $authorName = delimit $author ", " }}{{ else }}{{ $authorName = $author }}{{ end }}
 {{ $image := "" }}
-{{ with .Params.featured_image }}{{ $image = printf "%s%s" (strings.TrimRight "/" site.BaseURL) . }}{{ end }}
+{{ with .Params.featured_image }}{{ if hasPrefix . "http" }}{{ $image = . }}{{ else }}{{ $image = printf "%s%s" (strings.TrimRight "/" site.BaseURL) . }}{{ end }}{{ end }}
 {{ $keywords := "" }}
 {{ with .Params.keywords }}{{ $keywords = . }}{{ else }}{{ with .Params.tags }}{{ $keywords = delimit . ", " }}{{ end }}{{ end }}
 {{ $section := .CurrentSection.Title | default .Section }}
