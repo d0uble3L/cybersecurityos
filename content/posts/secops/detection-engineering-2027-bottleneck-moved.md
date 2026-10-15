@@ -18,7 +18,9 @@ categories: ["Security Operations", "Security Leadership"]
 description: "The detection bottleneck moved from writing rules to investigating alerts. What AI agents change, how to measure it, and five predictions for 2027."
 slug: "detection-engineering-2027-bottleneck-moved"
 show_reading_time: true
-featured_image: /posts/secops/images/detection-engineering-2027-thumb.svg
+featured_image: /posts/secops/images/detection-engineering-2027-social.png
+images:
+  - /posts/secops/images/detection-engineering-2027-social.png
 keywords: "detection engineering 2027, detection engineering trends, AI SOC analysts, AI agents alert triage, detection-as-code adoption, glass-box automation SOC, detection engineering metrics, ATT&CK coverage vanity metric, SANS State of Detection Engineering 2026, M-Trends 2026, monitoring AI agents non-human identities, in-stream detection data pipelines"
 faq:
   - q: "What is the biggest bottleneck in detection engineering heading into 2027?"
