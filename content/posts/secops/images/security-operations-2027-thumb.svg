@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a14"/>
+      <stop offset="100%" stop-color="#0a1a1e"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#0a2a2e" stroke-width="0.7"/>
+    </pattern>
+    <linearGradient id="cyanglow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="420" fill="url(#bg)"/>
+  <rect width="800" height="420" fill="url(#grid)"/>
+
+  <!-- Top accent -->
+  <rect x="0" y="0" width="800" height="4" fill="url(#cyanglow)"/>
+
+  <!-- Left bar -->
+  <rect x="52" y="56" width="4" height="254" rx="2" fill="#22d3ee"/>
+
+  <!-- Category chip -->
+  <rect x="72" y="56" width="150" height="22" rx="11" fill="#04191c" stroke="#22d3ee" stroke-width="1"/>
+  <text x="147" y="71" text-anchor="middle" font-size="9.5" fill="#22d3ee" letter-spacing="2" font-weight="600">SECURITY OPS</text>
+  <text x="234" y="71" font-size="9.5" fill="#3a5a5e" letter-spacing="1">OCT 21, 2026</text>
+
+  <!-- Title -->
+  <text x="72" y="128" font-size="26" font-weight="800" fill="#e8fbff" letter-spacing="-0.5">The SOC Gets a</text>
+  <text x="72" y="166" font-size="26" font-weight="800" fill="#e8fbff" letter-spacing="-0.5">New Org Chart:</text>
+  <text x="72" y="204" font-size="26" font-weight="800" fill="#22d3ee" letter-spacing="-0.5">5 Predictions for 2027</text>
+
+  <!-- Divider -->
+  <rect x="72" y="222" width="280" height="2" rx="1" fill="#0f2a2e"/>
+
+  <!-- Subtitle -->
+  <text x="72" y="250" font-size="14" fill="#6a9aa0">From a team that watches to a system that acts.</text>
+
+  <!-- Tags -->
+  <rect x="72" y="272" width="96" height="22" rx="11" fill="#041418" stroke="#22d3ee" stroke-width="1"/>
+  <text x="120" y="287" text-anchor="middle" font-size="10" fill="#22d3ee">AI Agents</text>
+
+  <rect x="176" y="272" width="82" height="22" rx="11" fill="#041418" stroke="#a855f7" stroke-width="1"/>
+  <text x="217" y="287" text-anchor="middle" font-size="10" fill="#a855f7">Identity</text>
+
+  <rect x="266" y="272" width="86" height="22" rx="11" fill="#041418" stroke="#f59e0b" stroke-width="1"/>
+  <text x="309" y="287" text-anchor="middle" font-size="10" fill="#f59e0b">Regulation</text>
+
+  <!-- Branding -->
+  <text x="72" y="388" font-size="11" fill="#0f2a2e" letter-spacing="2.5">CYBERSECURITYOS.NET</text>
+
+  <!-- Right: five predictions -->
+  <rect x="476" y="56" width="256" height="48" rx="7" fill="#04141a" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="476" y="56" width="4" height="48" fill="#22d3ee"/>
+  <text x="490" y="73" font-size="8" fill="#22d3ee" letter-spacing="1" font-weight="700">01 · PEOPLE</text>
+  <text x="490" y="93" font-size="12.5" fill="#e8fbff" font-weight="600">Juniors review the agents</text>
+
+  <rect x="476" y="112" width="256" height="48" rx="7" fill="#04141a" stroke="#a855f7" stroke-width="1"/>
+  <rect x="476" y="112" width="4" height="48" fill="#a855f7"/>
+  <text x="490" y="129" font-size="8" fill="#a855f7" letter-spacing="1" font-weight="700">02 · RESPONSE</text>
+  <text x="490" y="149" font-size="12.5" fill="#e8fbff" font-weight="600">Contain what can be undone</text>
+
+  <rect x="476" y="168" width="256" height="48" rx="7" fill="#04141a" stroke="#f59e0b" stroke-width="1"/>
+  <rect x="476" y="168" width="4" height="48" fill="#f59e0b"/>
+  <text x="490" y="185" font-size="8" fill="#f59e0b" letter-spacing="1" font-weight="700">03 · TELEMETRY</text>
+  <text x="490" y="205" font-size="12.5" fill="#e8fbff" font-weight="600">The session is the perimeter</text>
+
+  <rect x="476" y="224" width="256" height="48" rx="7" fill="#04141a" stroke="#10b981" stroke-width="1"/>
+  <rect x="476" y="224" width="4" height="48" fill="#10b981"/>
+  <text x="490" y="241" font-size="8" fill="#10b981" letter-spacing="1" font-weight="700">04 · EXPOSURE</text>
+  <text x="490" y="261" font-size="12.5" fill="#e8fbff" font-weight="600">Edge CVEs are incidents</text>
+
+  <rect x="476" y="280" width="256" height="48" rx="7" fill="#04141a" stroke="#f43f5e" stroke-width="1"/>
+  <rect x="476" y="280" width="4" height="48" fill="#f43f5e"/>
+  <text x="490" y="297" font-size="8" fill="#f43f5e" letter-spacing="1" font-weight="700">05 · COMPLIANCE</text>
+  <text x="490" y="317" font-size="12.5" fill="#e8fbff" font-weight="600">Run on the regulator's clock</text>
+</svg>

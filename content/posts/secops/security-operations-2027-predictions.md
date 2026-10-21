@@ -18,7 +18,9 @@ categories: ["Security Operations", "Security Leadership"]
 description: "Five checkable predictions for security operations in 2027: the Tier 1 job, autonomous containment, identity as telemetry, edge exploitation, and regulatory clocks."
 slug: "security-operations-2027-predictions"
 show_reading_time: true
-featured_image: ""
+featured_image: /posts/secops/images/security-operations-2027-social.png
+images:
+  - /posts/secops/images/security-operations-2027-social.png
 keywords: "security operations predictions 2027, SOC trends 2027, future of the SOC, AI SOC analyst, Tier 1 SOC analyst jobs, autonomous containment, time to contain metric, identity threat detection and response, session token theft, edge device exploitation, DORA incident reporting, NIS2 incident notification, SEC 8-K cybersecurity disclosure"
 faq:
   - q: "What will change most in security operations in 2027?"
@@ -28,7 +30,7 @@ faq:
   - q: "What is bounded autonomous containment?"
     a: "It's letting automation take pre-approved, reversible containment actions, such as revoking a session, forcing reauthentication, or isolating a single endpoint, without waiting for human approval. Irreversible or high-impact actions still need a person. The line is drawn by reversibility, not by how confident the model is."
   - q: "Why is identity becoming the main focus of the SOC?"
-    a: "Attackers increasingly log in rather than break in. Stolen session tokens, OAuth grants, help desk social engineering, and abused non-human identities all bypass the controls that stop password theft. Identity provider and SaaS audit logs are where those attacks show up first."
+    a: "Exploitation is still the most common way in, but identity is where attackers persist and spread. Stolen session tokens, OAuth grants, help desk social engineering, and abused non-human identities all bypass the controls that stop password theft. Identity provider and SaaS audit logs are where those attacks show up first."
   - q: "How do incident reporting rules affect the SOC?"
     a: "Rules like the SEC's four-business-day Form 8-K requirement, NIS2's 24-hour early warning, and DORA's four-hour initial notification for major ICT incidents put a legal clock on incident response. The SOC's case record becomes the evidence for what was known and when, so it has to be accurate, timestamped, and ready for scrutiny."
 ---
@@ -45,13 +47,13 @@ Here's how I'm framing these. Each prediction is specific enough to be wrong. Ea
 
 **The prediction:** By the end of 2027, a major workforce study (ISC2's or a comparable one) will report that AI triage is directly reducing hiring for entry-level SOC roles.
 
-The direction is already set. Gartner has been reported as expecting 75% of SOCs to deploy AI analysts by the end of 2026. Agents are good at the first pass: pull the context, check the obvious benign explanations, and close or escalate. That's most of what a Tier 1 analyst does on a normal shift.
+The direction is already set. Gartner predicts that by 2028, 70% of large SOCs will pilot AI agents to augment Tier 1 and Tier 2 operations. Agents are good at the first pass: pull the context, check the obvious benign explanations, and close or escalate. That's most of what a Tier 1 analyst does on a normal shift.
 
 So the queue moves. The question is what happens to the people.
 
 The tempting answer is to cut the tier and bank the savings. That's a mistake with a delayed bill. Every senior incident responder you have today learned the job by working a queue. They saw a thousand benign alerts, so they recognized the one that wasn't. Remove the queue and you remove the apprenticeship. In five years you'll have agents that need supervising and nobody with the instincts to supervise them.
 
-**My position:** Don't eliminate the junior tier. Redesign it. The new Tier 1 job is reviewing agent decisions. A junior analyst who audits 50 agent closures a day, and has to explain which ones were wrong and why, learns faster than one who clicks through 50 alerts. They also produce the quality data you need to trust the agent.
+**My position:** Don't eliminate the junior tier. Redesign it. The new Tier 1 job is reviewing agent decisions. A junior analyst who audits 50 agent closures a day, and has to explain which ones were wrong and why, learns faster than one who clicks through 50 alerts. They also produce the quality data you need to trust the agent. Gartner's same prediction says only 15% of those SOCs will see measurable improvement without structured evaluation. Juniors reviewing agent decisions is that evaluation.
 
 **What to do now:** Before you change headcount, write down how your next generation of senior responders will be trained. If the answer is "we'll hire them from somewhere else," so will everyone else.
 
@@ -77,7 +79,9 @@ Revoking a session is cheap to undo. The user signs in again. Isolating one lapt
 
 **The prediction:** The 2027 editions of at least two major breach reports (Verizon DBIR, M-Trends, or comparable) will break out stolen sessions or tokens, or abuse of non-human identities, as a distinct and growing initial access category.
 
-Attackers increasingly log in rather than break in. An infostealer lifts a session cookie and replays it, and MFA never fires. A consent-phishing link gets an OAuth grant that survives a password reset. A caller talks the help desk into resetting MFA, the [Scattered Spider playbook](/posts/os-weekly/scattered-spider-social-engineering-defense/). A leaked API key or overprivileged service account gives standing access with no human behind it at all. If that last one is new to you, start with [Non-Human Identity 101](/posts/security/what-is-non-human-identity/).
+Exploitation is still the most common way in (more on that below). But identity is where attackers persist, spread, and increasingly start. M-Trends 2026 has voice phishing as the second most common initial access vector, at 11% of cases where a vector was identified. Verizon's 2026 DBIR found that half of the ransomware victims with a prior infostealer or credential leak event had that event within 95 days of the attack.
+
+An infostealer lifts a session cookie and replays it, and MFA never fires. A consent-phishing link gets an OAuth grant that survives a password reset. A caller talks the help desk into resetting MFA, the [Scattered Spider playbook](/posts/os-weekly/scattered-spider-social-engineering-defense/). A leaked API key or overprivileged service account gives standing access with no human behind it at all. If that last one is new to you, start with [Non-Human Identity 101](/posts/security/what-is-non-human-identity/).
 
 None of these show up well in endpoint or network telemetry. They show up in identity provider logs, SaaS audit logs, and cloud control-plane events. In a lot of SOCs, those are still second-class sources: ingested late, parsed badly, and owned by a different team.
 
@@ -89,11 +93,11 @@ None of these show up well in endpoint or network telemetry. They show up in ide
 
 ## 4. The SOC Absorbs Exposure Response at the Edge
 
-**The prediction:** Exploitation will hold the top initial access spot in M-Trends for a seventh straight year, and edge devices (VPNs, firewalls, gateways) will make up a larger share of exploited targets in the 2027 Verizon DBIR than in its 2025 edition.
+**The prediction:** Exploitation will hold the top initial access spot in both M-Trends 2027 (a seventh straight year) and the 2027 Verizon DBIR (a second straight year).
 
-M-Trends 2026 has exploitation as the top initial access vector for the sixth year running, at 32%. Verizon's 2025 DBIR found edge devices and VPNs were the target in about 22% of vulnerability exploitation, up from roughly 3% the year before. It also found organizations took a median of 32 days to fully remediate those edge flaws.
+The two biggest breach datasets now agree. M-Trends 2026 has exploitation as the top initial access vector for the sixth year running, at 32%. Verizon's 2026 DBIR has exploitation overtaking credential abuse for the first time, at 31% of breaches, up from 20% the year before. And the edge is where it concentrates. Verizon's 2025 DBIR found edge devices and VPNs were the target in 22% of exploitation-related breaches, up from 3% the year before, with a median of 32 days to fully remediate those flaws.
 
-Thirty-two days is a long time when exploitation starts within days of disclosure, and sometimes before it. That gap used to belong to vulnerability management. It doesn't anymore. When a critical VPN flaw drops, the real questions are SOC questions. Are we exposed? Were we already hit? What can we detect or block before the patch lands?
+A month is a long time when exploitation starts within days of disclosure, and sometimes before it. That gap used to belong to vulnerability management. It doesn't anymore. When a critical VPN flaw drops, the real questions are SOC questions. Are we exposed? Were we already hit? What can we detect or block before the patch lands?
 
 **My position:** The first 72 hours after a critical edge-device CVE is an incident, not a patching ticket. Treat it like one: an incident commander, a compromise assessment, temporary mitigations, and a hunt for signs of earlier exploitation. Patching closes the door. It doesn't tell you who already walked through it.
 
@@ -107,7 +111,7 @@ Thirty-two days is a long time when exploitation starts within days of disclosur
 
 The clocks are already running. The SEC requires a Form 8-K within four business days of deciding a cybersecurity incident is material. NIS2 requires an early warning within 24 hours of becoming aware of a significant incident. DORA requires an initial notification within four hours of classifying an ICT incident as major, and no later than 24 hours after becoming aware of it.
 
-DORA has applied since January 2025. Supervisors spent the first stretch building reporting channels and getting reports in. The next stretch is checking whether those reports were on time and accurate. Enforcement tends to follow that sequence.
+DORA has applied since January 2025. Supervisors spent the first stretch building reporting channels and getting reports in. In June 2026 the European Supervisory Authorities published their first annual report on major ICT incidents: 3,383 reported across the EU financial sector in 2025. As of this writing, no supervisor has announced a fine for getting those reports wrong. The next stretch is checking whether those reports were on time and accurate. Enforcement tends to follow that sequence.
 
 This changes what the SOC produces. The case record is no longer an internal working file. It's evidence of what you knew, when you knew it, and when you decided. "We weren't sure it was material yet" holds up only if the timeline shows a real, documented assessment, not a ticket that sat untouched over a weekend.
 
@@ -124,7 +128,7 @@ This changes what the SOC produces. The case record is no longer an internal wor
 | 1   | AI triage reduces entry-level SOC hiring                         | ISC2 or comparable workforce study         | 70%        |
 | 2   | Autonomous reversible identity containment ships on by default   | Major XDR/identity platform releases       | 65%        |
 | 3   | Session, token, or NHI abuse broken out as its own access vector | 2027 DBIR, M-Trends, or comparable reports | 75%        |
-| 4   | Exploitation stays #1 and edge devices take a larger share       | M-Trends 2027 and 2027 DBIR                | 70%        |
+| 4   | Exploitation stays the top initial access vector in both reports | M-Trends 2027 and 2027 DBIR                | 70%        |
 | 5   | First enforcement action citing DORA incident reporting          | EU supervisor announcements                | 60%        |
 
 ## The Leader Lens
