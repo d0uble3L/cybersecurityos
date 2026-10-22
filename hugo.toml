@@ -25,12 +25,26 @@ author = "Michael Tayo"
   site_logo = "images/c-os.svg"
   showSocialLinks = true        # Show social links in the footer (if supported by the theme)
   paginate = 20
-  rss = "index.xml" #rss
+  rss = "/index.xml" #rss
   show_reading_time = true
 
 [params.social]
   linkedin = "https://www.linkedin.com/company/cybershieldacademy/" #linkedin
-  twitter = 'cyb3rshi3ld'
+  twitter = 'cybersecurityos'
+
+# Footer social icons (read by the Ananke theme's socials partials)
+[[params.ananke_socials]]
+  name = "twitter"
+  label = "X"
+  url = "https://x.com/cybersecurityos"
+
+[[params.ananke_socials]]
+  name = "instagram"
+  url = "https://www.instagram.com/cybersecurityos/"
+
+[[params.ananke_socials]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/company/cybershieldacademy/"
   
 # Menu Configuration (Optional: Customize navigation)
 [[menu.main]]
