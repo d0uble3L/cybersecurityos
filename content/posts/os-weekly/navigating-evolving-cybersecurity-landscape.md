@@ -96,7 +96,7 @@ Whether you’re shaping an organization’s security posture or kickstarting yo
 
 ## 📬 Stay in the Loop
 
-_If you found this helpful, join thousands of security pros and career climbers who subscribe to [**CybersecurityOS**](https://bio.link/cybershieldacademy) — weekly insights, tools, and frameworks for growth._
+_If you found this helpful, join thousands of security pros and career climbers who subscribe to [**CybersecurityOS**](https://linktr.ee/cybersecurityos) — weekly insights, tools, and frameworks for growth._
 
 ---
 

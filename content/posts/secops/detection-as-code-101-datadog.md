@@ -237,4 +237,4 @@ Detection as code is becoming table stakes for the same reason infrastructure as
 
 **Get the next breakdown in your inbox.** [Subscribe to the CybersecurityOS newsletter](https://join.cybersecurityos.net/) for weekly practitioner breakdowns like this one.
 
-**Tell us how your team does it.** Join the [CybersecurityOS Telegram community](https://t.me/cyb3rshi3ld_lite_community) and share how you manage detections today: Git, console, or somewhere in between.
+**Tell us how your team does it.** Join the [CybersecurityOS community](https://linktr.ee/cybersecurityos) and share how you manage detections today: Git, console, or somewhere in between.

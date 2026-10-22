@@ -54,7 +54,7 @@ Adopt a proactive mindset by regularly auditing both internal and third-party sy
 
 ---
 
-**If you found this helpful, join thousands of security pros and career climbers who subscribe to [**CybersecurityOS**](https://t.me/cyb3rshi3ld_lite_community) — weekly insights, tools, and frameworks for growth.**
+**If you found this helpful, join thousands of security pros and career climbers who subscribe to [**CybersecurityOS**](https://linktr.ee/cybersecurityos) — weekly insights, tools, and frameworks for growth.**
 
 ---
 
@@ -94,7 +94,7 @@ For cybersecurity leaders, this model serves as a strategic framework that align
 And for startups and SMBs, it reinforces that even limited resources can drive high-level risk management by adopting dynamic and iterative security practices.
 
 > ⚡️ If you found this helpful, join thousands of security pros and career climbers who subscribe to CybersecurityOS — weekly insights, tools, and frameworks for growth.  
-> 👉 [https://t.me/cyb3rshi3ld_lite_community](https://t.me/cyb3rshi3ld_lite_community)
+> 👉 [https://linktr.ee/cybersecurityos](https://linktr.ee/cybersecurityos)
 
 ---
 
