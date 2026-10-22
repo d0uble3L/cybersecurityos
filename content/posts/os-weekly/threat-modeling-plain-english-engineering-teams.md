@@ -308,8 +308,8 @@ A threat model from 18 months ago for a system that has been rewritten twice is 
 
 ---
 
-> 💡 **If you found this helpful, learn the thinking that separates security engineers from security leaders.** > ![CyberSHIELD PRO Membership](/posts/os-weekly/images/pro-os.png)
-> 🚀 Supercharge your security career with 🔗 [CyberSHIELD PRO Membership](https://cybersecurityos.gumroad.com/l/cybershield-membership) — frameworks, deep-dives, and async Q&A every month.
+> 💡 **If you found this helpful, learn the thinking that separates security engineers from security leaders.** > ![CybersecurityOS PRO Membership](/posts/os-weekly/images/pro-os.png)
+> 🚀 Supercharge your security career with 🔗 [CybersecurityOS PRO Membership](https://cybersecurityos.gumroad.com/l/cybershield-membership) — frameworks, deep-dives, and async Q&A every month.
 
 ---
 

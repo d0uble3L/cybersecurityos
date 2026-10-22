@@ -107,7 +107,7 @@ Auditors value **risk-based thinking**. Identify your assets, threats, and vulne
 
 **Systematize how you identify, map, and mitigate risk**  
 💰 **$29**  
-_By [CyberSHIELD | CybersecurityOS](https://cybersecurityos.net)_
+_By [CybersecurityOS](https://cybersecurityos.net)_
 
 ---
 

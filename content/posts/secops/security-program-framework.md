@@ -115,7 +115,7 @@ Our [NIST & SOC 2 Security Program Checklist](https://trilltayo.gumroad.com/l/se
 
 ![NIST & SOC 2 Security Program Checklist](/posts/secops/images/sec-program-checklist.png)
 
-_Image Source: [CyberSHIELD | CybersecurityOS. Gumroad](https://trilltayo.gumroad.com/l/sec-program-checklist)_
+_Image Source: [CybersecurityOS. Gumroad](https://trilltayo.gumroad.com/l/sec-program-checklist)_
 
 **Ready to strengthen your security program? [Get your checklist today!](https://trilltayo.gumroad.com/l/sec-program-checklist)**
 
