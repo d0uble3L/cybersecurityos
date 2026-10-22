@@ -129,11 +129,11 @@ Cyber threats grow increasingly complex and intertwined with everyday tools and 
 ---
 
 > 💡 **If you found this helpful, learn the thinking that separates leaders from followers** > ![Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](/posts/os-weekly/images/pro-os.png)
-> 🚀 Supercharge Your Cybersecurity Career with 🔗 [CyberSHIELD PRO Membership](https://cybersecurityos.gumroad.com/l/cybershield-membership) – Unlock Exclusive Benefits Today!
+> 🚀 Supercharge Your Cybersecurity Career with 🔗 [CybersecurityOS PRO Membership](https://cybersecurityos.gumroad.com/l/cybershield-membership) – Unlock Exclusive Benefits Today!
 
 ---
 
 Ultimately, whether you’re spearheading enterprise risk management or mapping out your career trajectory, use this **three-step model** as a mental guide to build, defend, and evolve in today’s threat environment.
 
 Stay informed, stay empowered,  
-**CyberSHIELD | CybersecurityOS**
+**CybersecurityOS**

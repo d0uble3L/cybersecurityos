@@ -265,4 +265,4 @@ Because leadership isn’t something you “figure out” over time.
 It’s something you can **learn deliberately.**
 
 Stay informed, stay empowered,  
-**CyberSHIELD | CybersecurityOS**
+**CybersecurityOS**

@@ -144,7 +144,7 @@ To help you translate this insight into action, check out [Cybersecurity Leaders
 ---
 
 > 💡 **If you found this helpful, learn the thinking that separates leaders from followers** > ![Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](/posts/os-weekly/images/pro-os.png)
-> 🚀 Supercharge Your Cybersecurity Career with 🔗 [CyberSHIELD PRO Membership](https://cybersecurityos.gumroad.com/l/cybershield-membership) – Unlock Exclusive Benefits Today!
+> 🚀 Supercharge Your Cybersecurity Career with 🔗 [CybersecurityOS PRO Membership](https://cybersecurityos.gumroad.com/l/cybershield-membership) – Unlock Exclusive Benefits Today!
 
 ---
 
@@ -155,4 +155,4 @@ _This post is brought to you by [Make](https://www.make.com/en/register?pc=trill
 ---
 
 Stay informed, stay empowered,  
-**CyberSHIELD | CybersecurityOS**
+**CybersecurityOS**

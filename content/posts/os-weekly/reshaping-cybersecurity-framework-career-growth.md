@@ -77,7 +77,7 @@ Whether you’re a seasoned CISO or a budding cyber analyst, the following frame
 
 Each element of this framework not only strengthens your security posture but also enriches your career journey: mapping out immediate actions for leaders and laying a solid groundwork for ambitious professionals.
 
-CyberSHIELD’s dual-engine approach—empowering cybersecurity leaders with strategic frameworks while equipping aspirants with practical tools—ensures that our community remains resilient and prepared for the challenges ahead.
+CybersecurityOS’s dual-engine approach—empowering cybersecurity leaders with strategic frameworks while equipping aspirants with practical tools—ensures that our community remains resilient and prepared for the challenges ahead.
 
 Remember, every threat encountered is an opportunity to refine defenses and accelerate your professional growth.
 

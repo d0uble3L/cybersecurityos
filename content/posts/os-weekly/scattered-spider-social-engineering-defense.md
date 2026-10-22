@@ -137,4 +137,4 @@ The technology to defend against this exists and is affordable. Phishing-resista
 > If you're building a security program, managing a team, or trying to make the leap from practitioner to leader, this is the resource you've been missing:
 > 🔗 [Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](https://store.cybersecurityos.net/l/cybersecurity-leadership-os)
 
-Follow CyberShield for more weekly breakdowns built for the next generation of security professionals.
+Follow CybersecurityOS for more weekly breakdowns built for the next generation of security professionals.

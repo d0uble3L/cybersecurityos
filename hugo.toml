@@ -29,7 +29,7 @@ author = "Michael Tayo"
   show_reading_time = true
 
 [params.social]
-  linkedin = "https://www.linkedin.com/company/cybershieldacademy/" #linkedin
+  linkedin = "https://www.linkedin.com/company/cybersecurityos/" #linkedin
   twitter = 'cybersecurityos'
 
 # Footer social icons (read by the Ananke theme's socials partials)
@@ -44,7 +44,7 @@ author = "Michael Tayo"
 
 [[params.ananke_socials]]
   name = "linkedin"
-  url = "https://www.linkedin.com/company/cybershieldacademy/"
+  url = "https://www.linkedin.com/company/cybersecurityos/"
   
 # Menu Configuration (Optional: Customize navigation)
 [[menu.main]]
