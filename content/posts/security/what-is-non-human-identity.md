@@ -179,4 +179,4 @@ The place to start is inventory. Know what credentials exist, where they're used
 
 As agentic AI deployments grow, this problem is only going to compound. An AI agent with over-permissioned credentials is a much larger blast radius than a misconfigured service account, because agents act autonomously and at speed. Getting NHI governance in place now is the kind of foundational work that will make or break AI security programs over the next few years.
 
-For more on the intersection of AI and identity security, see [GPT-Red: What OpenAI's Automated Red-Teamer Means for AI Security](/posts/ai-devsecops/gpt-red-self-improvement-robustness/) and [AWS's Security Agent](/posts/ai-devsecops/) for related coverage on how AI is changing both the attack and defense landscape.
+For more on the intersection of AI and identity security, see [GPT-Red: What OpenAI's Automated Red-Teamer Means for AI Security](/posts/ai-devsecops/gpt-red-self-improvement-robustness/) and [AWS's Security Agent](/posts/os-weekly/aws-security-agent-overview/) for related coverage on how AI is changing both the attack and defense landscape.
