@@ -64,7 +64,7 @@ This analogy isn’t merely a creative aside—it’s a blueprint for the kind o
 
 ---
 
-**If you found this helpful, join thousands of security pros and career climbers who subscribe to [**CybersecurityOS**](https://t.me/cyb3rshi3ld_lite_community) — weekly insights, tools, and frameworks for growth.**
+**If you found this helpful, join thousands of security pros and career climbers who subscribe to [**CybersecurityOS**](https://linktr.ee/cybersecurityos) — weekly insights, tools, and frameworks for growth.**
 
 ---
 

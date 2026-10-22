@@ -159,4 +159,4 @@ If your best analyst learned the job by working the queue, and the queue goes to
 
 **Get the next breakdown in your inbox.** [Subscribe to the CybersecurityOS newsletter](https://join.cybersecurityos.net/) for weekly practitioner breakdowns like this one.
 
-**Make your own call.** Join the [CybersecurityOS Telegram community](https://t.me/cyb3rshi3ld_lite_community) and tell us which of these five you'd bet against, and what you'd predict instead.
+**Make your own call.** Join the [CybersecurityOS community](https://linktr.ee/cybersecurityos) and tell us which of these five you'd bet against, and what you'd predict instead.

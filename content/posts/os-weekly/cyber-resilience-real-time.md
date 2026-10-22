@@ -64,7 +64,7 @@ The vulnerability landscape is evolving at breakneck speed with record-high CVE 
 
 ---
 
-**If you found this helpful, join thousands of security pros and career climbers who subscribe to [**CybersecurityOS**](https://t.me/cyb3rshi3ld_lite_community) — weekly insights, tools, and frameworks for growth.**
+**If you found this helpful, join thousands of security pros and career climbers who subscribe to [**CybersecurityOS**](https://linktr.ee/cybersecurityos) — weekly insights, tools, and frameworks for growth.**
 
 ---
 
@@ -86,7 +86,7 @@ For cybersecurity leaders facing mounting pressures, this framework provides a s
 For aspiring professionals, understanding these core principles offers a roadmap for a career in cybersecurity. Embrace these mental models, and you’re not just defending assets—you’re building a resilient portfolio of skills that will drive your next career breakthrough.
 
 > **If you found this breakdown helpful, join thousands of security pros and career climbers who subscribe to CybersecurityOS** — weekly insights, tools, and frameworks for growth.  
-> 📬 [https://t.me/cyb3rshi3ld_lite_community](https://t.me/cyb3rshi3ld_lite_community)
+> 📬 [https://linktr.ee/cybersecurityos](https://linktr.ee/cybersecurityos)
 
 ## Final Thoughts
 
