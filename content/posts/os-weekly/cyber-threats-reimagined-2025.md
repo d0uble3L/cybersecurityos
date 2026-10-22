@@ -98,7 +98,7 @@ For cybersecurity leaders, here’s a simple three-step framework to address the
 ---
 
 > 💡 **If you found this helpful, learn the thinking that separates leaders from followers** > ![Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](/posts/os-weekly/images/pro-os.png)
-> 🚀 Supercharge Your Cybersecurity Career with 🔗 [CyberSHIELD PRO Membership](https://cybersecurityos.gumroad.com/l/cybershield-membership) – Unlock Exclusive Benefits Today!
+> 🚀 Supercharge Your Cybersecurity Career with 🔗 [CybersecurityOS PRO Membership](https://cybersecurityos.gumroad.com/l/cybershield-membership) – Unlock Exclusive Benefits Today!
 
 ---
 
@@ -128,6 +128,6 @@ Whether you’re leading national defense strategy, taking your first steps in a
 Stay strategic, stay proactive, and remember: It’s not about reacting to threats—it’s about _out-thinking them_.
 
 Stay informed, stay empowered,  
-**CyberSHIELD | CybersecurityOS**
+**CybersecurityOS**
 
 ---

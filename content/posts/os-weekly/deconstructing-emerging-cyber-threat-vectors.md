@@ -24,7 +24,7 @@ faq:
     a: "The framework includes: Assessment — continuously evaluating how new policies align with internal security strategy; Collaboration — establishing communication channels with government bodies and industry peers to share best practices; and Implementation — adopting agile, iterative compliance methods that evolve alongside both the threat environment and advancing technology, rather than treating policy as a static checklist."
 ---
 
-In today’s dynamically shifting threat landscape, the tactics employed by cyber adversaries are evolving faster than ever. Malicious actors have transformed trusted features of mainstream platforms into vectors for impactful attacks. At **CyberSHIELD**, we believe that understanding these developments is the key to transforming risk into a strategic advantage.
+In today’s dynamically shifting threat landscape, the tactics employed by cyber adversaries are evolving faster than ever. Malicious actors have transformed trusted features of mainstream platforms into vectors for impactful attacks. At **CybersecurityOS**, we believe that understanding these developments is the key to transforming risk into a strategic advantage.
 
 ## The New Face of Malware Delivery
 

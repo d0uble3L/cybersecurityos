@@ -3,7 +3,7 @@ title: "Cybersecurity Careers, AI in the SOC, and the Future of GRC"
 date: 2025-10-02
 draft: false
 description: "Explore the evolving world of cybersecurity careers, the transformative impact of AI in Security Operations Centers, and the rise of GRC engineering. Learn practical insights for aspiring professionals and discover how curiosity, mentorship, and automation are shaping the future of security."
-tags: ["Cybersecurity", "AI", "SOC", "cloud security", "GRC", "CyberSHIELD", "CybersecurityOS"]
+tags: ["Cybersecurity", "AI", "SOC", "cloud security", "GRC", "CybersecurityOS"]
 categories: ["Career Development", "AI and Security"]
 images:
   - /posts/os-weekly/images/cyber-careers-2025.png
@@ -75,7 +75,7 @@ Gabriel’s other passion is GRC—and honestly, I get it. Governance, risk, and
 
 Instead of annual audits and static checklists, we’re moving toward **real-time, automated compliance**. That’s the essence of **GRC engineering**—an area so important it’s been called out in places like the [SANS blog](https://www.sans.org/blog/hype-around-grc-engineering-what-it-is-why-its-growing/) and in the book [_GRC Engineering_](https://grcengineeringbook.com/).
 
-Tools like CyberSHIELD and others are pointing us toward a future where compliance isn’t a burden—it’s baked into the way organizations build and run systems. And that means people entering GRC today aren’t just “checking boxes.” They’re designing the rules of the digital world.
+Tools like CybersecurityOS and others are pointing us toward a future where compliance isn’t a burden—it’s baked into the way organizations build and run systems. And that means people entering GRC today aren’t just “checking boxes.” They’re designing the rules of the digital world.
 
 ---
 
@@ -106,7 +106,7 @@ And that’s why I’m genuinely optimistic about where we’re headed.
 - **Pivot to Security Engineering** – Roles like cloud security engineering and application security engineering will be in higher demand.
 - **GRC Engineering is the Future of Compliance** – Automation will continuously monitor and enforce compliance standards.
 - **Cybersecurity Careers are Evolving** – Professionals must adapt by embracing new skills in AI, cloud, and governance.
-- **Mentorship Accelerates Growth** – One-on-one guidance, communities, and tools like CyberSHIELD help new entrants thrive.
+- **Mentorship Accelerates Growth** – One-on-one guidance, communities, and tools like CybersecurityOS help new entrants thrive.
 
 ---
 

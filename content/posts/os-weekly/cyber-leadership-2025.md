@@ -201,7 +201,7 @@ Because cybersecurity isn’t just technical—it’s organizational.
 ---
 
 > 💡 **If you found this helpful, learn the thinking that separates leaders from followers** > ![Cybersecurity Leadership OS: Battle-Tested Mental Models for Clarity, Speed & Command](/posts/os-weekly/images/pro-os.png)
-> 🚀 Supercharge Your Cybersecurity Career with 🔗 [CyberSHIELD PRO Membership](https://cybersecurityos.gumroad.com/l/cybershield-membership) – Unlock Exclusive Benefits Today!
+> 🚀 Supercharge Your Cybersecurity Career with 🔗 [CybersecurityOS PRO Membership](https://cybersecurityos.gumroad.com/l/cybershield-membership) – Unlock Exclusive Benefits Today!
 
 ---
 
