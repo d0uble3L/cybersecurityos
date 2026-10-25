@@ -1,31 +1,66 @@
 {{/*
   home-stat-tile
-  One tile in the homepage telemetry panel.
+  One KPI card in the homepage SOC console.
 
   @param value     number (negative = unavailable) or string ("" = unavailable)
   @param label     uppercase caption under the value
   @param note      small source / context line
   @param href      optional link for the whole tile
   @param fallback  optional value shown when value is unavailable
-  @param prev      optional previous-period number; renders a trend vs value
+  @param prev      optional previous-period number; renders a delta chip and
+                   a current-vs-previous comparison bar
+  @param code      optional panel ID shown top-left (e.g. "TLM-01")
+  @param src       optional feed tag shown top-left (e.g. "NVD")
+  @param sev       optional accent: crit | high | med | info
+  @param spark     optional slice of numbers, oldest first; renders a bar sparkline
+  @param meter     optional dict "part" "whole"; renders a share-of-total meter
+  @param rank      optional slice of dict "name" "count"; renders ranked bars
 */}}
 {{ $value := .value }}
 {{ $isText := eq (printf "%T" $value) "string" }}
 {{ $missing := false }}
 {{ if $isText }}{{ $missing = eq $value "" }}{{ else }}{{ $missing = lt $value 0 }}{{ end }}
 {{ $note := .note }}
+{{ $stale := false }}
 {{ if $missing }}
   {{ with .fallback }}
     {{ $value = . }}
     {{ $isText = eq (printf "%T" $value) "string" }}
     {{ $missing = false }}
+    {{ $stale = true }}
     {{ $note = "feed offline · last known" }}
   {{ else }}
     {{ $note = "feed offline · retrying next build" }}
   {{ end }}
 {{ end }}
+{{ $live := and (not $missing) (not $stale) }}
 
-<div class="os-tile{{ if $isText }} os-tile-text{{ end }}{{ if $missing }} os-tile-missing{{ end }}">
+{{ $pct := "" }}
+{{ with .prev }}
+  {{ if and $live (not $isText) (gt . 0) }}
+    {{ $pct = math.Round (mul (div (sub (float $value) .) .) 100) }}
+  {{ end }}
+{{ end }}
+
+<div class="os-tile{{ with .sev }} os-sev-{{ . }}{{ end }}{{ if $isText }} os-tile-text{{ end }}{{ if $missing }} os-tile-missing{{ end }}{{ if $stale }} os-tile-stale{{ end }}">
+  {{- if or .code .src (ne $pct "") }}
+  <div class="os-tile-head">
+    <span class="os-tile-id">
+      {{- with .code }}<span class="os-tile-code">{{ . }}</span>{{ end -}}
+      {{- with .src }}<span class="os-tile-src">{{ . }}</span>{{ end -}}
+    </span>
+    {{- if ne $pct "" }}
+      {{- if gt $pct 0 }}
+      <span class="os-delta os-delta-up" title="vs previous period"><span aria-hidden="true">▲</span> {{ $pct }}%</span>
+      {{- else if lt $pct 0 }}
+      <span class="os-delta os-delta-down" title="vs previous period"><span aria-hidden="true">▼</span> {{ math.Abs $pct }}%</span>
+      {{- else }}
+      <span class="os-delta" title="vs previous period">± 0%</span>
+      {{- end }}
+    {{- end }}
+  </div>
+  {{- end }}
+
   <span class="os-tile-value">
     {{- if $missing -}}
       —
@@ -36,21 +71,46 @@
     {{- end -}}
   </span>
   <span class="os-tile-label">{{ .label }}</span>
-  <span class="os-tile-note">
-    {{- with .prev }}
-      {{- if and (not $missing) (not $isText) (gt . 0) -}}
-        {{ $pct := math.Round (mul (div (sub (float $value) .) .) 100) }}
-        {{- if gt $pct 0 -}}
-          <span class="os-trend os-trend-up" title="vs previous period">▲ {{ $pct }}%</span>
-        {{- else if lt $pct 0 -}}
-          <span class="os-trend os-trend-down" title="vs previous period">▼ {{ math.Abs $pct }}%</span>
-        {{- else -}}
-          <span class="os-trend">● flat</span>
-        {{- end -}}
-      {{ end -}}
-    {{ end -}}
-    {{ $note }}
-  </span>
+
+  {{- if $live }}
+    {{- with .spark }}
+      {{ $max := 1 }}
+      {{ range . }}{{ if gt . $max }}{{ $max = . }}{{ end }}{{ end }}
+      {{ $w := 4 }}
+      <svg class="os-viz os-spark" viewBox="0 0 {{ mul (len .) $w }} 24" preserveAspectRatio="none" aria-hidden="true">
+        {{- range $i, $n := . }}
+        {{- $h := cond (gt $n 0) (math.Max 3 (mul (div (float $n) $max) 24)) 1 }}
+        <rect x="{{ mul $i $w }}" y="{{ sub 24 $h }}" width="{{ sub $w 1 }}" height="{{ $h }}"{{ if eq $n 0 }} class="os-spark-zero"{{ end }}></rect>
+        {{- end }}
+      </svg>
+    {{- end }}
+    {{- with .meter }}
+      {{ if gt .whole 0 }}
+        {{ $share := mul (div (float .part) .whole) 100 }}
+        <div class="os-viz os-meter" aria-hidden="true">
+          <span class="os-meter-track"><span class="os-meter-fill" style="width: {{ $share }}%"></span></span>
+          <span class="os-meter-pct">{{ math.Round $share }}%</span>
+        </div>
+      {{ end }}
+    {{- end }}
+    {{- if and .prev (ne $pct "") (not .spark) }}
+      {{ $top := math.Max (float $value) .prev }}
+      <div class="os-viz os-compare" aria-hidden="true">
+        <span class="os-compare-row"><span class="os-compare-key">now</span><span class="os-compare-bar" style="width: {{ mul (div (float $value) $top) 100 }}%"></span></span>
+        <span class="os-compare-row os-compare-prev"><span class="os-compare-key">prev</span><span class="os-compare-bar" style="width: {{ mul (div (float .prev) $top) 100 }}%"></span></span>
+      </div>
+    {{- end }}
+    {{- with .rank }}
+      {{ $top := (index . 0).count }}
+      <ol class="os-viz os-rank" aria-label="Top vendors">
+        {{- range . }}
+        <li><span class="os-rank-name">{{ .name }}</span><span class="os-rank-bar" style="width: {{ mul (div (float .count) $top) 100 }}%"></span><span class="os-rank-n">{{ .count }}</span></li>
+        {{- end }}
+      </ol>
+    {{- end }}
+  {{- end }}
+
+  <span class="os-tile-note">{{ $note }}</span>
   {{- with .href }}
   <a class="os-tile-link" href="{{ . }}"{{ if hasPrefix . "http" }} target="_blank" rel="noopener"{{ end }} aria-label="{{ $.label }}"></a>
   {{- end }}

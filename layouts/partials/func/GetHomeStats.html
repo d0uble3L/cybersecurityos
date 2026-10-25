@@ -58,6 +58,9 @@
 {{ $kevRansomware := -1 }}
 {{ $topVendor := "" }}
 {{ $topVendorCount := 0 }}
+{{ $topVendors := slice }}
+{{ $kevDaily := slice }}
+{{ $kevLatest := slice }}
 {{ with try (resources.GetRemote ($cfg.kevURL | default "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json")) }}
   {{ with .Err }}
     {{ warnf "home stats: CISA KEV fetch failed: %s" . }}
@@ -68,11 +71,13 @@
       {{ $kevPrev = 0 }}
       {{ $kevRansomware = 0 }}
       {{ $vendors := newScratch }}
+      {{ $daily := newScratch }}
       {{ range . }}
         {{/* dateAdded is YYYY-MM-DD, so string comparison orders by date */}}
         {{ $added := .dateAdded | default "" }}
         {{ if ge $added $start }}
           {{ $kevRecent = add $kevRecent 1 }}
+          {{ $daily.Add $added 1 }}
         {{ else if ge $added $prevStart }}
           {{ $kevPrev = add $kevPrev 1 }}
         {{ end }}
@@ -87,10 +92,29 @@
         {{ end }}
       {{ end }}
       {{ range $name, $n := $vendors.Get "count" }}
-        {{ if gt $n $topVendorCount }}
-          {{ $topVendor = $name }}
-          {{ $topVendorCount = $n }}
-        {{ end }}
+        {{ $topVendors = $topVendors | append (dict "name" $name "count" $n) }}
+      {{ end }}
+      {{ $topVendors = first 3 (sort $topVendors "count" "desc") }}
+      {{ with index $topVendors 0 }}
+        {{ $topVendor = .name }}
+        {{ $topVendorCount = .count }}
+      {{ end }}
+
+      {{/* Daily KEV additions across the window, oldest first (sparkline) */}}
+      {{ range seq 0 $window }}
+        {{ $day := ($today.AddDate 0 0 (sub . $window)).Format "2006-01-02" }}
+        {{ $kevDaily = $kevDaily | append ($daily.Get $day | default 0) }}
+      {{ end }}
+
+      {{/* Most recent additions for the intake log */}}
+      {{ range first 5 (sort . "dateAdded" "desc") }}
+        {{ $kevLatest = $kevLatest | append (dict
+          "id" .cveID
+          "vendor" .vendorProject
+          "product" .product
+          "added" .dateAdded
+          "ransomware" (eq .knownRansomwareCampaignUse "Known")
+        ) }}
       {{ end }}
     {{ end }}
   {{ else }}
@@ -132,6 +156,11 @@
     "kevRansomware" $kevRansomware
     "topVendor" $topVendor
     "topVendorCount" $topVendorCount
+    "topVendors" $topVendors
+    "kevDaily" $kevDaily
+    "kevLatest" $kevLatest
+    "nvdOK" (ge $cvesPerDay 0)
+    "kevOK" (ge $kevTotal 0)
   )
   "coverage" (dict
     "posts" (len $posts)
