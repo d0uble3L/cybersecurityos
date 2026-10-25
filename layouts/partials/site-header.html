@@ -60,24 +60,7 @@
         <a href="/posts/" class="os-btn os-btn-primary">Read the OS →</a>
         <a href="/docs/" class="os-btn os-btn-ghost">View Docs</a>
       </div>
-      <div class="os-hero-stats">
-        <div>
-          <span class="os-stat-value">21+</span>
-          <span class="os-stat-label">Weekly Posts</span>
-        </div>
-        <div>
-          <span class="os-stat-value">131</span>
-          <span class="os-stat-label">CVEs / Day (2025)</span>
-        </div>
-        <div>
-          <span class="os-stat-value">4.8M</span>
-          <span class="os-stat-label">Security Jobs Unfilled</span>
-        </div>
-        <div>
-          <span class="os-stat-value">< 5d</span>
-          <span class="os-stat-label">Median Exploit Time</span>
-        </div>
-      </div>
+      {{ partial "home-stats.html" . }}
     </div>
   </div>
   {{ end }}

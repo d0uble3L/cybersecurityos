@@ -1,0 +1,115 @@
+{{/*
+  home-stats
+  Homepage telemetry panel: live threat numbers from NVD and CISA KEV, plus
+  coverage numbers counted from the site's own posts. All values are computed
+  at build time by func/GetHomeStats.html.
+*/}}
+{{ $stats := partial "func/GetHomeStats.html" . }}
+{{ $live := $stats.live }}
+{{ $cov := $stats.coverage }}
+{{ $fallback := site.Params.stats.fallback | default dict }}
+{{ $synced := and (ge $live.cvesPerDay 0) (ge $live.kevTotal 0) }}
+
+<section class="os-telemetry" aria-label="Security telemetry">
+  <div class="os-telemetry-group">
+    <div class="os-telemetry-head">
+      <span class="os-telemetry-title">// Live Threat Telemetry</span>
+      <span class="os-live-badge{{ if not $synced }} os-live-badge-stale{{ end }}">
+        <span class="os-live-dot" aria-hidden="true"></span>
+        <time datetime="{{ $stats.updated.Format "2006-01-02T15:04:05Z" }}">
+          {{- if $synced }}Synced{{ else }}Partial sync{{ end }} {{ $stats.updated.Format "Jan 2, 2006 · 15:04" }} UTC
+        </time>
+      </span>
+    </div>
+    <div class="os-telemetry-grid">
+      {{ partial "home-stat-tile.html" (dict
+        "value" $live.cvesPerDay
+        "prev" $live.cvesPerDayPrev
+        "fallback" $fallback.cvesperday
+        "label" "New CVEs / Day"
+        "note" (printf "%d-day avg · NVD" $live.windowDays)
+        "href" "https://nvd.nist.gov/vuln/search"
+      ) }}
+      {{ partial "home-stat-tile.html" (dict
+        "value" $live.kevRecent
+        "prev" $live.kevPrev
+        "label" "Exploited in the Wild"
+        "note" (printf "added to KEV · last %d days" $live.windowDays)
+        "href" "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      ) }}
+      {{ partial "home-stat-tile.html" (dict
+        "value" $live.kevRansomware
+        "label" "Ransomware-Linked CVEs"
+        "note" (cond (gt $live.kevTotal 0) (printf "of %s in CISA KEV" (lang.FormatNumber 0 $live.kevTotal)) "CISA KEV")
+        "href" "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      ) }}
+      {{ partial "home-stat-tile.html" (dict
+        "value" $live.topVendor
+        "label" "Most-Exploited Vendor"
+        "note" (printf "%d KEV adds · last %d days" $live.topVendorCount $live.vendorWindowDays)
+        "href" "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      ) }}
+    </div>
+  </div>
+
+  <div class="os-telemetry-group">
+    <div class="os-telemetry-head">
+      <span class="os-telemetry-title">// CybersecurityOS Coverage</span>
+      <span class="os-telemetry-meta">counted from published posts</span>
+    </div>
+    <div class="os-telemetry-grid">
+      {{ partial "home-stat-tile.html" (dict
+        "value" $cov.posts
+        "label" "Posts Published"
+        "note" "threat intel · engineering · GRC"
+        "href" "/posts/"
+      ) }}
+      {{ partial "home-stat-tile.html" (dict
+        "value" $cov.weekly
+        "label" "OS Weekly Issues"
+        "note" "weekly threat digest"
+        "href" $cov.weeklyURL
+      ) }}
+      {{ partial "home-stat-tile.html" (dict
+        "value" $cov.cves
+        "label" "CVEs Analyzed"
+        "note" "unique CVE IDs across posts"
+        "href" "/search/?q=CVE"
+      ) }}
+      {{ with $cov.focus }}
+        {{ partial "home-stat-tile.html" (dict
+          "value" .name
+          "label" "Top Focus Area"
+          "note" (printf "%d posts" .count)
+          "href" .url
+        ) }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<script>
+  /* Count numeric tiles up from zero the first time the panel scrolls into view */
+  (function () {
+    var els = document.querySelectorAll(".os-telemetry [data-count]");
+    if (!els.length || !("IntersectionObserver" in window)) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var fmt = new Intl.NumberFormat("en-US");
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        io.unobserve(entry.target);
+        var el = entry.target;
+        var target = parseFloat(el.getAttribute("data-count"));
+        var start = performance.now();
+        var duration = 1100;
+        (function tick(t) {
+          var p = Math.min((t - start) / duration, 1);
+          el.textContent = fmt.format(Math.round(target * (1 - Math.pow(1 - p, 3))));
+          if (p < 1) requestAnimationFrame(tick);
+        })(start);
+      });
+    });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+</script>

@@ -329,17 +329,124 @@ article.pa4-ns {
   background: var(--os-green-glow);
 }
 
-.os-hero-stats {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin-top: 3.5rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--os-border);
-  flex-wrap: wrap;
+/* ─── Homepage telemetry panel ─────────────────────────────── */
+.os-telemetry {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 1040px;
+  margin: 3.5rem auto 0;
+  text-align: left;
   position: relative;
   z-index: 1;
 }
+.os-telemetry-group {
+  background: rgba(13, 17, 23, 0.72);
+  border: 1px solid var(--os-border);
+  border-radius: var(--os-radius-md);
+  backdrop-filter: blur(4px);
+  overflow: hidden;
+}
+.os-telemetry-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.6rem 1rem;
+  border-bottom: 1px solid var(--os-border);
+  background: var(--os-bg-elevated);
+  font-family: var(--os-font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+}
+.os-telemetry-title {
+  color: var(--os-green);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+.os-telemetry-meta {
+  color: var(--os-text-dim);
+}
+.os-telemetry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.os-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 1.1rem 1rem 1rem;
+  border-left: 1px solid var(--os-border);
+  transition: background 0.2s;
+}
+.os-tile:first-child {
+  border-left: 0;
+}
+.os-tile:hover {
+  background: var(--os-green-glow);
+}
+.os-tile-value {
+  font-family: var(--os-font-heading);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--os-green);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.os-tile-text .os-tile-value {
+  font-size: 1.05rem;
+  min-height: 1.82rem;
+  display: flex;
+  align-items: flex-end;
+}
+.os-tile-missing .os-tile-value {
+  color: var(--os-text-dim);
+}
+.os-tile-label {
+  font-family: var(--os-font-mono);
+  font-size: 0.68rem;
+  color: var(--os-text);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.5rem;
+}
+.os-tile-note {
+  font-family: var(--os-font-mono);
+  font-size: 0.64rem;
+  color: var(--os-text-dim);
+  margin-top: 0.25rem;
+  line-height: 1.45;
+}
+.os-tile-link {
+  position: absolute;
+  inset: 0;
+}
+.os-tile-link:focus-visible {
+  outline: 1px solid var(--os-green);
+  outline-offset: -1px;
+}
+.os-live-badge-stale {
+  color: var(--os-text-dim);
+}
+.os-live-badge-stale .os-live-dot {
+  background: var(--os-high);
+  box-shadow: none;
+  animation: none;
+}
+.os-trend {
+  margin-right: 0.35rem;
+  color: var(--os-text-muted);
+}
+/* For threat volume, "up" is the bad direction */
+.os-trend-up {
+  color: var(--os-high);
+}
+.os-trend-down {
+  color: var(--os-info);
+}
+
 .os-stat-value {
   font-family: var(--os-font-heading);
   font-size: 1.65rem;
@@ -1073,8 +1180,17 @@ article.pa4-ns {
   .os-hero {
     padding: 3.5rem 1rem 2.5rem;
   }
-  .os-hero-stats {
-    gap: 1.5rem;
+  .os-telemetry-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .os-tile:nth-child(odd) {
+    border-left: 0;
+  }
+  .os-tile:nth-child(n + 3) {
+    border-top: 1px solid var(--os-border);
+  }
+  .os-tile-value {
+    font-size: 1.35rem;
   }
   .os-article-wrap {
     padding: 2rem 1rem 4rem;

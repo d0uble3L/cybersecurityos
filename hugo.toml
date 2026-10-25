@@ -28,6 +28,21 @@ author = "Michael Tayo"
   rss = "/index.xml" #rss
   show_reading_time = true
 
+# Homepage telemetry panel (layouts/partials/func/GetHomeStats.html).
+# Live numbers are fetched from these feeds on every build; the deploy
+# workflow rebuilds daily so they stay current.
+[params.stats]
+  nvdURL = "https://services.nvd.nist.gov/rest/json/cves/2.0"
+  kevURL = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+  windowDays = 30          # CVE / KEV trend window
+  vendorWindowDays = 90    # "Most-Exploited Vendor" window
+  weeklyCategory = "OS Weekly"
+  focusExclude = ["OS Weekly"]   # categories that are formats, not topics
+
+# Shown only if a feed is unreachable at build time
+[params.stats.fallback]
+  cvesPerDay = 131   # 2025 NVD daily average
+
 [params.social]
   linkedin = "https://www.linkedin.com/company/cybersecurityos/" #linkedin
   twitter = 'cybersecurityos'
@@ -88,6 +103,10 @@ author = "Michael Tayo"
   excludeFields = ".*"
   disableDate = true
   disableLatLong = true
+
+# Remote feeds (homepage stats) are cached for at most a few hours locally
+[caches.getresource]
+  maxAge = "6h"
 
 # Sitemap
 [sitemap]
