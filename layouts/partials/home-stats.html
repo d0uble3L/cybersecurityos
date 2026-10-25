@@ -1,60 +1,109 @@
 {{/*
   home-stats
-  Homepage telemetry panel: live threat numbers from NVD and CISA KEV, plus
-  coverage numbers counted from the site's own posts. All values are computed
-  at build time by func/GetHomeStats.html.
+  Homepage SOC console: live threat numbers from NVD and CISA KEV, a KEV
+  intake log, plus coverage numbers counted from the site's own posts. All
+  values are computed at build time by func/GetHomeStats.html; the clock and
+  "synced … ago" text are the only client-side pieces.
 */}}
 {{ $stats := partial "func/GetHomeStats.html" . }}
 {{ $live := $stats.live }}
 {{ $cov := $stats.coverage }}
 {{ $fallback := site.Params.stats.fallback | default dict }}
-{{ $synced := and (ge $live.cvesPerDay 0) (ge $live.kevTotal 0) }}
+{{ $synced := and $live.nvdOK $live.kevOK }}
+{{ $kevURL := "https://www.cisa.gov/known-exploited-vulnerabilities-catalog" }}
 
 <section class="os-telemetry" aria-label="Security telemetry">
-  <div class="os-telemetry-group">
-    <div class="os-telemetry-head">
-      <span class="os-telemetry-title">// Live Threat Telemetry</span>
-      <span class="os-live-badge{{ if not $synced }} os-live-badge-stale{{ end }}">
-        <span class="os-live-dot" aria-hidden="true"></span>
-        <time datetime="{{ $stats.updated.Format "2006-01-02T15:04:05Z" }}">
-          {{- if $synced }}Synced{{ else }}Partial sync{{ end }} {{ $stats.updated.Format "Jan 2, 2006 · 15:04" }} UTC
-        </time>
-      </span>
+  <div class="os-telemetry-group os-console">
+    <div class="os-console-bar">
+      <div class="os-console-title">
+        <span class="os-live-badge{{ if not $synced }} os-live-badge-stale{{ end }}">
+          <span class="os-live-dot" aria-hidden="true"></span>{{ if $synced }}Live{{ else }}Degraded{{ end }}
+        </span>
+        <span class="os-telemetry-title">SOC // Threat Telemetry</span>
+      </div>
+      <ul class="os-console-status" aria-label="Feed status">
+        <li class="os-feed{{ if not $live.nvdOK }} os-feed-down{{ end }}" title="NVD CVE API 2.0 · {{ if $live.nvdOK }}ok{{ else }}unreachable at last build{{ end }}">NVD</li>
+        <li class="os-feed{{ if not $live.kevOK }} os-feed-down{{ end }}" title="CISA KEV catalog · {{ if $live.kevOK }}ok{{ else }}unreachable at last build{{ end }}">KEV</li>
+        <li class="os-console-clock"><time data-utc-clock>{{ $stats.updated.Format "15:04:05" }}</time> UTC</li>
+      </ul>
     </div>
+
     <div class="os-telemetry-grid">
       {{ partial "home-stat-tile.html" (dict
+        "code" "TLM-01"
+        "src" "NVD"
+        "sev" "high"
         "value" $live.cvesPerDay
         "prev" $live.cvesPerDayPrev
         "fallback" $fallback.cvesperday
         "label" "New CVEs / Day"
-        "note" (printf "%d-day avg · NVD" $live.windowDays)
+        "note" (printf "%d-day avg vs prior %d" $live.windowDays $live.windowDays)
         "href" "https://nvd.nist.gov/vuln/search"
       ) }}
       {{ partial "home-stat-tile.html" (dict
+        "code" "TLM-02"
+        "src" "KEV"
+        "sev" "crit"
         "value" $live.kevRecent
         "prev" $live.kevPrev
+        "spark" $live.kevDaily
         "label" "Exploited in the Wild"
-        "note" (printf "added to KEV · last %d days" $live.windowDays)
-        "href" "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        "note" (printf "KEV adds per day · last %d days" $live.windowDays)
+        "href" $kevURL
       ) }}
       {{ partial "home-stat-tile.html" (dict
+        "code" "TLM-03"
+        "src" "KEV"
+        "sev" "crit"
         "value" $live.kevRansomware
-        "label" "Ransomware-Linked CVEs"
-        "note" (cond (gt $live.kevTotal 0) (printf "of %s in CISA KEV" (lang.FormatNumber 0 $live.kevTotal)) "CISA KEV")
-        "href" "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        "meter" (dict "part" $live.kevRansomware "whole" $live.kevTotal)
+        "label" "Ransomware-Linked"
+        "note" (cond (gt $live.kevTotal 0) (printf "of %s CVEs in CISA KEV" (lang.FormatNumber 0 $live.kevTotal)) "CISA KEV")
+        "href" $kevURL
       ) }}
       {{ partial "home-stat-tile.html" (dict
+        "code" "TLM-04"
+        "src" "KEV"
+        "sev" "med"
         "value" $live.topVendor
+        "rank" $live.topVendors
         "label" "Most-Exploited Vendor"
-        "note" (printf "%d KEV adds · last %d days" $live.topVendorCount $live.vendorWindowDays)
-        "href" "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+        "note" (printf "KEV adds · last %d days" $live.vendorWindowDays)
+        "href" $kevURL
       ) }}
+    </div>
+
+    {{ with $live.kevLatest }}
+    <div class="os-log">
+      <div class="os-log-head">
+        <span>// KEV intake · latest additions</span>
+        <a href="{{ $kevURL }}" target="_blank" rel="noopener">full catalog →</a>
+      </div>
+      <ol class="os-log-list">
+        {{ range . }}
+        <li class="os-log-row">
+          <time class="os-log-date" datetime="{{ .added }}">{{ .added }}</time>
+          <a class="os-log-cve" href="https://nvd.nist.gov/vuln/detail/{{ .id }}" target="_blank" rel="noopener">{{ .id }}</a>
+          <span class="os-log-asset">{{ .vendor }} · {{ .product }}</span>
+          {{ if .ransomware }}<span class="os-log-tag">Ransomware</span>{{ end }}
+        </li>
+        {{ end }}
+      </ol>
+    </div>
+    {{ end }}
+
+    <div class="os-console-foot">
+      <span>Last sync
+        <time datetime="{{ $stats.updated.Format "2006-01-02T15:04:05Z" }}" data-synced>
+          {{- $stats.updated.Format "Jan 2, 2006 · 15:04" }} UTC</time>
+      </span>
+      <span>Rebuilt daily from public feeds</span>
     </div>
   </div>
 
-  <div class="os-telemetry-group">
+  <div class="os-telemetry-group os-coverage">
     <div class="os-telemetry-head">
-      <span class="os-telemetry-title">// CybersecurityOS Coverage</span>
+      <span class="os-telemetry-title">// Analyst Coverage</span>
       <span class="os-telemetry-meta">counted from published posts</span>
     </div>
     <div class="os-telemetry-grid">
@@ -89,11 +138,35 @@
 </section>
 
 <script>
-  /* Count numeric tiles up from zero the first time the panel scrolls into view */
   (function () {
-    var els = document.querySelectorAll(".os-telemetry [data-count]");
-    if (!els.length || !("IntersectionObserver" in window)) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var root = document.querySelector(".os-telemetry");
+    if (!root) return;
+    var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    /* UTC wall clock in the console bar */
+    var clock = root.querySelector("[data-utc-clock]");
+    if (clock) {
+      var pad = function (n) { return n < 10 ? "0" + n : "" + n; };
+      var tickClock = function () {
+        var d = new Date();
+        clock.textContent = pad(d.getUTCHours()) + ":" + pad(d.getUTCMinutes()) + ":" + pad(d.getUTCSeconds());
+      };
+      tickClock();
+      setInterval(tickClock, 1000);
+    }
+
+    /* "Last sync" as a relative age, keeping the absolute time in the tooltip */
+    var synced = root.querySelector("[data-synced]");
+    if (synced) {
+      var mins = Math.max(0, Math.round((Date.now() - Date.parse(synced.getAttribute("datetime"))) / 60000));
+      var age = mins < 60 ? mins + "m" : mins < 2880 ? Math.round(mins / 60) + "h" : Math.round(mins / 1440) + "d";
+      synced.title = synced.textContent;
+      synced.textContent = mins < 1 ? "just now" : age + " ago";
+    }
+
+    /* Count numeric tiles up from zero the first time the panel scrolls into view */
+    var els = root.querySelectorAll("[data-count]");
+    if (!els.length || reduced || !("IntersectionObserver" in window)) return;
     var fmt = new Intl.NumberFormat("en-US");
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {

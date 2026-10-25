@@ -44,8 +44,9 @@
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Share+Tech+Mono&family=Inter:wght@400;500;600&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Share+Tech+Mono&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- CybersecurityOS design system -->
-    {{ $css := resources.Get "css/cybersecurityos.css" | minify }}
-    {{ if $css }}<link rel="stylesheet" href="{{ $css.RelPermalink }}">{{ end }}
+    {{/* Fingerprinted so every deploy gets a new URL and no browser or CDN serves a stale copy */}}
+    {{ $css := resources.Get "css/cybersecurityos.css" | minify | fingerprint }}
+    {{ if $css }}<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">{{ end }}
     {{ partial "site-style.html" . }}
     {{ partial "site-scripts.html" . }}
 
