@@ -239,8 +239,7 @@ article.pa4-ns {
 .os-hero-grid {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(var(--os-border) 1px, transparent 1px),
+  background-image: linear-gradient(var(--os-border) 1px, transparent 1px),
     linear-gradient(90deg, var(--os-border) 1px, transparent 1px);
   background-size: 40px 40px;
   opacity: 0.35;
@@ -868,8 +867,7 @@ article.pa4-ns {
   content: "";
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(var(--os-border) 1px, transparent 1px),
+  background-image: linear-gradient(var(--os-border) 1px, transparent 1px),
     linear-gradient(90deg, var(--os-border) 1px, transparent 1px);
   background-size: 32px 32px;
   opacity: 0.25;
@@ -1599,8 +1597,7 @@ article.pa4-ns {
 .fm-hero-grid {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(var(--os-border) 1px, transparent 1px),
+  background-image: linear-gradient(var(--os-border) 1px, transparent 1px),
     linear-gradient(90deg, var(--os-border) 1px, transparent 1px);
   background-size: 40px 40px;
   opacity: 0.35;
@@ -2129,8 +2126,7 @@ article.pa4-ns {
 .fm-final-grid {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(var(--os-border) 1px, transparent 1px),
+  background-image: linear-gradient(var(--os-border) 1px, transparent 1px),
     linear-gradient(90deg, var(--os-border) 1px, transparent 1px);
   background-size: 32px 32px;
   opacity: 0.25;
