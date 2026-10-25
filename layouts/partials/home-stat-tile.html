@@ -1,0 +1,57 @@
+{{/*
+  home-stat-tile
+  One tile in the homepage telemetry panel.
+
+  @param value     number (negative = unavailable) or string ("" = unavailable)
+  @param label     uppercase caption under the value
+  @param note      small source / context line
+  @param href      optional link for the whole tile
+  @param fallback  optional value shown when value is unavailable
+  @param prev      optional previous-period number; renders a trend vs value
+*/}}
+{{ $value := .value }}
+{{ $isText := eq (printf "%T" $value) "string" }}
+{{ $missing := false }}
+{{ if $isText }}{{ $missing = eq $value "" }}{{ else }}{{ $missing = lt $value 0 }}{{ end }}
+{{ $note := .note }}
+{{ if $missing }}
+  {{ with .fallback }}
+    {{ $value = . }}
+    {{ $isText = eq (printf "%T" $value) "string" }}
+    {{ $missing = false }}
+    {{ $note = "feed offline · last known" }}
+  {{ else }}
+    {{ $note = "feed offline · retrying next build" }}
+  {{ end }}
+{{ end }}
+
+<div class="os-tile{{ if $isText }} os-tile-text{{ end }}{{ if $missing }} os-tile-missing{{ end }}">
+  <span class="os-tile-value">
+    {{- if $missing -}}
+      —
+    {{- else if $isText -}}
+      {{ $value }}
+    {{- else -}}
+      <span data-count="{{ $value }}">{{ lang.FormatNumber 0 $value }}</span>
+    {{- end -}}
+  </span>
+  <span class="os-tile-label">{{ .label }}</span>
+  <span class="os-tile-note">
+    {{- with .prev }}
+      {{- if and (not $missing) (not $isText) (gt . 0) -}}
+        {{ $pct := math.Round (mul (div (sub (float $value) .) .) 100) }}
+        {{- if gt $pct 0 -}}
+          <span class="os-trend os-trend-up" title="vs previous period">▲ {{ $pct }}%</span>
+        {{- else if lt $pct 0 -}}
+          <span class="os-trend os-trend-down" title="vs previous period">▼ {{ math.Abs $pct }}%</span>
+        {{- else -}}
+          <span class="os-trend">● flat</span>
+        {{- end -}}
+      {{ end -}}
+    {{ end -}}
+    {{ $note }}
+  </span>
+  {{- with .href }}
+  <a class="os-tile-link" href="{{ . }}"{{ if hasPrefix . "http" }} target="_blank" rel="noopener"{{ end }} aria-label="{{ $.label }}"></a>
+  {{- end }}
+</div>

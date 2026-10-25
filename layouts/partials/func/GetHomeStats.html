@@ -1,0 +1,143 @@
+{{/*
+  GetHomeStats
+  Computes the numbers behind the homepage telemetry panel at build time.
+
+  Live threat telemetry is pulled from public feeds with resources.GetRemote:
+    - NVD CVE API 2.0 — CVEs published in the last N full days (and the N
+      days before that, for the trend).
+    - CISA Known Exploited Vulnerabilities catalog — KEV additions, ransomware
+      linkage and the most-exploited vendor.
+  Coverage stats are counted from the site's own posts.
+
+  A failed feed never fails the build: the stat is left empty and the panel
+  falls back to params.stats.fallback (or a dash). The deploy workflow
+  rebuilds daily so the live numbers stay current.
+
+  Set HUGO_NVD_API_KEY in the build environment to use an NVD API key.
+
+  @return  dict with keys "live", "coverage" and "updated".
+*/}}
+{{ $cfg := site.Params.stats }}
+{{ $window := int ($cfg.windowDays | default 30) }}
+{{ $vendorWindow := int ($cfg.vendorWindowDays | default 90) }}
+{{ $today := now.UTC }}
+{{ $end := $today.Format "2006-01-02" }}
+{{ $start := ($today.AddDate 0 0 (mul -1 $window)).Format "2006-01-02" }}
+{{ $prevStart := ($today.AddDate 0 0 (mul -2 $window)).Format "2006-01-02" }}
+{{ $vendorStart := ($today.AddDate 0 0 (mul -1 $vendorWindow)).Format "2006-01-02" }}
+
+{{/* ── NVD: CVEs published per day ─────────────────────────── */}}
+{{ $nvdHeaders := dict "User-Agent" "CybersecurityOS site build (+https://www.cybersecurityos.net)" }}
+{{ with os.Getenv "HUGO_NVD_API_KEY" }}
+  {{ $nvdHeaders = merge $nvdHeaders (dict "apiKey" .) }}
+{{ end }}
+{{ $nvdTotals := slice }}
+{{ range slice (slice $start $end) (slice $prevStart $start) }}
+  {{ $total := -1 }}
+  {{ $url := printf "%s?pubStartDate=%sT00:00:00.000&pubEndDate=%sT00:00:00.000&resultsPerPage=1&noRejected" ($cfg.nvdURL | default "https://services.nvd.nist.gov/rest/json/cves/2.0") (index . 0) (index . 1) }}
+  {{ with try (resources.GetRemote $url (dict "headers" $nvdHeaders)) }}
+    {{ with .Err }}
+      {{ warnf "home stats: NVD fetch failed: %s" . }}
+    {{ else with .Value }}
+      {{ with (. | transform.Unmarshal).totalResults }}{{ $total = int . }}{{ end }}
+    {{ else }}
+      {{ warnf "home stats: NVD returned no data for %s" $url }}
+    {{ end }}
+  {{ end }}
+  {{ $nvdTotals = $nvdTotals | append $total }}
+{{ end }}
+{{ $cvesPerDay := -1 }}
+{{ $cvesPerDayPrev := -1 }}
+{{ if ge (index $nvdTotals 0) 0 }}{{ $cvesPerDay = math.Round (div (float (index $nvdTotals 0)) $window) }}{{ end }}
+{{ if ge (index $nvdTotals 1) 0 }}{{ $cvesPerDayPrev = math.Round (div (float (index $nvdTotals 1)) $window) }}{{ end }}
+
+{{/* ── CISA KEV: exploited-in-the-wild signals ─────────────── */}}
+{{ $kevTotal := -1 }}
+{{ $kevRecent := -1 }}
+{{ $kevPrev := -1 }}
+{{ $kevRansomware := -1 }}
+{{ $topVendor := "" }}
+{{ $topVendorCount := 0 }}
+{{ with try (resources.GetRemote ($cfg.kevURL | default "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json")) }}
+  {{ with .Err }}
+    {{ warnf "home stats: CISA KEV fetch failed: %s" . }}
+  {{ else with .Value }}
+    {{ with (. | transform.Unmarshal).vulnerabilities }}
+      {{ $kevTotal = len . }}
+      {{ $kevRecent = 0 }}
+      {{ $kevPrev = 0 }}
+      {{ $kevRansomware = 0 }}
+      {{ $vendors := newScratch }}
+      {{ range . }}
+        {{/* dateAdded is YYYY-MM-DD, so string comparison orders by date */}}
+        {{ $added := .dateAdded | default "" }}
+        {{ if ge $added $start }}
+          {{ $kevRecent = add $kevRecent 1 }}
+        {{ else if ge $added $prevStart }}
+          {{ $kevPrev = add $kevPrev 1 }}
+        {{ end }}
+        {{ if eq .knownRansomwareCampaignUse "Known" }}
+          {{ $kevRansomware = add $kevRansomware 1 }}
+        {{ end }}
+        {{ $vendor := .vendorProject | default "" }}
+        {{ if and (ge $added $vendorStart) $vendor }}
+          {{ $n := 0 }}
+          {{ with $vendors.Get "count" }}{{ with index . $vendor }}{{ $n = . }}{{ end }}{{ end }}
+          {{ $vendors.SetInMap "count" $vendor (add $n 1) }}
+        {{ end }}
+      {{ end }}
+      {{ range $name, $n := $vendors.Get "count" }}
+        {{ if gt $n $topVendorCount }}
+          {{ $topVendor = $name }}
+          {{ $topVendorCount = $n }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ else }}
+    {{ warnf "home stats: CISA KEV returned no data" }}
+  {{ end }}
+{{ end }}
+
+{{/* ── Coverage: counted from the site's own posts ─────────── */}}
+{{ $posts := where site.RegularPages "Section" "posts" }}
+{{ $weeklyTerm := $cfg.weeklyCategory | default "OS Weekly" }}
+{{ $weekly := where $posts "Params.categories" "intersect" (slice $weeklyTerm) }}
+{{ $cveIDs := slice }}
+{{ range $posts }}
+  {{ range findRE `(?i)CVE-\d{4}-\d{4,7}` .RawContent }}
+    {{ $cveIDs = $cveIDs | append (upper .) }}
+  {{ end }}
+{{ end }}
+{{ $cveIDs = $cveIDs | uniq }}
+
+{{/* Top focus area: the most-used category that isn't a format (e.g. OS Weekly) */}}
+{{ $focus := dict }}
+{{ $skip := apply ($cfg.focusExclude | default (slice $weeklyTerm)) "urlize" "." }}
+{{ range site.Taxonomies.categories.ByCount }}
+  {{ if and (not $focus) (not (in $skip .Name)) }}
+    {{ $focus = dict "name" .Page.Title "count" .Count "url" .Page.RelPermalink }}
+  {{ end }}
+{{ end }}
+
+{{ return dict
+  "updated" $today
+  "live" (dict
+    "windowDays" $window
+    "vendorWindowDays" $vendorWindow
+    "cvesPerDay" $cvesPerDay
+    "cvesPerDayPrev" $cvesPerDayPrev
+    "kevTotal" $kevTotal
+    "kevRecent" $kevRecent
+    "kevPrev" $kevPrev
+    "kevRansomware" $kevRansomware
+    "topVendor" $topVendor
+    "topVendorCount" $topVendorCount
+  )
+  "coverage" (dict
+    "posts" (len $posts)
+    "weekly" (len $weekly)
+    "weeklyURL" ((site.GetPage (printf "/categories/%s" (urlize $weeklyTerm))).RelPermalink | default "/posts/")
+    "cves" (len $cveIDs)
+    "focus" $focus
+  )
+}}
