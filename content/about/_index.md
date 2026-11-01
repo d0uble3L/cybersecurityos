@@ -37,7 +37,7 @@ When I'm not thinking about security architecture, you'll find me exploring fitn
 
 ## Work With Me
 
-I'm available for speaking, podcasts, workshops, and vCISO advisory. See the [contact page](/contact/) or [book a call](https://calendly.com/trilltayo).
+I'm available for speaking, podcasts, workshops, and vCISO advisory. See the [contact page](/contact/) or [book a call](https://calendly.com/cybershieldacademy).
 
 ## Go Deeper
 
