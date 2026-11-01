@@ -1,0 +1,5 @@
+# Security contact for www.cybersecurityos.net (RFC 9116)
+Contact: https://www.cybersecurityos.net/contact/
+Expires: 2027-10-31T23:59:59Z
+Preferred-Languages: en
+Canonical: https://www.cybersecurityos.net/.well-known/security.txt

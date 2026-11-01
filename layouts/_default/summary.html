@@ -1,6 +1,9 @@
 {{/* Post card — used in list.html and index.html card grid */}}
 {{ $featuredURL := partial "func/GetFeaturedImage.html" . }}
 {{ $featuredRes := partial "func/GetFeaturedImageObject.html" . }}
+{{/* Card label: first category (e.g. "OS Weekly", "AI and Security"), else the section */}}
+{{ $label := .CurrentSection.Title | default .Section }}
+{{ with .GetTerms "categories" }}{{ $label = (index . 0).LinkTitle }}{{ end }}
 
 <article class="os-card">
   {{ if or $featuredRes $featuredURL }}
@@ -13,19 +16,19 @@
     </a>
   {{ else }}
     <a href="{{ .RelPermalink }}" tabindex="-1" aria-hidden="true" class="os-card-img os-card-img--placeholder">
-      <span>{{ .CurrentSection.Title | default .Section }}</span>
+      <span>{{ $label }}</span>
     </a>
   {{ end }}
 
   <div class="os-card-body">
-    <p class="os-card-section">{{ .CurrentSection.Title | default .Section }}</p>
+    <p class="os-card-section">{{ $label }}</p>
 
     <a href="{{ .RelPermalink }}" class="os-card-title">{{ .Title }}</a>
 
     <p class="os-card-excerpt">{{ .Summary | plainify | truncate 120 }}</p>
 
-    {{/* Tags (capped to keep card heights consistent) */}}
-    {{ partial "tags.html" (dict "page" . "limit" 4) }}
+    {{/* Tags: site-wide tags hidden, capped at 3 to keep card heights consistent */}}
+    {{ partial "tags.html" (dict "page" . "limit" 3 "exclude" site.Params.cardtagexclude) }}
 
     {{/* Card footer */}}
     <div class="os-card-footer">

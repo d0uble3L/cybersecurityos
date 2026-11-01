@@ -2,14 +2,26 @@
 title: Contact
 featured_image: ""
 omit_header_text: true
-description: ""
+description: "Contact Michael Tayo of CybersecurityOS for speaking, podcasts, workshops, vCISO advisory, partnerships, or feedback on the OS Weekly newsletter."
 type: page
 ---
 
-## I'd love to hear from you
+## Speaking and Advisory
 
-Whether you have questions, feedback, or partnership inquiries, feel free to reach out below.
+I speak on security engineering, vulnerability management, AI security, and security leadership, and I'm open to keynotes, panels, podcasts, workshops, and conferences.
 
-I’m open to collaborations, speaking engagements, podcasts, keynotes, workshops, conferences, and more. Let’s connect and make something great together!
+As a part-time vCISO, I also help startups and SMBs build security programs: security strategy, audit readiness, vulnerability management, and board-level reporting.
 
-{{< form-contact action="<https://formspree.io/f/xrbznpkl>" >}}
+- **Book a call:** [calendly.com/trilltayo](https://calendly.com/trilltayo)
+- **vCISO services:** [CyberSHIELD vCISO plans](https://cybersecurityos.gumroad.com/l/cybershield-vciso)
+- **One-off advisory session:** [Cybersecurity Advisor Consultation](https://cybersecurityos.gumroad.com/l/cybersecurity-advisor)
+
+## Send a Message
+
+Questions, feedback on a post, partnership inquiries, or a security issue with this site: use the form below and I'll get back to you.
+
+<!-- markdownlint-disable MD034 -->
+
+{{< form-contact action="https://formspree.io/f/xrbznpkl" >}}
+
+<!-- markdownlint-enable MD034 -->

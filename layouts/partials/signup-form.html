@@ -1,0 +1,42 @@
+{{/*
+  signup-form
+  On-brand newsletter signup that posts straight to a Kit form, replacing
+  Kit's JS embeds (which render white default inputs in a different font).
+
+  Each placement uses its own Kit form ID so Kit reports which placement
+  brings in subscribers.
+
+  @param formID     Kit form ID (see params.newsletter in hugo.toml)
+  @param placement  "hero" | "footer" — sets the layout variant
+  @param title      optional heading
+  @param pitch      optional line describing what subscribers get
+
+  Works without JavaScript (the browser posts to Kit and Kit shows its
+  confirmation page). With JavaScript the form submits in place and shows
+  an inline confirmation; any error falls back to a normal post.
+*/}}
+{{ $nl := site.Params.newsletter | default dict }}
+{{ $id := .formID }}
+{{ $placement := .placement | default "footer" }}
+{{ $fieldID := printf "os-signup-email-%s" $placement }}
+<form class="os-signup os-signup--{{ $placement }}"
+      action="https://app.kit.com/forms/{{ $id }}/subscriptions"
+      method="post"
+      data-os-signup>
+  {{ with .title }}<p class="os-signup-title">{{ . }}</p>{{ end }}
+  {{ with .pitch }}<p class="os-signup-pitch">{{ . }}</p>{{ end }}
+  <div class="os-signup-row">
+    <label for="{{ $fieldID }}" class="os-visually-hidden">Email address</label>
+    <input id="{{ $fieldID }}"
+           class="os-signup-input"
+           type="email"
+           name="email_address"
+           autocomplete="email"
+           inputmode="email"
+           placeholder="you@company.com"
+           required>
+    <button type="submit" class="os-btn os-btn-primary os-signup-btn">Subscribe</button>
+  </div>
+  <p class="os-signup-fine">Free · {{ $nl.cadence | default "weekly" }} · unsubscribe in one click</p>
+  <p class="os-signup-status" role="status" aria-live="polite" hidden></p>
+</form>
