@@ -10,6 +10,7 @@
   @param placement  "hero" | "footer" — sets the layout variant
   @param title      optional heading
   @param pitch      optional line describing what subscribers get
+  @param confirm    true if the Kit form sends a confirmation email (double opt-in)
 
   Works without JavaScript (the browser posts to Kit and Kit shows its
   confirmation page). With JavaScript the form submits in place and shows
@@ -22,9 +23,12 @@
 <form class="os-signup os-signup--{{ $placement }}"
       action="https://app.kit.com/forms/{{ $id }}/subscriptions"
       method="post"
-      data-os-signup>
+      data-os-signup
+      data-success="{{ if .confirm }}Almost done: check your inbox and confirm your subscription.{{ else }}You're in. The next {{ $nl.name | default "issue" }} lands in your inbox {{ $nl.cadence | default "soon" }}.{{ end }}">
   {{ with .title }}<p class="os-signup-title">{{ . }}</p>{{ end }}
   {{ with .pitch }}<p class="os-signup-pitch">{{ . }}</p>{{ end }}
+  {{/* Kit stores this as the subscriber's referrer (the page they signed up on); filled in by JS */}}
+  <input type="hidden" name="referrer" value="">
   <div class="os-signup-row">
     <label for="{{ $fieldID }}" class="os-visually-hidden">Email address</label>
     <input id="{{ $fieldID }}"

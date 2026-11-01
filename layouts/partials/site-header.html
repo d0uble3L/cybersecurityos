@@ -60,6 +60,7 @@
       {{ partial "signup-form.html" (dict
         "formID" $nl.heroformid
         "placement" "hero"
+        "confirm" $nl.heroconfirmemail
         "pitch" (printf "%s lands %s — join %s security engineers and leaders." ($nl.name | default "OS Weekly") ($nl.cadence | default "every week") ($nl.subscribers | default "hundreds of"))
       ) }}
       <div class="os-hero-actions">
