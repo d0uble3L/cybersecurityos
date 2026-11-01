@@ -1,14 +1,20 @@
 {{/* CVE-style severity tag badges.
   Usage: partial "tags.html" . — render all tags for the page
          partial "tags.html" (dict "page" . "limit" 4) — cap tags shown, with a "+N" overflow badge
+         partial "tags.html" (dict "page" . "limit" 3 "exclude" (slice "cybersecurity")) — also skip tags (case-insensitive)
 */}}
 {{ $page := . }}
 {{ $limit := 0 }}
+{{ $exclude := slice }}
 {{ if reflect.IsMap . }}
   {{ $page = .page }}
   {{ $limit = .limit | default 0 }}
+  {{ with .exclude }}{{ $exclude = . }}{{ end }}
 {{ end }}
-{{ $terms := $page.GetTerms "tags" }}
+{{ $terms := slice }}
+{{ range $page.GetTerms "tags" }}
+  {{ if not (in $exclude (lower .LinkTitle)) }}{{ $terms = $terms | append . }}{{ end }}
+{{ end }}
 {{ if $terms }}
 <ul class="os-tags">
   {{ $shown := $terms }}

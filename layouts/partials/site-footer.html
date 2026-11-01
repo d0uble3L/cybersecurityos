@@ -3,9 +3,15 @@
   <div class="os-footer-inner">
 
     <!-- Newsletter -->
-    <div style="text-align:center; margin-bottom:2rem; padding-bottom:2rem; border-bottom:1px solid var(--os-border);">
-      <p style="font-family:var(--os-font-mono);font-size:.7rem;color:var(--os-green);letter-spacing:.16em;text-transform:uppercase;margin:0 0 .75rem;">// Subscribe to the OS</p>
-      <script async data-uid="63abb6cee3" src="https://theghettoflower.kit.com/63abb6cee3/index.js"></script>
+    {{ $nl := site.Params.newsletter | default dict }}
+    <div class="os-footer-signup">
+      <p class="os-footer-signup-eyebrow">// Subscribe to the OS</p>
+      {{ partial "signup-form.html" (dict
+        "formID" $nl.footerformid
+        "placement" "footer"
+        "title" (printf "Get %s in your inbox" ($nl.name | default "OS Weekly"))
+        "pitch" "One email a week: the vulnerabilities that matter, what attackers are doing, and the frameworks to act on it. Written by a Security Engineering Manager and vCISO."
+      ) }}
     </div>
 
     <!-- Footer grid -->
@@ -36,7 +42,7 @@
         <span>Built with Hugo · Hosted on GitHub Pages</span>
       </div>
       <div class="os-status-right">
-        <span>[CybersecurityOS] v2.0 · security-focused · AI-powered</span>
+        <span>[CybersecurityOS] v2.0 · written by a practitioner</span>
       </div>
     </div>
 

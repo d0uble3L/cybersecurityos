@@ -37,7 +37,7 @@
         "prev" $live.cvesPerDayPrev
         "fallback" $fallback.cvesperday
         "label" "New CVEs / Day"
-        "note" (printf "%d-day avg vs prior %d" $live.windowDays $live.windowDays)
+        "note" (printf "published to NVD · %d-day daily avg" $live.windowDays)
         "href" "https://nvd.nist.gov/vuln/search"
       ) }}
       {{ partial "home-stat-tile.html" (dict
@@ -48,7 +48,7 @@
         "prev" $live.kevPrev
         "spark" $live.kevDaily
         "label" "Exploited in the Wild"
-        "note" (printf "KEV adds per day · last %d days" $live.windowDays)
+        "note" (printf "added to KEV · %d-day total" $live.windowDays)
         "href" $kevURL
       ) }}
       {{ partial "home-stat-tile.html" (dict

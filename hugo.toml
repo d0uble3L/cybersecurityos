@@ -1,4 +1,4 @@
-baseURL = "https://www.cybersecurityos.net"
+baseURL = "https://www.cybersecurityos.net/"
 languageCode = "en-us"
 title = "CybersecurityOS"
 theme = "ananke"
@@ -27,6 +27,43 @@ author = "Michael Tayo"
   paginate = 20
   rss = "/index.xml" #rss
   show_reading_time = true
+  # <title> for the homepage only (other pages use "Page | CybersecurityOS")
+  homeTitle = "CybersecurityOS — Weekly Security Intelligence for Engineers & CISOs"
+  # Default social preview for pages without their own image (homepage,
+  # About, Contact, Docs). Hugo's OpenGraph/Twitter templates fall back to
+  # this and switch the X card to summary_large_image.
+  images = ["images/og-default.png"]
+  # Tags that appear on nearly every post; hidden on post cards
+  cardTagExclude = ["cybersecurityos", "cybersecurity"]
+
+# Inline newsletter signups (layouts/partials/signup-form.html).
+# Each placement posts to its own Kit form so Kit shows which one converts.
+[params.newsletter]
+  name = "OS Weekly"
+  cadence = "every Sunday"
+  # Shown as social proof; keep in line with Kit's active subscriber count
+  subscribers = "1,800+"
+  heroFormID = "9535604"     # Kit "Form" (inline) — rename to "Homepage Hero" in Kit
+  footerFormID = "8188491"   # Kit "Basic CybersecurityOS Form - Header/Footer"
+
+# Store strip on the homepage (layouts/partials/home-store.html)
+[[params.storeProducts]]
+  name = "Cyber Launchpad OS"
+  blurb = "Break into cybersecurity with a structured, first-principles plan."
+  price = "$49"
+  url = "https://cybersecurityos.gumroad.com/l/cyber-launchpad-os"
+
+[[params.storeProducts]]
+  name = "Vulnerability Management OS"
+  blurb = "Mini course: build the workflow and report risk with clarity."
+  price = "$49"
+  url = "https://cybersecurityos.gumroad.com/l/vulnerability-management-os"
+
+[[params.storeProducts]]
+  name = "AI Prompting Field Manual"
+  blurb = "Field-tested prompts for security engineers and analysts."
+  price = "$9"
+  url = "https://cybersecurityos.gumroad.com/l/ai-prompt-cybersecurity-guide"
 
 # Homepage telemetry panel (layouts/partials/func/GetHomeStats.html).
 # Live numbers are fetched from these feeds on every build; the deploy
@@ -90,7 +127,7 @@ author = "Michael Tayo"
 
 [[menu.main]]
   name = "Membership"
-  url = "https://cybersecurityos.gumroad.com/l/os-member"
+  url = "/membership/"
   weight = 6
 
 # Image processing pipeline (WebP conversion, quality, EXIF stripping)

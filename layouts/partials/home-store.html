@@ -1,0 +1,21 @@
+{{/* Homepage product strip. Products are listed in params.storeProducts (hugo.toml). */}}
+{{ with site.Params.storeproducts }}
+<section class="os-store-strip" aria-labelledby="os-store-heading">
+  <div class="os-store-head">
+    <div>
+      <p class="os-store-eyebrow">// From the Store</p>
+      <h2 id="os-store-heading" class="os-store-title">Playbooks &amp; Toolkits</h2>
+    </div>
+    <a href="https://store.cybersecurityos.net/" class="os-btn os-btn-ghost" style="font-size:.72rem;" target="_blank" rel="noopener">All products ↗</a>
+  </div>
+  <div class="os-store-grid">
+    {{ range . }}
+    <a class="os-store-card" href="{{ .url }}" target="_blank" rel="noopener">
+      <span class="os-store-name">{{ .name }}</span>
+      <span class="os-store-blurb">{{ .blurb }}</span>
+      <span class="os-store-meta"><span class="os-store-price">{{ .price }}</span><span class="os-store-cta">Get it ↗</span></span>
+    </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

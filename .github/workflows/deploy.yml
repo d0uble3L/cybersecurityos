@@ -63,11 +63,11 @@ jobs:
           TZ: America/Los_Angeles
           # Optional: raises NVD API rate limits for the homepage stats
           HUGO_NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
-        run: |
-          hugo \
-            --gc \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+        # baseURL comes from hugo.toml (https://www.cybersecurityos.net/).
+        # Don't pass --baseURL from configure-pages: it reports http:// for the
+        # custom domain, which put http:// in the sitemap, canonical tags, RSS
+        # and og:url.
+        run: hugo --gc --minify
       - name: Index site with Pagefind
         run: npx pagefind --source public
       - name: Upload artifact

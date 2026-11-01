@@ -2,34 +2,43 @@
 title = 'About'
 date = 2024-09-23T20:46:17-05:00
 draft = false
+description = "Michael Tayo is a Security Engineering Manager and part-time vCISO, CISSP, and the practitioner behind CybersecurityOS and the OS Weekly security newsletter."
 +++
 
-# Engineering Security from First Principles
+## Engineering Security from First Principles
 
-Welcome to **CybersecurityOS**—a resource dedicated to building secure systems by design, not by accident.
+I'm **Michael Tayo**, a full-time **Security Engineering Manager** and part-time **vCISO**, and I write CybersecurityOS.
 
-I'm Michael Tayo, a cybersecurity strategist based in the USA. I work at the intersection of **security engineering**, **system design**, and **automation**, helping organizations think critically about how to embed security into their technology from the ground up.
+My day job is building and running security programs: vulnerability management, cloud and application security, detection and response, and the leadership work that holds it together. As a vCISO I help startups and SMBs stand up security programs that hold up in an audit and against real attackers. CybersecurityOS is where I write down the frameworks, mental models, and threat analysis I use in that work.
+
+<!-- Add a headshot here, e.g. ![Michael Tayo](/images/michael-tayo.jpg) -->
+
+## Background
+
+<!-- Confirm each line before publishing; remove anything you'd rather not list. -->
+
+- **Certifications:** CISSP
+- **Speaking:** CISO Summit Chicago, TechEx
+- **Editorial:** CyberRisk Alliance editorial panel
+- **Industry:** CompTIA subject-matter expert (exam development)
 
 ## What You'll Find Here
 
-At CybersecurityOS, we explore:
+- **OS Weekly**: every Sunday, the vulnerabilities that matter, what attackers are doing, and what to do about it
+- **Secure-by-design architecture**: security as a first-class requirement, not an afterthought
+- **Automation and DevSecOps**: making security scalable, consistent, and sustainable
+- **Cloud security and infrastructure**: securing systems at scale
+- **AI security**: the risks and controls for AI systems and agents
+- **Leadership frameworks**: practical tools for security leaders, engineers, and teams
 
-- **Secure-by-design architecture** — Security as a first-class concern, not an afterthought
-- **Automation and DevSecOps** — Making security scalable, consistent, and sustainable
-- **Cloud security and infrastructure** — Securing systems at scale
-- **AI and emerging technologies** — Understanding the security implications of what's next
-- **Practical frameworks and strategies** — Actionable insights for security leaders, engineers, and teams
+This isn't about fear or complexity. It's about clarity: what systems need to be secure, why, and how to get there efficiently.
 
-This isn't about fear or complexity. It's about clarity—understanding what systems need to be secure, why, and how to achieve it efficiently.
+When I'm not thinking about security architecture, you'll find me exploring fitness, travel, music, and food.
 
-## Beyond the Blog
+## Work With Me
 
-I'm working on turning these frameworks and insights into a comprehensive guide on security-first engineering. For now, I share weekly perspectives on cybersecurity, technology trends, and the decisions that shape our digital future.
-
-When I'm not thinking about security architecture, you'll find me exploring the intersections of fitness, travel, music, and food.
-
-Let's build more resilient systems together.
+I'm available for speaking, podcasts, workshops, and vCISO advisory. See the [contact page](/contact/) or [book a call](https://calendly.com/trilltayo).
 
 ## Go Deeper
 
-If these frameworks are useful, **[become an OS Member](/founding-member/)** — the founding-rate membership for security leaders who want the deeper playbooks, templates, and frameworks behind the weekly posts. Not ready for that yet? Start with the **[free weekly posts](/posts/)**.
+If these frameworks are useful, **[become an OS Member](/membership/)** for the deeper playbooks, templates, and frameworks behind the weekly posts. Not ready for that yet? Start with the **[free weekly posts](/posts/)**.

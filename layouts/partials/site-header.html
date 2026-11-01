@@ -41,7 +41,7 @@
   </div>
   {{ end }}
 
-  {{/* Newsletter embed (homepage only, below hero) */}}
+  {{/* Homepage hero: headline, newsletter signup, telemetry */}}
   {{ if .IsHome }}
   <div class="os-hero">
     <div class="os-hero-grid" aria-hidden="true"></div>
@@ -56,8 +56,14 @@
         Mental models, leadership frameworks, and threat intelligence for CISOs,
         security engineers, and the next generation of cyber leaders.
       </p>
+      {{ $nl := site.Params.newsletter | default dict }}
+      {{ partial "signup-form.html" (dict
+        "formID" $nl.heroformid
+        "placement" "hero"
+        "pitch" (printf "%s lands %s — join %s security engineers and leaders." ($nl.name | default "OS Weekly") ($nl.cadence | default "every week") ($nl.subscribers | default "hundreds of"))
+      ) }}
       <div class="os-hero-actions">
-        <a href="/posts/" class="os-btn os-btn-primary">Read the OS →</a>
+        <a href="/posts/" class="os-btn os-btn-ghost">Read the OS →</a>
         <a href="/docs/" class="os-btn os-btn-ghost">View Docs</a>
       </div>
       {{ partial "home-stats.html" . }}

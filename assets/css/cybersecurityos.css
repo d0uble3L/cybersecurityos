@@ -2977,3 +2977,192 @@ article.pa4-ns {
 .os-faq-answer p {
   margin: 0;
 }
+
+/* ─── Newsletter signup (layouts/partials/signup-form.html) ─── */
+.os-visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.os-signup {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+}
+.os-signup--hero {
+  margin-bottom: 1.25rem;
+}
+.os-signup-title {
+  font-family: var(--os-font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--os-text);
+  margin: 0 0 0.5rem;
+}
+.os-signup-pitch {
+  font-size: 0.9rem;
+  color: var(--os-text-muted);
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+.os-signup--hero .os-signup-pitch {
+  font-family: var(--os-font-mono);
+  font-size: 0.8rem;
+  color: var(--os-green-dim);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+}
+.os-signup-row {
+  display: flex;
+  gap: 0.5rem;
+}
+.os-signup-input {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--os-font-mono);
+  font-size: 0.9rem;
+  color: var(--os-text);
+  background: var(--os-bg-surface);
+  border: 1px solid var(--os-border-bright);
+  border-radius: var(--os-radius);
+  padding: 0.65rem 0.9rem;
+}
+.os-signup-input::placeholder {
+  color: var(--os-text-dim);
+}
+.os-signup-input:focus {
+  outline: none;
+  border-color: var(--os-green);
+  box-shadow: 0 0 0 3px var(--os-green-glow);
+}
+.os-signup-btn {
+  flex: none;
+  justify-content: center;
+}
+.os-signup-btn:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+.os-signup-fine {
+  font-family: var(--os-font-mono);
+  font-size: 0.68rem;
+  color: var(--os-text-dim);
+  letter-spacing: 0.04em;
+  margin: 0.6rem 0 0;
+}
+.os-signup-status {
+  font-family: var(--os-font-mono);
+  font-size: 0.82rem;
+  color: var(--os-green);
+  margin: 0.75rem 0 0;
+}
+.os-signup.is-done .os-signup-row,
+.os-signup.is-done .os-signup-fine {
+  display: none;
+}
+.os-footer-signup {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--os-border);
+}
+.os-footer-signup-eyebrow {
+  font-family: var(--os-font-mono);
+  font-size: 0.7rem;
+  color: var(--os-green);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem;
+}
+@media (max-width: 480px) {
+  .os-signup-row {
+    flex-direction: column;
+  }
+}
+
+/* ─── Homepage store strip (layouts/partials/home-store.html) ─── */
+.os-store-strip {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 1rem;
+}
+.os-store-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--os-border);
+  padding-bottom: 1rem;
+}
+.os-store-head .os-btn {
+  flex: none;
+  white-space: nowrap;
+}
+.os-store-eyebrow {
+  font-family: var(--os-font-mono);
+  font-size: 0.68rem;
+  color: var(--os-green);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 0.3rem;
+}
+.os-store-title {
+  font-family: var(--os-font-heading);
+  font-size: 1.1rem;
+  color: var(--os-text);
+  margin: 0;
+}
+.os-store-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.os-store-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  background: var(--os-bg-surface);
+  border: 1px solid var(--os-border);
+  border-radius: var(--os-radius-md);
+  text-decoration: none;
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+}
+.os-store-card:hover {
+  border-color: var(--os-border-green);
+  background: var(--os-bg-elevated);
+}
+.os-store-name {
+  font-family: var(--os-font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--os-text);
+}
+.os-store-blurb {
+  font-size: 0.85rem;
+  color: var(--os-text-muted);
+  line-height: 1.55;
+}
+.os-store-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-family: var(--os-font-mono);
+  font-size: 0.78rem;
+}
+.os-store-price {
+  color: var(--os-green);
+}
+.os-store-cta {
+  color: var(--os-text-dim);
+}
