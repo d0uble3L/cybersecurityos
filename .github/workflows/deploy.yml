@@ -70,10 +70,23 @@ jobs:
         run: hugo --gc --minify
       - name: Index site with Pagefind
         run: npx pagefind --source public
+      # Package and upload by hand instead of actions/upload-pages-artifact@v4,
+      # which excludes dot-directories and so dropped /.well-known/security.txt.
+      # This is the same tarball that action builds, minus that exclusion.
+      - name: Package site
+        run: |
+          tar --dereference --hard-dereference --directory public \
+            -cvf "$RUNNER_TEMP/artifact.tar" \
+            --exclude=.git --exclude=.github .
+          tar -tf "$RUNNER_TEMP/artifact.tar" | grep -q '^\./\.well-known/security\.txt$' \
+            || echo "::warning::.well-known/security.txt is missing from the Pages artifact"
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
-          path: ./public
+          name: github-pages
+          path: ${{ runner.temp }}/artifact.tar
+          retention-days: 1
+          if-no-files-found: error
 
   # Deployment job
   deploy:
