@@ -14,7 +14,10 @@ Repository → Settings → Pages → check **Enforce HTTPS**. This redirects
 
 1. Add `cybersecurityos.net` to Cloudflare and switch the domain's nameservers.
 2. Keep the existing DNS records (`www` CNAME → `d0uble3l.github.io`, apex A
-   records → GitHub Pages IPs) and set them to **Proxied**.
+   records → GitHub Pages IPs) and set them to **Proxied**. Leave `join` (Kit)
+   and `store` (Gumroad) as **DNS only**: those services issue their own
+   certificates and break when proxied. Turn off DNSSEC at the registrar before
+   switching nameservers.
 3. SSL/TLS → Overview → **Full (strict)**.
 4. SSL/TLS → Edge Certificates → enable **Always Use HTTPS** and **HSTS**
    (max-age 6 months to start, include subdomains only once every subdomain is
@@ -38,7 +41,7 @@ it's enforced straight away. A starting point:
 
 ```text
 default-src 'self';
-script-src 'self' 'unsafe-inline' https://theghettoflower.kit.com https://f.convertkit.com https://*.disqus.com https://*.disquscdn.com;
+script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://theghettoflower.kit.com https://f.convertkit.com https://*.disqus.com https://*.disquscdn.com;
 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.disquscdn.com;
 font-src 'self' https://fonts.gstatic.com;
 img-src 'self' data: https:;
@@ -50,6 +53,8 @@ base-uri 'self';
 object-src 'none';
 upgrade-insecure-requests
 ```
+
+`'wasm-unsafe-eval'` is for the Pagefind site search, which runs WebAssembly.
 
 Watch the browser console for a week, add any blocked origins you actually
 use, then rename the header to `Content-Security-Policy` to enforce it.
