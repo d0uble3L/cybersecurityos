@@ -38,12 +38,12 @@ faq:
 
 <!--
 DRAFT NOTES (delete before publishing)
-Remaining TODOs are marked inline. Screenshots to grab:
+Before publishing: add a social card (featured_image/images in front matter) and these screenshots:
 - Zero Trust overview / plan page
 - Device enrollment permissions policy
 - Device profiles list (showing Default at the bottom)
 - Split Tunnels settings (Exclude mode list)
-- Access policy with the Require > Gateway rule
+- Gateway posture check under Reusable components > Posture checks
 - Mac client showing "Connected"
 -->
 
@@ -72,7 +72,7 @@ In Part 1 I'm covering the client, device configuration, and Access policies. Ga
 
 Sign in to the Cloudflare dashboard, open **Zero Trust**, and pick a **team name**. It becomes `<team-name>.cloudflareaccess.com` and it's what every device uses to enroll, so pick something short you won't want to change. Then choose the Free plan. Cloudflare asks for a payment method even on the free tier; you aren't charged.
 
-Next, set up a login method under **Integrations** > **Identity providers**. The built-in **one-time PIN** (a code sent by email) is the fastest way to start. Connecting Google, GitHub, or Microsoft gets you MFA you already trust. <!-- TODO: which login method did you use? -->
+Next, set up a login method under **Integrations** > **Identity providers**. The built-in **one-time PIN** (a code sent by email) is the fastest way to start, but I connected **Google**. It means enrollment and app logins go through an account that already has MFA turned on, and it unlocks identity-based selectors in device profiles later.
 
 ## Step 2: Device enrollment rules (who gets in)
 
@@ -137,9 +137,9 @@ My takeaways:
 4. **DNS is separate from split tunnels.** Split tunnels only control IP traffic. DNS queries still go to Gateway and are subject to DNS policies unless the domain is in **Local Domain Fallback**. That one took me a while to see.
 5. **Prefer IPs over domains** in the split tunnel list where you can. Domain-based entries depend on DNS resolution and have more edge cases.
 
-## Step 5: App policies that require an enrolled device
+## Step 5: Planning app policies that require an enrolled device
 
-The last piece I worked through was **Access policies**, the rules that decide who reaches an application. Every policy is built from four parts:
+I haven't put an app behind Access yet. That comes with Cloudflare Tunnel in Part 2, since I need something published before there's anything to protect. But I spent a good part of the evening working out how **Access policies** work, because getting the policy model right first makes everything after it easier. Every policy is built from four parts:
 
 - **Action:** Allow, Block, Bypass, or Service Auth
 - **Rule type:** Include (any of these can match), Require (all of these must match), Exclude (none of these can match)
@@ -148,7 +148,7 @@ The last piece I worked through was **Access policies**, the rules that decide w
 
 Access applications are **deny by default**. Nothing gets in until an Allow policy matches.
 
-The rule I care most about is **requiring an enrolled device**. Identity alone isn't enough: a stolen password plus an MFA prompt someone approves by mistake still gets an attacker in. Requiring the device closes that gap.
+The rule I'll put on every app is **requiring an enrolled device**. Identity alone isn't enough: a stolen password plus an MFA prompt someone approves by mistake still gets an attacker in. Requiring the device closes that gap. Here's how I'll set it up:
 
 1. Go to **Reusable components** > **Posture checks** > **Cloudflare One Client checks**, select **Add a check**, and choose **Gateway**.
 2. In the Access application's policy, add a **Require** rule with the **Gateway** selector.
@@ -158,11 +158,9 @@ The rule I care most about is **requiring an enrolled device**. Identity alone i
 | Allow  | Include   | Emails   | `you@example.com` |
 |        | Require   | Gateway  | Gateway           |
 
-Now the request has to come from the right person **and** from a device that's running the Cloudflare One Client and enrolled in _your_ organization.
+With that in place, a request has to come from the right person **and** from a device that's running the Cloudflare One Client and enrolled in _your_ organization.
 
 One trap: there's also a **WARP** selector. It looks similar, but it accepts any WARP client, **including the free consumer 1.1.1.1 app** that anyone can install. Use **Gateway**.
-
-<!-- TODO: which app did you put this policy in front of? -->
 
 ## Why it's worth it, even for a homelab
 
@@ -170,7 +168,7 @@ One trap: there's also a **WARP** selector. It looks similar, but it accepts any
 
 **Protection follows the laptop.** With the client in Exclude mode, the coffee-shop network gets the same coverage as home.
 
-**Device-bound access.** Requiring Gateway means credentials alone don't get anyone into your apps.
+**Device-bound access.** Once apps sit behind Access with a Gateway requirement, credentials alone won't get anyone in.
 
 **It's the real product.** Enrollment rules, device profiles, split tunnels, and deny-by-default app policies are the same concepts enterprises pay for. If you're learning Zero Trust for work, there's no better lab than running it yourself.
 
@@ -185,10 +183,10 @@ One trap: there's also a **WARP** selector. It looks similar, but it accepts any
 
 I'm going to keep building this out and write it up as I go:
 
-- **Part 2: Segmenting the network.** Using Cloudflare Tunnel to reach home resources, carving my subnet out of the split tunnel exclude list, and a catch-all block policy so enrolled devices can only reach what they're explicitly allowed to.
+- **Part 2: Segmenting the network.** Using Cloudflare Tunnel to reach home resources, putting the first app behind the Access policy above, carving my subnet out of the split tunnel exclude list, and a catch-all block policy so enrolled devices can only reach what they're explicitly allowed to.
 - **Part 3: App policies for routing traffic.** Gateway DNS, network, and HTTP policies, and the TLS decryption decision that comes with them.
 - **Part 4: Authentication and endpoint policies.** Identity providers, session lengths, and device posture checks beyond "is the client running."
 
 If you have a homelab or a laptop that goes everywhere with you, this is a good evening project. It costs nothing, and it teaches you Zero Trust by running the real thing.
 
-<!-- TODO: closing CTA. Newsletter signup? -->
+> **Want Part 2 when it lands?** Subscribe to CybersecurityOS with the signup form below. You'll get the rest of this series plus weekly insights, tools, and frameworks for security pros.
