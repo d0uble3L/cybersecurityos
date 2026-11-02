@@ -246,7 +246,7 @@ By adopting AI-driven tools, these companies are transforming how security is in
 
 ![Code, Commit, Secure - DevSecOps In Action](/posts/ai-devsecops/images/devsecops-guide.png) <!-- Callout for image -->
 
-To help you navigate the integration of security into your development processes, consider exploring [**Code, Commit, Secure - DevSecOps In Action**](https://trilltayo.gumroad.com/l/devsecops-in-action). This comprehensive guide is designed to empower you with the principles, practices, and real-world examples necessary for building secure and resilient software.
+To help you navigate the integration of security into your development processes, consider exploring [**Code, Commit, Secure - DevSecOps In Action**](https://store.cybersecurityos.net/l/devsecops-in-action). This comprehensive guide is designed to empower you with the principles, practices, and real-world examples necessary for building secure and resilient software.
 
 ### What You'll Discover
 
@@ -260,7 +260,7 @@ To help you navigate the integration of security into your development processes
 
 Developed by industry experts, this resource offers practical insights and actionable steps that you can apply immediately. Whether you're a developer, security professional, operations team member, or a manager looking to drive organizational change, this guide is designed to meet your needs\*.
 
-Download Now: [**Code, Commit, Secure - DevSecOps In Action**](https://trilltayo.gumroad.com/l/devsecops-in-action)
+Download Now: [**Code, Commit, Secure - DevSecOps In Action**](https://store.cybersecurityos.net/l/devsecops-in-action)
 
 ![Image of Successful Implementation](/posts/ai-devsecops/images/microsoft-devsecops.png) <!-- Callout for image -->
 _Image Source: [DevSecOps Guides. "Methodology." DevSecOps Guides.](https://devsecopsguides.com/docs/plan-develop/methodology/)_
@@ -275,7 +275,7 @@ Furthermore, reliance on AI should not diminish the importance of human oversigh
 
 The convergence of AI, DevSecOps, and the shift-left philosophy marks a transformative era in cybersecurity. By leveraging AI technologies, organizations can enhance their security posture and cultivate a culture of security awareness throughout the development lifecycle.
 
-Start transforming your development process with [**Code, Commit, Secure - DevSecOps In Action**](https://trilltayo.gumroad.com/l/devsecops-in-action) and take the first step toward becoming a DevSecOps champion in your organization!
+Start transforming your development process with [**Code, Commit, Secure - DevSecOps In Action**](https://store.cybersecurityos.net/l/devsecops-in-action) and take the first step toward becoming a DevSecOps champion in your organization!
 
 Thanks for reading,
 

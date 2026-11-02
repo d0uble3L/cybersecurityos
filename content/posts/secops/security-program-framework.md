@@ -104,7 +104,7 @@ Recovery is crucial for business continuity, especially following a disruptive s
 
 **Looking to align your security program with the NIST Cybersecurity Framework (CSF) and SOC 2 controls?**
 
-Our [NIST & SOC 2 Security Program Checklist](https://trilltayo.gumroad.com/l/sec-program-checklist) provides an easy-to-follow, step-by-step guide for building a robust security posture that meets regulatory compliance requirements. Ideal for CISOs, Security Managers, GRC Specialists, and Technology Professionals, this checklist helps streamline your security programs while ensuring alignment with industry standards.
+Our [NIST & SOC 2 Security Program Checklist](https://store.cybersecurityos.net/l/sec-program-checklist) provides an easy-to-follow, step-by-step guide for building a robust security posture that meets regulatory compliance requirements. Ideal for CISOs, Security Managers, GRC Specialists, and Technology Professionals, this checklist helps streamline your security programs while ensuring alignment with industry standards.
 
 ### 🔍 What You'll Get
 
@@ -115,9 +115,9 @@ Our [NIST & SOC 2 Security Program Checklist](https://trilltayo.gumroad.com/l/se
 
 ![NIST & SOC 2 Security Program Checklist](/posts/secops/images/sec-program-checklist.png)
 
-_Image Source: [CybersecurityOS. Gumroad](https://trilltayo.gumroad.com/l/sec-program-checklist)_
+_Image Source: [CybersecurityOS. Gumroad](https://store.cybersecurityos.net/l/sec-program-checklist)_
 
-**Ready to strengthen your security program? [Get your checklist today!](https://trilltayo.gumroad.com/l/sec-program-checklist)**
+**Ready to strengthen your security program? [Get your checklist today!](https://store.cybersecurityos.net/l/sec-program-checklist)**
 
 ## Measuring and Improving Security Posture
 
