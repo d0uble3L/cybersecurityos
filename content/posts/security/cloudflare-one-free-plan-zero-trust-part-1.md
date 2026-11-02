@@ -1,7 +1,7 @@
 ---
 title: "Zero Trust on a $0 Budget, Part 1: Setting Up Cloudflare One's Free Plan"
 date: 2026-11-02
-draft: true
+draft: false
 author: "Michael Tayo"
 tags:
   [
@@ -19,7 +19,9 @@ categories: ["Security Engineering", "Cloud Security"]
 description: "Part 1 of a hands-on series on Cloudflare One's free Zero Trust plan. I enrolled my Mac, worked through device enrollment rules, device profiles, split tunnel vs. full tunnel, and app policies that require an enrolled device. Here's what each piece does, where I got tripped up, and why it's worth it for a homelab."
 slug: "cloudflare-one-free-plan-zero-trust-part-1"
 show_reading_time: true
-# TODO: add featured_image + images once we have a social card
+featured_image: /posts/security/images/cf-one-free-part-1-social.png
+images:
+  - /posts/security/images/cf-one-free-part-1-social.png
 keywords: "Cloudflare One free plan, Cloudflare Zero Trust free, Cloudflare One Client setup, WARP client macOS, device enrollment permissions, Cloudflare device profiles, split tunnel vs full tunnel, Cloudflare split tunnels include exclude, Require Gateway access policy, homelab zero trust, ZTNA for free"
 faq:
   - q: "Is Cloudflare One really free?"
@@ -36,22 +38,13 @@ faq:
     a: "Enable the Gateway posture check under Reusable components > Posture checks, then add a Require rule with the Gateway selector to the Access application's policy. Access then only allows requests from devices running the Cloudflare One Client and enrolled in your organization. The similar WARP selector is weaker, because it also accepts the free consumer WARP app."
 ---
 
-<!--
-DRAFT NOTES (delete before publishing)
-Before publishing: add a social card (featured_image/images in front matter) and these screenshots:
-- Zero Trust overview / plan page
-- Device enrollment permissions policy
-- Device profiles list (showing Default at the bottom)
-- Split Tunnels settings (Exclude mode list)
-- Gateway posture check under Reusable components > Posture checks
-- Mac client showing "Connected"
--->
-
 Until this week, I had no remote access setup at all. No VPN, no port forwards, no filtering. My Mac was protected by whatever network it happened to be on: home Wi-Fi, a coffee shop, an airport.
 
 So I set up [Cloudflare One](https://developers.cloudflare.com/cloudflare-one/), Cloudflare's Zero Trust platform, on its free plan. One evening, $0. I expected it to be "install a VPN app and click connect." It wasn't. The first evening was mostly about understanding the control plane: who can enroll, how the device is configured, what traffic goes where, and what an app should require before it lets you in.
 
 This is Part 1 of a series. It covers that foundation. Later parts go into network segmentation, routing traffic with app policies, and authentication and endpoint policies.
+
+![Cloudflare One free plan setup, Part 1: org and Google login, enrollment rules, device profiles, split vs. full tunnel, app policies](/posts/security/images/cf-one-free-part-1-thumb.svg)
 
 ## What you get for $0
 
