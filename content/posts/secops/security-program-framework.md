@@ -100,25 +100,6 @@ Both frameworks emphasize having a clear, structured approach to incident respon
 
 Recovery is crucial for business continuity, especially following a disruptive security incident. Recovery planning aligns with both NIST and SOC 2’s Availability criterion. Regularly test disaster recovery (DR) and business continuity plans to ensure they meet organizational requirements and function as intended during an incident.
 
-## 📋 NIST & SOC 2 Security Program Checklist
-
-**Looking to align your security program with the NIST Cybersecurity Framework (CSF) and SOC 2 controls?**
-
-Our [NIST & SOC 2 Security Program Checklist](https://trilltayo.gumroad.com/l/sec-program-checklist) provides an easy-to-follow, step-by-step guide for building a robust security posture that meets regulatory compliance requirements. Ideal for CISOs, Security Managers, GRC Specialists, and Technology Professionals, this checklist helps streamline your security programs while ensuring alignment with industry standards.
-
-### 🔍 What You'll Get
-
-- Comprehensive checklist with actionable steps
-- Guidance on aligning with NIST CSF’s five core functions
-- SOC 2 control mapping for easy compliance
-- Practical tips for implementing strong security governance
-
-![NIST & SOC 2 Security Program Checklist](/posts/secops/images/sec-program-checklist.png)
-
-_Image Source: [CybersecurityOS. Gumroad](https://trilltayo.gumroad.com/l/sec-program-checklist)_
-
-**Ready to strengthen your security program? [Get your checklist today!](https://trilltayo.gumroad.com/l/sec-program-checklist)**
-
 ## Measuring and Improving Security Posture
 
 Continuous improvement is a core principle in both NIST and SOC 2. Security professionals should engage in regular audits, tests, and assessments to ensure that implemented controls are effective and evolve with emerging threats. SOC 2 audits, in particular, provide a structured way to validate security measures.

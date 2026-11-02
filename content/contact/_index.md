@@ -12,7 +12,7 @@ I speak on security engineering, vulnerability management, AI security, and secu
 
 As a part-time vCISO, I also help startups and SMBs build security programs: security strategy, audit readiness, vulnerability management, and board-level reporting.
 
-- **Book a call:** [calendly.com/trilltayo](https://calendly.com/trilltayo)
+- **Book a call:** [calendly.com/cybershieldacademy](https://calendly.com/cybershieldacademy)
 - **vCISO services:** [CyberSHIELD vCISO plans](https://cybersecurityos.gumroad.com/l/cybershield-vciso)
 - **One-off advisory session:** [Cybersecurity Advisor Consultation](https://cybersecurityos.gumroad.com/l/cybersecurity-advisor)
 
