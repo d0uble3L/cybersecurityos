@@ -9,6 +9,7 @@
       {{ partial "signup-form.html" (dict
         "formID" $nl.footerformid
         "placement" "footer"
+        "confirm" $nl.footerconfirmemail
         "title" (printf "Get %s in your inbox" ($nl.name | default "OS Weekly"))
         "pitch" "One email a week: the vulnerabilities that matter, what attackers are doing, and the frameworks to act on it. Written by a Security Engineering Manager and vCISO."
       ) }}

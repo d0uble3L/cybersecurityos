@@ -43,8 +43,12 @@ author = "Michael Tayo"
   cadence = "every Sunday"
   # Shown as social proof; keep in line with Kit's active subscriber count
   subscribers = "1,800+"
-  heroFormID = "9535604"     # Kit "Form" (inline) — rename to "Homepage Hero" in Kit
+  heroFormID = "9535604"     # Kit "Homepage Hero"
   footerFormID = "8188491"   # Kit "Basic CybersecurityOS Form - Header/Footer"
+  # Match each form's "Send confirmation email" setting in Kit. It picks the
+  # message shown after signup ("check your inbox" vs "you're in").
+  heroConfirmEmail = false
+  footerConfirmEmail = true
 
 # Store strip on the homepage (layouts/partials/home-store.html)
 [[params.storeProducts]]

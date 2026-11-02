@@ -117,6 +117,8 @@
       // Newsletter forms: submit to Kit in place; fall back to a normal post
       (function(){
         document.querySelectorAll('form[data-os-signup]').forEach(function(form) {
+          var ref = form.querySelector('input[name="referrer"]');
+          if (ref) ref.value = window.location.href;
           form.addEventListener('submit', function(e) {
             if (!window.fetch || !window.FormData) return;
             e.preventDefault();
@@ -133,7 +135,7 @@
               if (!data || data.status !== 'success') return Promise.reject('kit');
               form.classList.add('is-done');
               if (status) {
-                status.textContent = 'Almost done: check your inbox and confirm your subscription.';
+                status.textContent = form.getAttribute('data-success');
                 status.hidden = false;
               }
             }).catch(function() {
