@@ -19,7 +19,9 @@ tags:
     "CybersecurityOS",
   ]
 categories: ["Career Development"]
-featured_image: ""
+featured_image: /posts/security/images/entry-level-cyber-jobs-2027-social.png
+images:
+  - /posts/security/images/entry-level-cyber-jobs-2027-social.png
 show_reading_time: true
 faq:
   - q: "Are there still entry level cybersecurity jobs in 2027?"
