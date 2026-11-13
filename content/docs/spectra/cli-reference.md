@@ -38,15 +38,14 @@ spectra analyze [INPUT] [OPTIONS]
 
 **Options**
 
-| Flag           | Type   | Default             | Description                                                                                        |
-| -------------- | ------ | ------------------- | -------------------------------------------------------------------------------------------------- |
-| `--scanner`    | string | auto                | Force scanner type: `trivy`, `semgrep`, `generic`. Auto-detected from file structure when omitted. |
-| `--format`     | string | `markdown`          | Output format: `markdown`, `json`, or `both`.                                                      |
-| `--output`     | string | `./spectra_report`  | Output file path, without extension. SPECTRA appends `.md` and/or `.json` depending on `--format`. |
-| `--usage`      | flag   | off                 | Print Anthropic API token usage stats after analysis. Useful for cost tracking.                    |
-| `--model`      | string | `claude-sonnet-4-6` | Claude model to use. See [Configuration](/docs/spectra/configuration/) for supported models.       |
-| `--max-tokens` | int    | 4096                | Maximum tokens for the AI response. Increase for very large scan files.                            |
-| `--verbose`    | flag   | off                 | Enable verbose logging, including prompt and response details.                                     |
+| Flag              | Type   | Default             | Description                                                                                                        |
+| ----------------- | ------ | ------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `--scanner`, `-s` | string | `auto`              | Force scanner type: `trivy`, `semgrep`, `generic`. Auto-detected from file structure when omitted.                 |
+| `--format`, `-f`  | string | `markdown`          | Output format: `markdown`, `json`, or `both`.                                                                      |
+| `--output`, `-o`  | path   | _(stdout)_          | Output file path, without extension. SPECTRA appends `.md` and/or `.json` depending on `--format`.                 |
+| `--model`, `-m`   | string | `claude-sonnet-5-5` | Claude model to use. Also read from `SPECTRA_MODEL`. See [Configuration](/docs/spectra/configuration/) for models. |
+| `--think`, `-t`   | flag   | off                 | Request a summary of Claude's reasoning during analysis.                                                           |
+| `--usage`, `-u`   | flag   | off                 | Print Anthropic API token usage (including cache reads and writes) after analysis. Useful for cost tracking.       |
 
 **Examples**
 
@@ -92,23 +91,20 @@ spectra analyze --help
 
 ### Exit Codes
 
-| Code | Meaning                                                  |
-| ---- | -------------------------------------------------------- |
-| `0`  | Analysis completed successfully                          |
-| `1`  | General error (invalid input, missing API key, etc.)     |
-| `2`  | API error (Anthropic rate limit, authentication failure) |
+| Code | Meaning                                                                                          |
+| ---- | ------------------------------------------------------------------------------------------------ |
+| `0`  | Analysis completed successfully                                                                  |
+| `1`  | Error: invalid or empty input, parse failure, or API error (authentication, rate limit, refusal) |
+| `2`  | Invalid command-line usage (unknown flag or bad value)                                           |
 
 ---
 
 ### Environment Variable Overrides
 
-All `--flag` options can also be set via environment variables, which take lower precedence than CLI flags:
+These environment variables (or `.env` entries) are read. A CLI flag takes precedence over its variable:
 
 | Environment Variable | Equivalent Flag |
 | -------------------- | --------------- |
-| `SPECTRA_SCANNER`    | `--scanner`     |
-| `SPECTRA_FORMAT`     | `--format`      |
-| `SPECTRA_OUTPUT`     | `--output`      |
 | `SPECTRA_MODEL`      | `--model`       |
 | `ANTHROPIC_API_KEY`  | _(required)_    |
 
