@@ -26,11 +26,8 @@ A complete `.env` file looks like this:
 # Required
 ANTHROPIC_API_KEY=sk-ant-...
 
-# Optional — override defaults
-SPECTRA_MODEL=claude-sonnet-4-6
-SPECTRA_FORMAT=both
-SPECTRA_OUTPUT=reports/latest
-SPECTRA_MAX_TOKENS=4096
+# Optional — override the default model
+SPECTRA_MODEL=claude-sonnet-5-5
 ```
 
 > Never commit `.env` to version control. It is listed in `.gitignore` by default.
@@ -47,29 +44,31 @@ SPECTRA_MAX_TOKENS=4096
 
 ### Optional Variables
 
-| Variable             | Default             | Description                                                   |
-| -------------------- | ------------------- | ------------------------------------------------------------- |
-| `SPECTRA_MODEL`      | `claude-sonnet-4-6` | Claude model to use for analysis. See supported models below. |
-| `SPECTRA_FORMAT`     | `markdown`          | Default output format: `markdown`, `json`, or `both`.         |
-| `SPECTRA_OUTPUT`     | `./spectra_report`  | Default output path prefix.                                   |
-| `SPECTRA_MAX_TOKENS` | `4096`              | Maximum response tokens. Increase for large scans.            |
-| `SPECTRA_SCANNER`    | _(auto)_            | Force scanner detection: `trivy`, `semgrep`, `generic`.       |
+| Variable        | Default             | Description                                                                                        |
+| --------------- | ------------------- | -------------------------------------------------------------------------------------------------- |
+| `SPECTRA_MODEL` | `claude-sonnet-5-5` | Claude model to use for analysis, for both the CLI and the API server. See supported models below. |
+
+Output format, output path, and scanner type are set per run with `--format`, `--output`, and `--scanner`. See the [CLI Reference](/docs/spectra/cli-reference/).
 
 ---
 
 ### Supported Claude Models
 
-| Model                       | ID                          | Notes                                                              |
-| --------------------------- | --------------------------- | ------------------------------------------------------------------ |
-| Claude Sonnet 4.6 (default) | `claude-sonnet-4-6`         | Best balance of speed and quality for most analysis workloads      |
-| Claude Opus 4.7             | `claude-opus-4-7`           | Highest quality — recommended for complex multi-scanner batch runs |
-| Claude Haiku 4.5            | `claude-haiku-4-5-20251001` | Fastest and lowest cost — suitable for high-volume pipeline use    |
+| Model                       | ID                  | Notes                                                                      |
+| --------------------------- | ------------------- | -------------------------------------------------------------------------- |
+| Claude Sonnet 5.5 (default) | `claude-sonnet-5-5` | Best balance of quality, speed, and cost; recommended for CI/CD pipelines  |
+| Claude Opus 5.5             | `claude-opus-5-5`   | Highest quality; recommended for complex multi-scanner or large batch runs |
+| Claude Haiku 5.5            | `claude-haiku-5-5`  | Lowest cost, for high-volume pipelines; no automatic refusal fallback      |
 
-Override the model per-run with the `--model` flag:
+Override the model per run with the `--model` flag:
 
 ```bash
-spectra analyze trivy.json --model claude-opus-4-7 --format both --output reports/deep-analysis
+spectra analyze trivy.json --model claude-opus-5-5 --format both --output reports/deep-analysis
 ```
+
+#### Safety refusals and fallback
+
+Scanner output describes vulnerabilities and exploits, so a request can occasionally be declined by Claude's real-time cyber safeguards. SPECTRA turns on server-side fallbacks, so a declined request is automatically retried on a fallback model within the same API call. If the request is still declined, the run fails with a message naming the refusal category. Haiku has no server-side fallback. For legitimate security work that is declined repeatedly, see the [Cyber Verification Program](https://support.claude.com/en/articles/14604842-real-time-cyber-safeguards-on-claude-opus-and-sonnet).
 
 ---
 
