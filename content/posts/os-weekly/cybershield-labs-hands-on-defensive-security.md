@@ -29,7 +29,7 @@ keywords:
     "password strength lab",
     "open source security training",
   ]
-draft: true
+draft: false
 images:
   - /posts/os-weekly/images/cybershield-labs-hero.svg
 featured_image: /posts/os-weekly/images/cybershield-labs-hero.svg
