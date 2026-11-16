@@ -40,7 +40,7 @@ body {
 ::-webkit-scrollbar-thumb { background: rgba(0,255,136,0.4); }
 
 /* ── NAV ── */
-nav {
+body > nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
   height: var(--nav-h);
   display: flex; align-items: center; justify-content: space-between;
@@ -345,7 +345,7 @@ footer {
 /* ── MOBILE ── */
 @media (max-width: 900px) {
   :root { --sidebar-w: 0px; }
-  nav { padding: 0 20px; }
+  body > nav { padding: 0 20px; }
   .nav-center { display: none; }
   .sidebar {
     position: static; width: 100%;
@@ -433,13 +433,13 @@ footer {
 
       <!-- PREV / NEXT -->
       <nav class="doc-nav-footer" aria-label="doc pagination">
-        {{ with .PrevInSection }}
+        {{ with .NextInSection }}
         <a href="{{ .RelPermalink }}" class="doc-nav-link prev">
           <span class="doc-nav-label">← PREVIOUS</span>
           <span class="doc-nav-title">{{ .Title }}</span>
         </a>
         {{ end }}
-        {{ with .NextInSection }}
+        {{ with .PrevInSection }}
         <a href="{{ .RelPermalink }}" class="doc-nav-link next">
           <span class="doc-nav-label">NEXT →</span>
           <span class="doc-nav-title">{{ .Title }}</span>

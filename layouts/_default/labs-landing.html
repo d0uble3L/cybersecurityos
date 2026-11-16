@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberSHIELD Labs — Hands-On Defensive Security Labs | CybersecurityOS</title>
+<meta name="description" content="{{ .Description }}">
+<meta property="og:title" content="CyberSHIELD Labs — Hands-On Defensive Security Labs">
+<meta property="og:description" content="{{ .Description }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ "images/og-default.png" | absURL }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{ partialCached "site-favicon.html" . }}
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap');
+
+:root {
+  --green: #00ff88;
+  --green-dim: #00cc66;
+  --green-dark: #001a0d;
+  --bg: #080b10;
+  --bg2: #0d1117;
+  --text: #cccccc;
+  --text-dim: #556655;
+  --white: #ffffff;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Share Tech Mono', monospace;
+  overflow-x: hidden;
+  cursor: crosshair;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--green); opacity: 0.4; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 48px;
+  background: rgba(8,11,16,0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,255,136,0.1);
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 12px;
+  font-family: 'Orbitron', monospace;
+  font-weight: 900; font-size: 18px; letter-spacing: 4px;
+  color: var(--white); text-decoration: none;
+}
+.nav-logo span { color: var(--green); }
+.nav-links { display: flex; gap: 32px; }
+.nav-links a {
+  color: var(--text-dim); font-size: 11px; letter-spacing: 3px;
+  text-transform: uppercase; text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--green); }
+.nav-cta {
+  background: var(--green); color: #000; font-family: 'Share Tech Mono', monospace;
+  font-size: 11px; letter-spacing: 2px; padding: 10px 24px;
+  text-decoration: none; font-weight: 700;
+  transition: opacity 0.2s;
+}
+.nav-cta:hover { opacity: 0.85; }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+  padding: 120px 48px 80px;
+  text-align: center;
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(0,255,136,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,136,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.hero-glow {
+  position: absolute;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(0,255,136,0.12) 0%, transparent 70%);
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  pointer-events: none;
+}
+.hero-label {
+  font-size: 11px; letter-spacing: 5px; color: var(--green);
+  opacity: 0.8; margin-bottom: 24px; position: relative;
+}
+.hero-title {
+  font-family: 'Orbitron', monospace;
+  font-weight: 900; font-size: clamp(56px, 10vw, 112px);
+  letter-spacing: 12px; color: var(--white);
+  line-height: 1; margin-bottom: 24px; position: relative;
+  text-shadow: 0 0 60px rgba(0,255,136,0.3);
+}
+.hero-sub {
+  font-size: clamp(14px, 2vw, 18px); letter-spacing: 2px;
+  color: var(--text); max-width: 600px;
+  line-height: 1.7; margin-bottom: 48px; position: relative;
+}
+.hero-actions { display: flex; gap: 16px; position: relative; flex-wrap: wrap; justify-content: center; }
+.btn-primary {
+  background: var(--green); color: #000;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px; letter-spacing: 2px; font-weight: 700;
+  padding: 16px 36px; text-decoration: none;
+  transition: all 0.2s;
+}
+.btn-primary:hover { opacity: 0.85; transform: translateY(-1px); }
+.btn-secondary {
+  border: 1px solid rgba(0,255,136,0.4); color: var(--green);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 12px; letter-spacing: 2px;
+  padding: 16px 36px; text-decoration: none;
+  transition: all 0.2s; background: transparent;
+}
+.btn-secondary:hover { background: rgba(0,255,136,0.08); }
+.hero-stats {
+  display: flex; gap: 60px; margin-top: 80px; position: relative; flex-wrap: wrap; justify-content: center;
+}
+.stat { text-align: center; }
+.stat-num {
+  font-family: 'Orbitron', monospace; font-size: 36px; font-weight: 700;
+  color: var(--green); display: block; margin-bottom: 6px;
+}
+.stat-label { font-size: 10px; letter-spacing: 3px; color: var(--text-dim); }
+
+/* SECTION BASE */
+section { padding: 100px 48px; max-width: 1200px; margin: 0 auto; }
+.section-label {
+  font-size: 10px; letter-spacing: 5px; color: var(--green);
+  opacity: 0.7; margin-bottom: 16px; display: block;
+}
+.section-title {
+  font-family: 'Orbitron', monospace; font-weight: 700;
+  font-size: clamp(28px, 4vw, 42px); color: var(--white);
+  margin-bottom: 20px; line-height: 1.2;
+}
+.section-body {
+  font-size: 15px; line-height: 1.8; color: var(--text);
+  max-width: 640px; margin-bottom: 48px;
+}
+
+/* PROBLEM */
+.problem-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px; margin-top: 48px;
+}
+.problem-card {
+  background: #0d1117;
+  border: 1px solid rgba(0,255,136,0.15);
+  padding: 32px; position: relative; overflow: hidden;
+}
+.problem-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: var(--green); opacity: 0.4;
+}
+.problem-num {
+  font-family: 'Orbitron', monospace; font-size: 48px; font-weight: 900;
+  color: var(--green); opacity: 0.2; margin-bottom: 16px; line-height: 1;
+}
+.problem-title { font-size: 13px; letter-spacing: 2px; color: var(--white); margin-bottom: 12px; }
+.problem-text { font-size: 13px; color: var(--text-dim); line-height: 1.7; }
+
+/* FEATURES */
+.features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 48px; }
+.feature {
+  background: var(--bg2); padding: 40px;
+  border: 1px solid rgba(0,255,136,0.08);
+  transition: border-color 0.3s, background 0.3s;
+}
+.feature:hover { border-color: rgba(0,255,136,0.3); background: rgba(0,255,136,0.02); }
+.feature-icon {
+  width: 40px; height: 40px; margin-bottom: 24px;
+  border: 1px solid rgba(0,255,136,0.4); display: flex;
+  align-items: center; justify-content: center;
+  color: var(--green); font-size: 18px;
+}
+.feature-title {
+  font-family: 'Orbitron', monospace; font-size: 14px; font-weight: 700;
+  color: var(--white); margin-bottom: 12px; letter-spacing: 2px;
+}
+.feature-text { font-size: 13px; color: var(--text-dim); line-height: 1.8; }
+
+/* DOCS NAV GRID */
+.docs-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2px; margin-top: 48px;
+}
+.docs-card {
+  background: var(--bg2); padding: 32px 36px;
+  border: 1px solid rgba(0,255,136,0.08);
+  text-decoration: none;
+  transition: border-color 0.3s, background 0.3s;
+  display: block;
+}
+.docs-card:hover { border-color: rgba(0,255,136,0.3); background: rgba(0,255,136,0.02); }
+.docs-card-num {
+  font-family: 'Orbitron', monospace; font-size: 11px; font-weight: 700;
+  color: var(--green); opacity: 0.5; margin-bottom: 12px; letter-spacing: 3px;
+}
+.docs-card-title {
+  font-family: 'Orbitron', monospace; font-size: 13px; font-weight: 700;
+  color: var(--white); margin-bottom: 10px; letter-spacing: 2px;
+}
+.docs-card-text { font-size: 12px; color: var(--text-dim); line-height: 1.7; }
+.docs-card-arrow { color: var(--green); font-size: 12px; margin-top: 16px; display: block; opacity: 0.6; }
+
+/* TERMINAL */
+.terminal-section {
+  background: linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%);
+  border-top: 1px solid rgba(0,255,136,0.1);
+  border-bottom: 1px solid rgba(0,255,136,0.1);
+  padding: 100px 48px;
+}
+.terminal-wrap { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.terminal {
+  background: #000;
+  border: 1px solid rgba(0,255,136,0.3);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px; line-height: 1.9;
+  overflow: hidden;
+}
+.terminal-bar {
+  background: #111; padding: 10px 16px;
+  display: flex; align-items: center; gap: 8px;
+  border-bottom: 1px solid rgba(0,255,136,0.15);
+}
+.terminal-dot { width: 10px; height: 10px; border-radius: 50%; }
+.terminal-dot.r { background: #ff5f57; }
+.terminal-dot.y { background: #ffbd2e; }
+.terminal-dot.g { background: #28ca41; }
+.terminal-title { font-size: 11px; color: #444; margin-left: auto; }
+.terminal-body { padding: 24px; }
+.t-prompt { color: var(--green); }
+.t-cmd { color: var(--white); }
+.t-comment { color: #334; }
+.t-output { color: #668866; }
+.t-highlight { color: var(--green); }
+.t-warn { color: #ffaa00; }
+.t-dim { color: #334433; }
+
+/* USE CASES */
+.usecase-list { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 48px; }
+.usecase {
+  display: flex; flex-direction: column; gap: 10px;
+  padding: 32px 40px;
+  background: var(--bg2);
+  border: 1px solid rgba(0,255,136,0.08);
+  transition: all 0.2s;
+}
+.usecase:hover { border-color: rgba(0,255,136,0.25); background: rgba(0,255,136,0.02); }
+.usecase-icon {
+  width: 40px; height: 40px; margin-bottom: 8px;
+  border: 1px solid rgba(0,255,136,0.4); display: flex;
+  align-items: center; justify-content: center;
+  color: var(--green); font-size: 18px;
+}
+.usecase-tag { font-size: 10px; letter-spacing: 3px; color: var(--green); opacity: 0.7; }
+.usecase-title {
+  font-family: 'Orbitron', monospace; font-weight: 700;
+  font-size: 14px; letter-spacing: 2px; color: var(--white);
+}
+.usecase-desc { font-size: 13px; color: var(--text-dim); line-height: 1.7; }
+.usecase-cta {
+  font-size: 11px; letter-spacing: 2px; color: var(--green);
+  text-decoration: none; opacity: 0.8; margin-top: auto; padding-top: 8px;
+}
+.usecase-cta:hover { opacity: 1; }
+
+/* SPECTRA MEANING */
+.spectra-phrase {
+  font-size: clamp(16px, 2.2vw, 22px); letter-spacing: 1px;
+  color: var(--text); max-width: 720px; line-height: 1.6;
+  margin-bottom: 20px;
+}
+.spectra-phrase-accent {
+  color: var(--green); font-weight: 700;
+  text-shadow: 0 0 12px rgba(0,255,136,0.4);
+}
+.spectra-grid {
+  display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; margin-top: 48px;
+}
+.spectra-letter {
+  background: var(--bg2); border: 1px solid rgba(0,255,136,0.08);
+  padding: 28px 14px; text-align: center;
+  transition: border-color 0.3s, background 0.3s;
+}
+.spectra-letter:hover { border-color: rgba(0,255,136,0.3); background: rgba(0,255,136,0.02); }
+.spectra-char {
+  font-family: 'Orbitron', monospace; font-size: 40px; font-weight: 900;
+  color: var(--green); line-height: 1; margin-bottom: 12px;
+  text-shadow: 0 0 20px rgba(0,255,136,0.3);
+}
+.spectra-word {
+  font-family: 'Orbitron', monospace; font-size: 11px; font-weight: 700;
+  color: var(--white); letter-spacing: 2px; margin-bottom: 10px;
+}
+.spectra-desc { font-size: 12px; color: var(--text-dim); line-height: 1.6; }
+
+/* CTA */
+.cta-section {
+  text-align: center; padding: 120px 48px;
+  position: relative; overflow: hidden;
+}
+.cta-glow {
+  position: absolute; width: 800px; height: 400px;
+  background: radial-gradient(ellipse, rgba(0,255,136,0.08) 0%, transparent 70%);
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+}
+.cta-title {
+  font-family: 'Orbitron', monospace; font-weight: 900;
+  font-size: clamp(32px, 5vw, 64px); color: var(--white);
+  margin-bottom: 20px; position: relative;
+}
+.cta-sub { font-size: 15px; color: var(--text-dim); margin-bottom: 32px; position: relative; letter-spacing: 1px; }
+.cta-workflows {
+  display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;
+  margin-bottom: 32px; position: relative;
+}
+.cta-workflows a {
+  font-size: 11px; letter-spacing: 3px; color: var(--green);
+  opacity: 0.6; text-decoration: none; transition: opacity 0.2s;
+}
+.cta-workflows a:hover { opacity: 1; }
+.cta-actions { display: flex; gap: 16px; justify-content: center; position: relative; flex-wrap: wrap; }
+.code-block {
+  background: #000; border: 1px solid rgba(0,255,136,0.2);
+  padding: 20px 32px; margin-top: 48px;
+  font-size: 13px; color: var(--green);
+  display: inline-block; position: relative;
+  word-break: break-all;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid rgba(0,255,136,0.1);
+  padding: 40px 48px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px;
+}
+.footer-brand { font-family: 'Orbitron', monospace; font-size: 12px; letter-spacing: 4px; color: #334; }
+.footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+.footer-links a { font-size: 11px; letter-spacing: 2px; color: #334; text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--green); }
+.footer-status { display: flex; align-items: center; gap: 8px; font-size: 11px; color: #334; letter-spacing: 2px; }
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: pulse-dot 2s ease-in-out infinite; }
+
+/* DIVIDERS */
+.band { border-top: 1px solid rgba(0,255,136,0.1); }
+.band-alt { border-top: 1px solid rgba(0,255,136,0.1); background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%); }
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+@keyframes scan-hero {
+  0% { top: 0; opacity: 0.6; }
+  100% { top: 100%; opacity: 0; }
+}
+.scan-hero {
+  position: absolute; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0,255,136,0.4), transparent);
+  animation: scan-hero 4s linear infinite;
+  pointer-events: none;
+}
+
+/* LAB GRID */
+.lab-meta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+.lab-chip {
+  font-size: 10px; letter-spacing: 2px; color: var(--green);
+  border: 1px solid rgba(0,255,136,0.25); padding: 4px 8px;
+}
+.lab-cmd {
+  display: block; margin-top: 14px; font-size: 11px; color: #668866;
+  word-break: break-all;
+}
+.steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+
+@media (max-width: 900px) {
+  .steps-grid { grid-template-columns: 1fr; }
+  nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+  section { padding: 60px 24px; }
+  .terminal-section { padding: 60px 24px; }
+  .problem-grid { grid-template-columns: 1fr; }
+  .features-grid { grid-template-columns: 1fr; }
+  .terminal-wrap { grid-template-columns: 1fr; }
+  .usecase-list { grid-template-columns: 1fr; }
+  .usecase { padding: 24px; }
+  .spectra-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-stats { gap: 30px; }
+  footer { padding: 32px 24px; }
+  .cta-section { padding: 80px 24px; }
+}
+</style>
+</head>
+<body>
+{{ $repo := "https://github.com/d0uble3L/CyberSHIELD-Labs" }}
+{{ $labs := where .RegularPages.ByWeight "Params.group" "LABS" }}
+
+<!-- NAV -->
+<nav>
+  <a href="/docs/cybershield-labs/" class="nav-logo">CYBERSHIELD<span>.</span></a>
+  <div class="nav-links">
+    <a href="#labs">Labs</a>
+    <a href="/docs/cybershield-labs/getting-started/">Get Started</a>
+    <a href="/docs/cybershield-labs/safety-and-scope/">Safety</a>
+    <a href="/docs/">Docs</a>
+    <a href="/posts/">Blog</a>
+  </div>
+  <a href="{{ $repo }}" class="nav-cta" target="_blank" rel="noopener">VIEW ON GITHUB →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="max-width:100%;padding-top:140px;">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="scan-hero"></div>
+  <p class="hero-label">▸ HANDS-ON DEFENSIVE SECURITY · OPEN SOURCE</p>
+  <h1 class="hero-title" style="font-size:clamp(36px, 7.5vw, 92px);letter-spacing:8px;">CYBERSHIELD</h1>
+  <p class="hero-sub">{{ len $labs }} small, local-first labs that teach the defensive skills teams need as they adopt AI agents, cloud identity, and modern software supply chains. Read the guide, run the script, break the fixture, and learn what the checks miss.</p>
+  <div class="hero-actions">
+    <a href="/docs/cybershield-labs/getting-started/" class="btn-primary">GET STARTED →</a>
+    <a href="#labs" class="btn-secondary">BROWSE THE LABS ↓</a>
+    <a href="{{ $repo }}" class="btn-secondary" target="_blank" rel="noopener">GITHUB ↗</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-num">{{ len $labs }}</span>
+      <span class="stat-label">HANDS-ON LABS</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">0</span>
+      <span class="stat-label">DEPENDENCIES</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">LOCAL &amp; SYNTHETIC</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">3.9+</span>
+      <span class="stat-label">PYTHON</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<div class="band-alt">
+<section id="problem">
+  <span class="section-label">// WHY THESE LABS</span>
+  <h2 class="section-title">Reading About Security<br>Isn't the Same as Doing It.</h2>
+  <p class="section-body">Most training stops at slides or needs a cloud account, a vulnerable VM, and an afternoon of setup. CyberSHIELD Labs fit in a lunch break: clone the repo, run one command, and see a real check find a real misconfiguration.</p>
+  <div class="problem-grid">
+    <div class="problem-card">
+      <div class="problem-num">01</div>
+      <div class="problem-title">NO SETUP TAX</div>
+      <p class="problem-text">Standard-library Python only. No pip install, no Docker, no API keys, no cloud bill. If you have Python 3.9 or later, you can start now.</p>
+    </div>
+    <div class="problem-card">
+      <div class="problem-num">02</div>
+      <div class="problem-title">SAFE BY DESIGN</div>
+      <p class="problem-text">Every lab uses bundled synthetic data. Nothing touches production systems, and the one network lab refuses to talk to anything except your own machine.</p>
+    </div>
+    <div class="problem-card">
+      <div class="problem-num">03</div>
+      <div class="problem-title">HONEST ABOUT LIMITS</div>
+      <p class="problem-text">Each lab spells out what its checks cannot see. Learning where a control stops is as important as learning what it catches.</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- LABS -->
+<div class="band">
+<section id="labs">
+  <span class="section-label">// THE LEARNING PATH</span>
+  <h2 class="section-title">{{ len $labs }} Labs. One Command Each.</h2>
+  <p class="section-body">Work through them in order or jump to the area you need. Every lab has a guide, a runnable script, a synthetic fixture, and a takeaway you can apply at work.</p>
+  <div class="docs-grid">
+    {{ range $labs }}
+    <a href="{{ .RelPermalink }}" class="docs-card">
+      <div class="docs-card-num">LAB {{ printf "%02d" .Params.lab }} — {{ upper .Params.focus }}</div>
+      <div class="docs-card-title">{{ upper .Params.navTitle }}</div>
+      <p class="docs-card-text">{{ .Params.summary }}</p>
+      <code class="lab-cmd">$ {{ .Params.run }}</code>
+      <span class="docs-card-arrow">→ OPEN LAB</span>
+    </a>
+    {{ end }}
+  </div>
+</section>
+</div>
+
+<!-- TERMINAL -->
+<div class="terminal-section">
+  <div class="terminal-wrap">
+    <div>
+      <span class="section-label">// QUICK START</span>
+      <h2 class="section-title">Your First Finding<br>in 60 Seconds.</h2>
+      <p class="section-body">Lab 9 starts its own throwaway practice server on 127.0.0.1, checks it for commonly exposed paths, and shuts it down again. Nothing leaves your machine.</p>
+      <a href="/docs/cybershield-labs/getting-started/" class="btn-secondary" style="display:inline-block;">GETTING STARTED GUIDE ↗</a>
+    </div>
+    <div class="terminal">
+      <div class="terminal-bar">
+        <div class="terminal-dot r"></div>
+        <div class="terminal-dot y"></div>
+        <div class="terminal-dot g"></div>
+        <span class="terminal-title">cybershield-labs — zsh</span>
+      </div>
+      <div class="terminal-body">
+        <div><span class="t-comment"># Clone the repo (no install step)</span></div>
+        <div><span class="t-prompt">$ </span><span class="t-cmd">git clone {{ $repo }}</span></div>
+        <div><span class="t-prompt">$ </span><span class="t-cmd">cd CyberSHIELD-Labs</span></div>
+        <div>&nbsp;</div>
+        <div><span class="t-comment"># Scan a throwaway local practice server</span></div>
+        <div><span class="t-prompt">$ </span><span class="t-cmd">python3 -m labs.web_exposure.check --demo</span></div>
+        <div>&nbsp;</div>
+        <div><span class="t-output">Checking http://127.0.0.1:55823 ...</span></div>
+        <div><span class="t-warn">[+] Access controlled (403): /admin/</span></div>
+        <div><span class="t-highlight">[+] Found (200): /.git/</span></div>
+        <div><span class="t-highlight">[+] Found (200): /robots.txt</span></div>
+        <div><span class="t-highlight">[+] Found (200): /config.json</span></div>
+        <div><span class="t-highlight">[+] Found (200): /backup/</span></div>
+        <div>&nbsp;</div>
+        <div><span class="t-dim"># An exposed .git/ can leak your whole source history.</span></div>
+        <div><span class="t-dim"># Now go check that your real servers block it.</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="band-alt">
+<section id="how">
+  <span class="section-label">// HOW EVERY LAB WORKS</span>
+  <h2 class="section-title">Run It. Break It.<br>Understand It.</h2>
+  <p class="section-body">Each lab follows the same three-step loop, so the habit carries over to real reviews.</p>
+  <div class="steps-grid">
+    <div class="problem-card">
+      <div class="problem-num">01</div>
+      <div class="problem-title">RUN THE CHECK</div>
+      <p class="problem-text">One command against the bundled synthetic fixture. Read every finding and ask why it fired.</p>
+    </div>
+    <div class="problem-card">
+      <div class="problem-num">02</div>
+      <div class="problem-title">EDIT A COPY</div>
+      <p class="problem-text">Fix the risky settings in a copy of the fixture, or add new ones, and rerun. Watch findings appear and disappear.</p>
+    </div>
+    <div class="problem-card">
+      <div class="problem-num">03</div>
+      <div class="problem-title">FIND THE GAPS</div>
+      <p class="problem-text">Every guide lists what the check misses. Try to sneak a risky input past it, then decide how a real control would catch it.</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- WHO IT'S FOR -->
+<div class="band">
+<section id="usecases">
+  <span class="section-label">// WHO IT'S FOR</span>
+  <h2 class="section-title">Built for People Who<br>Learn by Doing.</h2>
+  <p class="section-body">The labs are small on purpose: easy to read in one sitting, easy to extend, and easy to run in a classroom or a team session.</p>
+  <div class="usecase-list">
+    <div class="usecase">
+      <div class="usecase-icon">◆</div>
+      <span class="usecase-tag">FOR CAREER CHANGERS &amp; STUDENTS</span>
+      <div class="usecase-title">BUILD REAL INTUITION</div>
+      <p class="usecase-desc">Go beyond definitions. See exactly what a wildcard IAM grant, a root container, or an MFA push-fatigue pattern looks like in data.</p>
+      <a href="/docs/cybershield-labs/getting-started/" class="usecase-cta">→ START WITH LAB 1</a>
+    </div>
+    <div class="usecase">
+      <div class="usecase-icon">⚙</div>
+      <span class="usecase-tag">FOR SECURITY &amp; PLATFORM ENGINEERS</span>
+      <div class="usecase-title">SHARPEN REVIEW INSTINCTS</div>
+      <p class="usecase-desc">Each script is under 200 lines. Read how the check works, then extend it for the configs and logs your team actually ships.</p>
+      <a href="/docs/cybershield-labs/contributing/" class="usecase-cta">→ EXTEND A LAB</a>
+    </div>
+    <div class="usecase">
+      <div class="usecase-icon">▤</div>
+      <span class="usecase-tag">FOR TEAM LEADS &amp; EDUCATORS</span>
+      <div class="usecase-title">RUN A TRAINING SESSION</div>
+      <p class="usecase-desc">No accounts to provision and no lab environment to tear down. Hand out the repo link and every attendee is running in minutes.</p>
+      <a href="/docs/cybershield-labs/safety-and-scope/" class="usecase-cta">→ REVIEW SAFETY &amp; SCOPE</a>
+    </div>
+    <div class="usecase">
+      <div class="usecase-icon">⬡</div>
+      <span class="usecase-tag">FOR AI &amp; APPSEC BUILDERS</span>
+      <div class="usecase-title">THINK LIKE A DEFENDER</div>
+      <p class="usecase-desc">Practice treating retrieved content as untrusted, keeping tool permissions narrow, and redacting data before it reaches a prompt or a log.</p>
+      <a href="/docs/cybershield-labs/ai-application-safety/" class="usecase-cta">→ OPEN THE AI SAFETY LAB</a>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- FINAL CTA -->
+<div class="band">
+<section class="cta-section" style="max-width:100%;">
+  <div class="cta-glow"></div>
+  <h2 class="cta-title">Pick a Lab.<br>Find Your First Finding.</h2>
+  <p class="cta-sub">Open source under Apache 2.0. Runs entirely on your machine. Built by CybersecurityOS.</p>
+  <div class="cta-workflows">
+    {{ range first 5 $labs }}<a href="{{ .RelPermalink }}">{{ upper .Params.navTitle }}</a>{{ end }}
+  </div>
+  <div class="cta-actions">
+    <a href="/docs/cybershield-labs/getting-started/" class="btn-primary">GET STARTED →</a>
+    <a href="{{ $repo }}" class="btn-secondary" target="_blank" rel="noopener">GITHUB ↗</a>
+  </div>
+  <div class="code-block">
+    <span style="color:#334433">$</span> git clone {{ $repo }} &amp;&amp; cd CyberSHIELD-Labs &amp;&amp; python3 -m labs.web_exposure.check --demo
+  </div>
+</section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">CYBERSHIELD LABS · CYBERSECURITYOS</div>
+  <div class="footer-links">
+    <a href="/docs/">DOCS</a>
+    <a href="/posts/">BLOG</a>
+    <a href="{{ $repo }}" target="_blank" rel="noopener">GITHUB</a>
+    <a href="/docs/cybershield-labs/license/">LICENSE</a>
+    <a href="/contact/">CONTACT</a>
+  </div>
+  <div class="footer-status">
+    <div class="status-dot"></div>
+    ACTIVE DEVELOPMENT
+  </div>
+</footer>
+
+</body>
+</html>
