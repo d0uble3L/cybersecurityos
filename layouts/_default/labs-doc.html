@@ -376,6 +376,7 @@ footer {
 .lab-source { color: var(--green); font-size: 11px; letter-spacing: 2px; margin-left: auto; text-decoration: none; }
 .lab-source:hover { text-decoration: underline; }
 </style>
+{{ if eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}{{ partial "x-pixel.html" . }}{{ end }}
 </head>
 <body>
 {{ $root := site.GetPage "/docs/cybershield-labs" }}

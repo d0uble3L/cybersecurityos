@@ -406,6 +406,7 @@ footer {
   .cta-section { padding: 80px 24px; }
 }
 </style>
+{{ if eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}{{ partial "x-pixel.html" . }}{{ end }}
 </head>
 <body>
 {{ $repo := "https://github.com/d0uble3L/CyberSHIELD-Labs" }}

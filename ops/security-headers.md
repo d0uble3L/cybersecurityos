@@ -35,17 +35,17 @@ Repository → Settings → Pages → check **Enforce HTTPS**. This redirects
 
 ## 3. Content-Security-Policy
 
-Start in **report-only** mode: the site loads Kit forms, Google Fonts, Disqus
-and Formspree, and has inline scripts, so a strict policy will break things if
+Start in **report-only** mode: the site loads Kit forms, Google Fonts, Disqus,
+Formspree and the X pixel, and has inline scripts, so a strict policy will break things if
 it's enforced straight away. A starting point:
 
 ```text
 default-src 'self';
-script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://theghettoflower.kit.com https://f.convertkit.com https://*.disqus.com https://*.disquscdn.com;
+script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://theghettoflower.kit.com https://f.convertkit.com https://*.disqus.com https://*.disquscdn.com https://static.ads-twitter.com;
 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.disquscdn.com;
 font-src 'self' https://fonts.gstatic.com;
 img-src 'self' data: https:;
-connect-src 'self' https://app.kit.com https://*.kit.com https://*.convertkit.com https://*.disqus.com;
+connect-src 'self' https://app.kit.com https://*.kit.com https://*.convertkit.com https://*.disqus.com https://analytics.twitter.com https://t.co https://*.x.com;
 frame-src https://disqus.com https://*.disqus.com;
 form-action 'self' https://app.kit.com https://formspree.io;
 frame-ancestors 'self';
@@ -55,6 +55,8 @@ upgrade-insecure-requests
 ```
 
 `'wasm-unsafe-eval'` is for the Pagefind site search, which runs WebAssembly.
+The `ads-twitter.com`, `analytics.twitter.com`, `t.co` and `x.com` entries are
+for the X pixel (`layouts/partials/x-pixel.html`).
 
 Watch the browser console for a week, add any blocked origins you actually
 use, then rename the header to `Content-Security-Policy` to enforce it.
