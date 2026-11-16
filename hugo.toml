@@ -84,6 +84,13 @@ author = "Michael Tayo"
 [params.stats.fallback]
   cvesPerDay = 131   # 2025 NVD daily average
 
+# X (Twitter) pixel base code (layouts/partials/x-pixel.html). Loads with the
+# production check in baseof.html and powers the "Site visits" / "Landing page views"
+# events in X Ads Manager. Signups are reported server-side (Kit webhook ->
+# x-capi-relay Worker -> X Conversion API), so no browser signup event fires.
+[params.xPixel]
+  id = "rj5cj"
+
 [params.social]
   linkedin = "https://www.linkedin.com/company/cybersecurityos/" #linkedin
   twitter = 'cybersecurityos'

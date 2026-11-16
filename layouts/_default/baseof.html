@@ -78,6 +78,7 @@
 
     {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
       {{ template "_internal/google_analytics.html" . }}
+      {{ partial "x-pixel.html" . }}
     {{ end }}
     {{ partial "structured-data.html" . }}
 	{{ block "head" . }}{{ partial "head-additions.html" . }}{{ end }}
