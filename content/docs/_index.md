@@ -13,9 +13,10 @@ This documentation covers open-source tools developed and maintained by Cybersec
 
 ### Projects
 
-| Project                   | Version     | Description                                                                                                                          |
-| ------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| [SPECTRA](/docs/spectra/) | v0.x (Beta) | AI-powered vulnerability triage CLI — transforms scanner output into ranked findings, attack chain analysis, and executive summaries |
+| Project                                     | Version     | Description                                                                                                                                                                        |
+| ------------------------------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [SPECTRA](/docs/spectra/)                   | v0.x (Beta) | AI-powered vulnerability triage CLI — transforms scanner output into ranked findings, attack chain analysis, and executive summaries                                               |
+| [CyberSHIELD Labs](/docs/cybershield-labs/) | 9 labs      | Hands-on defensive security labs — AI safety, cloud IAM, identity hunting, DLP, backups, SBOMs, containers, passwords, and web exposure; standard-library Python on synthetic data |
 
 ---
 
