@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">ISC2 AI Security Academy: What It Is and Which Path to Pick</title>
+  <desc id="d">The three Academy levels: Foundations (16 CPE), Practitioner (11 CPE, four tracks) and Leader (16 CPE workshops).</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050c1a"/>
+      <stop offset="100%" stop-color="#0c1f3a"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#0e2440" stroke-width="0.8"/>
+    </pattern>
+    <radialGradient id="glow" cx="78%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#00c9e0" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#00c9e0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="#00c9e0"/>
+  <rect x="80" y="96" width="5" height="420" rx="2" fill="#00c9e0"/>
+
+  <rect x="108" y="96" width="170" height="32" rx="16" fill="#061e38" stroke="#00c9e0" stroke-width="1.5"/>
+  <text x="193" y="117" text-anchor="middle" font-size="14" fill="#00c9e0" letter-spacing="3" font-weight="600">NEW LAUNCH</text>
+  <text x="294" y="117" font-size="14" fill="#3d6b8c" letter-spacing="1.5">NOV 17, 2026</text>
+
+  <text x="108" y="214" font-size="60" font-weight="800" fill="#e8f4ff" letter-spacing="-1.5">ISC2 AI Security</text>
+  <text x="108" y="284" font-size="60" font-weight="800" fill="#00c9e0" letter-spacing="-1.5">Academy</text>
+  <rect x="108" y="312" width="420" height="3" rx="1.5" fill="#1a3a5a"/>
+  <text x="108" y="356" font-size="24" fill="#9fb8d0">What it is and which path to pick</text>
+
+  <g font-size="15" letter-spacing="1.5">
+    <text x="108" y="430" fill="#00c9e0" font-weight="700">01</text><text x="146" y="430" fill="#e8f4ff" font-weight="600">FOUNDATIONS</text><text x="300" y="430" fill="#3d6b8c">baseline · 16 CPE</text>
+    <text x="108" y="466" fill="#00c9e0" font-weight="700">02</text><text x="146" y="466" fill="#e8f4ff" font-weight="600">PRACTITIONER</text><text x="300" y="466" fill="#3d6b8c">4 tracks · 11 CPE each</text>
+    <text x="108" y="502" fill="#00c9e0" font-weight="700">03</text><text x="146" y="502" fill="#e8f4ff" font-weight="600">LEADER</text><text x="300" y="502" fill="#3d6b8c">workshops · 16 CPE</text>
+  </g>
+
+  <!-- Shield with stacked levels -->
+  <g transform="translate(905 318)">
+    <path d="M0 -190 L132 -142 V-16 C132 80 70 138 0 166 C-70 138 -132 80 -132 -16 V-142 Z" fill="#061e38" stroke="#00c9e0" stroke-width="4"/>
+    <path d="M0 -164 L108 -125 V-18 C108 64 58 114 0 138 C-58 114 -108 64 -108 -18 V-125 Z" fill="none" stroke="#00c9e0" stroke-opacity="0.25" stroke-width="1.5"/>
+    <text x="0" y="-70" text-anchor="middle" font-size="40" font-weight="800" fill="#e8f4ff" letter-spacing="4">AI</text>
+    <g font-size="12" font-weight="700" letter-spacing="2" text-anchor="middle">
+      <rect x="-80" y="-40" width="160" height="30" rx="5" fill="#00c9e0" opacity="0.95"/><text x="0" y="-20" fill="#04111f">LEADER</text>
+      <rect x="-80" y="2" width="160" height="30" rx="5" fill="#00c9e0" opacity="0.6"/><text x="0" y="22" fill="#04111f">PRACTITIONER</text>
+      <rect x="-80" y="44" width="160" height="30" rx="5" fill="#00c9e0" opacity="0.35"/><text x="0" y="64" fill="#e8f4ff">FOUNDATIONS</text>
+    </g>
+  </g>
+  <text x="1120" y="590" text-anchor="end" font-size="15" fill="#3d6b8c" letter-spacing="3">CYBERSECURITYOS</text>
+</svg>
