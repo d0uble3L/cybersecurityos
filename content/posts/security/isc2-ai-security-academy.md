@@ -18,6 +18,9 @@ tags:
     "CybersecurityOS",
   ]
 categories: ["AI and Security", "Career Development"]
+featured_image: /posts/security/images/isc2-ai-security-academy-thumb.svg
+images:
+  - /posts/security/images/isc2-ai-security-academy-social.png
 show_reading_time: true
 faq:
   - q: "What is the ISC2 AI Security Academy?"
