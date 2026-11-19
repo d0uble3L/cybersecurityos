@@ -93,6 +93,7 @@
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}
+    {{ partial "gumroad-attribution.html" . }}
     <script>
       // Reading progress bar
       (function(){
